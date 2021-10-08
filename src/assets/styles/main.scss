@@ -372,7 +372,7 @@ section .section-header {
   .status {
     display:flex;
     align-items: center;
-    justify-content: end;
+    justify-content: flex-end;
     white-space: pre-line;
     font-family: 'Roboto', sans-serif;
     font-size:12px;
@@ -466,6 +466,6 @@ div.markdown {
     margin-inline-end: 0px;
     padding-inline-start: 20px;
     margin-bottom:1em;
-    list-style-image: url('/bullet.png');
+    list-style-image: url('../bullet.png');
   }
 }
