@@ -203,17 +203,20 @@ header video, div.location-info{
 		padding:0px 15px;
 	}
 	#planet{
-		width:100%;
+		width:315px;
 	}
+
 	#year {
 		width: 75px;
 		border-left:1px solid  rgba(255,255,255,0.24);
 		padding-right:0px;
 		height:100;
 	}
+
 	#gate {
 		border-left:1px solid  rgba(255,255,255,0.24);
 	}
+
 	#ring {
 		border-left:1px solid  rgba(255,255,255,0.24);
 		padding-right:0px;
@@ -329,12 +332,14 @@ section .section-header {
 }
 
 .mission {
+  cursor:pointer;
   font-size: 16px;
   margin: 0%;
   margin-left: 1em;
   margin-right: 0.5em;
   margin-top:0.5em;
   margin-bottom:0.5em;
+  padding-left:0.75em;
   font-family: 'Titillium Web', cursive;
   font-weight: 400;
   color: rgba(255,255,255, 0.87); 
@@ -411,11 +416,16 @@ section .section-header {
   }
 }
 
-.mission:hover{
-  background-color:#7DBBBB;
-  padding-left:1em;
-
+.mission.active {
+  background-color: rgba(255,255,255, 0.1); 
 }
+
+
+.mission:hover{
+  background-color:#7DBBBB!important;
+  padding-left:1em;
+}
+
 
 /*================================================*/
 /*======          Markdown Styling          ======*/
@@ -468,4 +478,13 @@ div.markdown {
     margin-bottom:1em;
     list-style-image: url('../bullet.png');
   }
+}
+
+#missions .markdown {
+  height:350px;
+}
+
+#events .markdown {
+  height:100%;
+  padding-top:1em;
 }

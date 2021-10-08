@@ -15,6 +15,8 @@
             v-for="item in this.missions"
             :key="item.slug"
             :mission="item"
+            :selected="this.mission_slug"
+            @click="selectMission(item)"
           />
         </div>
       </div>
@@ -25,6 +27,7 @@
         <h1>Events Log</h1>
       </div>
       <div class="section-content-container">
+        <Markdown :source="events" class="markdown"/>
       </div>
     </section>
     <section class="section-container" id="pilots" style="width:894px; height:714px;">
@@ -70,35 +73,56 @@ export default {
       "events": "",
       "missions": [
         {
-          "name":"Bug-Hunt",
           "slug":"001",
+          "name":"Bug-Hunt",
           "status": "success"
         },
         {
           "name":"Vigilant Gaze",
           "slug":"002",
-          "status": "partial-success"
-        },
-        {
-          "name":"Floodgate",
-          "slug":"003",
           "status": "start"
-        },
+        }
       ],
       "pilots": [],
     }
   },
 
   created() {
-    let self = this;
-    let md = `/markdown/${self.mission_slug}.md`
-    var client = new XMLHttpRequest();
-    client.open('GET', md);
-    client.onreadystatechange = function() {
-        self.current_md = client.responseText;
-    }
+    this.loadMissionMarkdown()
+    this.loadEventsMarkdown()
+  },
+
+  computed:{
+    
+  },
+
+  methods:{
+    selectMission(mission){
+      this.mission_slug = mission.slug;
+      this.loadMissionMarkdown()
+    },
+    loadMissionMarkdown(){
+      let self = this;
+      let md = `/markdown/${self.mission_slug}.md`
+      var client = new XMLHttpRequest();
+      client.open('GET', md);
+      client.onreadystatechange = function() {
+          self.current_md = client.responseText;
+      }
     client.send();
+    },
+    loadEventsMarkdown(){
+      let self = this;
+      let md = `/markdown/events.md`
+      var client = new XMLHttpRequest();
+      client.open('GET', md);
+      client.onreadystatechange = function() {
+          self.events = client.responseText;
+      }
+    client.send();
+    }
   }
+
 }
 </script>
 
