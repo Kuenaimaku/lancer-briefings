@@ -53,8 +53,8 @@
     </defs>
   </svg>
   <audio autoplay>
-      <source src="/startup.ogg" type="audio/ogg">
-    </audio>
+    <source src="/startup.ogg" type="audio/ogg">
+  </audio>
 </template>
 
 <script>
@@ -136,8 +136,6 @@ export default {
   width: 1902px;
   height: 910px;
   overflow: hidden;
-  background-image: url("../background.png");
-  background-size: cover;
 }
 
 </style>
