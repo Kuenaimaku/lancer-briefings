@@ -56,7 +56,7 @@ export default {
   width: 1902px;
   height: 910px;
   overflow: hidden;
-  background-image: url("/background.png");
+  background-image: url("./background.png");
   background-size: cover;
 }
 
