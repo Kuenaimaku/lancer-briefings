@@ -52,6 +52,9 @@
         </filter>
     </defs>
   </svg>
+  <audio autoplay>
+      <source src="/startup.ogg" type="audio/ogg">
+    </audio>
 </template>
 
 <script>
@@ -68,7 +71,7 @@ export default {
   
   data() {
     return {
-      "mission_slug": "001",
+      "mission_slug": "002",
       "current_md": "",
       "events": "",
       "missions": [
