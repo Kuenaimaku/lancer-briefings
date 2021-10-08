@@ -1,75 +1,59 @@
 <template>
 	<header class="clipped-x-large-forward">
-    <div class="title clipped-x-large-forward">&nbsp;</div>
+    <div class="title clipped-x-large-forward">
+      <img class="logo" src="/icon.svg"/>
+      <div class="title-container">
+        <div class="title-row" id="title-first-line">
+          <span id="title-header">
+            Mirrorsmoke
+          </span>
+          <span id="title-subheader">
+            Mercenary Company
+          </span>
+        </div>
+        <div class="title-row">
+          <span id="subtitle-header">
+            Crisis Response
+          </span>
+          <span id="subtitle-subheader">
+            // Delta-Echo-Echo-Zulu
+          </span>
+        </div>
+      </div>
+    </div>
     <div class="rhombus">&nbsp;</div>
-    <video autoplay muted loop width="100px" height="100px">
-      <source src="@/assets/planet.webm" type="video/webm">
+    <video autoplay muted loop width="90px" height="90px">
+      <source src="/planet.webm" type="video/webm">
     </video>
     <div class="location-info">
-      test
+      <div class="location-row" id="planet-year">
+        <div id="planet">
+          <h4>Deployment Info</h4>
+          <span class="subtitle">Hercynia</span>
+        </div>
+        <div id="year">
+          <h4>Year</h4>
+          <span class="subtitle">5014u</span>
+        </div>
+      </div>
+      <div class="location-row" id="system-gate-ring">
+        <div id="system">
+          <h4>System</h4>
+          <span class="subtitle">Ardennes-3</span>
+        </div>
+        <div id="gate">
+          <h4>Gate</h4>
+          <span class="subtitle">Atlas-QUANOKRIM</span>
+        </div>
+        <div id="ring">
+          <h4>Ring</h4>
+          <span class="subtitle">Atlas-line</span>
+        </div>
+      </div>
     </div>
   </header>
 </template>
 
 <style lang="scss" scoped>
-
-header {
-  background-color: rgba(23, 29, 30, 0.8);
-  border-color: rgba(23, 29, 30, 0.8);
-  height:96px;
-  display:flex;
-  align-items: center;
-}
-
-.title{
-  background-color:#7DBBBB;
-  border-color: #7DBBBB;
-  width: 700px;
-  height:100%;
-  display:inline-block;
-}
-
-.rhombus{
-  transform: skew(-0.785398rad) !important;
-  background-color:#7DBBBB;
-  border-color: #7DBBBB;
-  width: 100px;
-  height:100%;
-  display:inline-block;
-  margin-left:-40px;
-}
-
-.rhombus-back{
-  transform: skew(0.785398rad) !important;
-  background-color:#7DBBBB;
-  border-color: #7DBBBB;
-  width: 40px;
-  height:52px;
-  display:inline-block;
-  position: relative;
-  left: -25px;
-  top: -30px;
-}
-
-header video{
-  margin-left:10%;
-}
-
-div .location-info{
-  height:100px;
-  width:500px;
-  background-color:#7DBBBB;
-  margin-left:20px;
-}
-
-.clipped-medium-backward-pilot{
-  width:452px;
-  -webkit-clip-path: polygon(0 0, 400px 0, 452px 100%, 0% 100%);
-}
-
-.clipped-x-large-forward{
-  clip-path: polygon(100% 0, 100% calc(100% - 96px), calc(100% - 96px) 100%, 0 100%, 0 0);
-  -webkit-clip-path: polygon(100% 0, 100% calc(100% - 96px), calc(100% - 96px) 100%, 0 100%, 0 0);
-}
 
 </style>
