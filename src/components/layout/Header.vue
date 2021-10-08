@@ -1,7 +1,7 @@
 <template>
 	<header class="clipped-x-large-forward">
     <div class="title clipped-x-large-forward">
-      <img class="logo" src="/icon.svg"/>
+      <img class="logo" src="/company-icon.svg"/>
       <div class="title-container">
         <div class="title-row" id="title-first-line">
           <span id="title-header">
