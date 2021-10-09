@@ -69,5 +69,5 @@ Once the site builds remotely, click on the link provided in the `site overview`
 
 ## Usage within FoundryVTT
 
-install the [Inline Webviewer](https://foundryvtt.com/packages/inlinewebviewer) module and use the new button to send websites to your players - namely this one.
+install the [Inline Webviewer](https://foundryvtt.com/packages/inlinewebviewer) module and use the new button to send websites to your players - namely this one. Best viewed at 1920x1080.
 
