@@ -39,7 +39,13 @@
         <div class="rhombus-back">&nbsp;</div>
       </div>
       <div class="section-content-container">
-        text
+        <div class="pilot-list-container">
+          <Pilot
+            v-for="item in this.pilots"
+            :key="item.slug"
+            :pilot="item"
+          />
+        </div>
       </div>
     </section>
   </div>
@@ -60,33 +66,71 @@
 <script>
 import Header from './components/layout/Header.vue';
 import Mission from './components/Mission.vue';
+import Pilot from './components/Pilot.vue';
 import Markdown from 'vue3-markdown-it';
 
 export default {
   components: {
     Header,
     Mission,
+    Pilot,
     Markdown
   },
   
   data() {
     return {
-      "mission_slug": "002",
+      "mission_slug": "001",
       "current_md": "",
       "events": "",
       "missions": [
         {
           "slug":"001",
           "name":"Bug-Hunt",
-          "status": "success"
+          "status": "start"
+        },
+      ],
+      "pilots": [
+        {
+          "callsign":"Jinzo",
+          "alias":"Shayan Arsenal",
+          "code":"462370be-bd0f-41c2-b667-cc75f3a59a96///NDL-C-DEEP-STATION//377308ad-ba23-410b-ae37-68a1fb5f8db4",
+          "corpro": "GMS",
+          "frame": "Everest",
+          "mech": "Type - Worst Beat"
         },
         {
-          "name":"Vigilant Gaze",
-          "slug":"002",
-          "status": "start"
-        }
+          "callsign":"Kal",
+          "alias":"Vier Flau",
+          "code":"462370be-bd0f-41c2-b667-cc75f3a59a96///NDL-C-DEEP-STATION//377308ad-ba23-410b-ae37-68a1fb5f8db4",
+          "corpro": "GMS",
+          "frame": "Everest",
+          "mech": "Necrophile"
+        },
+        {
+          "callsign":"Starboard",
+          "alias":"Maria",
+          "code":"462370be-bd0f-41c2-b667-cc75f3a59a96///NDL-C-DEEP-STATION//377308ad-ba23-410b-ae37-68a1fb5f8db4",
+          "corpro": "GMS",
+          "frame": "Everest",
+          "mech": "Scarlet Judicator"
+        },
+        {
+          "callsign":"Badlands",
+          "alias":"Marlene Gatsby",
+          "code":"462370be-bd0f-41c2-b667-cc75f3a59a96///NDL-C-DEEP-STATION//377308ad-ba23-410b-ae37-68a1fb5f8db4",
+          "corpro": "GMS",
+          "frame": "Everest",
+          "mech": "Mayfly"
+        },
+        {
+          "callsign":"Compadre",
+          "alias":'Clint "CC" Cruz',
+          "code":"462370be-bd0f-41c2-b667-cc75f3a59a96///NDL-C-DEEP-STATION//377308ad-ba23-410b-ae37-68a1fb5f8db4",
+          "corpro": "GMS",
+          "frame": "Everest",
+          "mech": "Rio Bravo"
+        },
       ],
-      "pilots": [],
     }
   },
 
