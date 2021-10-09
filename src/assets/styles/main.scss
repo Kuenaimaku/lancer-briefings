@@ -1,7 +1,41 @@
 @charset "utf-8";
 
+/*-------------------------------------*/
+/*--       Theme Customization       --*/
+/*-------------------------------------*/
+
+//Primary Colors
 $primary: rgba(125, 187, 187, 1);
 $secondary: rgba(23, 29, 30, 0.8);
+$highlight-hover: rgba(255,255,255,0.3);
+$highlight-active: rgba(255,255,255,0.1);
+
+//Primary Text
+$text-headers: rgba(0,0,0,1);
+$text-location: rgba(255,255,255,0.87);
+
+//Location Information
+$location-separator: rgba(255,255,255,0.24);
+
+//Mission Pane
+$text-mission-title: rgba(255, 255, 255, 0.67);
+$text-mission-status: rgba(255,255,255,0.87);
+$mission-start: rgba(109, 109, 109, 1);
+$mission-partial: rgba(88, 34, 102, 1);
+$mission-success: rgba(34, 102, 98, 1);
+$mission-failure: rgba(176, 45, 45, 1);
+
+//Pilot Roster Text
+$text-pilot-header: rgba(255,255,255,0.67);
+$text-pilot-value: rgba(255,255,255,0.87);
+$text-pilot-code: rgba(255,255,255,0.47);
+
+//Markdown (Current Assignment, Events Log, Pilot Biography)
+$text-markdown-p: rgba(255,255,255, 0.87);
+$text-markdown-h1: rgba(255,255,255, 0.67);
+$text-markdown-h2: rgba(255,255,255, 0.87);
+
+
 
 @import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@400;600;800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap');
@@ -53,7 +87,7 @@ $secondary: rgba(23, 29, 30, 0.8);
 }
 
 :root{
-  background-color:#171D1E;
+  background-color: $secondary;
 }
 
 body{
@@ -104,6 +138,7 @@ header {
 		font-weight: 600;
 		text-transform: uppercase;
 		letter-spacing: 0.12em;
+    padding-left: 0.32em;
   }
 
   #subtitle-header{
@@ -180,6 +215,7 @@ div .location-info{
   margin-left:20px;
 	display:flex;
 	flex-direction: column;
+  color:$text-location;
 }
 
 header video, div.location-info{
@@ -192,7 +228,6 @@ header video, div.location-info{
 .location-row{
 	height: 40px;
 	display:flex;
-	color: rgba(255,255,255,0.87);
 	h4 {
 		margin:0px;
 		line-height:1.5em;
@@ -220,17 +255,17 @@ header video, div.location-info{
 
 	#year {
 		width: 75px;
-		border-left:1px solid  rgba(255,255,255,0.24);
+		border-left:1px solid $location-separator;
 		padding-right:0px;
 		height:100;
 	}
 
 	#gate {
-		border-left:1px solid  rgba(255,255,255,0.24);
+		border-left:1px solid $location-separator
 	}
 
 	#ring {
-		border-left:1px solid  rgba(255,255,255,0.24);
+		border-left:1px solid $highlight-hover;
 		padding-right:0px;
 	}
 }
@@ -262,8 +297,8 @@ section.section-container{
 }
 
 section .section-header {
-  background-color:#7DBBBB;
-  border-color: #7DBBBB;
+  background-color:$primary;
+  border-color: $primary;
   height:52px;
   display:inline-flex;
   gap:15px;
@@ -288,13 +323,13 @@ section .section-header {
 
 .section-content-container{
   height:100%;
-  background: #171D1E;
-  border: 1px solid #7DBBBB;
+  background: $secondary;
+  border: 1px solid $primary;
   margin-top: -1px;
   z-index:0;
 
   h3{
-    color: #7DBBBB;
+    color: $primary;
     font-size: 18px;
     padding:1em;
     padding-bottom:0px;
@@ -316,9 +351,9 @@ section .section-header {
   }
   
   ::-webkit-scrollbar-thumb {
-    background-color: #7DBBBB;    /* color of the scroll thumb */
+    background-color: $primary;    /* color of the scroll thumb */
     border-radius: 20px;     /* roundness of the scroll thumb */
-    border: 3px solid #171D1E;
+    border: 3px solid $secondary;
     margin:3px;  /* creates padding around scroll thumb */
   }
 }
@@ -361,7 +396,6 @@ section .section-header {
   padding-left:0.75em;
   font-family: 'Titillium Web', cursive;
   font-weight: 400;
-  color: rgba(255,255,255, 0.87); 
   display:flex;
   align-items: center;
   transition: background-color 0.2s ease-in-out, padding-left 0.2s ease-in-out;
@@ -379,7 +413,7 @@ section .section-header {
 		font-weight: 800;
 		text-transform: uppercase;
 		letter-spacing: 3px;
-    color: rgba(255,255,255, 0.67)
+    color: $text-mission-title;
   }
 
   h2{
@@ -390,7 +424,7 @@ section .section-header {
 		font-weight: 800;
 		text-transform: uppercase;
 		letter-spacing: 0.1em;
-    color: rgba(255,255,255, 0.87)
+    color: $text-mission-status;
   }
 
   .status {
@@ -407,10 +441,10 @@ section .section-header {
     border-radius: 3px;
     padding: 0.7em;
     width: 135px;
+    color: $text-mission-status;
     filter:url(#round);
     clip-path: polygon(0 0, 45px 100%, 100% 100%, 100% 0%);
     -webkit-clip-path: polygon(0 0, 45px 100%, 100% 100%, 100% 0%);
-
     img {
       width:24px;
       height:24px;
@@ -419,29 +453,29 @@ section .section-header {
   }
 
   .start{
-    background-color: #6D6D6D;
+    background-color: $mission-start;
   }
 
   .partial-success{
-    background-color: #582266;
+    background-color: $mission-partial;
   }
 
   .success{
-    background-color: #226662;
+    background-color: $mission-success;
   }
 
   .failure{
-    background-color:#B02D2D;
+    background-color:$mission-failure;
   }
 }
 
 .mission.active {
-  background-color: rgba(255,255,255, 0.1); 
+  background-color: $highlight-active;
 }
 
 
 .mission:hover{
-  background-color:#7DBBBB!important;
+  background-color: $highlight-hover!important;
   padding-left:1em;
 }
 
@@ -478,7 +512,6 @@ section .section-header {
   .pilot-portrait{
     width:104px;
     height:136px;
-    background-color:#FFF;
     object-fit: cover;
   }
 
@@ -497,7 +530,7 @@ section .section-header {
 		font-weight: 800;
 		text-transform: uppercase;
 		letter-spacing: 3px;
-    color: rgba(255,255,255, 0.67)
+    color: $text-pilot-header;
   }
 
   h2{
@@ -509,7 +542,7 @@ section .section-header {
 		font-weight: 800;
 		text-transform: uppercase;
 		letter-spacing: 0.1em;
-    color: rgba(255,255,255, 0.87)
+    color: $text-pilot-value;
   }
 
   .code{
@@ -517,13 +550,8 @@ section .section-header {
     font-weight: 400;
     line-height: 1.25em;
     font-size: 11px;
-    color: rgba(255,255,255, 0.47);
+    color: $text-pilot-code;
     flex-grow:2;
-  }
-
-  .pilot-details{
-    height:100%;
-    background-color:#226662;
   }
 }
 
@@ -536,7 +564,7 @@ section .section-header {
   position: absolute;
   text-align: center;
   height: 136px;
-  background-color: rgba(255,255,255,0.24);
+  background-color: $highlight-hover;
   display: flex;
   align-items: center;
   margin-bottom: 1em;
@@ -553,7 +581,7 @@ section .section-header {
 
 .pilot-wrapper {
   position: relative;
-  border-bottom: 1px solid #7DBBBB;
+  border-bottom: 1px solid $primary;
 }
 
 .pilot-wrapper:last-child {
@@ -565,7 +593,7 @@ section .section-header {
 }
 
 .pilot-wrapper:active .middle, .pilot-wrapper.active .middle {
-  background-color: rgba(255,255,255,0.54);
+  background-color: $highlight-active;
   transition: 0.5s ease;
 
 }
@@ -588,9 +616,9 @@ section .section-header {
   }
   
   ::-webkit-scrollbar-thumb {
-    background-color: #7DBBBB;    /* color of the scroll thumb */
+    background-color: $primary;    /* color of the scroll thumb */
     border-radius: 20px;     /* roundness of the scroll thumb */
-    border: 3px solid #171D1E;
+    border: 3px solid $secondary;
     margin:3px;  /* creates padding around scroll thumb */
   }
 
@@ -599,19 +627,28 @@ section .section-header {
   }
 
   div .section-header {
-    background-color: #7DBBBB;
-    border-color: #7DBBBB;
+    background-color: $primary;
+    border-color: $primary;
     height: 52px;
     display: inline-flex;
     gap: 15px;
     padding-left: 16px;
     margin-top: -38px !important;
+    h1{
+      font-size: 26px;
+      margin: 0%;
+      align-self: center;
+      font-family: "Big Shoulders Display", cursive;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      }
   }
 
   .rhombus-back {
     transform: skew(0.785398rad) !important;
-    background-color: #7dbbbb;
-    border-color: #7dbbbb;
+    background-color: $primary;
+    border-color: $primary;
     width: 40px;
     height: 52px;
     display: inline-block;
@@ -621,8 +658,8 @@ section .section-header {
   }
 
   div.pilot{
-    background-color:#171D1E;
-    border:1px solid #7DBBBB;
+    background-color: $secondary;
+    border:1px solid $primary;
     margin-top: -38px;
     width: 888px;
     height: 662px;
@@ -650,8 +687,8 @@ section .section-header {
   }
 
   div .section-header {
-    background-color: #7DBBBB;
-    border-color: #7DBBBB;
+    background-color: $primary;
+    border-color: $primary;
     height: 52px;
     display: inline-flex;
     gap: 15px;
@@ -661,8 +698,8 @@ section .section-header {
 
   .rhombus-back {
     transform: skew(0.785398rad) !important;
-    background-color: #7dbbbb;
-    border-color: #7dbbbb;
+    background-color: $primary;
+    border-color: $primary;
     width: 40px;
     height: 52px;
     display: inline-block;
@@ -692,8 +729,8 @@ div.markdown {
   margin: 0%;
   font-family: 'Titillium Web', cursive;
   font-weight: 400;
-  color: rgba(255,255,255, 0.87);
-  border-bottom: 1px solid #7DBBBB;
+  color: $text-markdown-p;
+  border-bottom: 1px solid $primary;
   height:350px;
   overflow-y: auto;
 
@@ -706,7 +743,7 @@ div.markdown {
 		font-weight: 800;
 		text-transform: uppercase;
 		letter-spacing: 3px;
-    color: rgba(255,255,255, 0.67)
+    color: $text-markdown-h1;
   }
 
   h2{
@@ -718,7 +755,7 @@ div.markdown {
 		font-weight: 800;
 		text-transform: uppercase;
 		letter-spacing: 0.1em;
-    color: rgba(255,255,255, 0.87)
+    color: $text-markdown-h2;
   }
 
   ul{

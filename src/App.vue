@@ -1,9 +1,9 @@
 <template>
-  <Header/>
+  <Header :header="this.header"/>
   <div class="content-container">
     <section class="section-container" id="missions" style="width:435px; height:714px;">
       <div class="section-header clipped-medium-backward">
-        <img src="/mission-icon.svg"/>
+        <img src="/icons/mission-icon.svg"/>
         <h1>Mission Log</h1>
       </div>
       <div class="section-content-container">
@@ -23,7 +23,7 @@
     </section>
     <section class="section-container" id="events" style="width:435px; height:714px;">
       <div class="section-header clipped-medium-backward">
-        <img src="/events-icon.svg"/>
+        <img src="/icons/events-icon.svg"/>
         <h1>Events Log</h1>
       </div>
       <div class="section-content-container">
@@ -33,7 +33,7 @@
     <section class="section-container" id="pilots" style="width:894px; height:714px;">
       <div style="height:52px; overflow:hidden;">
         <div class="section-header clipped-medium-backward-pilot">
-          <img src="/pilot-icon.svg"/>
+          <img src="/icons/pilot-icon.svg"/>
           <h1>Pilot Roster</h1>
         </div>
         <div class="rhombus-back">&nbsp;</div>
@@ -131,6 +131,17 @@ export default {
           "mech": "Rio Bravo"
         },
       ],
+      "header":{
+        "planet": "Hercynia",
+        "year": "5014u",
+        "system": "Ardennes-3",
+        "gate": "Atlas-Quanokrim",
+        "ring": "Atlas-Line",
+        "headerTitle": "Mirrorsmoke",
+        "headerSubtitle": "Mercenary Company",
+        "subheaderTitle": "Crisis Response",
+        "subheaderSubtitle": "Delta-Echo-Echo-Zulu",
+      }
     }
   },
 
@@ -150,7 +161,7 @@ export default {
     },
     loadMissionMarkdown(){
       let self = this;
-      let md = `/markdown/${self.mission_slug}.md`
+      let md = `/missions/${self.mission_slug}.md`
       var client = new XMLHttpRequest();
       client.open('GET', md);
       client.onreadystatechange = function() {
@@ -160,7 +171,7 @@ export default {
     },
     loadEventsMarkdown(){
       let self = this;
-      let md = `/markdown/events.md`
+      let md = `/events.md`
       var client = new XMLHttpRequest();
       client.open('GET', md);
       client.onreadystatechange = function() {

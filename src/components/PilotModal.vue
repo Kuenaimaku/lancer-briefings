@@ -2,7 +2,7 @@
 	<div class="pilot-modal">
 		<div class="pilot-header-container">
 			<div class="section-header clipped-medium-backward-bio">
-				<img src="/pilot-icon.svg"/>
+				<img src="/icons/pilot-icon.svg"/>
 				<h1>{{pilot.alias}} [{{pilot.callsign}}]</h1>
 			</div>
 			<div class="rhombus-back">&nbsp;</div>
@@ -15,7 +15,7 @@
 	<div class="pilot-modal portrait">
 		<div class="pilot-header-container">
 			<div class="section-header clipped-medium-backward-pilot">
-				<img src="/portrait-icon.svg"/>
+				<img src="/icons/portrait-icon.svg"/>
 				<h1>Character Artwork</h1>
 			</div>
 			<div class="rhombus-back">&nbsp;</div>
@@ -47,12 +47,12 @@ export default {
   },
   computed:{
 		portrait(){
-			return `/${this.pilot.callsign}.png`
+			return `/pilots/${this.pilot.callsign}.png`
 		},
 	},
 	created(){
       let self = this;
-      let md = `/markdown/${this.pilot.callsign}.md`
+      let md = `/pilots/${this.pilot.callsign}.md`
       var client = new XMLHttpRequest();
       client.open('GET', md);
       client.onreadystatechange = function() {
@@ -65,28 +65,3 @@ export default {
 	}
 }
 </script>
-
-<style lang="scss" scoped>
-
-.pilot-modal {
-	div .section-header {
-    background-color: #7DBBBB;
-    border-color: #7DBBBB;
-    height: 52px;
-    display: inline-flex;
-    gap: 15px;
-    padding-left: 16px;
-		
-		h1 {
-			font-size: 26px;
-			margin: 0%;
-			align-self: center;
-			font-family: "Big Shoulders Display", cursive;
-			font-weight: 800;
-			text-transform: uppercase;
-			letter-spacing: 0.1em;
-		}
-  }
-}
-
-</style>

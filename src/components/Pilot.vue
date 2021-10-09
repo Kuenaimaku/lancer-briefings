@@ -44,14 +44,11 @@ export default {
     }
   },
   computed:{
-		icon(){
-			return `/mission-${this.mission.status}.svg`
-		},
 		pilotPortrait(){
-			return `/${this.pilot.callsign}.png`
+			return `/pilots/${this.pilot.callsign}.png`
 		},
 		mechPortrait(){
-			return `/${this.pilot.mech}.png`
+			return `/mechs/${this.pilot.mech}.png`
 		},
 	},
 	methods:{
