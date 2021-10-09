@@ -764,6 +764,7 @@ div.markdown {
   border-bottom: 1px solid $primary;
   height: 350px;
   overflow-y: auto;
+  transition: height 0.5s ease-in-out;
 
   h1 {
     margin: 0px;
