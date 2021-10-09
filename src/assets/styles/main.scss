@@ -452,7 +452,7 @@ section .section-header {
   padding:1em;
   column-gap: 1em;
   height:136px;
-  border-bottom:1px solid #7DBBBB;
+  border-bottom:none;
   z-index:1;
   cursor: pointer;
 
@@ -547,8 +547,13 @@ section .section-header {
   }
 }
 
-.pilot-wrapper{
+.pilot-wrapper {
   position: relative;
+  border-bottom: 1px solid #7DBBBB;
+}
+
+.pilot-wrapper:last-child {
+  border-bottom: none;
 }
 
 .pilot-wrapper:hover .middle {
