@@ -153,7 +153,7 @@ export default {
         "subheaderSubtitle": "Delta-Echo-Echo-Zulu",
       },
       "options":{
-        "eventsMarkdownPerMission": false
+        "eventsMarkdownPerMission": true
       }
     }
   },
@@ -171,7 +171,7 @@ export default {
     selectMission(mission) {
       this.mission_slug = mission.slug;
       this.loadMissionMarkdown()
-      if(self.options.eventsMarkdownPerMission){
+      if(this.options.eventsMarkdownPerMission){
         this.loadEventsMarkdown();
       }
     },
