@@ -56,6 +56,10 @@ $secondary: rgba(23, 29, 30, 0.8);
   background-color:#171D1E;
 }
 
+body{
+  overflow:hidden !important;
+}
+
 header {
   animation: 1s ease-out 1 slideInFromLeft;
   background-color: $secondary;
