@@ -67,6 +67,8 @@ Finally, make sure the branch being deployed is `master`, the `base directory` f
 
 Once the site builds remotely, click on the link provided in the `site overview` tab and make sure everything looks right.
 
+Alternatively, if you use github, you can probably rely on github-pages. Take a look at the [vite documentation](https://vitejs.dev/guide/static-deploy.html#github-pages) for more info.
+
 ## Usage within FoundryVTT
 
 install the [Inline Webviewer](https://foundryvtt.com/packages/inlinewebviewer) module and use the new button to send websites to your players - namely this one. Best viewed at 1920x1080.
