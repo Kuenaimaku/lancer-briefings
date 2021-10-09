@@ -151,6 +151,9 @@ export default {
         "headerSubtitle": "Mercenary Company",
         "subheaderTitle": "Crisis Response",
         "subheaderSubtitle": "Delta-Echo-Echo-Zulu",
+      },
+      "options":{
+        "eventsMarkdownPerMission": false
       }
     }
   },
@@ -168,6 +171,9 @@ export default {
     selectMission(mission) {
       this.mission_slug = mission.slug;
       this.loadMissionMarkdown()
+      if(self.options.eventsMarkdownPerMission){
+        this.loadEventsMarkdown();
+      }
     },
     loadMissionMarkdown() {
       let self = this;
@@ -181,7 +187,15 @@ export default {
     },
     loadEventsMarkdown() {
       let self = this;
-      let md = `/events.md`
+      let md = "";
+
+      if(self.options.eventsMarkdownPerMission){
+        md = `/events/${self.mission_slug}.md`
+      }
+      else {
+        md = "/events.md"
+      }
+
       var client = new XMLHttpRequest();
       client.open('GET', md);
       client.onreadystatechange = function () {
