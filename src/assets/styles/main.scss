@@ -326,7 +326,7 @@ section .section-header {
 }
 
 .section-content-container {
-  height: 100%;
+  height: 666px;
   background: $secondary;
   border: 1px solid $primary;
   margin-top: -1px;
@@ -766,6 +766,10 @@ div.markdown {
   overflow-y: auto;
   transition: height 0.5s ease-in-out;
 
+  p strong {
+    color: $primary;
+  }
+
   h1 {
     margin: 0px;
     margin-bottom: 0.25em;
@@ -800,6 +804,19 @@ div.markdown {
     padding-inline-start: 20px;
     margin-bottom: 1em;
     list-style-image: url("../bullet.png");
+  }
+
+  ol{
+    display: block;
+    margin-block-start: 0.25em;
+    margin-block-end: 0.25em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 20px;
+    margin-bottom: 1em;
+    li{
+      margin-bottom:0.5em;
+    }
   }
 }
 
