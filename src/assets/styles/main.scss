@@ -5,7 +5,7 @@
 /*-------------------------------------*/
 
 //Primary Colors
-$primary: rgba(255, 0, 0, 1);
+$primary: rgba(125, 187, 187, 1);
 $secondary: rgba(23, 29, 30, 0.8);
 $highlight-hover: rgba(255, 255, 255, 0.3);
 $highlight-active: rgba(255, 255, 255, 0.1);
@@ -298,6 +298,12 @@ section.section-container {
   display: flex;
   flex-direction: column;
   margin: 50px;
+  width:435px; 
+  height:714px;
+}
+
+section.section-container:last-child {
+  width:894px;
 }
 
 section .section-header {
@@ -718,6 +724,63 @@ section .section-header {
   right: 0;
   top: 0;
   background-color: rgba(10, 10, 10, 0.7);
+}
+
+.person {
+  display: flex;
+  flex-direction: row;
+  padding: 1em;
+  column-gap: 1em;
+  height: 136px;
+  border-bottom: none;
+  z-index: 1;
+  cursor: pointer;
+
+  .person-loadout {
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 0px;
+  }
+
+  .person-portrait {
+    width: 104px;
+    height: 136px;
+    object-fit: cover;
+  }
+
+  h1 {
+    margin: 0px;
+    margin-bottom: 0.25em;
+    line-height: 1.5em;
+    font-family: "Raleway", sans-serif;
+    font-size: 10px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: $text-pilot-header;
+  }
+
+  h2 {
+    font-size: 18px;
+    margin: 0%;
+    margin-bottom: 0.25em;
+    align-self: center;
+    font-family: "Big Shoulders Display", cursive;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: $text-pilot-value;
+  }
+
+  .code {
+    font-family: "Inconsolata", monospace;
+    font-weight: 400;
+    line-height: 1.25em;
+    font-size: 11px;
+    color: $text-pilot-code;
+    flex-grow: 2;
+  }
 }
 
 footer {

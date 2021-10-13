@@ -1,49 +1,23 @@
 <template>
   <Header :header="this.header" />
   <div class="content-container">
-    <section class="section-container" id="missions" style="width:435px; height:714px;">
-      <div class="section-header clipped-medium-backward">
-        <img src="/icons/mission-icon.svg" />
-        <h1>Mission Log</h1>
-      </div>
-      <div class="section-content-container">
-        <h3>Current Assignment</h3>
-        <Markdown :source="current_md" class="markdown" />
-        <h3>Mission List</h3>
-        <div class="mission-list-container">
-          <Mission
-            v-for="item in this.missions"
-            :key="item.slug"
-            :mission="item"
-            :selected="this.mission_slug"
-            @click="selectMission(item)"
-          />
-        </div>
-      </div>
-    </section>
-    <section class="section-container" id="events" style="width:435px; height:714px;">
-      <div class="section-header clipped-medium-backward">
-        <img src="/icons/events-icon.svg" />
-        <h1>Events Log</h1>
-      </div>
-      <div class="section-content-container">
-        <Markdown :source="events" class="markdown" />
-      </div>
-    </section>
-    <section class="section-container" id="pilots" style="width:894px; height:714px;">
-      <div style="height:52px; overflow:hidden;">
-        <div class="section-header clipped-medium-backward-pilot">
-          <img src="/icons/pilot-icon.svg" />
-          <h1>Pilot Roster</h1>
-        </div>
-        <div class="rhombus-back">&nbsp;</div>
-      </div>
-      <div class="section-content-container">
-        <div class="pilot-list-container">
-          <Pilot v-for="item in this.pilots" :key="item.slug" :pilot="item" />
-        </div>
-      </div>
-    </section>
+    <MissionView
+      :missions="this.missions"
+      :missionMarkdown="this.current_md"
+      :selected="this.mission_slug"
+      v-on:missionSelected="handleMissionSelected"
+      />
+    
+    <EventsView v-if="this.options.tab2 === 'events'"
+      :events="this.events"
+    />
+    <NPCView v-if="this.options.tab2 === 'npcs'"
+      :npcs="this.npcs"
+    />
+    <PilotsView
+      :pilots="this.pilots"
+    />
+
   </div>
   <svg
     style="visibility: hidden; position: absolute;"
@@ -74,17 +48,19 @@
 <script>
 import Header from './components/layout/Header.vue';
 import Footer from './components/layout/Footer.vue';
-import Mission from './components/Mission.vue';
-import Pilot from './components/Pilot.vue';
-import Markdown from 'vue3-markdown-it';
+import MissionView from './components/layout/MissionView.vue';
+import EventsView from './components/layout/EventsView.vue';
+import PilotsView from './components/layout/PilotsView.vue';
+import NPCView from './components/layout/NPCView.vue';
 
 export default {
   components: {
     Header,
     Footer,
-    Mission,
-    Pilot,
-    Markdown
+    MissionView,
+    EventsView,
+    PilotsView,
+    NPCView
   },
 
   data() {
@@ -96,6 +72,11 @@ export default {
         {
           "slug": "001",
           "name": "Bug-Hunt",
+          "status": "success"
+        },
+        {
+          "slug": "002",
+          "name": "Vigilant Gaze",
           "status": "start"
         },
       ],
@@ -141,6 +122,20 @@ export default {
           "mech": "Rio Bravo"
         },
       ],
+      "npcs":[
+        {
+          "name": "Snakeman",
+          "affiliation": "Mirrorsmoke Mercenary Company",
+          "pronouns": "He/Him",
+          "notes": "DELTA-ECHO-ECHO-ZULU's primary report"
+        },
+        {
+          "name": "Firstname Lastname",
+          "affiliation": "Planet",
+          "pronouns": "She/Her",
+          "notes": "Role on planet"
+        },
+      ],
       "header": {
         "planet": "Hercynia",
         "year": "5014u",
@@ -152,8 +147,18 @@ export default {
         "subheaderTitle": "Crisis Response",
         "subheaderSubtitle": "Delta-Echo-Echo-Zulu",
       },
+      "clocks":[
+        {
+          "name": "Test",
+          "value": 0,
+          "max": 6,
+          "tooltip": "This should show on hover"
+        }
+
+      ],
       "options":{
-        "eventsMarkdownPerMission": true
+        "eventsMarkdownPerMission": true,
+        "tab2": "npcs",
       }
     }
   },
@@ -168,7 +173,7 @@ export default {
   },
 
   methods: {
-    selectMission(mission) {
+    handleMissionSelected(mission) {
       this.mission_slug = mission.slug;
       this.loadMissionMarkdown()
       if(this.options.eventsMarkdownPerMission){
