@@ -199,8 +199,7 @@ header {
   height: 52px;
   display: inline-block;
   position: relative;
-  left: -25px;
-  top: -30px;
+  left: -2.5em;
 }
 
 header video {
@@ -274,7 +273,7 @@ div.location-info {
 
 #missions,
 #events,
-#pilots {
+#main-tab {
   animation: 0.5s ease 1 flickerIn;
   animation-delay: 2.2s;
   animation-fill-mode: forwards;
@@ -285,7 +284,7 @@ div.location-info {
   animation-delay: 2.5s;
 }
 
-#pilots {
+#main-tab {
   animation-delay: 2.8s;
 }
 
@@ -297,13 +296,13 @@ div .content-container {
 section.section-container {
   display: flex;
   flex-direction: column;
-  margin: 50px;
-  width:435px; 
-  height:714px;
+  margin: 50px 30px;
+  width: 450px;
+  height: 714px;
 }
 
 section.section-container:last-child {
-  width:894px;
+  width:800px;
 }
 
 section .section-header {
@@ -394,6 +393,13 @@ section .section-header {
   clip-path: polygon(100% 0, 100% calc(100% - 96px), calc(100% - 96px) 100%, 0 100%, 0 0);
   -webkit-clip-path: polygon(100% 0, 100% calc(100% - 96px), calc(100% - 96px) 100%, 0 100%, 0 0);
 }
+
+.clipped-rhombus-backward {
+  clip-path: polygon(0 0, 52px 52px, 104px 52px, 52px 0, 0 0);
+  -webkit-clip-path: polygon(0 0, 52px 52px, 104px 52px, 52px 0, 0 0);
+}
+
+
 
 .mission {
   cursor: pointer;
@@ -493,7 +499,7 @@ section .section-header {
   overflow-y: scroll;
 }
 
-#pilots .pilot {
+#main-tab .pilot {
   display: flex;
   flex-direction: row;
   padding: 1em;
@@ -564,9 +570,33 @@ section .section-header {
   }
 }
 
-#pilots .pilot:last-child {
+#main-tab .pilot:last-child {
   border-bottom: none;
 }
+
+.main-tab-header{
+  display:flex;
+  column-gap: 1em;
+}
+
+.main-tab-button {
+  background-color: $primary;
+  width:104px;
+  height:52px;
+  cursor: pointer;
+  margin: 0em -1.5em;
+  position: relative;
+  left: -2.75em;
+
+  img{
+    padding: 10px 37px;
+  }
+}
+
+.main-tab-button.hidden {
+  display: none;
+}
+
 
 .middle {
   transition: 0.2s ease;
@@ -726,6 +756,19 @@ section .section-header {
   background-color: rgba(10, 10, 10, 0.7);
 }
 
+.person-list-container{
+  height:666px;
+}
+
+.person-list-container .person{
+  border-bottom:$primary 1px solid;
+}
+
+.person-list-container .person:last-child {
+  border-bottom: none;
+}
+
+
 .person {
   display: flex;
   flex-direction: row;
@@ -734,10 +777,9 @@ section .section-header {
   height: 136px;
   border-bottom: none;
   z-index: 1;
-  cursor: pointer;
 
   .person-loadout {
-    width: 250px;
+    width: 300px;
     display: flex;
     flex-direction: column;
     row-gap: 0px;
@@ -781,6 +823,10 @@ section .section-header {
     color: $text-pilot-code;
     flex-grow: 2;
   }
+}
+
+.glossary-container{
+  height:666px;
 }
 
 footer {
@@ -892,4 +938,18 @@ div.markdown {
   padding-top: 1em;
   padding-bottom: 1em;
   border-bottom: none;
+}
+
+.person .markdown{
+  width:350px;
+  height:136px;
+  border-bottom: none;
+}
+
+.glossary-container .markdown {
+  height: 666px;
+}
+
+.glossary-container .markdown strong {
+  text-transform: uppercase;
 }

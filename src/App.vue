@@ -8,15 +8,32 @@
       v-on:missionSelected="handleMissionSelected"
       />
     
-    <EventsView v-if="this.options.tab2 === 'events'"
+    <EventsView
       :events="this.events"
     />
-    <NPCView v-if="this.options.tab2 === 'npcs'"
-      :npcs="this.npcs"
-    />
-    <PilotsView
+    <section class="section-container" id="main-tab">
+    <div class="main-tab-header" style="height:52px; overflow:hidden;">
+			<div class="section-header clipped-medium-backward-pilot">
+				<img :src="mainTabIcon" />
+				<h1>{{mainTabTitle}}</h1>
+			</div>
+        <TabButton v-for="item in this.options.panelOptions"
+          :name="item"
+          :hidden="item === this.options.mainPanel"
+          :key="item"
+          @click="selectMainPanel(item)"
+        />
+        <div class="rhombus-back">&nbsp;</div>
+		</div>
+
+    <PilotsView v-if="this.options.mainPanel === 'pilot'"
       :pilots="this.pilots"
     />
+    <NPCView v-if="this.options.mainPanel === 'npc'"
+      :npcs="this.npcs"
+    />
+    <GlossaryView v-if="this.options.mainPanel === 'glossary'"/>
+    </section>
 
   </div>
   <svg
@@ -52,6 +69,8 @@ import MissionView from './components/layout/MissionView.vue';
 import EventsView from './components/layout/EventsView.vue';
 import PilotsView from './components/layout/PilotsView.vue';
 import NPCView from './components/layout/NPCView.vue';
+import GlossaryView from './components/layout/GlossaryView.vue';
+import TabButton from './components/TabButton.vue'
 
 export default {
   components: {
@@ -60,7 +79,9 @@ export default {
     MissionView,
     EventsView,
     PilotsView,
-    NPCView
+    NPCView,
+    GlossaryView,
+    TabButton
   },
 
   data() {
@@ -130,10 +151,10 @@ export default {
           "notes": "DELTA-ECHO-ECHO-ZULU's primary report"
         },
         {
-          "name": "Firstname Lastname",
-          "affiliation": "Planet",
+          "name": "Brava Hadura",
+          "affiliation": "Evergreen",
           "pronouns": "She/Her",
-          "notes": "Role on planet"
+          "notes": "Captain of the Local Militia"
         },
       ],
       "header": {
@@ -158,7 +179,12 @@ export default {
       ],
       "options":{
         "eventsMarkdownPerMission": true,
-        "tab2": "npcs",
+        "mainPanel": "pilot",
+        "panelOptions":[
+          "pilot",
+          "npc",
+          "glossary"
+        ]
       }
     }
   },
@@ -169,7 +195,14 @@ export default {
   },
 
   computed: {
-
+    mainTabTitle(){
+      if (this.options.mainPanel === "pilot") return "Pilot Roster"
+      if (this.options.mainPanel === "npc") return "Persons Registry"
+      if (this.options.mainPanel === "glossary") return "Lexicon"
+    },
+    mainTabIcon(){
+      return `/icons/${this.options.mainPanel}-icon.svg`
+    }
   },
 
   methods: {
@@ -207,6 +240,9 @@ export default {
         self.events = client.responseText;
       }
       client.send();
+    },
+    selectMainPanel(panel){
+      this.options.mainPanel = panel;
     }
   }
 
