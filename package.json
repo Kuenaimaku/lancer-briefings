@@ -8,8 +8,9 @@
   },
   "dependencies": {
     "@oruga-ui/oruga-next": "^0.4.2",
-    "@traptitech/markdown-it-spoiler": "^1.1.6",
+    "chart.js": "^3.5.1",
     "vue": "^3.2.16",
+    "vue-chart-3": "^0.5.8",
     "vue3-markdown-it": "^1.0.9"
   },
   "devDependencies": {

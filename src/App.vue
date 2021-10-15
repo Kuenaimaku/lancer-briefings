@@ -12,27 +12,36 @@
       :events="this.events"
     />
     <section class="section-container" id="main-tab">
-    <div class="main-tab-header" style="height:52px; overflow:hidden;">
-			<div class="section-header clipped-medium-backward-pilot">
-				<img :src="mainTabIcon" />
-				<h1>{{mainTabTitle}}</h1>
-			</div>
-        <TabButton v-for="item in this.options.panelOptions"
-          :name="item"
-          :hidden="item === this.options.mainPanel"
-          :key="item"
-          @click="selectMainPanel(item)"
-        />
-        <div class="rhombus-back">&nbsp;</div>
-		</div>
+      <div class="main-tab-header" style="height:52px; overflow:hidden;">
+        <div class="section-header clipped-medium-backward-pilot">
+          <img :src="mainTabIcon" />
+          <h1>{{mainTabTitle}}</h1>
+        </div>
+          <TabButton v-for="item in this.options.panelOptions"
+            :name="item"
+            :hidden="item === this.options.mainPanel"
+            :key="item"
+            @click="selectMainPanel(item)"
+          />
+          <div class="rhombus-back">&nbsp;</div>
+      </div>
 
-    <PilotsView v-if="this.options.mainPanel === 'pilot'"
+      <PilotsView v-if="this.options.mainPanel === 'a'"
       :pilots="this.pilots"
-    />
-    <NPCView v-if="this.options.mainPanel === 'npc'"
-      :npcs="this.npcs"
-    />
-    <GlossaryView v-if="this.options.mainPanel === 'glossary'"/>
+      />
+      <NPCView v-if="this.options.mainPanel === 'b'"
+        :npcs="this.npcs"
+      />
+      <GlossaryView v-if="this.options.mainPanel === 'c'"/>
+
+      <div class="section-content-container">
+        <div class="glossary-container">
+          <Clock v-for="item in this.clocks"
+            :clock="item"
+            :key="item.name"
+          />
+        </div>
+      </div>
     </section>
 
   </div>
@@ -71,6 +80,7 @@ import PilotsView from './components/layout/PilotsView.vue';
 import NPCView from './components/layout/NPCView.vue';
 import GlossaryView from './components/layout/GlossaryView.vue';
 import TabButton from './components/TabButton.vue'
+import Clock from './components/Clock.vue'
 
 export default {
   components: {
@@ -81,7 +91,8 @@ export default {
     PilotsView,
     NPCView,
     GlossaryView,
-    TabButton
+    TabButton,
+    Clock
   },
 
   data() {
@@ -170,11 +181,21 @@ export default {
       },
       "clocks":[
         {
-          "name": "Test",
-          "value": 0,
+          "name": "Positive",
+          "description": "This is a description of a positive clock.",
+          "help": "Having more segments filled in will make things easier for you during later missions.",
+          "color": "#7DBBBB",
+          "value": 2,
           "max": 6,
-          "tooltip": "This should show on hover"
-        }
+        },
+        {
+          "name": "Negative",
+          "description": "This is a description of a negative clock.",
+          "help": "Having more segments filled in will make things harder for you during later missions.",
+          "color": "#FD7777",
+          "value": 2,
+          "max": 3,
+        },
 
       ],
       "options":{
@@ -196,7 +217,7 @@ export default {
 
   computed: {
     mainTabTitle(){
-      if (this.options.mainPanel === "pilot") return "Pilot Roster"
+      if (this.options.mainPanel === "pilot") return "Clock Demo"
       if (this.options.mainPanel === "npc") return "Persons Registry"
       if (this.options.mainPanel === "glossary") return "Lexicon"
     },

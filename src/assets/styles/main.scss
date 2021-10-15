@@ -768,7 +768,6 @@ section .section-header {
   border-bottom: none;
 }
 
-
 .person {
   display: flex;
   flex-direction: row;
@@ -827,6 +826,56 @@ section .section-header {
 
 .glossary-container{
   height:666px;
+  display:flex;
+  column-gap: 0.5em;
+}
+
+.clock { 
+	display: flex;
+	flex-direction: column;
+  align-items: center;
+  text-align: center;
+  row-gap:0.5em;
+	padding: 1em;
+  max-width:250px;
+  
+  h1{
+    font-size: 18px;
+    margin: 0%;
+    color:$text-location;
+    font-family: "Big Shoulders Display", cursive;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+
+  p{
+    font-family: "Titillium Web", cursive;
+    font-weight: 400;
+    color: $text-markdown-p;
+    margin:0.2em;
+    text-align: justify;
+  }
+  
+  .help {
+    font-family: "Inconsolata", monospace;
+    font-weight: 400;
+    line-height: 1.25em;
+    font-size: 11px;
+    color: $text-pilot-code;
+  }
+
+  h1, p{
+    animation: 0.5s ease 1 flickerIn;
+    animation-delay: 3.0s;
+    animation-fill-mode: forwards;
+    opacity:0;
+  }
+}
+
+.chart{
+	width:200px;
+	height:200px;
 }
 
 footer {

@@ -43,6 +43,7 @@
         </div>
       </div>
     </div>
+
   </header>
 </template>
 
@@ -51,6 +52,7 @@
 
 export default {
   components: {
+
   },
   props: {
     header: {
