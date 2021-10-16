@@ -1,5 +1,5 @@
 <template>
-	<div :class="['main-tab-button', 'clipped-rhombus-backward', {hidden:hidden}]">
+	<div :class="['main-tab-button', 'clipped-rhombus-backward', {active:hidden}]">
 		<img :src="icon"/>
 
 	</div>

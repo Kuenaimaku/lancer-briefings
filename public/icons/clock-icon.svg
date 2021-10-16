@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="32"
+   height="32"
+   viewBox="0 0 8.4666665 8.4666669"
+   version="1.1"
+   id="svg8"
+   inkscape:version="0.92.4 (5da689c313, 2019-01-14)"
+   sodipodi:docname="clock-icon.svg">
+  <defs
+     id="defs2" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="7.9195959"
+     inkscape:cx="-3.8471442"
+     inkscape:cy="-9.9779168"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:pagecheckerboard="true"
+     units="px"
+     inkscape:window-width="2560"
+     inkscape:window-height="1377"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-288.53332)">
+    <g
+       id="g817"
+       transform="matrix(0.00972465,0,0,-0.00972465,-0.74569117,297.12329)">
+      <path
+         id="path815"
+         d="M 512,789 Q 470,789 432,773 395,757 367,729.5 339,702 323,664 307,627 307,585 v 0 q 0,-43 16,-80 16,-37 44,-65 28,-28 65,-44 38,-16 80,-16 v 0 q 42,0 80,16 37,16 65,44 28,28 44,65 16,37 16,80 v 0 q 0,7 -0.5,14 -0.5,7 -1.5,14 v -1 q -9,-56 -52,-93 -43,-37 -100,-37 v 0 q -63,0 -108,45 -45,45 -45,109 v 0 q 0,57 37,99.5 37,42.5 91,51.5 h 1 q -6,1 -13,1.5 -7,0.5 -14,0.5 z M 239,346 V 180 Q 221,171 204,161.5 187,152 171,141 l 34,-34 q 51,38 134,57 83,19 173,19 90,0 173,-19 83,-19 134,-57 l 34,34 q -16,11 -33,20.5 -17,9.5 -35,18.5 v 97 h -68 v -69 q -66,23 -135,31 -69,8 -138,0 v 38 h -69 v -49 q -8,-2 -16.5,-4 -8.5,-2 -17.5,-5 v 127 z"
+         inkscape:connector-curvature="0"
+         style="fill:currentColor" />
+    </g>
+  </g>
+</svg>

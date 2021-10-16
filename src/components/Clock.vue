@@ -1,10 +1,11 @@
 <template>
-	<div class="clock">
-		<h1>{{$props.clock.name}}</h1>
-		<DoughnutChart :chartData="testData" class="chart"/>
-		<p>{{$props.clock.description}}</p>
-		<p class="help">{{$props.clock.help}}</p>
-	</div>
+		<div class="clock">
+			<h1>{{$props.clock.name}}</h1>
+			<o-tooltip :label="$props.clock.help" position="bottom" size="large" multiline>
+			<DoughnutChart :chartData="testData" class="chart"/>
+			</o-tooltip>
+			<p>{{$props.clock.description}}</p>
+		</div>
 </template>
 
 <script lang="ts">
@@ -13,7 +14,7 @@ Chart.register(...registerables);
 
 Chart.defaults.plugins.tooltip.enabled = false;
 Chart.defaults.plugins.legend.display = false;
-Chart.defaults.animation = {delay: 3000, duration: 1000, easing: 'easeInOutExpo', loop: false}
+Chart.defaults.animation = {delay: 100, duration: 1000, easing: 'easeInOutExpo', loop: false}
 
 import { computed, defineComponent, ref } from 'vue';
 import { DoughnutChart } from 'vue-chart-3';

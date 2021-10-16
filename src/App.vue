@@ -6,44 +6,35 @@
       :missionMarkdown="this.current_md"
       :selected="this.mission_slug"
       v-on:missionSelected="handleMissionSelected"
-      />
-    
-    <EventsView
-      :events="this.events"
     />
+
+    <EventsView :events="this.events" />
     <section class="section-container" id="main-tab">
       <div class="main-tab-header" style="height:52px; overflow:hidden;">
         <div class="section-header clipped-medium-backward-pilot">
           <img :src="mainTabIcon" />
-          <h1>{{mainTabTitle}}</h1>
+          <h1>{{ mainTabTitle }}</h1>
         </div>
-          <TabButton v-for="item in this.options.panelOptions"
-            :name="item"
-            :hidden="item === this.options.mainPanel"
-            :key="item"
-            @click="selectMainPanel(item)"
-          />
-          <div class="rhombus-back">&nbsp;</div>
+        <TabButton
+          v-for="item in this.options.panelOptions"
+          :name="item"
+          :hidden="item === this.options.mainPanel"
+          :key="item"
+          @click="selectMainPanel(item)"
+        />
+        <div class="rhombus-back">&nbsp;</div>
       </div>
-
-      <PilotsView v-if="this.options.mainPanel === 'a'"
-      :pilots="this.pilots"
-      />
-      <NPCView v-if="this.options.mainPanel === 'b'"
-        :npcs="this.npcs"
-      />
-      <GlossaryView v-if="this.options.mainPanel === 'c'"/>
-
-      <div class="section-content-container">
-        <div class="glossary-container">
-          <Clock v-for="item in this.clocks"
-            :clock="item"
-            :key="item.name"
-          />
+      <transition name="fade" mode="out-in">
+        <PilotsView v-if="this.options.mainPanel === 'pilot'" :pilots="this.pilots" />
+        <NPCView v-else-if="this.options.mainPanel === 'npc'" :npcs="this.npcs" />
+        <GlossaryView v-else-if="this.options.mainPanel === 'glossary'" />
+        <div class="section-content-container" v-else-if="this.options.mainPanel === 'clock'">
+          <div class="glossary-container">
+            <Clock v-for="item in this.clocks" :clock="item" :key="item.name" />
+          </div>
         </div>
-      </div>
+      </transition>
     </section>
-
   </div>
   <svg
     style="visibility: hidden; position: absolute;"
@@ -68,7 +59,7 @@
   <audio autoplay>
     <source src="/startup.ogg" type="audio/ogg" />
   </audio>
-  <Footer/>
+  <Footer />
 </template>
 
 <script>
@@ -154,7 +145,7 @@ export default {
           "mech": "Rio Bravo"
         },
       ],
-      "npcs":[
+      "npcs": [
         {
           "name": "Snakeman",
           "affiliation": "Mirrorsmoke Mercenary Company",
@@ -179,7 +170,7 @@ export default {
         "subheaderTitle": "Crisis Response",
         "subheaderSubtitle": "Delta-Echo-Echo-Zulu",
       },
-      "clocks":[
+      "clocks": [
         {
           "name": "Positive",
           "description": "This is a description of a positive clock.",
@@ -198,13 +189,14 @@ export default {
         },
 
       ],
-      "options":{
+      "options": {
         "eventsMarkdownPerMission": true,
         "mainPanel": "pilot",
-        "panelOptions":[
+        "panelOptions": [
           "pilot",
           "npc",
-          "glossary"
+          "glossary",
+          "clock"
         ]
       }
     }
@@ -216,12 +208,13 @@ export default {
   },
 
   computed: {
-    mainTabTitle(){
-      if (this.options.mainPanel === "pilot") return "Clock Demo"
+    mainTabTitle() {
+      if (this.options.mainPanel === "pilot") return "Pilot Roster"
       if (this.options.mainPanel === "npc") return "Persons Registry"
       if (this.options.mainPanel === "glossary") return "Lexicon"
+      if (this.options.mainPanel === "clock") return "Clocks"
     },
-    mainTabIcon(){
+    mainTabIcon() {
       return `/icons/${this.options.mainPanel}-icon.svg`
     }
   },
@@ -230,7 +223,7 @@ export default {
     handleMissionSelected(mission) {
       this.mission_slug = mission.slug;
       this.loadMissionMarkdown()
-      if(this.options.eventsMarkdownPerMission){
+      if (this.options.eventsMarkdownPerMission) {
         this.loadEventsMarkdown();
       }
     },
@@ -248,7 +241,7 @@ export default {
       let self = this;
       let md = "";
 
-      if(self.options.eventsMarkdownPerMission){
+      if (self.options.eventsMarkdownPerMission) {
         md = `/events/${self.mission_slug}.md`
       }
       else {
@@ -262,7 +255,7 @@ export default {
       }
       client.send();
     },
-    selectMainPanel(panel){
+    selectMainPanel(panel) {
       this.options.mainPanel = panel;
     }
   }

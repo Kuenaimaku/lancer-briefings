@@ -1,0 +1,128 @@
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromLeftRhombus {
+  0% {
+    transform: translateX(-5000%) skew(-0.785398rad);
+  }
+  90% {
+    transform: translateX(-25%) skew(-0.785398rad);
+  }
+  100% {
+    transform: translateX(0) skew(-0.785398rad);
+  }
+}
+
+@keyframes flickerIn {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.2;
+  }
+  15%,
+  40% {
+    opacity: 0.05;
+  }
+  30% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+header {
+  animation: 1s ease-out 1 slideInFromLeft;
+  background-color: var(--secondary-color);
+  border-color: var(--secondary-color);
+  height: 96px;
+  display: flex;
+  align-items: center;
+}
+
+.title {
+  transform: translateX(-100%);
+  animation: 1s ease-out 1 slideInFromLeft;
+  animation-delay: 0.5s;
+  animation-fill-mode: forwards;
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  width: 700px;
+  height: 100%;
+  display: inline-flex;
+  align-items: center;
+  column-gap: 1em;
+}
+
+.rhombus{
+  transform: translateX(-5000%) skew(-0.785398rad);
+  -webkit-animation: 0.75s ease-out 1 slideInFromLeftRhombus;
+  animation: 0.75s ease-out 1 slideInFromLeftRhombus;
+  -webkit-animation-delay: 1s;
+  animation-delay: 1s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+header video,
+div.location-info {
+  -webkit-animation: 0.5s ease 1 flickerIn;
+  animation: 0.5s ease 1 flickerIn;
+  -webkit-animation-delay: 2s;
+  animation-delay: 2s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+#missions,
+#events,
+#main-tab {
+  -webkit-animation: 0.5s ease 1 flickerIn;
+  animation: 0.5s ease 1 flickerIn;
+  -webkit-animation-delay: 2.2s;
+  animation-delay: 2.2s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+#events {
+  -webkit-animation-delay: 2.5s;
+  animation-delay: 2.5s;
+}
+#main-tab {
+  -webkit-animation-delay: 2.8s;
+  animation-delay: 2.8s;
+}
+
+.main-tab-button {
+  transition: background-color 0.2s ease-in-out;
+}
+
+.mission {
+  transition: background-color 0.2s ease-in-out, padding-left 0.2s ease-in-out;
+}
+
+.middle {
+  transition: 0.2s ease;
+}
+
+.pilot-wrapper:active .middle,
+.pilot-wrapper.active .middle {
+  transition: 0.5s ease;
+}
+
+footer{
+  transition: 2s ease-in-out;
+}
+
+div.markdown {
+  transition: height 0.5s ease-in-out;
+}
