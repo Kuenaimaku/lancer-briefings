@@ -1,9 +1,7 @@
 <template>
-		<div class="section-content-container">
-			<div class="person-list-container">
-				<Person v-for="item in this.npcs" :key="item.name" :person="item" />
-			</div>
-		</div>
+	<div class="person-list-container">
+		<Person v-for="item in this.npcs" :key="item.name" :person="item" />
+	</div>
 </template>
 
 <script>

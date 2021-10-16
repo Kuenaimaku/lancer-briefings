@@ -1,8 +1,6 @@
 <template>
-	<div class="section-content-container">
-		<div class="glossary-container">
-			<Markdown class="markdown" :source="markdown" />
-		</div>
+	<div class="glossary-container">
+		<Markdown class="markdown" :source="markdown" />
 	</div>
 </template>
 

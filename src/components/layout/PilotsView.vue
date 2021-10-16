@@ -1,9 +1,7 @@
 <template>
-		<div class="section-content-container">
-			<div class="pilot-list-container">
-				<Pilot v-for="item in this.pilots" :key="item.callsign" :pilot="item" />
-			</div>
-		</div>
+	<div class="pilot-list-container">
+		<Pilot v-for="item in this.pilots" :key="item.callsign" :pilot="item" />
+	</div>
 </template>
 
 <script>

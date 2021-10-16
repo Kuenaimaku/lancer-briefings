@@ -503,10 +503,18 @@ section .section-header h1 {
   left: -2.75em;
 }
 .main-tab-button img {
-  padding: 10px 37px;
+  width: 50px;
+  height: 50px;
+  padding: 12px;
+  object-fit: cover;
+  margin-left: 28px;
 }
-.main-tab-button.active {
+.main-tab-button:hover {
   background-color: var(--highlight-hover);
+}
+
+.main-tab-button.active, .main-tab-button:active {
+  background-color: var(--highlight-active);
 }
 .middle {
   position: absolute;
@@ -540,12 +548,13 @@ section .section-header h1 {
   background-color: var(--highlight-active);
 }
 .o-modal > div:nth-child(2) {
-  position: absolute;
-  left: 50px;
-  top: 142px;
   display: flex;
   gap: 5em;
 }
+.pilot-modal{
+  position:relative;
+}
+
 .pilot-modal ::-webkit-scrollbar {
   width: 12px;
 }
@@ -587,7 +596,7 @@ section .section-header h1 {
   height: 52px;
   display: inline-block;
   position: relative;
-  left: -25px;
+  left: -10px;
   top: -38px;
 }
 .pilot-modal div.pilot {
@@ -717,12 +726,28 @@ section .section-header h1 {
   color: var(--text-pilot-code);
   flex-grow: 2;
 }
-.glossary-container {
+.glossary-container, .clocks-container {
   height: 666px;
   display: flex;
   -moz-column-gap: 0.5em;
   column-gap: 0.5em;
 }
+
+.clocks-container {
+  display: flex;
+  -moz-column-gap: 0.5em;
+  column-gap: 0.5em;
+}
+
+.clocks-list-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  column-gap: 1em;
+  overflow-y: scroll;
+  height: 666px;
+}
+
 .clock {
   display: flex;
   flex-direction: column;
@@ -753,9 +778,9 @@ section .section-header h1 {
   height: 200px;
 }
 footer {
-  position: absolute;
+  position: fixed;
   bottom: 0;
-  right: 50px;
+  right: 25px;
   opacity: 0.1;
   color: var(--text-location);
 }

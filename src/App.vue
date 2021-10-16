@@ -24,16 +24,14 @@
         />
         <div class="rhombus-back">&nbsp;</div>
       </div>
-      <transition name="fade" mode="out-in">
-        <PilotsView v-if="this.options.mainPanel === 'pilot'" :pilots="this.pilots" />
-        <NPCView v-else-if="this.options.mainPanel === 'npc'" :npcs="this.npcs" />
-        <GlossaryView v-else-if="this.options.mainPanel === 'glossary'" />
-        <div class="section-content-container" v-else-if="this.options.mainPanel === 'clock'">
-          <div class="glossary-container">
-            <Clock v-for="item in this.clocks" :clock="item" :key="item.name" />
-          </div>
-        </div>
-      </transition>
+      <div class="section-content-container">
+        <transition name="fade" mode="out-in">
+          <PilotsView v-if="this.options.mainPanel === 'pilot'" :pilots="this.pilots" />
+          <NPCView v-else-if="this.options.mainPanel === 'npc'" :npcs="this.npcs" />
+          <GlossaryView v-else-if="this.options.mainPanel === 'glossary'" />
+          <ClocksView v-else-if="this.options.mainPanel === 'clock'" :clocks="this.clocks" />
+        </transition>
+      </div>
     </section>
   </div>
   <svg
@@ -69,9 +67,9 @@ import MissionView from './components/layout/MissionView.vue';
 import EventsView from './components/layout/EventsView.vue';
 import PilotsView from './components/layout/PilotsView.vue';
 import NPCView from './components/layout/NPCView.vue';
+import ClocksView from './components/layout/ClocksView.vue';
 import GlossaryView from './components/layout/GlossaryView.vue';
 import TabButton from './components/TabButton.vue'
-import Clock from './components/Clock.vue'
 
 export default {
   components: {
@@ -82,8 +80,8 @@ export default {
     PilotsView,
     NPCView,
     GlossaryView,
+    ClocksView,
     TabButton,
-    Clock
   },
 
   data() {
@@ -95,11 +93,6 @@ export default {
         {
           "slug": "001",
           "name": "Bug-Hunt",
-          "status": "success"
-        },
-        {
-          "slug": "002",
-          "name": "Vigilant Gaze",
           "status": "start"
         },
       ],
@@ -187,7 +180,14 @@ export default {
           "value": 2,
           "max": 3,
         },
-
+        {
+          "name": "Player Project",
+          "description": "This is a description of a Player Project clock.",
+          "help": "Filling all the segments will grant Player a new power.",
+          "color": "#3CB043",
+          "value": 0,
+          "max": 5,
+        }
       ],
       "options": {
         "eventsMarkdownPerMission": true,
