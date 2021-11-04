@@ -895,6 +895,7 @@ div.markdown ol li {
 }
 .glossary-container .markdown {
   height: 666px;
+  border-bottom: none;
 }
 .glossary-container .markdown strong {
   text-transform: uppercase;
