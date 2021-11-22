@@ -98,6 +98,11 @@ export default {
           "name": "a bridge too far",
           "status": "start"
         },
+         {
+          "slug": "002",
+          "name": "Get Collard",
+          "status": "start"
+        },
       ],
       "pilots": [
         {
