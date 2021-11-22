@@ -101,44 +101,44 @@ export default {
       ],
       "pilots": [
         {
-          "callsign": "Jinzo",
-          "alias": "Shayan Arsenal",
-          "code": "462370be-bd0f-41c2-b667-cc75f3a59a96///NDL-C-DEEP-STATION//377308ad-ba23-410b-ae37-68a1fb5f8db4",
+          "callsign": "Outrigger",
+          "alias": "Pappy Bong",
+          "code": "3d6ca0e0-e73d-4f0c-b161-09a28535bf3b//274e70ac-e5c2-4756-a7b4-6b76b7415b57",
           "corpro": "GMS",
           "frame": "Everest",
-          "mech": "Type - Worst Beat"
+          "mech": "Augenblick"
         },
         {
-          "callsign": "Kal",
-          "alias": "Vier Flau",
-          "code": "7cd700cc-c990-48ed-892f-e5468de724c4///NDL-C-DEEP-STATION//a98c3e28-ad4a-4f89-bcd9-501464e960da",
+          "callsign": "Mouse",
+          "alias": "Gerry Thomas",
+          "code": "3d6ca0e0-e73d-4f0c-b161-09a28535bf3b//7c169109-15ea-4d65-8165-23a9994ff6ae",
           "corpro": "GMS",
           "frame": "Everest",
-          "mech": "Necrophile"
+          "mech": "Pea Shooter"
         },
         {
-          "callsign": "Starboard",
-          "alias": "Maria",
-          "code": "4be26ce9-923b-4069-b6c9-76437d4be455///NDL-C-DEEP-STATION//056940c6-8d55-4190-8e85-57caa043cb1a",
+          "callsign": "Mako",
+          "alias": "Raniero Kun",
+          "code": "3D6CA0E0-E73D-4F0C-B161-09A28535BF3B//5861FD53-F2CC-4C6A-BA98-6036EEE5DA25",
           "corpro": "GMS",
           "frame": "Everest",
-          "mech": "Scarlet Judicator"
+          "mech": "Judgemental Connotation"
         },
         {
-          "callsign": "Badlands",
-          "alias": "Marlene Gatsby",
-          "code": "98ca9616-044e-4f87-b89b-aae4eb3387ec///NDL-C-DEEP-STATION//6f572259-6946-41bf-931a-e0543709e892",
+          "callsign": "Badgers",
+          "alias": "Deke Rogers",
+          "code": "3d6ca0e0-e73d-4f0c-b161-09a28535bf3b//adadc250-dd0d-4fd3-b340-da828f044bb8",
           "corpro": "GMS",
-          "frame": "Everest",
+          "frame": "Ode to Truth",
           "mech": "Mayfly"
         },
         {
-          "callsign": "Compadre",
+          "callsign": "Tweek",
           "alias": 'Clint "CC" Cruz',
-          "code": "d1fdf62e-d81e-4e10-97c8-df3bc4860117///NDL-C-DEEP-STATION//5a4254aa-9fa2-42ca-a077-8f5bfd1e1ad3",
+          "code": "3d6ca0e0-e73d-4f0c-b161-09a28535bf3b//e43ead24-bb2b-4f61-9b32-4c895a15127e",
           "corpro": "GMS",
           "frame": "Everest",
-          "mech": "Rio Bravo"
+          "mech": "Monkey Wrench"
         },
       ],
       "header": {
