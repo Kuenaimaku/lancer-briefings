@@ -147,15 +147,15 @@ export default {
         },
       ],
       "header": {
-        "planet": "Hercynia",
+        "planet": "Lambda 02",
         "year": "5014u",
-        "system": "Ardennes-3",
-        "gate": "Atlas-Quanokrim",
-        "ring": "Atlas-Line",
-        "headerTitle": "Mirrorsmoke",
-        "headerSubtitle": "Mercenary Company",
-        "subheaderTitle": "Crisis Response",
-        "subheaderSubtitle": "Delta-Echo-Echo-Zulu",
+        "system": "Aeon-3",
+        "gate": "Aeon-Quanokrim",
+        "ring": "Aon-Line",
+        "headerTitle": "Fallen Star",
+        "headerSubtitle": "Lancer Company",
+        "subheaderTitle": "Assault Response",
+        "subheaderSubtitle": "Capture-extraction",
       },
       "options":{
         "eventsMarkdownPerMission": true
