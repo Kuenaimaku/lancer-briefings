@@ -89,14 +89,14 @@ export default {
 
   data() {
     return {
-      "mission_slug": "001",
+      "mission_slug": "002",
       "current_md": "",
       "events": "",
       "missions": [
         {
           "slug": "001",
           "name": "a bridge too far",
-          "status": "start"
+          "status": "success"
         },
          {
           "slug": "002",
