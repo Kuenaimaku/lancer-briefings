@@ -5,35 +5,35 @@
 /*-------------------------------------*/
 
 //Primary Colors
-$primary: rgba(125, 187, 187, 1);
-$secondary: rgba(23, 29, 30, 0.8);
+$primary: rgba(153, 30, 42, 1);
+$secondary: rgba(255, 255, 255, 0.8);
 $highlight-hover: rgba(255, 255, 255, 0.3);
 $highlight-active: rgba(255, 255, 255, 0.1);
 
 //Primary Text
-$text-headers: rgba(0, 0, 0, 1);
-$text-location: rgba(255, 255, 255, 0.87);
+$text-headers: rgba(33, 33, 33, 1);
+$text-location: rgba(33, 33, 33, 0.87);
 
 //Location Information
 $location-separator: rgba(255, 255, 255, 0.24);
 
 //Mission Pane
-$text-mission-title: rgba(255, 255, 255, 0.67);
-$text-mission-status: rgba(255, 255, 255, 0.87);
+$text-mission-title: rgba(33, 33, 33, 0.67);
+$text-mission-status: rgba(33, 33, 33, 0.87);
 $mission-start: rgba(109, 109, 109, 1);
 $mission-partial: rgba(88, 34, 102, 1);
 $mission-success: rgba(34, 102, 98, 1);
 $mission-failure: rgba(176, 45, 45, 1);
 
 //Pilot Roster Text
-$text-pilot-header: rgba(255, 255, 255, 0.67);
-$text-pilot-value: rgba(255, 255, 255, 0.87);
-$text-pilot-code: rgba(255, 255, 255, 0.47);
+$text-pilot-header: rgba(33, 33, 33, 0.67);
+$text-pilot-value: rgba(33, 33, 33, 0.87);
+$text-pilot-code: rgba(33, 33, 33, 0.47);
 
 //Markdown (Current Assignment, Events Log, Pilot Biography)
-$text-markdown-p: rgba(255, 255, 255, 0.87);
-$text-markdown-h1: rgba(255, 255, 255, 0.67);
-$text-markdown-h2: rgba(255, 255, 255, 0.87);
+$text-markdown-p: rgba(33, 33, 33, 0.87);
+$text-markdown-h1: rgba(33, 33, 33, 0.67);
+$text-markdown-h2: rgba(33, 33, 33, 0.87);
 
 @import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@400;600;800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap");
@@ -125,7 +125,7 @@ header {
     font-size: 32px;
     margin: 0%;
     align-self: center;
-    font-family: "Big Shoulders Display", cursive;
+    font-family: "Titillium Web", cursive;
     font-weight: 800;
     text-transform: uppercase;
     letter-spacing: 0.15em;
@@ -135,7 +135,7 @@ header {
     font-size: 32px;
     margin: 0%;
     align-self: center;
-    font-family: "Big Shoulders Display", cursive;
+    font-family: "Titillium Web", cursive;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.12em;
@@ -146,7 +146,7 @@ header {
     font-size: 24px;
     margin: 0%;
     align-self: center;
-    font-family: "Big Shoulders Display", cursive;
+    font-family: "Titillium Web", cursive;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.08em;
@@ -233,7 +233,7 @@ div.location-info {
   h4 {
     margin: 0px;
     line-height: 1.5em;
-    font-family: "Raleway", sans-serif;
+    font-family: "Roboto", sans-serif;
     font-size: 10px;
     font-weight: 800;
     text-transform: uppercase;
@@ -243,7 +243,7 @@ div.location-info {
     font-size: 18px;
     margin: 0%;
     align-self: center;
-    font-family: "Big Shoulders Display", cursive;
+    font-family: "Titillium Web", cursive;
     font-weight: 800;
     text-transform: uppercase;
     letter-spacing: 0.1em;
@@ -318,7 +318,7 @@ section .section-header {
     font-size: 26px;
     margin: 0%;
     align-self: center;
-    font-family: "Big Shoulders Display", cursive;
+    font-family: "Titillium Web", cursive;
     font-weight: 800;
     text-transform: uppercase;
     letter-spacing: 0.1em;
@@ -340,7 +340,7 @@ section .section-header {
     margin: 0%;
     margin-bottom: 0.5em;
     align-self: center;
-    font-family: "Big Shoulders Display", cursive;
+    font-family: "Titillium Web", cursive;
     font-weight: 800;
     text-transform: uppercase;
     letter-spacing: 0.1em;
@@ -412,7 +412,7 @@ section .section-header {
     margin: 0px;
     margin-bottom: 0.25em;
     line-height: 1.5em;
-    font-family: "Raleway", sans-serif;
+    font-family: "Roboto", sans-serif;
     font-size: 10px;
     font-weight: 800;
     text-transform: uppercase;
@@ -424,7 +424,7 @@ section .section-header {
     font-size: 18px;
     margin: 0%;
     align-self: center;
-    font-family: "Big Shoulders Display", cursive;
+    font-family: "Titillium Web", cursive;
     font-weight: 800;
     text-transform: uppercase;
     letter-spacing: 0.1em;
@@ -528,7 +528,7 @@ section .section-header {
     margin: 0px;
     margin-bottom: 0.25em;
     line-height: 1.5em;
-    font-family: "Raleway", sans-serif;
+    font-family: "Roboto", sans-serif;
     font-size: 10px;
     font-weight: 800;
     text-transform: uppercase;
@@ -541,7 +541,7 @@ section .section-header {
     margin: 0%;
     margin-bottom: 0.25em;
     align-self: center;
-    font-family: "Big Shoulders Display", cursive;
+    font-family: "Titillium Web", cursive;
     font-weight: 800;
     text-transform: uppercase;
     letter-spacing: 0.1em;
@@ -641,7 +641,7 @@ section .section-header {
       font-size: 26px;
       margin: 0%;
       align-self: center;
-      font-family: "Big Shoulders Display", cursive;
+      font-family: "Titillium Web", cursive;
       font-weight: 800;
       text-transform: uppercase;
       letter-spacing: 0.1em;
@@ -774,7 +774,7 @@ div.markdown {
     margin: 0px;
     margin-bottom: 0.25em;
     line-height: 1.5em;
-    font-family: "Raleway", sans-serif;
+    font-family: "Roboto", sans-serif;
     font-size: 10px;
     font-weight: 800;
     text-transform: uppercase;
@@ -787,7 +787,7 @@ div.markdown {
     margin: 0%;
     margin-bottom: 1em;
     align-self: center;
-    font-family: "Big Shoulders Display", cursive;
+    font-family: "Titillium Web", cursive;
     font-weight: 800;
     text-transform: uppercase;
     letter-spacing: 0.1em;
