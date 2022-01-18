@@ -111,7 +111,7 @@ export default {
         {
           "callsign": "Sunrise",
           "alias": "Ren Shou Tomesch Lewton",
-          "code": "0f406ce1-c66d-439f-9e62-9031e2d33ed8//b36398ba-f73f-4bcb-a6ca-48588f993577//NDL-C-DEEP-STATION",
+          "code": "",
           "corpro": "GMS",
           "frame": "Everest",
           "mech": "A Profound Problem"
@@ -127,7 +127,7 @@ export default {
         {
           "callsign": "Pharaoh",
           "alias": 'Clarissa "Rissa" Pentecost',
-          "code": "ffe8fc8f-c855-48ae-a91c-725941a23073// 1c89218f-e841-490b-9524-462b77f79728//NDL-C-DEEP-STATION",
+          "code": "",
           "corpro": "GMS",
           "frame": "Sagarmatha",
           "mech": "Sarcophagus"
@@ -135,7 +135,7 @@ export default {
         {
           "callsign": "Strange Cargo",
           "alias": "Johannus Mammen-Dovenbarger",
-          "code": "e3c300f1-ab1b-4995-a396-07b0ed30fc2c//f0dddd96-7c89-4ff1-8712-a00fcc3be962//NDL-C-DEEP-STATION",
+          "code": "",
           "corpro": "GMS",
           "frame": "Sagarmatha",
           "mech": "OVER-SEASONED AND UNDER-COOKED"
