@@ -101,44 +101,52 @@ export default {
       ],
       "pilots": [
         {
-          "callsign": "Jinzo",
-          "alias": "Shayan Arsenal",
-          "code": "462370be-bd0f-41c2-b667-cc75f3a59a96///NDL-C-DEEP-STATION//377308ad-ba23-410b-ae37-68a1fb5f8db4",
+          "callsign": "Spectre",
+          "alias": "Adam Geist",
+          "code": "a485b10d-760b-44e2-8bce-643fe941c803//d5761423-3978-4e8d-8167-bfc72ffe80e3//NDL-C-DEEP-STATION",
           "corpro": "GMS",
           "frame": "Everest",
-          "mech": "Type - Worst Beat"
+          "mech": "Efficacious Grace"
         },
         {
-          "callsign": "Kal",
-          "alias": "Vier Flau",
-          "code": "7cd700cc-c990-48ed-892f-e5468de724c4///NDL-C-DEEP-STATION//a98c3e28-ad4a-4f89-bcd9-501464e960da",
+          "callsign": "Sunrise",
+          "alias": "Ren Shou Tomesch Lewton",
+          "code": "0f406ce1-c66d-439f-9e62-9031e2d33ed8//b36398ba-f73f-4bcb-a6ca-48588f993577//NDL-C-DEEP-STATION",
           "corpro": "GMS",
           "frame": "Everest",
-          "mech": "Necrophile"
+          "mech": "A Profound Problem"
         },
         {
-          "callsign": "Starboard",
-          "alias": "Maria",
-          "code": "4be26ce9-923b-4069-b6c9-76437d4be455///NDL-C-DEEP-STATION//056940c6-8d55-4190-8e85-57caa043cb1a",
+          "callsign": "Goose",
+          "alias": "Nick Bradshaw",
+          "code": "9dfab210-672d-4611-9191-1f0b597b15a1//d441fb56-2266-4051-9072-476c42690f56//NDL-C-DEEP-STATION",
           "corpro": "GMS",
-          "frame": "Everest",
-          "mech": "Scarlet Judicator"
+          "frame": "Sagarmatha",
+          "mech": "Space Cowboy"
         },
         {
-          "callsign": "Badlands",
-          "alias": "Marlene Gatsby",
-          "code": "98ca9616-044e-4f87-b89b-aae4eb3387ec///NDL-C-DEEP-STATION//6f572259-6946-41bf-931a-e0543709e892",
+          "callsign": "Pharaoh",
+          "alias": 'Clarissa "Rissa" Pentecost',
+          "code": "ffe8fc8f-c855-48ae-a91c-725941a23073// 1c89218f-e841-490b-9524-462b77f79728//NDL-C-DEEP-STATION",
           "corpro": "GMS",
-          "frame": "Everest",
-          "mech": "Mayfly"
+          "frame": "Sagarmatha",
+          "mech": "Sarcophagus"
         },
         {
-          "callsign": "Compadre",
-          "alias": 'Clint "CC" Cruz',
-          "code": "d1fdf62e-d81e-4e10-97c8-df3bc4860117///NDL-C-DEEP-STATION//5a4254aa-9fa2-42ca-a077-8f5bfd1e1ad3",
+          "callsign": "Strange Cargo",
+          "alias": "Johannus Mammen-Dovenbarger",
+          "code": "e3c300f1-ab1b-4995-a396-07b0ed30fc2c//f0dddd96-7c89-4ff1-8712-a00fcc3be962//NDL-C-DEEP-STATION",
+          "corpro": "GMS",
+          "frame": "Sagarmatha",
+          "mech": "OVER-SEASONED AND UNDER-COOKED"
+        },
+        {
+          "callsign": "Sandman",
+          "alias": "Jimothy Salads",
+          "code": "bd6f2e77-2eea-48c2-ab77-d0e70efed06f// 718275c4-a2f9-47c4-959f-b1d8cd2a196//NDL- C-DEEP-STATION",
           "corpro": "GMS",
           "frame": "Everest",
-          "mech": "Rio Bravo"
+          "mech": "Not In My Backyard"
         },
       ],
       "header": {
