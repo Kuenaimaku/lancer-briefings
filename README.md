@@ -1,7 +1,7 @@
-[![Netlify Status](https://api.netlify.com/api/v1/badges/55d0e9f5-8e0d-422e-a3d0-38a79ecf2413/deploy-status)](https://app.netlify.com/sites/lancer-briefings/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/d7c2b0b5-5f3a-4454-add0-603585c983b7/deploy-status)](https://app.netlify.com/sites/goofy-torvalds-72c12c/deploys)
 # Lancer Briefings
 
-**[Live Demo](https://lancer.kuenaimaku.com/)** (No Room for a Wallflower Spoilers)
+**[Live Demo](https://goofy-torvalds-72c12c.netlify.app/)** (No Room for a Wallflower Spoilers)
 
 Go over mission briefings within the LANCER Universe in style by showing your players a fully animated mission briefing screen, with a Mirrorsmoke Mercenary Company theme.
 
