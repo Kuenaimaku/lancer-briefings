@@ -163,7 +163,7 @@ export default {
         "headerTitle": "Union",
         "headerSubtitle": "Naval Department",
         "subheaderTitle": "Auxiliary Program",
-        "subheaderSubtitle": "Delta-Echo-Echo-Zulu",
+        "subheaderSubtitle": "Juliet-Kilo",
       },
       "options":{
         "eventsMarkdownPerMission": true
