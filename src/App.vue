@@ -134,8 +134,8 @@ export default {
           "alias": 'Clarissa "Rissa" Pentecost',
           "code": "",
           "corpro": "GMS",
-          "frame": "Sagarmatha",
-          "mech": "Sarcophagus"
+          "frame": "Everest",
+          "mech": "Sarcophagus MKII"
         },
         {
           "callsign": "Strange Cargo",
@@ -143,7 +143,7 @@ export default {
           "code": "",
           "corpro": "GMS",
           "frame": "Sagarmatha",
-          "mech": "OVER-SEASONED AND UNDER-COOKED"
+          "mech": "No Viable Alternative"
         },
         {
           "callsign": "Sandman",
