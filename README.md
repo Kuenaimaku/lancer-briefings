@@ -3,7 +3,7 @@
 
 **[Live Demo](https://goofy-torvalds-72c12c.netlify.app/)** (No Room for a Wallflower Spoilers)
 
-Go over mission briefings within the LANCER Universe in style by showing your players a fully animated mission briefing screen, with a Mirrorsmoke Mercenary Company theme.
+Go over mission briefings within the LANCER Universe in style by showing your players a fully animated mission briefing screen, with a Union Navy Auxiliary theme.
 
 ## Credits
 
