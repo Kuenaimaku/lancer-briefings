@@ -155,7 +155,7 @@ export default {
         "headerTitle": "Landmark",
         "headerSubtitle": "Colonial",
         "subheaderTitle": "Crisis Response Team",
-        "subheaderSubtitle": "Brave-Oscar-Oscar-Mike",
+        "subheaderSubtitle": "Bravo-Oscar-Oscar-Mike",
       },
       "options":{
         "eventsMarkdownPerMission": true
