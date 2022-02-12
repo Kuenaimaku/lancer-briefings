@@ -126,16 +126,16 @@ export default {
           "alias": "Nick Bradshaw",
           "code": "9dfab210-672d-4611-9191-1f0b597b15a1//d441fb56-2266-4051-9072-476c42690f56//NDL-C-DEEP-STATION",
           "corpro": "GMS",
-          "frame": "Sagarmatha",
-          "mech": "Space Cowboy"
+          "frame": "Everest",
+          "mech": "Atrocious Acts At Affordable Prices"
         },
         {
           "callsign": "Pharaoh",
           "alias": 'Clarissa "Rissa" Pentecost',
           "code": "",
           "corpro": "GMS",
-          "frame": "Sagarmatha",
-          "mech": "Sarcophagus"
+          "frame": "Everest",
+          "mech": "Sarcophagus MKII"
         },
         {
           "callsign": "Strange Cargo",
@@ -143,7 +143,7 @@ export default {
           "code": "",
           "corpro": "GMS",
           "frame": "Sagarmatha",
-          "mech": "OVER-SEASONED AND UNDER-COOKED"
+          "mech": "No Viable Alternative"
         },
         {
           "callsign": "Sandman",
@@ -151,7 +151,7 @@ export default {
           "code": "bd6f2e77-2eea-48c2-ab77-d0e70efed06f// 718275c4-a2f9-47c4-959f-b1d8cd2a196//NDL- C-DEEP-STATION",
           "corpro": "GMS",
           "frame": "Everest",
-          "mech": "Not In My Backyard"
+          "mech": "Not In My Backyard MKII"
         },
       ],
       "header": {
