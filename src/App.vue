@@ -155,7 +155,7 @@ export default {
         "headerTitle": "Landmark",
         "headerSubtitle": "Colonial",
         "subheaderTitle": "Crisis Response Team",
-        "subheaderSubtitle": "Bravo-Oscar-Oscar-Mike",
+        "subheaderSubtitle": "Chimera Corps",
       },
       "options":{
         "eventsMarkdownPerMission": true
