@@ -89,7 +89,7 @@ export default {
 
   data() {
     return {
-      "mission_slug": "001",
+      "mission_slug": "002",
       "current_md": "",
       "events": "",
       "missions": [
@@ -101,6 +101,11 @@ export default {
         {
           "slug": "001",
           "name": "Bug-Hunt",
+          "status": "success"
+        },
+        {
+          "slug": "002",
+          "name": "Vigilant Gaze",
           "status": "start"
         },
       ],
@@ -138,12 +143,12 @@ export default {
           "mech": "Full English Breakfast"
         },
         {
-          "callsign": "Nitro",
-          "alias": 'Hiro Kanashima',
+          "callsign": "Galahad",
+          "alias": 'Barry Suez',
           "code": "d1fdf62e-d81e-4e10-97c8-df3bc4860117///NDL-C-DEEP-STATION//5a4254aa-9fa2-42ca-a077-8f5bfd1e1ad3",
           "corpro": "GMS",
           "frame": "Everest",
-          "mech": "Chernobyl"
+          "mech": "The Squire"
         },
       ],
       "header": {
