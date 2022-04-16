@@ -175,8 +175,8 @@ export default {
 
 <style>
 #app {
-  width: 1902px;
-  height: 910px;
+  width: 1905px;
+  height: 924px;
   overflow: hidden !important;
   border-right: 1px solid #FF0;
   border-bottom: 1px solid #FF0;
