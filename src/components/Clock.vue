@@ -1,11 +1,34 @@
 <template>
-		<div class="clock">
-			<h1>{{$props.clock.name}}</h1>
-			<o-tooltip :label="$props.clock.help" position="bottom" size="large" multiline>
-			<DoughnutChart :chartData="testData" class="chart"/>
-			</o-tooltip>
-			<p>{{$props.clock.description}}</p>
+	<div class="clock-container" @click="toggleActive">
+		<div v-if="$props.clock.type == 'Story'" :class="$props.clock.type.toLowerCase()">
+			<div class="clock-header">
+				<h2 class="clock-subtitle">{{ $props.clock.type }} // {{ $props.clock.result }}</h2>
+				<h1 class="clock-title">{{ $props.clock.name }}</h1>
+			</div>
+			<div class="clock-body">
+				<div class="clock">
+					<DoughnutChart :chartData="testData" :options="options" class="chart" />
+				</div>
+				<div class="clock-summary">
+					{{ clock.description }}
+				</div>
+			</div>
 		</div>
+		<div v-if="$props.clock.type == 'Pilot'" :class="$props.clock.type.toLowerCase()">
+			<div class="clock-body">
+				<div class="clock">
+					<DoughnutChart :chartData="testData" :options="options" class="chart" />
+				</div>
+				<div class="clock-header">
+					<h2 class="clock-subtitle">{{ $props.clock.type }} // [CALLSIGN]</h2>
+					<h1 class="clock-title">{{ $props.clock.name }}</h1>
+				</div>
+			</div>
+			<div v-if="isActive" class="clock-summary">
+				{{ clock.description }}
+			</div>
+		</div>
+	</div>
 </template>
 
 <script lang="ts">
@@ -14,54 +37,59 @@ Chart.register(...registerables);
 
 Chart.defaults.plugins.tooltip.enabled = false;
 Chart.defaults.plugins.legend.display = false;
-Chart.defaults.animation = {delay: 100, duration: 1000, easing: 'easeInOutExpo', loop: false}
+Chart.defaults.animation = { delay: 100, duration: 1000, easing: 'easeInOutExpo', loop: false }
+Chart.defaults.plugins.filler
 
-import { computed, defineComponent, ref } from 'vue';
+import { computed, defineComponent, ref, reactive } from 'vue';
 import { DoughnutChart } from 'vue-chart-3';
 
 export default defineComponent({
-  name: 'Clock',
-  components: { DoughnutChart },
-	props:{
+	name: 'Clock',
+	components: { DoughnutChart },
+	props: {
 		clock: Object,
 	},
-  setup(props) {
+	setup(props) {
 
 		const dataArray = [];
-		const colorArray =[];
+		const colorArray = [];
 		for (let index = 0; index < props.clock.max; index++) {
 			dataArray.push(1);
-			
-			if(index < props.clock.value){
+
+			if (index < props.clock.value) {
 				colorArray.push(props.clock.color)
 			}
-			else{
+			else {
 				colorArray.push('#AAA')
 			}
 		}
+		const data = ref(dataArray);
 
-    const data = ref(dataArray);
-    const doughnutRef = ref();
+		const options = ref({
+			responsive: true,
+			cutout:"35%",
+			devicePixelRatio: 2
+		});
 
-    const options = ref({
-      responsive: true,
-    });
+		const testData = computed(() => ({
+			datasets: [
+				{
+					data: data.value,
+					backgroundColor: colorArray
+				},
+			],
+		}));
+		
+		const isActive = ref(false);
 
-    const testData = computed(() => ({
-      datasets: [
-        {
-          data: data.value,
-          backgroundColor: colorArray
-        },
-      ],
-    }));
+		function toggleActive(){
+			isActive.value = !isActive.value
+		}
 
-    return { testData, doughnutRef, options };
-  }
+		return { testData, options, isActive, toggleActive };
+	}
 });
 </script>
 
 <style type="scss">
-
-
 </style>

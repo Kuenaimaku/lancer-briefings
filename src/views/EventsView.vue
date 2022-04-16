@@ -5,7 +5,7 @@
         <h1>Events Log</h1>
       </div>
       <div class="section-content-container">
-        <Markdown :source="events" class="markdown" />
+				test
       </div>
     </section>
 </template>
@@ -19,10 +19,6 @@ export default {
 		Markdown
 	},
 	props: {
-		events: {
-			type: String,
-			required: true,
-		}
 	}
 }
 </script>

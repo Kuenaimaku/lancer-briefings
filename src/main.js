@@ -8,6 +8,9 @@ import '@/assets/styles/_reset.css'
 import '@/assets/styles/_base.css'
 import '@/assets/styles/_animations.css'
 
+import Router from './router'
+
 createApp(App)
+	.use(Router)
 	.use(Oruga)
 	.mount('#app')

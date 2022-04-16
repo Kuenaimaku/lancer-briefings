@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@400;600;800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;700&?family=Big+Shoulders+Display:wght@400;600;800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inconsolata&display=swap');
 
 :root {
@@ -39,9 +39,11 @@ header {
   height: 96px;
   display: flex;
   align-items: center;
+  position:relative;
 }
 
 .title {
+  z-index: 1;
   background-color: var(--primary-color);
   border-color: var(--primary-color);
   width: 700px;
@@ -105,11 +107,10 @@ header {
 
 #title-first-line {
   border-bottom: 1px solid #000;
-
 }
 
 .rhombus {
-  z-index: -1;
+  z-index: 0;
   transform: skew(-0.785398rad);
   background-color: var(--primary-color);
   border-color: var(--primary-color);
@@ -129,17 +130,25 @@ header {
   left: -2.5em;
 }
 
+.planet-location-container {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  right: 25px;
+}
+
 header video {
-  margin-left: 3.5%;
   width: 86px;
   height: 86px;
+  align-self: center;
 }
 
 div .location-info {
-  width: 550px;
   padding: 10px;
   margin-left: 20px;
   display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
   flex-direction: column;
   color: var(--text-location);
 }
@@ -151,7 +160,9 @@ div.location-info {
 
 .location-row {
   height: 40px;
+  width: 100%;
   display: flex;
+  flex-direction: row-reverse;
 }
 
 .location-row h4 {
@@ -179,7 +190,7 @@ div.location-info {
 }
 
 .location-row #planet {
-  width: 345px;
+  flex-grow: 1;
 }
 
 .location-row #year {
@@ -196,6 +207,68 @@ div.location-info {
 .location-row #ring {
   border-left: 1px solid var(--highlight-hover);
   padding-right: 0px;
+}
+
+.sidebar-page {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
+.sidebar-layout {
+  display: flex;
+  flex-direction: row;
+  min-height: 100%;
+}
+
+.o-side__content {
+  background-color: var(--primary-color);
+  height: 100%;
+  width: 90px;
+  padding-right: 0.5em;
+  padding-top: 1em;
+  text-align:center;
+}
+
+.sidebar-layout img{
+  width:48px;
+  height:48px;
+}
+
+.sidebar-layout a, .sidebar-layout a:visited{
+  font-family: 'Roboto', sans-serif;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    font-size: 12px;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1em;
+    text-decoration: none;
+    color: var(--text-headers)
+}
+
+.sidebar-layout a.router-link-exact-active{
+  font-family: 'Roboto', sans-serif;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    font-size: 12px;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: white;
+    margin-bottom: 1em;
+    text-decoration: none;
+}
+
+.clipped-bottom-right {
+  clip-path: polygon(0 0,calc(100% - 52px) 0,100% 100%,0% 100%);
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% calc(100% - 12px), calc(100% - 12px) 100%, 0 100%);
 }
 
 #missions,
@@ -220,6 +293,12 @@ div.location-info {
   animation-delay: 2.8s;
 }
 
+div#router-view-container{
+  position:absolute;
+  top:95px;
+  left:90px;
+}
+
 div .content-container {
   display: flex;
   flex-direction: row;
@@ -229,12 +308,8 @@ section.section-container {
   display: flex;
   flex-direction: column;
   margin: 50px 30px;
-  width: 450px;
+  width: 393px;
   height: 714px;
-}
-
-section.section-container:last-child {
-  width: 800px;
 }
 
 section .section-header {
@@ -513,7 +588,8 @@ section .section-header h1 {
   background-color: var(--highlight-hover);
 }
 
-.main-tab-button.active, .main-tab-button:active {
+.main-tab-button.active,
+.main-tab-button:active {
   background-color: var(--highlight-active);
 }
 .middle {
@@ -551,8 +627,8 @@ section .section-header h1 {
   display: flex;
   gap: 5em;
 }
-.pilot-modal{
-  position:relative;
+.pilot-modal {
+  position: relative;
 }
 
 .pilot-modal ::-webkit-scrollbar {
@@ -649,7 +725,7 @@ section .section-header h1 {
   top: 0;
   background-color: rgba(10, 10, 10, 0.7);
 }
-.o-tip__arrow{
+.o-tip__arrow {
   color: var(--primary-color);
 }
 .o-tip__content {
@@ -661,7 +737,7 @@ section .section-header h1 {
   padding: 0.5em;
 }
 
-.clock .o-tip__content{
+.clock .o-tip__content {
   width: 200px;
 }
 
@@ -726,12 +802,6 @@ section .section-header h1 {
   color: var(--text-pilot-code);
   flex-grow: 2;
 }
-.glossary-container, .clocks-container {
-  height: 666px;
-  display: flex;
-  -moz-column-gap: 0.5em;
-  column-gap: 0.5em;
-}
 
 .clocks-container {
   display: flex;
@@ -741,42 +811,81 @@ section .section-header h1 {
 
 .clocks-list-container {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  column-gap: 1em;
+  flex-direction: column;
   overflow-y: scroll;
-  height: 666px;
+  height: 665px;
 }
 
-.clock {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  row-gap: 0.5em;
+.clock-container{
+  width:100%;
   padding: 1em;
-  max-width: 250px;
+  border-bottom: 1px solid var(--primary-color)
 }
-.clock h1 {
+
+.pilot .clock-header{
+  margin-left: 0.5em;
+  align-self:middle
+}
+
+.clock-body {
+  display:flex;
+  flex-direction:row;
+  row-gap: 10px;
+  margin: 1em auto;
+}
+
+.pilot .clock-body {
+  margin: 0em auto;
+}
+
+.story .clock {
+  width: calc(100%/3)
+}
+
+.pilot .clock {
+  width: calc(100%/7)
+}
+
+.chart{
+  width: 100%;
+  height: 100%;
+  padding: 5px;
+}
+
+.clock-header h1.clock-title {
   font-size: 18px;
   margin: 0%;
   color: var(--text-location);
-  font-family: 'Big Shoulders Display', cursive;
-  font-weight: 800;
+  font-family: 'Titillium Web', cursive;
+  font-weight: bold;
   text-transform: uppercase;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.5px;
 }
-.clock p {
+
+.clock-header h2.clock-subtitle {
+  font-size: 12px;
+  margin: 0%;
+  line-height:1.5em;
+  color: var(--text-location);
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.clock-summary {
   font-family: 'Titillium Web', cursive;
   font-weight: 400;
   color: var(--text-markdown-p);
   margin: 0.2em;
-  text-align: justify;
+  text-align: left;
+
 }
-.chart {
-  width: 200px;
-  height: 200px;
+
+.story .clock-summary {
+  width: calc(100%/3 * 2)
 }
+
 footer {
   position: fixed;
   bottom: 0;

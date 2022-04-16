@@ -1,38 +1,8 @@
 <template>
   <Header :header="this.header" />
-  <div class="content-container">
-    <MissionView
-      :missions="this.missions"
-      :missionMarkdown="this.current_md"
-      :selected="this.mission_slug"
-      v-on:missionSelected="handleMissionSelected"
-    />
-
-    <EventsView :events="this.events" />
-    <section class="section-container" id="main-tab">
-      <div class="main-tab-header" style="height:52px; overflow:hidden;">
-        <div class="section-header clipped-medium-backward-pilot">
-          <img :src="mainTabIcon" />
-          <h1>{{ mainTabTitle }}</h1>
-        </div>
-        <TabButton
-          v-for="item in this.options.panelOptions"
-          :name="item"
-          :hidden="item === this.options.mainPanel"
-          :key="item"
-          @click="selectMainPanel(item)"
-        />
-        <div class="rhombus-back">&nbsp;</div>
-      </div>
-      <div class="section-content-container">
-        <transition name="fade" mode="out-in">
-          <PilotsView v-if="this.options.mainPanel === 'pilot'" :pilots="this.pilots" />
-          <NPCView v-else-if="this.options.mainPanel === 'npc'" :npcs="this.npcs" />
-          <GlossaryView v-else-if="this.options.mainPanel === 'glossary'" />
-          <ClocksView v-else-if="this.options.mainPanel === 'clock'" :clocks="this.clocks" />
-        </transition>
-      </div>
-    </section>
+  <Sidebar/>
+  <div id="router-view-container">
+    <router-view/>
   </div>
   <svg
     style="visibility: hidden; position: absolute;"
@@ -62,26 +32,14 @@
 
 <script>
 import Header from './components/layout/Header.vue';
+import Sidebar from './components/layout/Sidebar.vue';
 import Footer from './components/layout/Footer.vue';
-import MissionView from './components/layout/MissionView.vue';
-import EventsView from './components/layout/EventsView.vue';
-import PilotsView from './components/layout/PilotsView.vue';
-import NPCView from './components/layout/NPCView.vue';
-import ClocksView from './components/layout/ClocksView.vue';
-import GlossaryView from './components/layout/GlossaryView.vue';
-import TabButton from './components/TabButton.vue'
 
 export default {
   components: {
     Header,
     Footer,
-    MissionView,
-    EventsView,
-    PilotsView,
-    NPCView,
-    GlossaryView,
-    ClocksView,
-    TabButton,
+    Sidebar
   },
 
   data() {
@@ -203,71 +161,24 @@ export default {
   },
 
   created() {
-    this.loadMissionMarkdown()
-    this.loadEventsMarkdown()
   },
 
-  computed: {
-    mainTabTitle() {
-      if (this.options.mainPanel === "pilot") return "Pilot Roster"
-      if (this.options.mainPanel === "npc") return "Persons Registry"
-      if (this.options.mainPanel === "glossary") return "Lexicon"
-      if (this.options.mainPanel === "clock") return "Clocks"
-    },
-    mainTabIcon() {
-      return `/icons/${this.options.mainPanel}-icon.svg`
-    }
+  mounted(){
+    this.$router.push('/status')
   },
-
   methods: {
-    handleMissionSelected(mission) {
-      this.mission_slug = mission.slug;
-      this.loadMissionMarkdown()
-      if (this.options.eventsMarkdownPerMission) {
-        this.loadEventsMarkdown();
-      }
-    },
-    loadMissionMarkdown() {
-      let self = this;
-      let md = `/missions/${self.mission_slug}.md`
-      var client = new XMLHttpRequest();
-      client.open('GET', md);
-      client.onreadystatechange = function () {
-        self.current_md = client.responseText;
-      }
-      client.send();
-    },
-    loadEventsMarkdown() {
-      let self = this;
-      let md = "";
-
-      if (self.options.eventsMarkdownPerMission) {
-        md = `/events/${self.mission_slug}.md`
-      }
-      else {
-        md = "/events.md"
-      }
-
-      var client = new XMLHttpRequest();
-      client.open('GET', md);
-      client.onreadystatechange = function () {
-        self.events = client.responseText;
-      }
-      client.send();
-    },
-    selectMainPanel(panel) {
-      this.options.mainPanel = panel;
-    }
   }
 
 }
 </script>
 
 
-<style lang="scss">
+<style>
 #app {
   width: 1902px;
   height: 910px;
-  overflow: hidden;
+  overflow: hidden !important;
+  border-right: 1px solid #FF0;
+  border-bottom: 1px solid #FF0;
 }
 </style>

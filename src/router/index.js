@@ -1,0 +1,49 @@
+import { createWebHistory, createRouter } from "vue-router";
+
+import Status from "@/views/StatusView.vue";
+import Pilots from "@/views/PilotsView.vue";
+import Events from "@/views/EventsView.vue";
+
+const DEFAULT_TITLE = 'MSMC |';
+const routes = [
+	{
+		path: "/status",
+		name: "Mission Status",
+		component: Status,
+		meta: { title: `${DEFAULT_TITLE} MISSION STATUS` }
+	},
+	{
+		path: "/pilots",
+		name: "Pilots",
+		component: Pilots,
+		meta: { title: `${DEFAULT_TITLE} PILOT ROSTER` }
+	},
+	{
+		path: "/events",
+		name: "Events",
+		component: Events,
+		meta: { title: `${DEFAULT_TITLE} EVENTS LOG` }
+	},
+];
+
+const router = createRouter({
+	history: createWebHistory(),
+	routes,
+	scrollBehavior(to, from, savedPosition) {
+		if (to.hash) {
+			return {
+				el: to.hash,
+				behavior: 'smooth',
+			}
+		}
+	},
+});
+
+router.beforeEach((to, from, next) => {
+    // Use next tick to handle router history correctly
+    // see: https://github.com/vuejs/vue-router/issues/914#issuecomment-384477609
+			document.title = `${to.meta.title}`;
+			next();
+})
+
+export default router;

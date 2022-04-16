@@ -7,11 +7,12 @@
     "serve": "vite preview"
   },
   "dependencies": {
-    "@oruga-ui/oruga-next": "^0.4.2",
-    "chart.js": "^3.5.1",
+    "@oruga-ui/oruga-next": "^0.5.5",
+    "chart.js": "^3.7.1",
     "vue": "^3.2.16",
-    "vue-chart-3": "^0.5.8",
-    "vue3-markdown-it": "^1.0.9"
+    "vue-chart-3": "^3.1.8",
+    "vue-router": "^4.0.9",
+    "vue3-markdown-it": "^1.0.10"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^1.9.2",
