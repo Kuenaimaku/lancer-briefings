@@ -357,21 +357,10 @@ section .section-header h1 {
   text-transform: uppercase;
   letter-spacing: 0.1em;
 }
-.section-content-container ::-webkit-scrollbar {
-  width: 12px;
-}
-.section-content-container ::-webkit-scrollbar-track {
-  background: none;
-}
-.section-content-container ::-webkit-scrollbar-thumb {
-  background-color: var(--primary-color);
-  border-radius: 20px;
-  border: 3px solid var(--secondary-color);
-  margin: 3px;
-}
+
 .mission-list-container {
   height: 180px;
-  overflow-y: scroll;
+  overflow-y: overlay;
 }
 .clipped-medium-backward {
   clip-path: polygon(0 0, calc(100% - 52px) 0, 100% 100%, 0% 100%);
@@ -492,7 +481,7 @@ section .section-header h1 {
 }
 .pilot-list-container {
   height: 666px;
-  overflow-y: scroll;
+  overflow-y: overlay;
 }
 #main-tab .pilot {
   display: flex;
@@ -631,18 +620,6 @@ section .section-header h1 {
   position: relative;
 }
 
-.pilot-modal ::-webkit-scrollbar {
-  width: 12px;
-}
-.pilot-modal ::-webkit-scrollbar-track {
-  background: none;
-}
-.pilot-modal ::-webkit-scrollbar-thumb {
-  background-color: var(--primary-color);
-  border-radius: 20px;
-  border: 3px solid var(--secondary-color);
-  margin: 3px;
-}
 .pilot-modal .pilot-header-container {
   display: flex;
 }
@@ -812,7 +789,7 @@ section .section-header h1 {
 .clocks-list-container {
   display: flex;
   flex-direction: column;
-  overflow-y: scroll;
+  overflow-y: overlay;
   height: 665px;
 }
 
@@ -884,6 +861,21 @@ section .section-header h1 {
 
 .story .clock-summary {
   width: calc(100%/3 * 2)
+}
+
+#app ::-webkit-scrollbar {
+  width: 12px;
+}
+
+#app {
+  scrollbar-width: thin;
+}
+
+#app ::-webkit-scrollbar-thumb {
+  background-color: var(--primary-color);
+  border-radius:6px;
+  border: 4px solid var(--secondary-color);
+  background-clip: content-box;
 }
 
 footer {
