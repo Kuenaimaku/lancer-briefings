@@ -1,8 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@400;600;800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;700&?family=Big+Shoulders+Display:wght@400;600;800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght400;500;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Inconsolata&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@400;600;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;700&?family=Big+Shoulders+Display:wght@400;600;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata&display=swap");
 
 :root {
   --primary-color: rgba(125, 187, 187, 1);
@@ -39,7 +39,7 @@ header {
   height: 96px;
   display: flex;
   align-items: center;
-  position:relative;
+  position: relative;
 }
 
 .title {
@@ -61,7 +61,7 @@ header {
   font-size: 32px;
   margin: 0%;
   align-self: center;
-  font-family: 'Big Shoulders Display', cursive;
+  font-family: "Big Shoulders Display", cursive;
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 0.15em;
@@ -70,7 +70,7 @@ header {
   font-size: 32px;
   margin: 0%;
   align-self: center;
-  font-family: 'Big Shoulders Display', cursive;
+  font-family: "Big Shoulders Display", cursive;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.12em;
@@ -80,7 +80,7 @@ header {
   font-size: 24px;
   margin: 0%;
   align-self: center;
-  font-family: 'Big Shoulders Display', cursive;
+  font-family: "Big Shoulders Display", cursive;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.08em;
@@ -89,7 +89,7 @@ header {
   font-size: 24px;
   margin: 0%;
   align-self: center;
-  font-family: 'Titillium Web', cursive;
+  font-family: "Titillium Web", cursive;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.02em;
@@ -168,7 +168,7 @@ div.location-info {
 .location-row h4 {
   margin: 0px;
   line-height: 1.5em;
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
   font-size: 10px;
   font-weight: 800;
   text-transform: uppercase;
@@ -179,7 +179,7 @@ div.location-info {
   font-size: 18px;
   margin: 0%;
   align-self: center;
-  font-family: 'Big Shoulders Display', cursive;
+  font-family: "Big Shoulders Display", cursive;
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 0.1em;
@@ -228,47 +228,54 @@ div.location-info {
   width: 90px;
   padding-right: 0.5em;
   padding-top: 1em;
-  text-align:center;
+  text-align: center;
 }
 
-.sidebar-layout img{
-  width:48px;
-  height:48px;
+.sidebar-layout img {
+  width: 48px;
+  height: 48px;
 }
 
-.sidebar-layout a, .sidebar-layout a:visited{
-  font-family: 'Roboto', sans-serif;
-    letter-spacing: 0.5px;
-    text-transform: uppercase;
-    font-size: 12px;
-    padding-top: 0.5em;
-    padding-bottom: 0.5em;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 1em;
-    text-decoration: none;
-    color: var(--text-headers)
+.sidebar-layout a,
+.sidebar-layout a:visited {
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  font-size: 12px;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1em;
+  text-decoration: none;
+  color: var(--text-headers);
 }
 
-.sidebar-layout a.router-link-exact-active{
-  font-family: 'Roboto', sans-serif;
-    letter-spacing: 0.5px;
-    text-transform: uppercase;
-    font-size: 12px;
-    padding-top: 0.5em;
-    padding-bottom: 0.5em;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background: white;
-    margin-bottom: 1em;
-    text-decoration: none;
+.sidebar-layout a.router-link-exact-active {
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  font-size: 12px;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: white;
+  margin-bottom: 1em;
+  text-decoration: none;
 }
 
 .clipped-bottom-right {
-  clip-path: polygon(0 0,calc(100% - 52px) 0,100% 100%,0% 100%);
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% calc(100% - 12px), calc(100% - 12px) 100%, 0 100%);
+  clip-path: polygon(0 0, calc(100% - 52px) 0, 100% 100%, 0% 100%);
+  -webkit-clip-path: polygon(
+    0 0,
+    100% 0,
+    100% calc(100% - 12px),
+    calc(100% - 12px) 100%,
+    0 100%
+  );
 }
 
 #missions,
@@ -293,10 +300,10 @@ div.location-info {
   animation-delay: 2.8s;
 }
 
-div#router-view-container{
-  position:absolute;
-  top:95px;
-  left:90px;
+div#router-view-container {
+  position: absolute;
+  top: 95px;
+  left: 90px;
 }
 
 div .content-container {
@@ -320,7 +327,7 @@ section.section-container#pilots {
   height: 714px;
 }
 
-section.section-container#pilots .rhombus-back{
+section.section-container#pilots .rhombus-back {
   top: -2em;
   left: -2em;
 }
@@ -344,7 +351,7 @@ section .section-header h1 {
   font-size: 26px;
   margin: 0%;
   align-self: center;
-  font-family: 'Big Shoulders Display', cursive;
+  font-family: "Big Shoulders Display", cursive;
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 0.1em;
@@ -365,7 +372,7 @@ section .section-header h1 {
   margin: 0%;
   margin-bottom: 0.5em;
   align-self: center;
-  font-family: 'Big Shoulders Display', cursive;
+  font-family: "Big Shoulders Display", cursive;
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 0.1em;
@@ -419,7 +426,7 @@ section .section-header h1 {
   margin-top: 0.5em;
   margin-bottom: 0.5em;
   padding-left: 0.75em;
-  font-family: 'Titillium Web', cursive;
+  font-family: "Titillium Web", cursive;
   font-weight: 400;
   display: flex;
   align-items: center;
@@ -432,7 +439,7 @@ section .section-header h1 {
   margin: 0px;
   margin-bottom: 0.25em;
   line-height: 1.5em;
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
   font-size: 10px;
   font-weight: 800;
   text-transform: uppercase;
@@ -443,7 +450,7 @@ section .section-header h1 {
   font-size: 18px;
   margin: 0%;
   align-self: center;
-  font-family: 'Big Shoulders Display', cursive;
+  font-family: "Big Shoulders Display", cursive;
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 0.1em;
@@ -454,7 +461,7 @@ section .section-header h1 {
   align-items: center;
   justify-content: flex-end;
   white-space: pre-line;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 12px;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -502,32 +509,32 @@ section .section-header h1 {
 
 .event {
   padding: 1em;
-  border-bottom: 1px solid var(--primary-color)
+  border-bottom: 1px solid var(--primary-color);
 }
 
 .event .name h1 {
-  line-height:1.5em;
-  font-size:12px;
-  font-family:'Roboto', sans-serif;
+  line-height: 1.5em;
+  font-size: 12px;
+  font-family: "Roboto", sans-serif;
   letter-spacing: 3px;
   color: var(--text-location);
   text-transform: uppercase;
 }
 
 .event .name h2 {
-  line-height:1.5em;
-  font-size:18px;
-  font-family:'Titillium Web', sans-serif;
+  line-height: 1.5em;
+  font-size: 18px;
+  font-family: "Titillium Web", sans-serif;
   letter-spacing: 0.5px;
   color: var(--primary-color);
   text-transform: uppercase;
 }
 
 .event .preview {
-  line-height:1.5em;
-  font-size:16px;
-  font-weight:400;
-  font-family:'Roboto', sans-serif;
+  line-height: 1.5em;
+  font-size: 16px;
+  font-weight: 400;
+  font-family: "Roboto", sans-serif;
   color: var(--text-location);
 }
 
@@ -538,13 +545,13 @@ section .section-header h1 {
 }
 
 .event a {
-  line-height:1.5em;
-  font-size:16px;
-  font-weight:600;
-  font-family:'Roboto', sans-serif;
+  line-height: 1.5em;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: "Roboto", sans-serif;
   color: var(--primary-color);
-  text-decoration:underline;
-  cursor:pointer;
+  text-decoration: underline;
+  cursor: pointer;
 }
 
 .pilot-list-container {
@@ -591,7 +598,7 @@ section .section-header h1 {
   margin: 0px;
   margin-bottom: 0.25em;
   line-height: 1.5em;
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
   font-size: 10px;
   font-weight: 800;
   text-transform: uppercase;
@@ -603,14 +610,14 @@ section .section-header h1 {
   margin: 0%;
   margin-bottom: 0.25em;
   align-self: center;
-  font-family: 'Big Shoulders Display', cursive;
+  font-family: "Big Shoulders Display", cursive;
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 0.1em;
   color: var(--text-pilot-value);
 }
 #main-tab .pilot .code {
-  font-family: 'Inconsolata', monospace;
+  font-family: "Inconsolata", monospace;
   font-weight: 400;
   line-height: 1.25em;
   font-size: 11px;
@@ -704,7 +711,7 @@ section .section-header h1 {
   font-size: 26px;
   margin: 0%;
   align-self: center;
-  font-family: 'Big Shoulders Display', cursive;
+  font-family: "Big Shoulders Display", cursive;
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 0.1em;
@@ -783,7 +790,7 @@ section .section-header h1 {
   font-size: 26px;
   margin: 0%;
   align-self: center;
-  font-family: 'Big Shoulders Display', cursive;
+  font-family: "Big Shoulders Display", cursive;
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 0.1em;
@@ -823,7 +830,7 @@ section .section-header h1 {
 
 .event-modal ::-webkit-scrollbar-thumb {
   background-color: var(--primary-color);
-  border-radius:6px;
+  border-radius: 6px;
   border: 4px solid var(--secondary-color);
   background-clip: content-box;
 }
@@ -840,7 +847,7 @@ section .section-header h1 {
   color: var(--primary-color);
 }
 .o-tip__content {
-  font-family: 'Inconsolata', monospace;
+  font-family: "Inconsolata", monospace;
   font-weight: 400;
   line-height: 1.25em;
   font-size: 11px;
@@ -887,7 +894,7 @@ section .section-header h1 {
   margin: 0px;
   margin-bottom: 0.25em;
   line-height: 1.5em;
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
   font-size: 10px;
   font-weight: 800;
   text-transform: uppercase;
@@ -899,14 +906,14 @@ section .section-header h1 {
   margin: 0%;
   margin-bottom: 0.25em;
   align-self: center;
-  font-family: 'Big Shoulders Display', cursive;
+  font-family: "Big Shoulders Display", cursive;
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 0.1em;
   color: var(--text-pilot-value);
 }
 .person .code {
-  font-family: 'Inconsolata', monospace;
+  font-family: "Inconsolata", monospace;
   font-weight: 400;
   line-height: 1.25em;
   font-size: 11px;
@@ -927,20 +934,20 @@ section .section-header h1 {
   height: 665px;
 }
 
-.clock-container{
-  width:100%;
+.clock-container {
+  width: 100%;
   padding: 1em;
-  border-bottom: 1px solid var(--primary-color)
+  border-bottom: 1px solid var(--primary-color);
 }
 
-.pilot .clock-header{
+.pilot .clock-header {
   margin-left: 0.5em;
-  flex-grow: 1
+  flex-grow: 1;
 }
 
 .clock-body {
-  display:flex;
-  flex-direction:row;
+  display: flex;
+  flex-direction: row;
   row-gap: 10px;
   margin: 1em auto;
 }
@@ -950,18 +957,18 @@ section .section-header h1 {
 }
 
 .story .clock {
-  width: calc(100%/3)
+  width: calc(100% / 3);
 }
 
 .pilot .clock {
-  width: calc(100%/7)
+  width: calc(100% / 7);
 }
 
 .clock-container .icon {
   color: var(--primary-color);
 }
 
-.chart{
+.chart {
   width: 100%;
   height: 100%;
   padding: 5px;
@@ -971,42 +978,41 @@ section .section-header h1 {
   font-size: 18px;
   margin: 0%;
   color: var(--text-location);
-  font-family: 'Titillium Web', cursive;
+  font-family: "Titillium Web", cursive;
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 0.5px;
 }
 
-.pilot .clock-header h1.clock-title{
-  max-width:252px;
+.pilot .clock-header h1.clock-title {
+  max-width: 252px;
 }
 
 .clock-header h2.clock-subtitle {
   font-size: 12px;
   margin: 0%;
-  line-height:1.5em;
+  line-height: 1.5em;
   color: var(--text-location);
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 3px;
 }
 
-.pilot .clock-header h2.clock-subtitle{
-  max-width:252px;
+.pilot .clock-header h2.clock-subtitle {
+  max-width: 252px;
 }
 
 .clock-summary {
-  font-family: 'Titillium Web', cursive;
+  font-family: "Titillium Web", cursive;
   font-weight: 400;
   color: var(--text-markdown-p);
   margin: 0.2em;
   text-align: left;
-
 }
 
 .story .clock-summary {
-  width: calc(100%/3 * 2)
+  width: calc(100% / 3 * 2);
 }
 
 #app ::-webkit-scrollbar {
@@ -1019,7 +1025,7 @@ section .section-header h1 {
 
 #app ::-webkit-scrollbar-thumb {
   background-color: var(--primary-color);
-  border-radius:6px;
+  border-radius: 6px;
   border: 4px solid var(--secondary-color);
   background-clip: content-box;
 }
@@ -1032,7 +1038,7 @@ footer {
   color: var(--text-location);
 }
 footer p {
-  font-family: 'Inconsolata', monospace;
+  font-family: "Inconsolata", monospace;
   font-weight: 400;
   line-height: 1.25em;
   font-size: 11px;
@@ -1040,7 +1046,7 @@ footer p {
   flex-grow: 2;
 }
 footer a {
-  font-family: 'Inconsolata', monospace;
+  font-family: "Inconsolata", monospace;
   font-weight: 400;
   line-height: 1.25em;
   font-size: 11px;
@@ -1055,7 +1061,7 @@ div.markdown {
   padding-right: 1em;
   font-size: 16px;
   margin: 0%;
-  font-family: 'Titillium Web', cursive;
+  font-family: "Titillium Web", cursive;
   font-weight: 400;
   color: var(--text-markdown-p);
   border-bottom: 1px solid var(--primary-color);
@@ -1075,7 +1081,7 @@ div.markdown h1 {
   margin: 0px;
   margin-bottom: 0.25em;
   line-height: 1.5em;
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
   font-size: 10px;
   font-weight: 800;
   text-transform: uppercase;
@@ -1087,7 +1093,7 @@ div.markdown h2 {
   margin: 0%;
   margin-bottom: 1em;
   align-self: center;
-  font-family: 'Big Shoulders Display', cursive;
+  font-family: "Big Shoulders Display", cursive;
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 0.1em;
@@ -1107,7 +1113,7 @@ div.markdown ul {
   -webkit-padding-start: 20px;
   padding-inline-start: 20px;
   margin-bottom: 1em;
-  list-style-image: url('../bullet.png');
+  list-style-image: url("../bullet.png");
 }
 div.markdown ol {
   display: block;

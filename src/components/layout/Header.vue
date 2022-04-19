@@ -15,10 +15,10 @@
     </div>
     <div class="rhombus">&nbsp;</div>
     <div class="planet-location-container">
-    <video autoplay muted loop width="90px" height="90px">
-      <source src="/planet.webm" type="video/webm" />
-    </video>
-    <div class="location-info">
+      <video autoplay muted loop width="90px" height="90px">
+        <source src="/planet.webm" type="video/webm" />
+      </video>
+      <div class="location-info">
         <div class="location-row" id="planet-year">
           <div id="year">
             <h4>Year</h4>
@@ -45,25 +45,19 @@
         </div>
       </div>
     </div>
-
   </header>
 </template>
 
 <script>
-
-
 export default {
-  components: {
-
-  },
+  components: {},
   props: {
     header: {
       type: Object,
       required: true,
-    }
-  }
-}
+    },
+  },
+};
 </script>
 
-<style lang="scss" scoped>
-</style>
+<style lang="scss" scoped></style>

@@ -61,7 +61,7 @@ header {
   column-gap: 1em;
 }
 
-.rhombus{
+.rhombus {
   transform: translateX(-5000%) skew(-0.785398rad);
   -webkit-animation: 0.75s ease-out 1 slideInFromLeftRhombus;
   animation: 0.75s ease-out 1 slideInFromLeftRhombus;
@@ -119,7 +119,7 @@ div.location-info {
   transition: 0.5s ease;
 }
 
-footer{
+footer {
   transition: 2s ease-in-out;
 }
 

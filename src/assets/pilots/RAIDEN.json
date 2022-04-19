@@ -1,395 +1,381 @@
 {
-	"id": "f0bb9f53-9606-4966-9538-75816f94d7f5",
-	"level": 3,
-	"callsign": "Rai-Den",
-	"name": "Galatea Sers",
-	"player_name": "",
-	"status": "Active",
-	"dead": false,
-	"text_appearance": "",
-	"notes": "",
-	"history": "",
-	"quirks": [],
-	"current_hp": 8,
-	"background": "MERCENARY",
-	"resistances": [],
-	"mechs": [
-		{
-			"id": "f2cc7a38-2cc9-4821-973c-38a2684a6354",
-			"name": "Snow Upon the Desert",
-			"notes": "",
-			"gm_note": "",
-			"frame": "mf_deaths_head",
-			"active": false,
-			"current_structure": 4,
-			"current_move": 5,
-			"boost": 0,
-			"current_hp": 14,
-			"overshield": 0,
-			"current_stress": 4,
-			"current_heat": 0,
-			"current_repairs": 3,
-			"current_overcharge": 0,
-			"current_core_energy": 1,
-			"statuses": [],
-			"conditions": [],
-			"resistances": [],
-			"reactions": [],
-			"burn": 0,
-			"destroyed": false,
-			"defeat": "",
-			"activations": 1,
-			"meltdown_imminent": false,
-			"reactor_destroyed": false,
-			"core_active": false,
-			"cc_ver": "ERR",
-			"portrait": "",
-			"cloud_portrait": "",
-			"loadouts": [
-				{
-					"id": "6f2f491d-d929-4f28-a798-16c0a3a708b6",
-					"name": "Primary",
-					"systems": [
-						{
-							"id": "ms_kinetic_compensator",
-							"uses": 0,
-							"destroyed": false,
-							"cascading": false
-						},
-						{
-							"id": "ms_comp_con_class_assistant_unit",
-							"uses": 0,
-							"destroyed": false,
-							"cascading": false
-						},
-						{
-							"id": "ms_pattern_a_smoke_charges",
-							"uses": 3,
-							"destroyed": false,
-							"cascading": false
-						},
-						{
-							"id": "ms_eva_module",
-							"uses": 0,
-							"destroyed": false,
-							"cascading": false
-						},
-						{
-							"id": "ms_manipulators",
-							"uses": 0,
-							"destroyed": false,
-							"cascading": false
-						}
-					],
-					"integratedSystems": [
-						{
-							"id": "ms_walking_armory_2",
-							"uses": 6,
-							"destroyed": false,
-							"cascading": false
-						}
-					],
-					"mounts": [
-						{
-							"mount_type": "Main/Aux",
-							"lock": false,
-							"slots": [
-								{
-									"size": "Main",
-									"weapon": {
-										"id": "mw_vulture_dmr",
-										"destroyed": false,
-										"cascading": false,
-										"loaded": true,
-										"mod": null,
-										"customDamageType": null,
-										"maxUseOverride": 0,
-										"uses": 0,
-										"selectedProfile": 0
-									}
-								},
-								{
-									"size": "Auxiliary",
-									"weapon": {
-										"id": "mw_pistol",
-										"destroyed": false,
-										"cascading": false,
-										"loaded": true,
-										"mod": null,
-										"customDamageType": null,
-										"maxUseOverride": 0,
-										"uses": 0,
-										"selectedProfile": 0
-									}
-								}
-							],
-							"extra": [],
-							"bonus_effects": [
-								"cb_overpower_caliber"
-							]
-						},
-						{
-							"mount_type": "Heavy",
-							"lock": false,
-							"slots": [
-								{
-									"size": "Heavy",
-									"weapon": {
-										"id": "mw_railgun",
-										"destroyed": false,
-										"cascading": false,
-										"loaded": true,
-										"mod": null,
-										"customDamageType": null,
-										"maxUseOverride": 0,
-										"uses": 0,
-										"selectedProfile": 0
-									}
-								}
-							],
-							"extra": [],
-							"bonus_effects": []
-						}
-					],
-					"integratedMounts": [],
-					"improved_armament": {
-						"mount_type": "Flex",
-						"lock": false,
-						"slots": [
-							{
-								"size": "Flex",
-								"weapon": null
-							}
-						],
-						"extra": [
-							{
-								"size": "Auxiliary",
-								"weapon": null
-							}
-						],
-						"bonus_effects": []
-					},
-					"integratedWeapon": {
-						"mount_type": "Aux",
-						"lock": false,
-						"slots": [
-							{
-								"size": "Auxiliary",
-								"weapon": null
-							}
-						],
-						"extra": [],
-						"bonus_effects": []
-					}
-				}
-			],
-			"active_loadout_index": 0
-		}
-	],
-	"cc_ver": "",
-	"special_equipment": {
-		"PilotArmor": [],
-		"PilotWeapons": [],
-		"PilotGear": [],
-		"Frames": [],
-		"MechWeapons": [],
-		"WeaponMods": [],
-		"MechSystems": [],
-		"SystemMods": []
-	},
-	"combat_history": {
-		"moves": 0,
-		"kills": 0,
-		"damage": 0,
-		"hp_damage": 0,
-		"structure_damage": 0,
-		"overshield": 0,
-		"heat_damage": 0,
-		"reactor_damage": 0,
-		"overcharge_uses": 0,
-		"core_uses": 0
-	},
-	"state": {
-		"active_mech_id": "",
-		"remote_mech_id": "",
-		"stage": "Narrative",
-		"turn": 1,
-		"actions": 2,
-		"braced": false,
-		"overcharged": false,
-		"prepare": false,
-		"bracedCooldown": false,
-		"redundant": false,
-		"stats": {
-			"moves": 0,
-			"kills": 0,
-			"damage": 0,
-			"hp_damage": 0,
-			"structure_damage": 0,
-			"overshield": 0,
-			"heat_damage": 0,
-			"reactor_damage": 0,
-			"overcharge_uses": 0,
-			"core_uses": 0
-		},
-		"deployed": []
-	},
-	"lastModified": "Tue Apr 19 2022 00:19:09 GMT-0500 (Central Daylight Time)",
-	"lastUpdate_cloud": "Tue Apr 19 2022 00:19:09 GMT-0500 (Central Daylight Time)",
-	"lastSync": "Tue Apr 19 2022 00:19:09 GMT-0500 (Central Daylight Time)",
-	"skills": [
-		{
-			"id": "sk_act_unseen_or_unheard",
-			"rank": 2
-		},
-		{
-			"id": "sk_get_somewhere_quickly",
-			"rank": 1
-		},
-		{
-			"id": "sk_spot",
-			"rank": 1
-		},
-		{
-			"id": "sk_stay_cool",
-			"rank": 2
-		},
-		{
-			"id": "sk_take_someone_out",
-			"rank": 1
-		}
-	],
-	"talents": [
-		{
-			"id": "t_crack_shot",
-			"rank": 2
-		},
-		{
-			"id": "t_heavy_gunner",
-			"rank": 2
-		},
-		{
-			"id": "t_walking_armory",
-			"rank": 2
-		}
-	],
-	"mechSkills": [
-		2,
-		1,
-		0,
-		2
-	],
-	"counter_data": [],
-	"custom_counters": [],
-	"core_bonuses": [
-		"cb_overpower_caliber"
-	],
-	"licenses": [
-		{
-			"id": "mf_deaths_head",
-			"rank": 3
-		}
-	],
-	"reserves": [],
-	"orgs": [],
-	"bondId": "ktb-bond-harlequin",
-	"xp": 0,
-	"stress": 0,
-	"isBroken": false,
-	"burdens": [
-		{
-			"id": "7a2a38a6-d2a7-428d-82d7-13806b254b5f",
-			"title": "New Burden",
-			"description": "",
-			"resolution": "",
-			"segments": 8,
-			"progress": 0
-		}
-	],
-	"bondPowers": [],
-	"powerSelections": 0,
-	"maxStress": 8,
-	"bondAnswers": [
-		"A deal you once made in a dream.",
-		"Your can swap your clothing’s coloration, material, fit, cut, and type completely when you enter any scene."
-	],
-	"majorIdeal": "I expressed my heritage, background, or beliefs through my actions.",
-	"minorIdeal": "I struggled against or humiliated the powerful.",
-	"clocks": [],
-	"group": "",
-	"sort_index": -1,
-	"portrait": "",
-	"cloud_portrait": "",
-	"loadout": {
-		"id": "78e98f17-8922-4b91-be2a-c720298c04fa",
-		"name": "Primary",
-		"armor": [
-			{
-				"id": "pg_mobility_hardsuit",
-				"destroyed": false,
-				"uses": 0,
-				"cascading": false,
-				"flavorName": "MOBILITY HARDSUIT",
-				"flavorDescription": "These hardsuits have integrated flight systems, allowing pilots to fly when they move or Boost. Flying pilots must end their turn on the ground (or another surface) or begin falling.",
-				"customDamageType": null
-			}
-		],
-		"weapons": [
-			{
-				"id": "pg_heavy_signature",
-				"destroyed": false,
-				"uses": 0,
-				"cascading": false,
-				"flavorName": "HEAVY SIGNATURE",
-				"flavorDescription": "Heavy signature weapons are missile tubes, heavy lasers, light machine gun, or exotic rifles.",
-				"customDamageType": null
-			},
-			{
-				"id": "pg_light_signature",
-				"destroyed": false,
-				"uses": 0,
-				"cascading": false,
-				"flavorName": "LIGHT SIGNATURE",
-				"flavorDescription": "Light signature weapons might be oversized revolvers, braces of pistols, and submachine guns.",
-				"customDamageType": null
-			}
-		],
-		"gear": [
-			{
-				"id": "pg_infoskin",
-				"destroyed": false,
-				"uses": 0,
-				"cascading": false,
-				"flavorName": "INFOSKIN",
-				"flavorDescription": "A reactive, synthetic polymer with advanced qualities, infoskin bonds quickly to real skin and hair. Once applied, it responds to electronic signals delivered by linked software, rapidly changing its color and texture – even contorting and distorting its form – allowing wearers to make minor changes to their appearance. With infoskin, it’s a simple matter to alter facial features, hair color, or makeup patterns.",
-				"customDamageType": null
-			},
-			{
-				"id": "pg_omnihook",
-				"destroyed": false,
-				"uses": 0,
-				"cascading": false,
-				"flavorName": "OMNIHOOK",
-				"flavorDescription": "A portable – if bulky – omninet terminal that allows for communication, data transfer, and limited hot-spotting. Omnihooks are extremely valuable, although most mech squads have at least one. Tuning an omnihook requires a high level of skill, so they are usually mounted or carried by designated operators.",
-				"customDamageType": null
-			},
-			{
-				"id": "pg_smart_scope",
-				"destroyed": false,
-				"uses": 0,
-				"cascading": false,
-				"flavorName": "SMART SCOPE",
-				"flavorDescription": "A powerful electronic scope that provides high-resolution magnification up to two miles, and automatically adjusts its reticle for wind, gravity, and pressure. Smart scopes can project their field of vision and all data to the HUD of any networked user. They can also pair with other thermal, optical, or simulated-vision devices to further enhance targeting.",
-				"customDamageType": null
-			}
-		],
-		"extendedWeapons": [
-			null
-		],
-		"extendedGear": [
-			null,
-			null
-		]
-	},
-	"brews": []
+  "id": "f0bb9f53-9606-4966-9538-75816f94d7f5",
+  "level": 3,
+  "callsign": "Rai-Den",
+  "name": "Galatea Sers",
+  "player_name": "",
+  "status": "Active",
+  "dead": false,
+  "text_appearance": "",
+  "notes": "",
+  "history": "",
+  "quirks": [],
+  "current_hp": 8,
+  "background": "MERCENARY",
+  "resistances": [],
+  "mechs": [
+    {
+      "id": "f2cc7a38-2cc9-4821-973c-38a2684a6354",
+      "name": "Snow Upon the Desert",
+      "notes": "",
+      "gm_note": "",
+      "frame": "mf_deaths_head",
+      "active": false,
+      "current_structure": 4,
+      "current_move": 5,
+      "boost": 0,
+      "current_hp": 14,
+      "overshield": 0,
+      "current_stress": 4,
+      "current_heat": 0,
+      "current_repairs": 3,
+      "current_overcharge": 0,
+      "current_core_energy": 1,
+      "statuses": [],
+      "conditions": [],
+      "resistances": [],
+      "reactions": [],
+      "burn": 0,
+      "destroyed": false,
+      "defeat": "",
+      "activations": 1,
+      "meltdown_imminent": false,
+      "reactor_destroyed": false,
+      "core_active": false,
+      "cc_ver": "ERR",
+      "portrait": "",
+      "cloud_portrait": "",
+      "loadouts": [
+        {
+          "id": "6f2f491d-d929-4f28-a798-16c0a3a708b6",
+          "name": "Primary",
+          "systems": [
+            {
+              "id": "ms_kinetic_compensator",
+              "uses": 0,
+              "destroyed": false,
+              "cascading": false
+            },
+            {
+              "id": "ms_comp_con_class_assistant_unit",
+              "uses": 0,
+              "destroyed": false,
+              "cascading": false
+            },
+            {
+              "id": "ms_pattern_a_smoke_charges",
+              "uses": 3,
+              "destroyed": false,
+              "cascading": false
+            },
+            {
+              "id": "ms_eva_module",
+              "uses": 0,
+              "destroyed": false,
+              "cascading": false
+            },
+            {
+              "id": "ms_manipulators",
+              "uses": 0,
+              "destroyed": false,
+              "cascading": false
+            }
+          ],
+          "integratedSystems": [
+            {
+              "id": "ms_walking_armory_2",
+              "uses": 6,
+              "destroyed": false,
+              "cascading": false
+            }
+          ],
+          "mounts": [
+            {
+              "mount_type": "Main/Aux",
+              "lock": false,
+              "slots": [
+                {
+                  "size": "Main",
+                  "weapon": {
+                    "id": "mw_vulture_dmr",
+                    "destroyed": false,
+                    "cascading": false,
+                    "loaded": true,
+                    "mod": null,
+                    "customDamageType": null,
+                    "maxUseOverride": 0,
+                    "uses": 0,
+                    "selectedProfile": 0
+                  }
+                },
+                {
+                  "size": "Auxiliary",
+                  "weapon": {
+                    "id": "mw_pistol",
+                    "destroyed": false,
+                    "cascading": false,
+                    "loaded": true,
+                    "mod": null,
+                    "customDamageType": null,
+                    "maxUseOverride": 0,
+                    "uses": 0,
+                    "selectedProfile": 0
+                  }
+                }
+              ],
+              "extra": [],
+              "bonus_effects": ["cb_overpower_caliber"]
+            },
+            {
+              "mount_type": "Heavy",
+              "lock": false,
+              "slots": [
+                {
+                  "size": "Heavy",
+                  "weapon": {
+                    "id": "mw_railgun",
+                    "destroyed": false,
+                    "cascading": false,
+                    "loaded": true,
+                    "mod": null,
+                    "customDamageType": null,
+                    "maxUseOverride": 0,
+                    "uses": 0,
+                    "selectedProfile": 0
+                  }
+                }
+              ],
+              "extra": [],
+              "bonus_effects": []
+            }
+          ],
+          "integratedMounts": [],
+          "improved_armament": {
+            "mount_type": "Flex",
+            "lock": false,
+            "slots": [
+              {
+                "size": "Flex",
+                "weapon": null
+              }
+            ],
+            "extra": [
+              {
+                "size": "Auxiliary",
+                "weapon": null
+              }
+            ],
+            "bonus_effects": []
+          },
+          "integratedWeapon": {
+            "mount_type": "Aux",
+            "lock": false,
+            "slots": [
+              {
+                "size": "Auxiliary",
+                "weapon": null
+              }
+            ],
+            "extra": [],
+            "bonus_effects": []
+          }
+        }
+      ],
+      "active_loadout_index": 0
+    }
+  ],
+  "cc_ver": "",
+  "special_equipment": {
+    "PilotArmor": [],
+    "PilotWeapons": [],
+    "PilotGear": [],
+    "Frames": [],
+    "MechWeapons": [],
+    "WeaponMods": [],
+    "MechSystems": [],
+    "SystemMods": []
+  },
+  "combat_history": {
+    "moves": 0,
+    "kills": 0,
+    "damage": 0,
+    "hp_damage": 0,
+    "structure_damage": 0,
+    "overshield": 0,
+    "heat_damage": 0,
+    "reactor_damage": 0,
+    "overcharge_uses": 0,
+    "core_uses": 0
+  },
+  "state": {
+    "active_mech_id": "",
+    "remote_mech_id": "",
+    "stage": "Narrative",
+    "turn": 1,
+    "actions": 2,
+    "braced": false,
+    "overcharged": false,
+    "prepare": false,
+    "bracedCooldown": false,
+    "redundant": false,
+    "stats": {
+      "moves": 0,
+      "kills": 0,
+      "damage": 0,
+      "hp_damage": 0,
+      "structure_damage": 0,
+      "overshield": 0,
+      "heat_damage": 0,
+      "reactor_damage": 0,
+      "overcharge_uses": 0,
+      "core_uses": 0
+    },
+    "deployed": []
+  },
+  "lastModified": "Tue Apr 19 2022 00:19:09 GMT-0500 (Central Daylight Time)",
+  "lastUpdate_cloud": "Tue Apr 19 2022 00:19:09 GMT-0500 (Central Daylight Time)",
+  "lastSync": "Tue Apr 19 2022 00:19:09 GMT-0500 (Central Daylight Time)",
+  "skills": [
+    {
+      "id": "sk_act_unseen_or_unheard",
+      "rank": 2
+    },
+    {
+      "id": "sk_get_somewhere_quickly",
+      "rank": 1
+    },
+    {
+      "id": "sk_spot",
+      "rank": 1
+    },
+    {
+      "id": "sk_stay_cool",
+      "rank": 2
+    },
+    {
+      "id": "sk_take_someone_out",
+      "rank": 1
+    }
+  ],
+  "talents": [
+    {
+      "id": "t_crack_shot",
+      "rank": 2
+    },
+    {
+      "id": "t_heavy_gunner",
+      "rank": 2
+    },
+    {
+      "id": "t_walking_armory",
+      "rank": 2
+    }
+  ],
+  "mechSkills": [2, 1, 0, 2],
+  "counter_data": [],
+  "custom_counters": [],
+  "core_bonuses": ["cb_overpower_caliber"],
+  "licenses": [
+    {
+      "id": "mf_deaths_head",
+      "rank": 3
+    }
+  ],
+  "reserves": [],
+  "orgs": [],
+  "bondId": "ktb-bond-harlequin",
+  "xp": 0,
+  "stress": 0,
+  "isBroken": false,
+  "burdens": [
+    {
+      "id": "7a2a38a6-d2a7-428d-82d7-13806b254b5f",
+      "title": "New Burden",
+      "description": "",
+      "resolution": "",
+      "segments": 8,
+      "progress": 0
+    }
+  ],
+  "bondPowers": [],
+  "powerSelections": 0,
+  "maxStress": 8,
+  "bondAnswers": [
+    "A deal you once made in a dream.",
+    "Your can swap your clothing’s coloration, material, fit, cut, and type completely when you enter any scene."
+  ],
+  "majorIdeal": "I expressed my heritage, background, or beliefs through my actions.",
+  "minorIdeal": "I struggled against or humiliated the powerful.",
+  "clocks": [],
+  "group": "",
+  "sort_index": -1,
+  "portrait": "",
+  "cloud_portrait": "",
+  "loadout": {
+    "id": "78e98f17-8922-4b91-be2a-c720298c04fa",
+    "name": "Primary",
+    "armor": [
+      {
+        "id": "pg_mobility_hardsuit",
+        "destroyed": false,
+        "uses": 0,
+        "cascading": false,
+        "flavorName": "MOBILITY HARDSUIT",
+        "flavorDescription": "These hardsuits have integrated flight systems, allowing pilots to fly when they move or Boost. Flying pilots must end their turn on the ground (or another surface) or begin falling.",
+        "customDamageType": null
+      }
+    ],
+    "weapons": [
+      {
+        "id": "pg_heavy_signature",
+        "destroyed": false,
+        "uses": 0,
+        "cascading": false,
+        "flavorName": "HEAVY SIGNATURE",
+        "flavorDescription": "Heavy signature weapons are missile tubes, heavy lasers, light machine gun, or exotic rifles.",
+        "customDamageType": null
+      },
+      {
+        "id": "pg_light_signature",
+        "destroyed": false,
+        "uses": 0,
+        "cascading": false,
+        "flavorName": "LIGHT SIGNATURE",
+        "flavorDescription": "Light signature weapons might be oversized revolvers, braces of pistols, and submachine guns.",
+        "customDamageType": null
+      }
+    ],
+    "gear": [
+      {
+        "id": "pg_infoskin",
+        "destroyed": false,
+        "uses": 0,
+        "cascading": false,
+        "flavorName": "INFOSKIN",
+        "flavorDescription": "A reactive, synthetic polymer with advanced qualities, infoskin bonds quickly to real skin and hair. Once applied, it responds to electronic signals delivered by linked software, rapidly changing its color and texture – even contorting and distorting its form – allowing wearers to make minor changes to their appearance. With infoskin, it’s a simple matter to alter facial features, hair color, or makeup patterns.",
+        "customDamageType": null
+      },
+      {
+        "id": "pg_omnihook",
+        "destroyed": false,
+        "uses": 0,
+        "cascading": false,
+        "flavorName": "OMNIHOOK",
+        "flavorDescription": "A portable – if bulky – omninet terminal that allows for communication, data transfer, and limited hot-spotting. Omnihooks are extremely valuable, although most mech squads have at least one. Tuning an omnihook requires a high level of skill, so they are usually mounted or carried by designated operators.",
+        "customDamageType": null
+      },
+      {
+        "id": "pg_smart_scope",
+        "destroyed": false,
+        "uses": 0,
+        "cascading": false,
+        "flavorName": "SMART SCOPE",
+        "flavorDescription": "A powerful electronic scope that provides high-resolution magnification up to two miles, and automatically adjusts its reticle for wind, gravity, and pressure. Smart scopes can project their field of vision and all data to the HUD of any networked user. They can also pair with other thermal, optical, or simulated-vision devices to further enhance targeting.",
+        "customDamageType": null
+      }
+    ],
+    "extendedWeapons": [null],
+    "extendedGear": [null, null]
+  },
+  "brews": []
 }
