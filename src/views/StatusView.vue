@@ -130,10 +130,10 @@ export default {
       for (const path in files) {
         let mission = {};
         const content = files[path];
-        mission['slug'] = content.split('\r\n')[0];
-        mission['name'] = content.split('\r\n')[1];
-        mission['status'] = content.split('\r\n')[2];
-        mission['content'] = content.split('\r\n').splice(3).join('\n');
+        mission['slug'] = content.split('\n')[0];
+        mission['name'] = content.split('\n')[1];
+        mission['status'] = content.split('\n')[2];
+        mission['content'] = content.split('\n').splice(3).join('\n');
         this.missions.push(mission);
       }
     },
@@ -141,11 +141,11 @@ export default {
       for (const path in files) {
         let event = {};
         const content = files[path];
-        event['title'] = content.split('\r\n')[0];
-        event['location'] = content.split('\r\n')[1];
-        event['time'] = content.split('\r\n')[2];
-        event['thumbnail'] = content.split('\r\n')[3];
-        event['content'] = content.split('\r\n').splice(4).join('\n');
+        event['title'] = content.split('\n')[0];
+        event['location'] = content.split('\n')[1];
+        event['time'] = content.split('\n')[2];
+        event['thumbnail'] = content.split('\n')[3];
+        event['content'] = content.split('\n').splice(4).join('\n');
         this.events.push(event);
       }
     },
