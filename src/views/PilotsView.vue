@@ -9,7 +9,7 @@
     </div>
     <div class="section-content-container">
       <div class="pilot-list-container">
-        {{ pilots }}
+        <Pilot v-for="item in this.pilots" :key="item.callsign" :pilot="item" />
       </div>
     </div>
   </section>
@@ -17,10 +17,12 @@
 
 <script>
 import Markdown from "vue3-markdown-it";
+import Pilot from "@/components/Pilot.vue"
 
 export default {
   components: {
     Markdown,
+    Pilot
   },
   data() {
     return {

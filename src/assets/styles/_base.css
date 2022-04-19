@@ -558,135 +558,119 @@ section .section-header h1 {
   height: 666px;
   overflow-y: overlay;
 }
-#main-tab .pilot {
+.pilot-wrapper {
   display: flex;
   flex-direction: row;
   padding: 1em;
-  -moz-column-gap: 1em;
-  column-gap: 1em;
-  height: 169px;
-  border-bottom: none;
+  height: 200px;
+  border-bottom: 1px solid var(--primary-color);
   z-index: 1;
   cursor: pointer;
 }
-#main-tab .pilot .pilot-loadout {
-  width: 250px;
+
+.pilot-wrapper .pilot-column,
+.pilot-wrapper .gear-column,
+.pilot-wrapper .bonds-column,
+.pilot-wrapper .mech-column {
   display: flex;
-  flex-direction: column;
-  row-gap: 0px;
+  flex-direction: row;
+  padding: 0.5em 1em;
+  border-right: 1px solid var(--secondary-color);
+  
 }
-#main-tab .pilot .mech-loadout {
-  width: 250px;
+
+.pilot-wrapper .pilot-column{
+  column-gap: 1em;
+}
+
+.pilot-wrapper .pilot-column .age-pob{
   display: flex;
-  flex-direction: column;
-  row-gap: 0px;
-  text-align: right;
+  flex-direction: row;
+  column-gap: 1em;
 }
-#main-tab .pilot .pilot-portrait {
-  width: 104px;
-  height: 136px;
-  -o-object-fit: cover;
+
+.pilot-wrapper img.portrait {
+  width: 150px;
+  height: 150px;
   object-fit: cover;
+  object-position: top;
 }
-#main-tab .pilot .mech-portrait {
-  width: 104px;
-  height: 136px;
-  -o-object-fit: cover;
-  object-fit: cover;
-}
-#main-tab .pilot h1 {
-  margin: 0px;
-  margin-bottom: 0.25em;
+
+.pilot-wrapper h1 {
+  font-size: 12px;
+  font-weight: 400;
+  font-family: 'Roboto', sans-serif;
   line-height: 1.5em;
-  font-family: "Raleway", sans-serif;
-  font-size: 10px;
-  font-weight: 800;
-  text-transform: uppercase;
   letter-spacing: 3px;
+  text-transform: uppercase;
   color: var(--text-pilot-header);
 }
-#main-tab .pilot h2 {
+
+.pilot-wrapper h2 {
   font-size: 18px;
-  margin: 0%;
-  margin-bottom: 0.25em;
-  align-self: center;
-  font-family: "Big Shoulders Display", cursive;
-  font-weight: 800;
+  font-weight: 700;
+  font-family: 'Titillium Web', sans-serif;
+  line-height: 1.5em;
+  letter-spacing: 0.5px;
   text-transform: uppercase;
-  letter-spacing: 0.1em;
   color: var(--text-pilot-value);
 }
-#main-tab .pilot .code {
+
+.pilot-wrapper .pilot-code {
   font-family: "Inconsolata", monospace;
   font-weight: 400;
   line-height: 1.25em;
   font-size: 11px;
   color: var(--text-pilot-code);
-  flex-grow: 2;
+  max-width:150px;
 }
+
+.pilot-wrapper .gear-column {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.pilot-wrapper .gear-column .gear-row {
+  display: flex;
+  flex-direction: row;
+  column-gap: 1em;
+}
+
+.gear-row .gear, .gear-row .weapon, .gear-row .armor {
+  width: 50%;
+}
+
+.pilot-wrapper .mech-column {
+  border-right: 0px solid transparent;
+  column-gap: 1em;
+}
+
+.pilot-wrapper .mech-column .manufacturer {
+  display: flex;
+  flex-direction: row;
+  column-gap: 0.5em;
+}
+
+.pilot-wrapper .mech-column .manufacturer-icon {
+  width:48px;
+  height:48px;
+}
+
+.pilot-wrapper .mech-column .role {
+  font-size: 18px;
+  font-weight: 700;
+  font-family: 'Titillium Web', sans-serif;
+  line-height: 1.5em;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: var(--text-pilot-value);
+}
+
 #main-tab .pilot:last-child {
   border-bottom: none;
 }
-.main-tab-header {
-  display: flex;
-  -moz-column-gap: 1em;
-  column-gap: 1em;
-}
-.main-tab-button {
-  background-color: var(--primary-color);
-  width: 104px;
-  height: 52px;
-  cursor: pointer;
-  margin: 0em -1.75em;
-  position: relative;
-  left: -2.75em;
-}
-.main-tab-button img {
-  width: 50px;
-  height: 50px;
-  padding: 12px;
-  object-fit: cover;
-  margin-left: 28px;
-}
-.main-tab-button:hover {
-  background-color: var(--highlight-hover);
-}
 
-.main-tab-button.active,
-.main-tab-button:active {
-  background-color: var(--highlight-active);
-}
-.middle {
-  position: absolute;
-  text-align: center;
-  height: 136px;
-  background-color: var(--highlight-hover);
-  display: flex;
-  align-items: center;
-  margin-bottom: 1em;
-  width: 0px;
-  margin-top: -153px;
-  margin-left: 1em;
-  z-index: -1;
-}
-.middle .text {
-  transform: rotate(90deg);
-  -webkit-transform: rotate(90deg);
-}
-.pilot-wrapper {
-  position: relative;
-  border-bottom: 1px solid var(--primary-color);
-}
-.pilot-wrapper:last-child {
-  border-bottom: none;
-}
-.pilot-wrapper:hover .middle {
-  width: 757px;
-}
-.pilot-wrapper:active .middle,
-.pilot-wrapper.active .middle {
-  background-color: var(--highlight-active);
-}
 .o-modal > div:nth-child(2) {
   display: flex;
   gap: 5em;
