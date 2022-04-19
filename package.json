@@ -9,13 +9,15 @@
   "dependencies": {
     "@oruga-ui/oruga-next": "^0.5.5",
     "chart.js": "^3.7.1",
-    "vue": "^3.2.16",
+    "remove-markdown": "^0.3.0",
+    "vue": "^3.2.33",
     "vue-chart-3": "^3.1.8",
     "vue-router": "^4.0.9",
     "vue3-markdown-it": "^1.0.10"
   },
   "devDependencies": {
-    "@vitejs/plugin-vue": "^1.9.2",
-    "vite": "^2.6.0"
+    "@mdi/font": "^6.6.96",
+    "@vitejs/plugin-vue": "^2.3.1",
+    "vite": "^2.9.5"
   }
 }

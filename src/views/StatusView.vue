@@ -7,15 +7,15 @@
       </div>
       <div class="section-content-container">
         <h3>Current Assignment</h3>
-        <Markdown :source="current_md" class="markdown" />
+        <Markdown :source="missionMarkdown" class="markdown" />
         <h3>Mission List</h3>
         <div class="mission-list-container">
           <Mission
             v-for="item in this.missions"
             :key="item.slug"
             :mission="item"
-            :selected="this.mission_slug"
-            @click="selectMission(item)"
+            :selected="this.missionSlug"
+            @click="selectMission(item.slug)"
           />
         </div>
       </div>
@@ -26,7 +26,13 @@
         <h1>Events Log</h1>
       </div>
       <div class="section-content-container">
-        <Markdown :source="events" class="markdown" />
+        <div class="events-list-container">
+          <Event
+            v-for="item in this.events"
+            :key="item.title"
+            :event="item"
+          />
+        </div>
       </div>
     </section>
     <section class="section-container" id="reserves">
@@ -56,54 +62,25 @@
 
 import Markdown from 'vue3-markdown-it';
 import Mission from '@/components/Mission.vue'
+import Event from '@/components/Event.vue'
 import Clock from '@/components/Clock.vue'
+
+import removeMd from 'remove-markdown';
 
 export default {
 	components: {
 		Markdown,
     Mission,
+    Event,
     Clock
 	},
 	data (){
 		return {
-			"mission_slug": "001",
-      "current_md": "",
-      "events": "",
-      "missions": [
-        {
-          "slug": "001",
-          "name": "Bug-Hunt",
-          "status": "start"
-        },
-      ],
-      "eventlog": [
-        {
-          "lt" : "MSMC TRANSPORT CARRIER // 2.21.5014U",
-          "title": "I Would Have Been Your Daddy...",
-          "image": "",
-          "caption": "",
-          "blurb": "this is a short sentence..."
-        }
-      ],
+			"missionSlug": "001",
+      "missionMarkdown": "",
+      "events": [],
+      "missions": [],
       "clocks": [
-        {
-          "type": "Story",
-          "result": "Positive",
-          "name": "Evergreen Defense",
-          "description": "[Insert info here] Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed aliquam sem mi, vitae pharetra lorem dictum consectetur.",
-          "color": "#7DBBBB",
-          "value": 2,
-          "max": 6,
-        },
-        {
-          "type": "Story",
-          "result": "Negative",
-          "name": "Machine Horde",
-          "description": "[Insert info here] Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed aliquam sem mi, vitae pharetra lorem dictum consectetur.",
-          "color": "#FD7777",
-          "value": 2,
-          "max": 6,
-        },
         {
           "type": "Story",
           "result": "Positive",
@@ -134,50 +111,44 @@ export default {
       ],
       "options": {
         "eventsMarkdownPerMission": true,
-      }
+      },
+      removeMd,
 		}
 	},
-
-	created() {
-    this.loadMissionMarkdown()
-    this.loadEventsMarkdown()
+  mounted() {
+    this.importMissions(import.meta.glob('@/assets/missions/*.md', { as: 'raw' }));
+    this.importEvents(import.meta.glob('@/assets/events/*.md', { as: 'raw' }));
+    this.selectMission(this.missionSlug)
   },
-
   methods: {
     selectMission(mission) {
-      this.$emit('missionSelected', mission)
+      this.missionSlug = mission;
+      var m = this.missions.find(x => x.slug === mission);
+      this.missionMarkdown = m.content;
 		},
-    loadMissionMarkdown() {
-      let self = this;
-      let md = `/missions/${self.mission_slug}.md`
-      var client = new XMLHttpRequest();
-      client.open('GET', md);
-      client.onreadystatechange = function () {
-        self.current_md = client.responseText;
+    importMissions(files) {
+      for (const path in files) {
+        let mission = {};
+        const content = files[path];
+        mission['slug'] = content.split('\r\n')[0];
+        mission['name'] = content.split('\r\n')[1];
+        mission['status'] = content.split('\r\n')[2];
+        mission['content'] = content.split('\r\n').splice(3).join('\n');
+        this.missions.push(mission);
       }
-      client.send();
     },
-    loadEventsMarkdown() {
-      let self = this;
-      let md = "";
-
-      if (self.options.eventsMarkdownPerMission) {
-        md = `/events/${self.mission_slug}.md`
+    importEvents(files) {
+      for (const path in files) {
+        let event = {};
+        const content = files[path];
+        event['title'] = content.split('\r\n')[0];
+        event['location'] = content.split('\r\n')[1];
+        event['time'] = content.split('\r\n')[2];
+        event['thumbnail'] = content.split('\r\n')[3];
+        event['content'] = content.split('\r\n').splice(4).join('\n');
+        this.events.push(event);
       }
-      else {
-        md = "/events.md"
-      }
-
-      var client = new XMLHttpRequest();
-      client.open('GET', md);
-      client.onreadystatechange = function () {
-        self.events = client.responseText;
-      }
-      client.send();
     },
-    selectMainPanel(panel) {
-      this.options.mainPanel = panel;
-    }
   }
 }
 </script>

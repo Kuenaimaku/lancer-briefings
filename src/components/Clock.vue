@@ -23,6 +23,7 @@
 					<h2 class="clock-subtitle">{{ $props.clock.type }} // [CALLSIGN]</h2>
 					<h1 class="clock-title">{{ $props.clock.name }}</h1>
 				</div>
+				<o-icon pack="mdi" class="icon" icon="chevron-up" size="large"/>
 			</div>
 			<div v-if="isActive" class="clock-summary">
 				{{ clock.description }}

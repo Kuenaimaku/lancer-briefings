@@ -52,14 +52,13 @@ export default {
 	methods: {
 		pilotModal() {
 			this.$oruga.modal.open({
-				parent: this,
 				component: PilotModal,
 				custom: true,
 				trapFocus: true,
 				props: {
 					pilot: this.pilot,
 				},
-				class: "TEST",
+				class: "custom-modal",
 				width: 1920,
 			});
 		},
