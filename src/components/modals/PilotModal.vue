@@ -3,12 +3,12 @@
     <div class="pilot-header-container">
       <div class="section-header clipped-medium-backward-bio">
         <img src="/icons/pilot-icon.svg" />
-        <h1>{{ pilot.alias }} [{{ pilot.callsign }}]</h1>
+        <h1>{{ pilot.name }} [{{ pilot.callsign }}]</h1>
       </div>
       <div class="rhombus-back">&nbsp;</div>
     </div>
     <div class="pilot">
-      <Markdown :source="bio" class="markdown" />
+      <Markdown :source="pilot.history" class="markdown" html="true"/>
     </div>
   </div>
   <div class="pilot-modal portrait">
@@ -47,16 +47,6 @@ export default {
     portrait() {
       return `/pilots/${this.pilot.callsign}.png`;
     },
-  },
-  created() {
-    let self = this;
-    let md = `/pilots/${this.pilot.callsign}.md`;
-    var client = new XMLHttpRequest();
-    client.open("GET", md);
-    client.onreadystatechange = function () {
-      self.bio = client.responseText;
-    };
-    client.send();
   },
   methods: {},
 };

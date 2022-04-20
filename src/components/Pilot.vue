@@ -26,7 +26,7 @@
         {{pilot.id}}
       </div>
     </div>
-    <div class="gear-column">
+    <div class="gear-column" v-if="!this.pilot.bondId">
       <div class="gear-row">
         <div class="armor">
           <h1>Pilot Armor</h1>
@@ -58,9 +58,25 @@
         </div>
       </div>
     </div>
-    <!-- <div class="bonds-column" v-if="!this.pilot.bondId">
-      lol
-    </div> -->
+    <div class="bonds-column" v-if="this.pilot.bondId">
+      <div class="bonds">
+        <div class="bond">
+          <h1>Bond</h1>
+          <h2>The Harlequinn</h2>
+        </div>
+        <div class="experience">
+          <h1>Experience</h1>
+          <ProgressBar :value="this.pilot.xp" :max="8" color="rgba(125, 187, 187, 1)"/>
+        </div>
+        <div class="stress">
+          <h1>Stress</h1>
+          <ProgressBar :value="this.pilot.stress" :max="8" color="#F00"/>
+        </div>
+      </div>
+      <div class="burdens">
+        <Burden v-for="item in this.pilot.burdens" :key="item.id" :burden="item" />
+      </div>
+    </div>
     <div class="mech-column">
       <div class="mech-info">
         <div class="name">
@@ -85,10 +101,14 @@
 
 <script>
 import PilotModal from "@/components/modals/PilotModal.vue";
+import ProgressBar from"@/components/ProgressBar.vue";
+import Burden from "@/components/Burden.vue"
 
 export default {
   components: {
+    Burden,
     PilotModal,
+    ProgressBar
   },
   props: {
     pilot: {

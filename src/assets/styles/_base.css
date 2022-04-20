@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@400;600;800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;700&?family=Big+Shoulders+Display:wght@400;600;800&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght400;500;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
 @import url("https://fonts.googleapis.com/css2?family=Inconsolata&display=swap");
 
 :root {
@@ -625,11 +625,90 @@ section .section-header h1 {
   max-width:150px;
 }
 
-.pilot-wrapper .gear-column {
+.pilot-wrapper .gear-column,
+.pilot-wrapper .bonds-column {
   display: flex;
   flex-direction: column;
   flex-grow: 1;
+  max-width: 694px;
 }
+
+.segmented-progressbar {
+  display: flex;
+}
+
+.item {
+  width: 100%;
+  background-color: lightgray;
+  margin-right: 2px;
+  height: 22px;
+}
+.item:first-child {
+  border-top-left-radius: 11px;
+  border-bottom-left-radius: 11px;
+}
+
+.item:last-child {
+  border-top-right-radius: 11px;
+  border-bottom-right-radius: 11px;
+}
+
+.pilot-wrapper .bonds-column .bonds,
+.pilot-wrapper .bonds-column .burdens {
+  width: 50%;
+  display:flex;
+  flex-direction:column;
+  row-gap: 0.5em;
+  padding: 0em 1em;
+}
+
+.pilot-wrapper .bonds-column  {
+  width: 50%;
+  display:flex;
+  flex-direction:row;
+  row-gap: 0.5em;
+  padding: 0.5em 1em;
+}
+
+.burden-body{
+  display: flex;
+  flex-direction:row;
+}
+
+.burden-header {
+  align-self: center;
+}
+
+.burdens .burden {
+  width: calc(100% / 7);
+}
+
+.burden-header h1.burden-title {
+  font-size: 18px;
+  margin: 0%;
+  color: var(--text-location);
+  font-family: "Titillium Web", cursive;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.burden-header h2.burden-subtitle {
+  font-size: 12px;
+  margin: 0%;
+  line-height: 1.5em;
+  color: var(--text-location);
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.burden-header h2.burden-subtitle {
+  max-width: 252px;
+}
+
+
 
 .pilot-wrapper .gear-column .gear-row {
   display: flex;
@@ -644,6 +723,12 @@ section .section-header h1 {
 .pilot-wrapper .mech-column {
   border-right: 0px solid transparent;
   column-gap: 1em;
+}
+
+.pilot-wrapper .mech-column .mech-info{
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.5em;
 }
 
 .pilot-wrapper .mech-column .manufacturer {
@@ -998,6 +1083,8 @@ section .section-header h1 {
 .story .clock-summary {
   width: calc(100% / 3 * 2);
 }
+
+
 
 #app ::-webkit-scrollbar {
   width: 12px;
