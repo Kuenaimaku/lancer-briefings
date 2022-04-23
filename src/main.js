@@ -11,5 +11,10 @@ import "@/assets/styles/_base.css";
 // import '@/assets/styles/_animations.css'
 
 import Router from "./router";
+import VueWriter from "vue-writer";
 
-createApp(App).use(Router).use(Oruga).mount("#app");
+createApp(App)
+	.use(Router)
+	.use(Oruga)
+	.use(VueWriter)
+	.mount("#app");

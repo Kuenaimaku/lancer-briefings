@@ -36,7 +36,11 @@
         <img src="/icons/events-icon.svg" />
         <h1>Reserves</h1>
       </div>
-      <div class="section-content-container"></div>
+      <div class="section-content-container">
+        <div class="reserves-list-container">
+          <Reserve v-for="item in this.reserves" :key="item.name" :reserve="item" :pilots="pilots"/>
+        </div>
+      </div>
     </section>
     <section class="section-container" id="clocks">
       <div class="section-header clipped-medium-backward">
@@ -45,7 +49,7 @@
       </div>
       <div class="section-content-container">
         <div class="clocks-list-container">
-          <Clock v-for="item in this.clocks" :key="item.name" :clock="item" />
+          <Clock v-for="item in this.clocks" :key="item.name" :clock="item"/>
         </div>
       </div>
     </section>
@@ -57,8 +61,7 @@ import Markdown from "vue3-markdown-it";
 import Mission from "@/components/Mission.vue";
 import Event from "@/components/Event.vue";
 import Clock from "@/components/Clock.vue";
-
-import removeMd from "remove-markdown";
+import Reserve from "@/components/Reserve.vue";
 
 export default {
   components: {
@@ -66,55 +69,39 @@ export default {
     Mission,
     Event,
     Clock,
+    Reserve
+  },
+  props: {
+    missions: {
+      Type: Array,
+      Required: true
+    },
+    events: {
+      Type: Array,
+      Required: true
+    },
+    pilots: {
+      Type: Array,
+      Required: true
+    },
+    clocks: {
+      Type: Array,
+      Required: true,
+    },
+    reserves: {
+      Type: Array,
+      Required: true,
+    }
   },
   data() {
     return {
       missionSlug: "001",
-      missionMarkdown: "",
-      events: [],
-      missions: [],
-      clocks: [
-        {
-          type: "Story",
-          result: "Positive",
-          name: "Evergreen Defense",
-          description:
-            "[Insert info here] Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed aliquam sem mi, vitae pharetra lorem dictum consectetur.",
-          color: "#7DBBBB",
-          value: 2,
-          max: 6,
-        },
-        {
-          type: "Story",
-          result: "Negative",
-          name: "Machine Horde",
-          description:
-            "[Insert info here] Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed aliquam sem mi, vitae pharetra lorem dictum consectetur.",
-          color: "#FD7777",
-          value: 2,
-          max: 6,
-        },
-        {
-          type: "Pilot",
-          result: "Positive",
-          name: "Digging Up the Past",
-          description: "This is a description of a Player Project clock.",
-          color: "#3CB043",
-          value: 2,
-          max: 3,
-        },
-      ],
-      options: {
-        eventsMarkdownPerMission: true,
-      },
-      removeMd,
+      missionMarkdown: ""
     };
   },
+  computed: {
+  },
   mounted() {
-    this.importMissions(
-      import.meta.glob("@/assets/missions/*.md", { as: "raw" })
-    );
-    this.importEvents(import.meta.glob("@/assets/events/*.md", { as: "raw" }));
     this.selectMission(this.missionSlug);
   },
   methods: {
@@ -122,29 +109,6 @@ export default {
       this.missionSlug = mission;
       var m = this.missions.find((x) => x.slug === mission);
       this.missionMarkdown = m.content;
-    },
-    importMissions(files) {
-      for (const path in files) {
-        let mission = {};
-        const content = files[path];
-        mission["slug"] = content.split("\n")[0];
-        mission["name"] = content.split("\n")[1];
-        mission["status"] = content.split("\n")[2];
-        mission["content"] = content.split("\n").splice(3).join("\n");
-        this.missions.push(mission);
-      }
-    },
-    importEvents(files) {
-      for (const path in files) {
-        let event = {};
-        const content = files[path];
-        event["title"] = content.split("\n")[0];
-        event["location"] = content.split("\n")[1];
-        event["time"] = content.split("\n")[2];
-        event["thumbnail"] = content.split("\n")[3];
-        event["content"] = content.split("\n").splice(4).join("\n");
-        this.events.push(event);
-      }
     },
   },
 };

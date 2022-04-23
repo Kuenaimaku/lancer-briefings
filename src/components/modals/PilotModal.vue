@@ -45,7 +45,7 @@ export default {
   },
   computed: {
     portrait() {
-      return `/pilots/${this.pilot.callsign}.png`;
+      return this.pilot.cloud_portrait;
     },
   },
   methods: {},

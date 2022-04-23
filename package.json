@@ -10,10 +10,13 @@
   "dependencies": {
     "@oruga-ui/oruga-next": "^0.5.5",
     "chart.js": "^3.7.1",
+    "external-svg-loader": "^1.4.0",
+    "lancer-data": "^3.0.43",
     "remove-markdown": "^0.3.0",
     "vue": "^3.2.33",
     "vue-chart-3": "^3.1.8",
     "vue-router": "^4.0.9",
+    "vue-writer": "^1.2.0",
     "vue3-markdown-it": "^1.0.10"
   },
   "devDependencies": {

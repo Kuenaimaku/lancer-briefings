@@ -24,22 +24,15 @@ export default {
     Markdown,
     Pilot
   },
+  props: {
+    pilots: {
+      Type: Array,
+      Required: true
+    }
+  },
   data() {
     return {
-      pilots: [],
-    };
-  },
-  mounted() {
-    this.importPilots(import.meta.glob("@/assets/pilots/*.json"));
-  },
-  methods: {
-    importPilots(files) {
-      for (const path in files) {
-        files[path]().then((mod) => {
-          this.pilots.push(JSON.parse(JSON.stringify(mod)));
-        });
-      }
-    },
-  },
-};
+    }
+  }
+}
 </script>

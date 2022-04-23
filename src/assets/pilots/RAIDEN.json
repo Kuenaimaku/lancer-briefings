@@ -184,12 +184,137 @@
 				}
 			],
 			"active_loadout_index": 0
+		},
+		{
+			"id": "0961c377-4eb1-4a1b-8ab9-cff065929309",
+			"name": "Terms and Conditions",
+			"notes": "",
+			"gm_note": "",
+			"frame": "mf_standard_pattern_i_everest",
+			"active": false,
+			"current_structure": 4,
+			"current_move": 4,
+			"boost": 0,
+			"current_hp": 16,
+			"overshield": 0,
+			"current_stress": 4,
+			"current_heat": 0,
+			"current_repairs": 6,
+			"current_overcharge": 0,
+			"current_core_energy": 1,
+			"statuses": [],
+			"conditions": [],
+			"resistances": [],
+			"reactions": [],
+			"burn": 0,
+			"destroyed": false,
+			"defeat": "",
+			"activations": 1,
+			"meltdown_imminent": false,
+			"reactor_destroyed": false,
+			"core_active": false,
+			"cc_ver": "ERR",
+			"lastModified": "Fri Apr 22 2022 22:58:55 GMT-0500 (Central Daylight Time)",
+			"isDeleted": false,
+			"expireTime": "",
+			"deleteTime": "",
+			"portrait": "",
+			"cloud_portrait": "",
+			"loadouts": [
+				{
+					"id": "be879a05-7a7a-43fe-816d-f4ee674cf3e8",
+					"name": "Primary",
+					"systems": [],
+					"integratedSystems": [
+						{
+							"id": "ms_walking_armory_2",
+							"uses": 6,
+							"destroyed": false,
+							"cascading": false,
+							"flavorName": "Ammo Case II",
+							"flavorDescription": "Gained from the <i>Walking Armory: Rank II</i> pilot talent."
+						}
+					],
+					"mounts": [
+						{
+							"mount_type": "Main",
+							"lock": false,
+							"slots": [
+								{
+									"size": "Main",
+									"weapon": null
+								}
+							],
+							"extra": [],
+							"bonus_effects": []
+						},
+						{
+							"mount_type": "Flex",
+							"lock": false,
+							"slots": [
+								{
+									"size": "Flex",
+									"weapon": null
+								}
+							],
+							"extra": [
+								{
+									"size": "Auxiliary",
+									"weapon": null
+								}
+							],
+							"bonus_effects": []
+						},
+						{
+							"mount_type": "Heavy",
+							"lock": false,
+							"slots": [
+								{
+									"size": "Heavy",
+									"weapon": null
+								}
+							],
+							"extra": [],
+							"bonus_effects": []
+						}
+					],
+					"integratedMounts": [],
+					"improved_armament": {
+						"mount_type": "Flex",
+						"lock": false,
+						"slots": [
+							{
+								"size": "Flex",
+								"weapon": null
+							}
+						],
+						"extra": [
+							{
+								"size": "Auxiliary",
+								"weapon": null
+							}
+						],
+						"bonus_effects": []
+					},
+					"integratedWeapon": {
+						"mount_type": "Aux",
+						"lock": false,
+						"slots": [
+							{
+								"size": "Auxiliary",
+								"weapon": null
+							}
+						],
+						"extra": [],
+						"bonus_effects": []
+					}
+				}
+			],
+			"active_loadout_index": 0
 		}
 	],
 	"cc_ver": "",
 	"special_equipment": {
-		"PilotArmor": [],
-		"PilotWeapons": [],
 		"PilotGear": [],
 		"Frames": [],
 		"MechWeapons": [],
@@ -212,7 +337,7 @@
 		"core_uses": 0
 	},
 	"state": {
-		"active_mech_id": "",
+		"active_mech_id": "f2cc7a38-2cc9-4821-973c-38a2684a6354",
 		"remote_mech_id": "",
 		"stage": "Narrative",
 		"turn": 1,
@@ -236,9 +361,9 @@
 		},
 		"deployed": []
 	},
-	"lastModified": "Tue Apr 19 2022 17:12:22 GMT-0500 (Central Daylight Time)",
-	"lastUpdate_cloud": "Tue Apr 19 2022 17:06:39 GMT-0500 (Central Daylight Time)",
-	"lastSync": "Tue Apr 19 2022 17:06:39 GMT-0500 (Central Daylight Time)",
+	"lastModified": "Fri Apr 22 2022 23:02:39 GMT-0500 (Central Daylight Time)",
+	"lastUpdate_cloud": "Fri Apr 22 2022 23:02:39 GMT-0500 (Central Daylight Time)",
+	"lastSync": "Fri Apr 22 2022 23:02:39 GMT-0500 (Central Daylight Time)",
 	"skills": [
 		{
 			"id": "sk_act_unseen_or_unheard",
@@ -299,9 +424,117 @@
 			"name": "Safe Harbor",
 			"label": "Location",
 			"description": "Guaranteed safety for meeting, planning, or recuperating.",
+			"resource_name": "Location",
+			"resource_note": "Notes",
+			"resource_cost": "Cost",
+			"used": false,
+			"bonuses": [],
+			"actions": [],
+			"synergies": [],
+			"deployables": [],
+			"counters": [],
+			"integrated": [],
+			"special_equipment": []
+		},
+		{
+			"id": "reserve_corebonus",
+			"type": "Bonus",
+			"name": "Extra CORE Bonus",
+			"label": "Bonus",
+			"description": "Add an additional CORE Bonus.",
+			"resource_name": "Bonus",
+			"resource_note": "Notes",
+			"resource_cost": "Costs",
+			"used": false,
+			"bonuses": [
+				{
+					"id": "cb_point",
+					"val": 1,
+					"damage_types": [],
+					"range_types": [],
+					"weapon_types": [],
+					"weapon_sizes": []
+				}
+			],
+			"actions": [],
+			"synergies": [],
+			"deployables": [],
+			"counters": [],
+			"integrated": [],
+			"special_equipment": []
+		},
+		{
+			"id": "reserve_mechskill",
+			"type": "Bonus",
+			"name": "Mech Skill Point",
+			"label": "Bonus",
+			"description": "Add a Mech Skill Point to add to your Pilot's HULL, AGILITY, SYSTEMS, or ENGINEERING rating.",
+			"resource_name": "Bonus",
+			"resource_note": "Notes",
+			"resource_cost": "Costs",
+			"used": false,
+			"bonuses": [
+				{
+					"id": "mech_skill_point",
+					"val": 1,
+					"damage_types": [],
+					"range_types": [],
+					"weapon_types": [],
+					"weapon_sizes": []
+				}
+			],
+			"actions": [],
+			"synergies": [],
+			"deployables": [],
+			"counters": [],
+			"integrated": [],
+			"special_equipment": []
+		},
+		{
+			"id": "reserve_scouting",
+			"type": "Tactical",
+			"name": "Scouting",
+			"label": "Location",
+			"description": "Detailed information on the kinds of mechs and threats you will face on the mission, such as number, type, and statistics.",
+			"resource_name": "Location",
+			"resource_note": "Notes",
+			"resource_cost": "Cost",
+			"used": false,
+			"bonuses": [],
+			"actions": [],
+			"synergies": [],
+			"deployables": [],
+			"counters": [],
+			"integrated": [],
+			"special_equipment": []
+		},
+		{
+			"id": "reserve_rented_gear",
+			"type": "Mech",
+			"name": "Rented gear",
+			"label": "Gear",
+			"description": "Temporary access to a new weapon or piece of mech gear.",
 			"resource_name": "",
-			"resource_note": "",
-			"resource_cost": "",
+			"resource_note": "Test",
+			"resource_cost": "Test",
+			"used": false,
+			"bonuses": [],
+			"actions": [],
+			"synergies": [],
+			"deployables": [],
+			"counters": [],
+			"integrated": [],
+			"special_equipment": []
+		},
+		{
+			"id": "reserve_project",
+			"type": "Project",
+			"name": "Exploring the Ancient  (In Progress)",
+			"label": "Project",
+			"description": "",
+			"resource_name": "Exploring the Ancient",
+			"resource_note": "Details",
+			"resource_cost": "Requires: Specialized tools, A good workspace, Specific knowledge or techniques, Quality materials",
 			"used": false,
 			"bonuses": [],
 			"actions": [],
@@ -312,9 +545,18 @@
 			"special_equipment": []
 		}
 	],
-	"orgs": [],
+	"orgs": [
+		{
+			"name": "THE ARMADA",
+			"purpose": "Military",
+			"description": "purpose",
+			"efficiency": 2,
+			"influence": 4,
+			"actions": ""
+		}
+	],
 	"bondId": "ktb-bond-harlequin",
-	"xp": 7,
+	"xp": 2,
 	"stress": 4,
 	"isBroken": false,
 	"burdens": [
@@ -331,9 +573,14 @@
 		{
 			"name": "Fast Friends",
 			"description": "When someone can hear and understand you, you can make them friendly to you for a minute. They’ll let you into areas, vouch for you, do small favors for you, and so on. Social rolls against them gain +1 ACCURACY and increased effect. After a minute, they realize they were manipulated and it won’t work on them again in the same session. This power only works on one person at a time."
+		},
+		{
+			"name": "Mercurial",
+			"frequency": "1/session",
+			"description": "If nobody else is looking, you can completely change your physical appearance, looking and sounding like an entirely new person (height, weight, build, hair/ clothes, and gender). Whether this physically changes you or is an illusory effect created by visual trickery is up to you. If you’re trying to impersonate someone else, your disguise holds up perfectly unless someone knows that person intimately, and even then you get +1 ACCURACY on all skill checks to keep the disguise up. You’re stuck in this form until you next eat or drink."
 		}
 	],
-	"powerSelections": 0,
+	"powerSelections": 2,
 	"maxStress": 8,
 	"bondAnswers": [
 		"A deal you once made in a dream.",
@@ -341,7 +588,16 @@
 	],
 	"majorIdeal": "I expressed my heritage, background, or beliefs through my actions.",
 	"minorIdeal": "I struggled against or humiliated the powerful.",
-	"clocks": [],
+	"clocks": [
+		{
+			"id": "0c58d359-2f79-42eb-a5d0-57dbf485e788",
+			"title": "Digging up the Past",
+			"description": "RAI-DEN is attempting to find information about the history of this planet.",
+			"resolution": "",
+			"segments": 6,
+			"progress": 2
+		}
+	],
 	"group": "",
 	"sort_index": -1,
 	"portrait": "",
