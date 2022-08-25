@@ -16,7 +16,7 @@
     <div class="rhombus">&nbsp;</div>
     <div class="planet-location-container">
       <video autoplay muted loop width="90px" height="90px">
-        <source src="/planet.webm" type="video/webm" />
+        <source src="/island_planet1.webm" type="video/webm" />
       </video>
       <div class="location-info">
         <div class="location-row" id="planet-year">

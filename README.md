@@ -22,8 +22,8 @@ Go over mission briefings within the LANCER Universe in style by showing your pl
 
 ## Build Scripts
 
-`npm run dev` - Serve the webapp with hot reloads (for development work)  
-`npm run build` - Build for production  
+`npm run dev` - Serve the webapp with hot reloads (for development work)
+`npm run build` - Build for production
 `npm run serve` - Locally preview production build
 
 ## Customization
@@ -46,7 +46,7 @@ This folder holds all of the assets.
 - `/missions` - This is where the summaries of missions are held. The filename MUST match the `slug` property within the App's data.
 - `/pilots` - This is where the images of pilots and their bios are held. Filenames MUST match the `callsign` property on pilots.
 - `/mechs` - This is where the images of mechs are held. Filenames MUST match the `mech` property on pilots.
-- `bullet.png` - This replaces the default bullet point in Markdown areas.
+- `bullet.webp` - This replaces the default bullet point in Markdown areas.
 - `events.md` - This is the Markdown file used to create the Event Log pane.
 - `planet.webm` - This is the planet rotation video used in the header.
 - `startup.ogg` - This is the sound that plays on page load.
@@ -69,8 +69,8 @@ This file contains the basic structure of the entire application - and houses th
 
 ## Hosting Recommendations
 
-I would strongly recommend using [Netlify](https://www.netlify.com/) for hosting, as there's no cost for hosting, has Continuous Deployment, and they'll provide a url. Register for an account, and click the `New Site from Git` button.  
-On the next page, pick the git service you used to fork this repo with, and authenticate. On the next page, select the `lancer-briefings` repository. If you can't see the repository listed on the page, click the `Can’t see your repo here? Configure the Netlify app on <git site>` link at the bottom of the page.  
+I would strongly recommend using [Netlify](https://www.netlify.com/) for hosting, as there's no cost for hosting, has Continuous Deployment, and they'll provide a url. Register for an account, and click the `New Site from Git` button.
+On the next page, pick the git service you used to fork this repo with, and authenticate. On the next page, select the `lancer-briefings` repository. If you can't see the repository listed on the page, click the `Can’t see your repo here? Configure the Netlify app on <git site>` link at the bottom of the page.
 Finally, make sure the branch being deployed is `master`, the `base directory` field is blank, the `build command` is `npm run build`, and the publish directory is `dist`.
 
 Once the site builds remotely, click on the link provided in the `site overview` tab and make sure everything looks right.

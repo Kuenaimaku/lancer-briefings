@@ -119,7 +119,7 @@ export default {
             ...pilotFromVue
           }
           this.pilots.push(pilot);
-          
+
           pilot.clocks.forEach((clock) => {
             this.clocks.push({
               type: `Pilot Project // ${pilot.callsign}`,

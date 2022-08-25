@@ -10,6 +10,7 @@
   "dependencies": {
     "@oruga-ui/oruga-next": "^0.5.5",
     "chart.js": "^3.7.1",
+    "esbuild-linux-64": "^0.14.36",
     "external-svg-loader": "^1.4.0",
     "lancer-data": "^3.0.43",
     "remove-markdown": "^0.3.0",
