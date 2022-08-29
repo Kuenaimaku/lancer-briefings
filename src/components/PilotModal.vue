@@ -26,40 +26,38 @@
 </template>
 
 <script>
-import Markdown from 'vue3-markdown-it';
+import Markdown from "vue3-markdown-it";
 
 export default {
 	components: {
-		Markdown
+		Markdown,
 	},
 	data() {
 		return {
 			bio: "",
-		}
+		};
 	},
 	props: {
 		pilot: {
 			type: Object,
 			required: true,
-		}
+		},
 	},
 	computed: {
 		portrait() {
-			return `/pilots/${this.pilot.callsign}.webp`
+			return `/pilots/${this.pilot.callsign}.webp`;
 		},
 	},
 	created() {
 		let self = this;
-		let md = `/pilots/${this.pilot.callsign}.md`
+		let md = `/pilots/${this.pilot.callsign}.md`;
 		var client = new XMLHttpRequest();
-		client.open('GET', md);
+		client.open("GET", md);
 		client.onreadystatechange = function () {
 			self.bio = client.responseText;
-		}
+		};
 		client.send();
 	},
-	methods: {
-
-	}
-}
+	methods: {},
+};
 </script>

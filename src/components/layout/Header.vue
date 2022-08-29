@@ -1,18 +1,19 @@
 <template>
-  <header>
-    <div class="title clipped-x-large-forward">
-      <img class="logo" src="/icons/company-icon.svg" />
-      <div class="title-container">
-        <div class="title-row" id="title-first-line">
-          <span id="title-header">{{ header.headerTitle }}</span>
-          <span id="title-subheader">{{ header.headerSubtitle }}</span>
-        </div>
-        <div class="title-row">
-          <span id="subtitle-header">{{ header.subheaderTitle }}</span>
-          <span id="subtitle-subheader">// {{ header.subheaderSubtitle }}</span>
+  <Transition name="header-slide" appear>
+	<header>
+      <div class="title clipped-x-large-forward">
+        <img class="logo" src="/icons/company-icon.svg" />
+        <div class="title-container">
+          <div class="title-row" id="title-first-line">
+            <span id="title-header">{{ header.headerTitle }}</span>
+            <span id="title-subheader">{{ header.headerSubtitle }}</span>
+          </div>
+          <div class="title-row">
+            <span id="subtitle-header">{{ header.subheaderTitle }}</span>
+            <span id="subtitle-subheader">// {{ header.subheaderSubtitle }}</span>
+          </div>
         </div>
       </div>
-    </div>
     <div class="rhombus">&nbsp;</div>
     <div class="planet-location-container">
       <video autoplay muted loop width="90px" height="90px">
@@ -45,17 +46,26 @@
         </div>
       </div>
     </div>
-  </header>
+	</header>
+  </Transition>
 </template>
 
 <script>
 export default {
-  components: {},
-  props: {
-    header: {
-      type: Object,
-      required: true,
-    },
+	components: {},
+	props: {
+		header: {
+			type: Object,
+			required: true,
+		},
+	},
+  created() {
+  },
+  data() {
+    return {
+    }
+  },
+  mounted() {
   },
 };
 </script>

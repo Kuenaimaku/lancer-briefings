@@ -1,128 +1,160 @@
 @keyframes slideInFromLeft {
-  0% {
-    transform: translateX(-100%);
+	0% {
+		transform: translateX(-100%);
+	}
+	100% {
+		transform: translateX(0);
+	}
+}
+
+@keyframes slideInDown {
+  from {
+    transform: translate3d(0, -1000%, 0);
+    visibility: visible;
   }
-  100% {
-    transform: translateX(0);
+
+  to {
+    transform: translate3d(0, 0, 0);
   }
 }
 
 @keyframes slideInFromLeftRhombus {
-  0% {
-    transform: translateX(-5000%) skew(-0.785398rad);
-  }
-  90% {
-    transform: translateX(-25%) skew(-0.785398rad);
-  }
-  100% {
-    transform: translateX(0) skew(-0.785398rad);
-  }
+	0% {
+		transform: translateX(-500%) skew(-0.785398rad);
+	}
+	90% {
+		transform: translateX(-25%) skew(-0.785398rad);
+	}
+	100% {
+		transform: translateX(0) skew(-0.785398rad);
+	}
 }
 
 @keyframes flickerIn {
-  0% {
-    opacity: 0;
-  }
-  10% {
-    opacity: 0.2;
-  }
-  15%,
-  40% {
-    opacity: 0.05;
-  }
-  30% {
-    opacity: 0.4;
-  }
-  100% {
-    opacity: 1;
-  }
+	0% { opacity: 0; }
+	10% { opacity: 0.2; }
+	15%,
+  30% { opacity: 0.4; }
+	40% { opacity: 0.05; }
+	100% { opacity: 1; }
 }
 
-header {
-  animation: 1s ease-out 1 slideInFromLeft;
-  background-color: var(--secondary-color);
-  border-color: var(--secondary-color);
-  height: 96px;
+@keyframes blink {
+	49% {
+		background-color: var(--text-pilot-code);
+	}
+	50% {
+		background-color: transparent;
+	}
+	99% {
+		background-color: transparent;
+	}
+}
+
+@keyframes unhide {
+  0% { opacity: 0; }
+  50% { opacity: 0.5; }
+	100% { opacity: 1; }
+}
+
+/* TODO: Create special classes for animation styling and bind these classes per-vue
+so that they stop animating after the initial page load.
+https://stackoverflow.com/a/53420370
+*/
+
+.header-slide-enter-active {
+  animation: slideInFromLeft 0.3s ease-out;
+}
+
+.header-slide-enter-active div {
+  transition-delay: 2s;
+}
+
+.sidebar-slide-enter-from {
+  opacity: 0;
+  display: none;
+  visibility: hidden;
+  background-color: transparent;
+}
+
+.sidebar-slide-enter-active {
+  opacity: 1;
   display: flex;
-  align-items: center;
+  visibility: hidden;
+  background-color: var(--primary-color);
+  animation: slideInDown 0.3s ease-out 1.2s;
 }
 
-.title {
-  transform: translateX(-100%);
-  animation: 1s ease-out 1 slideInFromLeft;
-  animation-delay: 0.5s;
-  animation-fill-mode: forwards;
-  background-color: var(--primary-color);
-  border-color: var(--primary-color);
-  width: 700px;
-  height: 100%;
-  display: inline-flex;
-  align-items: center;
-  column-gap: 1em;
+.clipped-bottom-right {
+  animation: flickerIn 0.5s ease 1.5s;
+}
+
+.title-container {
+  transform: translateX(-5000%);
+  animation: slideInFromLeft 0.3s ease-out 0.5s;
+	animation-fill-mode: forwards;
+}
+
+.logo {
+  transform: translateX(-5000%);
+  animation: slideInFromLeft 0.3s ease-out 1s;
+	animation-fill-mode: forwards;
 }
 
 .rhombus {
-  transform: translateX(-5000%) skew(-0.785398rad);
-  -webkit-animation: 0.75s ease-out 1 slideInFromLeftRhombus;
-  animation: 0.75s ease-out 1 slideInFromLeftRhombus;
-  -webkit-animation-delay: 1s;
-  animation-delay: 1s;
-  -webkit-animation-fill-mode: forwards;
-  animation-fill-mode: forwards;
+	transform: translateX(-200%) skew(-0.785398rad);
+	animation: slideInFromLeftRhombus 0.3s ease-out 1s 1;
+	animation-fill-mode: forwards;
 }
 
-header video,
+header div video,
 div.location-info {
-  -webkit-animation: 0.5s ease 1 flickerIn;
-  animation: 0.5s ease 1 flickerIn;
-  -webkit-animation-delay: 2s;
-  animation-delay: 2s;
-  -webkit-animation-fill-mode: forwards;
-  animation-fill-mode: forwards;
-  opacity: 0;
+	animation: flickerIn 0.5s ease-in 1.5s 1 ;
+	animation-fill-mode: forwards;
+	opacity: 0;
 }
 
-#missions,
-#events,
-#main-tab {
-  -webkit-animation: 0.5s ease 1 flickerIn;
-  animation: 0.5s ease 1 flickerIn;
-  -webkit-animation-delay: 2.2s;
-  animation-delay: 2.2s;
-  -webkit-animation-fill-mode: forwards;
-  animation-fill-mode: forwards;
-  opacity: 0;
-}
-#events {
-  -webkit-animation-delay: 2.5s;
-  animation-delay: 2.5s;
-}
-#main-tab {
-  -webkit-animation-delay: 2.8s;
-  animation-delay: 2.8s;
-}
-
-.main-tab-button {
-  transition: background-color 0.2s ease-in-out;
+section.section-container#missions,
+section.section-container#events,
+section.section-container#reserves,
+section.section-container#clocks
+/* section.section-container */
+{
+	animation: flickerIn 0.5s ease 2.5s;
+	animation-fill-mode: forwards;
 }
 
 .mission {
-  transition: background-color 0.2s ease-in-out, padding-left 0.2s ease-in-out;
+	transition: background-color 0.2s ease-in-out, padding-left 0.2s ease-in-out;
 }
 
 .middle {
-  transition: 0.2s ease;
+	transition: 0.2s ease;
+}
+section.section-container#events-logs,
+section.section-container#pilots {
+  animation: flickerIn 0.5s ease;
+  animation-fill-mode: forwards;
+  opacity: 0;
 }
 
 .pilot-wrapper:active .middle,
 .pilot-wrapper.active .middle {
-  transition: 0.5s ease;
+	transition: 0.5s ease;
 }
 
 footer {
-  transition: 2s ease-in-out;
+	transition: 2s ease-in-out;
 }
 
 div.markdown {
-  transition: height 0.5s ease-in-out;
+	transition: height 0.5s ease-in-out;
+}
+
+.is-typed span.cursor {
+	animation: blink 1.5s infinite;
+}
+
+.is-typed span.cursor.typing {
+	animation: none;
 }
