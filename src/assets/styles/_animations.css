@@ -8,13 +8,12 @@
 }
 
 @keyframes slideInDown {
-  from {
-    transform: translate3d(0, -1000%, 0);
-    visibility: visible;
+  0% {
+    transform: translateY(-1000%);
   }
 
-  to {
-    transform: translate3d(0, 0, 0);
+  100% {
+    transform: translateY(0);
   }
 }
 
@@ -28,6 +27,18 @@
 	100% {
 		transform: translateX(0) skew(-0.785398rad);
 	}
+}
+
+@keyframes slideInDownSidebar {
+  0% {
+    transform: translateY(-1000%);
+    visibility: hidden;
+  }
+
+  100% {
+    transform: translateY(0);
+    visibility: visible;
+  }
 }
 
 @keyframes flickerIn {
@@ -57,85 +68,84 @@
 	100% { opacity: 1; }
 }
 
-/* TODO: Create special classes for animation styling and bind these classes per-vue
-so that they stop animating after the initial page load.
-https://stackoverflow.com/a/53420370
+
+/* Some elements have been loaded with a dynamic "animate" class in their html.
+   If this class is present then the animations will be enabled for those elements,
+   otherwise the animations will be disabled.
+   By default, these styles limit the element animations this sheet to only play once per browser session.
 */
 
-.header-slide-enter-active {
+/* TODO: fix animations for Pilot.vue and Events.vue elements */
+
+/* HEADER + SIDEBAR */
+header[class*="animate"] {
   animation: slideInFromLeft 0.3s ease-out;
 }
 
-.header-slide-enter-active div {
-  transition-delay: 2s;
-}
-
-.sidebar-slide-enter-from {
-  opacity: 0;
-  display: none;
-  visibility: hidden;
-  background-color: transparent;
-}
-
-.sidebar-slide-enter-active {
-  opacity: 1;
+.sidebar-page[class*="animate"]  #sidebar{
   display: flex;
-  visibility: hidden;
   background-color: var(--primary-color);
-  animation: slideInDown 0.3s ease-out 1.2s;
+  animation: slideInDownSidebar 0.3s ease-out 1.2s;
+  animation-fill-mode: both;
 }
 
-.clipped-bottom-right {
+[class*="animate"] .clipped-bottom-right {
   animation: flickerIn 0.5s ease 1.5s;
 }
 
-.title-container {
+[class*="animate"] .title-container {
   transform: translateX(-5000%);
   animation: slideInFromLeft 0.3s ease-out 0.5s;
 	animation-fill-mode: forwards;
 }
 
-.logo {
+[class*="animate"] .logo {
   transform: translateX(-5000%);
   animation: slideInFromLeft 0.3s ease-out 1s;
 	animation-fill-mode: forwards;
 }
 
-.rhombus {
+[class*="animate"] .rhombus {
 	transform: translateX(-200%) skew(-0.785398rad);
 	animation: slideInFromLeftRhombus 0.3s ease-out 1s 1;
 	animation-fill-mode: forwards;
 }
 
-header div video,
-div.location-info {
+header[class*="animate"]  div video,
+header[class*="animate"] div.location-info {
 	animation: flickerIn 0.5s ease-in 1.5s 1 ;
 	animation-fill-mode: forwards;
 	opacity: 0;
 }
+/* END HEADER + SIDEBAR */
 
-section.section-container#missions,
-section.section-container#events,
-section.section-container#reserves,
-section.section-container#clocks
-/* section.section-container */
+/* VIEWS CONTENT */
+
+/* make sure the containers dont appear until the animation starts */
+[class*="animate"] section.section-container {
+  opacity: 0;
+}
+
+/* all section-containers on main /status view */
+[class*="animate"] section.section-container
 {
 	animation: flickerIn 0.5s ease 2.5s;
 	animation-fill-mode: forwards;
 }
 
-.mission {
-	transition: background-color 0.2s ease-in-out, padding-left 0.2s ease-in-out;
-}
-
-.middle {
-	transition: 0.2s ease;
-}
-section.section-container#events-logs,
-section.section-container#pilots {
+[class*="animate"] section.section-container#events-logs,
+[class*="animate"] section.section-container#pilots {
   animation: flickerIn 0.5s ease;
   animation-fill-mode: forwards;
   opacity: 0;
+}
+
+div.markdown {
+	transition: height 0.5s ease-in-out;
+}
+
+.mission {
+	transition: background-color 0.2s ease-in-out, padding-left 0.2s ease-in-out;
 }
 
 .pilot-wrapper:active .middle,
@@ -143,18 +153,4 @@ section.section-container#pilots {
 	transition: 0.5s ease;
 }
 
-footer {
-	transition: 2s ease-in-out;
-}
-
-div.markdown {
-	transition: height 0.5s ease-in-out;
-}
-
-.is-typed span.cursor {
-	animation: blink 1.5s infinite;
-}
-
-.is-typed span.cursor.typing {
-	animation: none;
-}
+/* END VIEWS CONTENT */

@@ -1,8 +1,8 @@
 <template>
 	<div class="sidebar-page">
 		<section class="sidebar-layout">
-      <Transition name="sidebar-slide" appear>
         <o-sidebar
+          id="sidebar"
           position="static"
           :mobile="mobile"
           :expand-on-hover="expandOnHover"
@@ -19,7 +19,6 @@
             ><img src="/icons/events-icon.svg" /><span>Logs</span></router-link
           >
         </o-sidebar>
-      </Transition>
 		</section>
 	</div>
 </template>
@@ -36,4 +35,4 @@ export default {
 };
 </script>
 
-<style></style>
+<!-- <style></style> -->

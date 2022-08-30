@@ -1,5 +1,7 @@
 <template>
-	<div class="content-container">
+	<div
+    :class="{animate: animate}"
+    class="content-container">
 		<section class="section-container" id="missions">
 			<div class="section-header clipped-medium-backward">
 				<img src="/icons/mission-icon.svg" />
@@ -27,7 +29,7 @@
 			</div>
 			<div class="section-content-container">
 				<div class="events-list-container">
-					<Event v-for="item in this.events" :key="item.title" :event="item" />
+					<Event v-for="item in $props.events" :key="item.title" :event="item" />
 				</div>
 			</div>
 		</section>
@@ -54,7 +56,7 @@
 			</div>
 			<div class="section-content-container">
 				<div class="clocks-list-container">
-					<Clock v-for="item in this.clocks" :key="item.name" :clock="item" />
+					<Clock v-for="item in this.clocks" :key="item.name" :clock="item" :initialAnimate="animate"/>
 				</div>
 			</div>
 		</section>
@@ -77,6 +79,10 @@ export default {
 		Reserve,
 	},
 	props: {
+    initialSlug: {
+      Type: String,
+      Required: true,
+    },
 		missions: {
 			Type: Array,
 			Required: true,
@@ -100,25 +106,39 @@ export default {
 	},
 	data() {
 		return {
-			missionSlug: "001",
+      missionSlug: this.initialSlug,
+      animate: true,
 			missionMarkdown: "",
 		};
 	},
+  created() {
+    this.disableAnimate();
+  },
 	computed: {},
-	mounted() {},
+  beforeUpdate() {
+      // initial set
+      this.selectMission(this.missionSlug);
+  },
+	mounted() {
+    // need to set on re-mount
+    if (this.missions.length > 0) {
+      this.selectMission(this.missions[0].slug);
+    }
+  },
 	methods: {
-		selectMission(missionSlug) {
-      this.missionSlug = missionSlug;
+		selectMission(slug) {
+      this.missionSlug = slug;
       var m = this.missions.find((x) => x.slug === this.missionSlug);
       this.missionMarkdown = m.content;
     },
-  },
-  watch: {
-    missions: {
-      handler(){
-        this.selectMission(this.missionSlug);
-      },
-      deep: true
+    disableAnimate() {
+      let statusAnimated = window.sessionStorage.getItem('statusAnimated');
+      if (statusAnimated) {
+        this.animate = false;
+      }
+      if (statusAnimated === null) {
+        window.sessionStorage.setItem('statusAnimated', true);
+      }
     },
   },
 };

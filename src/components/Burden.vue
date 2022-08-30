@@ -34,6 +34,7 @@ export default defineComponent({
 	components: { DoughnutChart },
 	props: {
 		burden: Object,
+    initialAnimate: Boolean,
 	},
 	setup(props) {
 		const dataArray = [];
@@ -48,11 +49,12 @@ export default defineComponent({
 			}
 		}
 		const data = ref(dataArray);
-
+    const animation = !props.initialAnimate ? null : { delay: 10000 }
 		const options = ref({
 			responsive: true,
 			cutout: "35%",
 			devicePixelRatio: 2,
+      animation
 		});
 
 		const testData = computed(() => ({

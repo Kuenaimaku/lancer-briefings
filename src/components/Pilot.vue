@@ -79,7 +79,7 @@
 				</div>
 			</div>
 			<div class="burdens">
-				<Burden v-for="item in this.pilot.burdens" :key="item.id" :burden="item" />
+				<Burden v-for="item in this.pilot.burdens" :key="item.id" :burden="item" :initialAnimate="animate"/>
 			</div>
 		</div>
 		<div class="mech-column">
@@ -122,6 +122,10 @@ export default {
 		ProgressBar,
 	},
 	props: {
+    animate: {
+      Type: String,
+      Required: true,
+    },
 		pilot: {
 			type: Object,
 			required: true,

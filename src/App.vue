@@ -1,10 +1,15 @@
 <template>
   <div class="page-wrapper">
-    <Header :header="this.header" />
-    <Sidebar />
+    <Header
+      :planetPath="planetPath"
+      :class="{animate: animate}"
+      :header="this.header" />
+    <Sidebar :class="{animate: animate}" />
   </div>
 	<div id="router-view-container">
-		<router-view
+		<RouterView
+      :animate="animate"
+      :initialSlug="initialSlug"
 			:missions="missions"
 			:events="events"
 			:pilots="pilots"
@@ -35,34 +40,24 @@
 	<audio autoplay>
 		<source src="/startup.ogg" type="audio/ogg" />
 	</audio>
-	<Footer />
 </template>
 
 <script>
 import Header from "./components/layout/Header.vue";
 import Sidebar from "./components/layout/Sidebar.vue";
-import Footer from "./components/layout/Footer.vue";
+import Info from "@/assets/info/general-info.json"
 
 export default {
 	components: {
 		Header,
-		Footer,
 		Sidebar,
 	},
 
 	data() {
 		return {
-			header: {
-				planet: "Hercynia",
-				year: "5014u",
-				system: "Ardennes-3",
-				gate: "Atlas-Quanokrim",
-				ring: "Atlas-Line",
-				headerTitle: "Mirrorsmoke",
-				headerSubtitle: "Mercenary Company",
-				subheaderTitle: "Crisis Response",
-				subheaderSubtitle: "Delta-Echo-Echo-Zulu",
-			},
+      initialSlug: Info.initialSlug,
+      planetPath: Info.planetPath,
+			header: Info.header,
 			clocks: [],
 			events: [],
 			missions: [],
@@ -78,15 +73,18 @@ export default {
 					pob: "Gaia",
 				},
 			},
+      animate: true,
 		};
 	},
-	created() {},
-	mounted() {
-		this.importMissions(import.meta.glob("@/assets/missions/*.md", { as: 'raw' }));
+	created() {
+    this.importMissions(import.meta.glob("@/assets/missions/*.md", { as: 'raw' }));
 		this.importEvents(import.meta.glob("@/assets/events/*.md", { as: 'raw' }));
 		this.importClocks(import.meta.glob("@/assets/clocks/*.json"));
 		this.importReserves(import.meta.glob("@/assets/reserves/*.json"));
 		this.importPilots(import.meta.glob("@/assets/pilots/*.json"));
+    // this.disableAnimate();
+  },
+	mounted() {
 		this.$router.push("/status");
 	},
 	methods: {
@@ -140,31 +138,43 @@ export default {
 						...pilotFromVue,
 					};
 					this.pilots.push(pilot);
-					pilot.clocks.forEach(clock => {
-						this.clocks.push({
-							type: `Pilot Project // ${pilot.callsign}`,
-							result: "",
-							name: clock.title,
-							description: clock.description,
-							value: clock.progress,
-							max: clock.segments,
-							color: "#3CB043",
-						});
+					pilot.clocks.forEach(content => {
+            let clock = {};
+            clock["type"] = `Pilot Project // ${pilot.callsign}`;
+            clock["result"] = "";
+            clock["name"] = content.title;
+            clock["description"] = content.description;
+            clock["value"] = content.progress;
+            clock["max"] = content.segments;
+            clock["color"] = "#3CB043";
+            this.clocks = [...this.clocks, clock];
 					});
 
-					pilot.reserves.forEach(reserve => {
-						this.reserves.push({
-							type: reserve.type,
-							name: reserve.name,
-							description: reserve.description,
-							label: reserve.label,
-							cost: reserve.cost,
-							notes: reserve.notes,
-							callsign: pilot.callsign.toUpperCase(),
-						});
+					pilot.reserves.forEach(content => {
+            let reserve = {};
+            reserve["type"] = content.type;
+            reserve["name"] = content.name;
+            reserve["description"] = content.description;
+            reserve["label"] = content.label;
+            reserve["cost"] = content.cost;
+            reserve["notes"] = content.notes;
+            reserve["callsign"] = pilot.callsign.toUpperCase();
+            this.reserves = [...this.reserves, reserve];
 					});
 				});
 		},
+    // disableAnimate() {
+    //   // TODO: Make this method take in a string for the "getItem" name so that each view will have its own global
+    //   //      "was<name>Animated" setting. Pass this.$options.name to get Component name.
+    //   //      This method should also take in the component-specific variable to set.
+    //   let frameAnimated = window.sessionStorage.getItem('frameAnimated');
+    //   if (frameAnimated) {
+    //     this.animate = false;
+    //   }
+    //   if (frameAnimated === null) {
+    //     window.sessionStorage.setItem('frameAnimated', true);
+    //   }
+    // },
 	},
 };
 </script>

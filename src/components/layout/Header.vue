@@ -1,5 +1,4 @@
 <template>
-  <Transition name="header-slide" appear>
 	<header>
       <div class="title clipped-x-large-forward">
         <img class="logo" src="/icons/company-icon.svg" />
@@ -17,7 +16,7 @@
     <div class="rhombus">&nbsp;</div>
     <div class="planet-location-container">
       <video autoplay muted loop width="90px" height="90px">
-        <source src="/island_planet1.webm" type="video/webm" />
+        <source :src="`${planetPath}`" type="video/webm" />
       </video>
       <div class="location-info">
         <div class="location-row" id="planet-year">
@@ -47,16 +46,19 @@
       </div>
     </div>
 	</header>
-  </Transition>
 </template>
 
 <script>
 export default {
 	components: {},
 	props: {
+    planetPath: {
+      Type: String,
+      Required: true,
+    },
 		header: {
-			type: Object,
-			required: true,
+			Type: Object,
+			Required: true,
 		},
 	},
   created() {

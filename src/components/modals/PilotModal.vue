@@ -8,7 +8,7 @@
 			<div class="rhombus-back">&nbsp;</div>
 		</div>
 		<div class="pilot">
-			<Markdown :source="pilot.history" class="markdown" html="true" />
+			<Markdown :source="pilot.history" class="markdown" :html="markdownHtml" />
 		</div>
 	</div>
 	<div class="pilot-modal portrait">
@@ -20,7 +20,7 @@
 			<div class="rhombus-back">&nbsp;</div>
 		</div>
 		<div class="pilot">
-			<img :src="portrait" class="portrait" />
+			<img :src="this.pilot.cloud_portrait" class="portrait" />
 		</div>
 	</div>
 </template>
@@ -29,12 +29,13 @@
 import Markdown from "vue3-markdown-it";
 
 export default {
+  inheritAttrs: false,
 	components: {
 		Markdown,
 	},
 	data() {
 		return {
-			bio: "",
+      markdownHtml: true,
 		};
 	},
 	props: {
@@ -44,9 +45,6 @@ export default {
 		},
 	},
 	computed: {
-		portrait() {
-			return this.pilot.cloud_portrait;
-		},
 	},
 	methods: {},
 };
