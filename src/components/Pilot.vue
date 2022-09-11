@@ -1,88 +1,125 @@
 <template>
-	<div class="pilot-wrapper" @click="pilotModal">
-		<div class="pilot-column">
-			<img :src="this.pilot.cloud_portrait" class="portrait" />
+	<div class="pilot-wrapper">
+		<div class="pilot-column" @click="pilotModal">
+			<img :src="this.pilotInfo.cloud_portrait" class="portrait" />
 			<div class="pilot-info">
 				<div class="callsign">
 					<h1>Callsign</h1>
-					<h2>{{ pilot.callsign }}</h2>
+					<h2>{{ pilotInfo.callsign }}</h2>
 				</div>
 				<div class="name">
 					<h1>Name or Legal Alias</h1>
-					<h2>{{ pilot.name }}</h2>
+					<h2>{{ pilotInfo.name }}</h2>
 				</div>
-				<div class="age-pob" v-if="this.pilot.age">
-					<div class="age">
-						<h1>Subjective Age</h1>
-						<h2>{{ pilot.age }}</h2>
-					</div>
-					<div class="pob">
+				<div class="age-pob" v-if="this.pilotInfo.age || this.pilotInfo.pob">
+          <div class="pob" v-if="this.pilotInfo.pob.length > 0">
 						<h1>Place of Birth</h1>
 						<h2>{{ pilot.pob }}</h2>
+					</div>
+					<div class="age" v-if="this.pilotInfo.age.length > 0">
+						<h1>Subjective Age</h1>
+						<h2>{{ pilot.age }}</h2>
 					</div>
 				</div>
 			</div>
 			<div class="pilot-code">
-				<VueWriter
-					:array="pilotCode"
-					:typeSpeed="25"
-					:eraseSpeed="0"
-					:delay="10000"
-				/>
+				<VueWriter :array="pilotCode" :typeSpeed="25" :eraseSpeed="0" :delay="10000" />
 			</div>
 		</div>
-		<div class="gear-column" v-if="!this.pilot.bondId">
+		<div class="gear-column" v-if="!this.pilotInfo.bondId" @click="pilotModal">
 			<div class="gear-row">
-				<div class="armor">
-					<h1>Pilot Armor</h1>
-					<h2>{{ pilot.loadout.armor[0].flavorName }}</h2>
-				</div>
-				<div class="gear">
-					<h1>Pilot Gear</h1>
-					<h2>{{ pilot.loadout.gear[0].flavorName }}</h2>
-				</div>
-			</div>
-			<div class="gear-row">
-				<div class="weapon">
-					<h1>Pilot Weapon</h1>
-					<h2>{{ pilot.loadout.weapons[0].flavorName }}</h2>
-				</div>
-				<div class="gear">
-					<h1>Pilot Gear</h1>
-					<h2>{{ pilot.loadout.gear[1].flavorName }}</h2>
-				</div>
-			</div>
-			<div class="gear-row">
-				<div class="armor">
-					<h1>Pilot Weapon</h1>
-					<h2>{{ pilot.loadout.weapons[1].flavorName }}</h2>
-				</div>
-				<div class="gear">
-					<h1>Pilot Gear</h1>
-					<h2>{{ pilot.loadout.gear[2].flavorName }}</h2>
-				</div>
+        <div class="armor">
+          <h1>Pilot Armor</h1>
+          <h2>{{ pilotInfo.loadout.armor[0].flavorName }}</h2>
+        </div>
+        <div class="gear">
+          <h1>Pilot Gear</h1>
+          <h2>{{ pilotInfo.loadout.gear[0].flavorName }}</h2>
+        </div>
+      </div>
+      <div class="gear-row">
+        <div class="weapon">
+          <h1>Pilot Weapon</h1>
+          <h2>{{ pilotInfo.loadout.weapons[0].flavorName }}</h2>
+        </div>
+        <div class="gear">
+          <h1>Pilot Gear</h1>
+          <h2>{{ pilotInfo.loadout.gear[1].flavorName }}</h2>
+        </div>
+      </div>
+      <div class="gear-row">
+        <div class="weapon">
+          <h1>Pilot Weapon</h1>
+          <h2>{{ pilotInfo.loadout.weapons[1].flavorName }}</h2>
+        </div>
+        <div class="gear">
+          <h1>Pilot Gear</h1>
+          <h2>{{ pilotInfo.loadout.gear[2].flavorName }}</h2>
+        </div>
 			</div>
 		</div>
-		<div class="bonds-column" v-if="this.pilot.bondId">
+		<div class="bonds-column" v-if="this.pilotInfo.bondId" @click="pilotModal">
 			<div class="bonds">
 				<div class="bond">
 					<h1>Bond</h1>
-					<h2>The Harlequinn</h2>
+					<h2>{{ bond.name }}</h2>
 				</div>
 				<div class="experience">
 					<h1>Experience</h1>
-					<ProgressBar :value="this.pilot.xp" :max="8" color="rgba(125, 187, 187, 1)" />
+					<ProgressBar
+            :value="this.pilotInfo.xp"
+            :max="8"
+            color="rgba(125, 187, 187, 1)" />
 				</div>
 				<div class="stress">
 					<h1>Stress</h1>
-					<ProgressBar :value="this.pilot.stress" :max="8" color="#F00" />
+					<ProgressBar
+            :value="this.pilotInfo.stress"
+            :max="8" color="#F00" />
 				</div>
 			</div>
-			<div class="burdens">
-				<Burden v-for="item in this.pilot.burdens" :key="item.id" :burden="item" :initialAnimate="animate"/>
+			<div class="burdens" v-if="this.pilotInfo.burdens.length > 0">
+				<Burden
+					v-for="item in this.pilotInfo.burdens"
+					:key="item.id"
+					:burden="item"
+					:animate="animate"
+				/>
+      </div>
+      <div class="gear-column" v-else @click="pilotModal">
+        <div class="gear-row">
+          <div class="armor">
+            <h1>Pilot Armor</h1>
+            <h2>{{ pilotInfo.loadout.armor[0].flavorName }}</h2>
+          </div>
+          <div class="gear">
+            <h1>Pilot Gear</h1>
+            <h2>{{ pilotInfo.loadout.gear[0].flavorName }}</h2>
+          </div>
+        </div>
+        <div class="gear-row">
+          <div class="weapon">
+            <h1>Pilot Weapon</h1>
+            <h2>{{ pilotInfo.loadout.weapons[0].flavorName }}</h2>
+          </div>
+          <div class="gear">
+            <h1>Pilot Gear</h1>
+            <h2>{{ pilotInfo.loadout.gear[1].flavorName }}</h2>
+          </div>
+        </div>
+        <div class="gear-row">
+          <div class="weapon">
+            <h1>Pilot Weapon</h1>
+            <h2>{{ pilotInfo.loadout.weapons[1].flavorName }}</h2>
+          </div>
+          <div class="gear">
+            <h1>Pilot Gear</h1>
+            <h2>{{ pilotInfo.loadout.gear[2].flavorName }}</h2>
+          </div>
 			</div>
+    </div>
 		</div>
-		<div class="mech-column">
+		<div class="mech-column" @click="mechModal">
 			<div class="mech-info">
 				<div class="name">
 					<h1>Active Mech</h1>
@@ -110,8 +147,12 @@
 <script>
 import "external-svg-loader";
 import lancerData from "lancer-data";
+import ktbData from "lancer-ktb-data";
+import nrfawData from "lancer-nrfaw-data";
+import longrimData from "lancer-longrim-data";
 
 import PilotModal from "@/components/modals/PilotModal.vue";
+
 import ProgressBar from "@/components/ProgressBar.vue";
 import Burden from "@/components/Burden.vue";
 
@@ -122,10 +163,10 @@ export default {
 		ProgressBar,
 	},
 	props: {
-    animate: {
-      Type: String,
-      Required: true,
-    },
+		animate: {
+			type: Boolean,
+			required: true,
+		},
 		pilot: {
 			type: Object,
 			required: true,
@@ -134,6 +175,7 @@ export default {
 	data() {
 		return {
 			activeMech: {},
+      bond: {},
 		};
 	},
 	computed: {
@@ -145,36 +187,88 @@ export default {
 		},
 		mechManufacturerIcon() {
 			if (this.activeMech.manufacturer) {
-				return `/icons/${this.activeMech.manufacturer.toLowerCase()}.svg`;
+				return `/faction-logos/${this.activeMech.manufacturer.toLowerCase()}.svg`;
 			}
 		},
 		pilotCode() {
+      var identNameParts = this.pilot.name.split(" ");
+      var identFirstName = identNameParts[0];
+      var identLastNameParts = identNameParts.slice(1);
+      var identName = "";
+      identLastNameParts.forEach(part => {
+        identName += part + "."
+      })
+      identName += identFirstName;
 			return [
-				`${this.pilot.id} // ${this.pilot.background} // LOADOUT ${this.pilot.loadout.id} - MECH ${this.pilot.mechs[0].id} // HARDPOINTS ${this.pilot.mechs[0].loadouts[0].id}`
+				`Union Administrative RM-4 Pilot Identification Protocol (IDENT) Record ${identName}:${this.pilot.id} // ${this.pilot.background} // LOADOUT ${this.pilot.loadout.id} - MECH ${this.pilot.mechs[0].id} // HARDPOINTS ${this.pilot.mechs[0].loadouts[0].id}`,
 			];
 		},
+    pilotInfo() {
+      var pilotInfo = this.pilot;
+      let knownGear = [...lancerData.pilot_gear, ...nrfawData.pilot_gear];
+
+      function resolveGear(type, item, idx, arr) {
+        if (item && item.hasOwnProperty("flavorName") && typeof item.flavorName !== 'undefined') {
+          !item.flavorName.length > 0 ? item.flavorName = knownGear.find(obj => {return item.id == obj.id;}).name : null ;
+        }
+        else {
+          let missingPilotArmorID = "missing_pilotarmor";
+          let missingPilotWeaponID = "missing_pilotweapon";
+          let missingPilotGearID = "missing_pilotgear";
+
+          item = knownGear.find(obj => {return (
+            (type == "armor" && missingPilotArmorID == obj.id)
+            || (type == "weapon" && missingPilotWeaponID == obj.id)
+            || (type == "gear" && missingPilotGearID == obj.id)
+          )});
+          item.flavorName = item.name;
+          arr[idx] = item;
+        }
+      }
+
+      pilotInfo.loadout.armor.forEach(function(item, index, array) {
+        resolveGear("armor", item, index, array);
+      });
+      pilotInfo.loadout.weapons.forEach(function(item, index, array) {
+        resolveGear("weapon", item, index, array);
+      });
+      pilotInfo.loadout.gear.forEach(function(item, index, array) {
+        resolveGear("gear", item, index, array);
+      });
+
+      return pilotInfo;
+    },
 	},
 	mounted() {
 		this.getActiveMech();
+    this.getBond();
 	},
 	methods: {
+    getBond() {
+      this.bond = ktbData.bonds.find(obj => {
+        return obj.id == this.pilot.bondId;
+      })
+    },
 		getActiveMech() {
+      let activeMechID = this.pilot.state.active_mech_id;
 			var mech = this.pilot.mechs.find(obj => {
-				return obj.active == true;
+				return obj.id == activeMechID;
 			});
 
 			if (mech) {
 				this.activeMech = mech;
 			} else {
-				this.activeMech = this.pilot.mechs[0];
+        // default to missing frame in case pilot has no mechs
+				this.pilot.mechs[0] ? this.activeMech = this.pilot.mechs[0] : lancerData.frames.find(obj => {return obj.id == "missing_frame"});
 			}
 
-			var frame = lancerData.frames.find(obj => {
-				return obj.id == this.activeMech.frame;
-			});
+      let knownFrames = [...lancerData.frames, ...ktbData.frames, ...nrfawData.frames, ...longrimData.frames]
+      var frame = knownFrames.find(obj => {
+          return obj.id == this.activeMech.frame;
+      });
 
 			if (!frame) {
-				frame = this.lancerData.frames[0];
+				frame = lancerData.frames[0];
 			}
 
 			this.activeMech["frame_name"] = frame.name;

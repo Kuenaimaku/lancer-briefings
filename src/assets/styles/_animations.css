@@ -8,13 +8,13 @@
 }
 
 @keyframes slideInDown {
-  0% {
-    transform: translateY(-1000%);
-  }
+	0% {
+		transform: translateY(-1000%);
+	}
 
-  100% {
-    transform: translateY(0);
-  }
+	100% {
+		transform: translateY(0);
+	}
 }
 
 @keyframes slideInFromLeftRhombus {
@@ -30,24 +30,34 @@
 }
 
 @keyframes slideInDownSidebar {
-  0% {
-    transform: translateY(-1000%);
-    visibility: hidden;
-  }
+	0% {
+		transform: translateY(-1000%);
+		visibility: hidden;
+	}
 
-  100% {
-    transform: translateY(0);
-    visibility: visible;
-  }
+	100% {
+		transform: translateY(0);
+		visibility: visible;
+	}
 }
 
 @keyframes flickerIn {
-	0% { opacity: 0; }
-	10% { opacity: 0.2; }
+	0% {
+		opacity: 0;
+	}
+	10% {
+		opacity: 0.2;
+	}
 	15%,
-  30% { opacity: 0.4; }
-	40% { opacity: 0.05; }
-	100% { opacity: 1; }
+	30% {
+		opacity: 0.4;
+	}
+	40% {
+		opacity: 0.05;
+	}
+	100% {
+		opacity: 1;
+	}
 }
 
 @keyframes blink {
@@ -63,45 +73,49 @@
 }
 
 @keyframes unhide {
-  0% { opacity: 0; }
-  50% { opacity: 0.5; }
-	100% { opacity: 1; }
+	0% {
+		opacity: 0;
+	}
+	50% {
+		opacity: 0.5;
+	}
+	100% {
+		opacity: 1;
+	}
 }
-
 
 /* Some elements have been loaded with a dynamic "animate" class in their html.
    If this class is present then the animations will be enabled for those elements,
    otherwise the animations will be disabled.
-   By default, these styles limit the element animations this sheet to only play once per browser session.
 */
 
-/* TODO: fix animations for Pilot.vue and Events.vue elements */
+/* TODO: fix animations for Pilot.vue and Event.vue elements */
 
 /* HEADER + SIDEBAR */
 header[class*="animate"] {
-  animation: slideInFromLeft 0.3s ease-out;
+	animation: slideInFromLeft 0.3s ease-out;
 }
 
-.sidebar-page[class*="animate"]  #sidebar{
-  display: flex;
-  background-color: var(--primary-color);
-  animation: slideInDownSidebar 0.3s ease-out 1.2s;
-  animation-fill-mode: both;
+.sidebar-page[class*="animate"] #sidebar {
+	display: flex;
+	background-color: var(--primary-color);
+	animation: slideInDownSidebar 0.3s ease-out 1.2s;
+	animation-fill-mode: both;
 }
 
 [class*="animate"] .clipped-bottom-right {
-  animation: flickerIn 0.5s ease 1.5s;
+	animation: flickerIn 0.5s ease 1.5s;
 }
 
 [class*="animate"] .title-container {
-  transform: translateX(-5000%);
-  animation: slideInFromLeft 0.3s ease-out 0.5s;
+	transform: translateX(-5000%);
+	animation: slideInFromLeft 0.3s ease-out 0.5s;
 	animation-fill-mode: forwards;
 }
 
 [class*="animate"] .logo {
-  transform: translateX(-5000%);
-  animation: slideInFromLeft 0.3s ease-out 1s;
+	transform: translateX(-5000%);
+	animation: slideInFromLeft 0.3s ease-out 1s;
 	animation-fill-mode: forwards;
 }
 
@@ -111,33 +125,28 @@ header[class*="animate"] {
 	animation-fill-mode: forwards;
 }
 
-header[class*="animate"]  div video,
+header[class*="animate"] div video,
 header[class*="animate"] div.location-info {
-	animation: flickerIn 0.5s ease-in 1.5s 1 ;
+	animation: flickerIn 0.5s ease-in 1.5s 1;
 	animation-fill-mode: forwards;
-	opacity: 0;
 }
 /* END HEADER + SIDEBAR */
 
 /* VIEWS CONTENT */
 
-/* make sure the containers dont appear until the animation starts */
-[class*="animate"] section.section-container {
-  opacity: 0;
-}
-
 /* all section-containers on main /status view */
-[class*="animate"] section.section-container
-{
-	animation: flickerIn 0.5s ease 2.5s;
-	animation-fill-mode: forwards;
+[class*="animate"] section.section-container {
+	/* the animation-delay for the StatusView section-containers is dynamically set in StatusView.vue */
+	animation: flickerIn 0.5s ease;
+	/* make sure the containers dont appear until the animation starts */
+	animation-fill-mode: both;
 }
 
-[class*="animate"] section.section-container#events-logs,
-[class*="animate"] section.section-container#pilots {
-  animation: flickerIn 0.5s ease;
-  animation-fill-mode: forwards;
-  opacity: 0;
+/* section-containers on /pilots and /events views */
+section.section-container[class*="animate"]#events-logs,
+section.section-container[class*="animate"]#pilots {
+	animation: flickerIn 0.8s ease;
+	animation-fill-mode: both;
 }
 
 div.markdown {

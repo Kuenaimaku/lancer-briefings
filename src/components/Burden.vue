@@ -33,12 +33,18 @@ export default defineComponent({
 	name: "Burden",
 	components: { DoughnutChart },
 	props: {
-		burden: Object,
-    initialAnimate: Boolean,
+		burden: {
+			type: Object,
+			required: true,
+		},
+		animate: {
+			type: Boolean,
+			required: true,
+		},
 	},
 	setup(props) {
-		const dataArray = [];
-		const colorArray = [];
+		const dataArray: number[] = [];
+		const colorArray: string[] = [];
 		for (let index = 0; index < props.burden.segments; index++) {
 			dataArray.push(1);
 
@@ -49,12 +55,12 @@ export default defineComponent({
 			}
 		}
 		const data = ref(dataArray);
-    const animation = !props.initialAnimate ? null : { delay: 10000 }
+		const animation = !props.animate ? null : { delay: 5000 };
 		const options = ref({
 			responsive: true,
 			cutout: "35%",
 			devicePixelRatio: 2,
-      animation
+			animation,
 		});
 
 		const testData = computed(() => ({

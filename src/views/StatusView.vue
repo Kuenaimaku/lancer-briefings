@@ -1,10 +1,13 @@
 <template>
 	<div
-    :class="{animate: animate}"
-    class="content-container">
-		<section class="section-container" id="missions">
+		:class="{ animate: animateView }"
+		:style="{ 'animation-delay': animationDelay }"
+		class="content-container"
+		id="statusView"
+	>
+		<section class="section-container" id="missions" :style="{ 'animation-delay': animationDelay }">
 			<div class="section-header clipped-medium-backward">
-				<img src="/icons/mission-icon.svg" />
+				<img src="/icons/campaign.svg" />
 				<h1>Mission Log</h1>
 			</div>
 			<div class="section-content-container">
@@ -22,9 +25,9 @@
 				</div>
 			</div>
 		</section>
-		<section class="section-container" id="events">
+		<section class="section-container" id="events" :style="{ 'animation-delay': animationDelay }">
 			<div class="section-header clipped-medium-backward">
-				<img src="/icons/events-icon.svg" />
+				<img src="/icons/events.svg" />
 				<h1>Events Log</h1>
 			</div>
 			<div class="section-content-container">
@@ -33,9 +36,9 @@
 				</div>
 			</div>
 		</section>
-		<section class="section-container" id="reserves">
+		<section class="section-container" id="reserves" :style="{ 'animation-delay': animationDelay }">
 			<div class="section-header clipped-medium-backward">
-				<img src="/icons/events-icon.svg" />
+				<img src="/icons/squad.svg" />
 				<h1>Reserves</h1>
 			</div>
 			<div class="section-content-container">
@@ -49,14 +52,20 @@
 				</div>
 			</div>
 		</section>
-		<section class="section-container" id="clocks">
+		<section class="section-container" id="clocks" :style="{ 'animation-delay': animationDelay }">
 			<div class="section-header clipped-medium-backward">
-				<img src="/icons/events-icon.svg" />
+				<img src="/icons/protocol.svg" />
 				<h1>Progress Clocks</h1>
 			</div>
 			<div class="section-content-container">
 				<div class="clocks-list-container">
-					<Clock v-for="item in this.clocks" :key="item.name" :clock="item" :initialAnimate="animate"/>
+					<Clock
+						v-for="item in this.clocks"
+						:key="item.name"
+						:clock="item"
+						:animate="animate"
+						:animationDelay="clockAnimationDelay"
+					/>
 				</div>
 			</div>
 		</section>
@@ -79,67 +88,82 @@ export default {
 		Reserve,
 	},
 	props: {
-    initialSlug: {
-      Type: String,
-      Required: true,
-    },
+		animate: {
+			type: Boolean,
+			required: true,
+		},
+		initialSlug: {
+			type: String,
+			required: true,
+		},
 		missions: {
-			Type: Array,
-			Required: true,
+			type: Array,
+			required: true,
 		},
 		events: {
-			Type: Array,
-			Required: true,
+			type: Array,
+			required: true,
 		},
 		pilots: {
-			Type: Array,
-			Required: true,
+			type: Array,
+			required: true,
 		},
 		clocks: {
-			Type: Array,
-			Required: true,
+			type: Array,
+			required: true,
 		},
 		reserves: {
-			Type: Array,
-			Required: true,
+			type: Array,
+			required: true,
 		},
 	},
 	data() {
 		return {
-      missionSlug: this.initialSlug,
-      animate: true,
+			missionSlug: this.initialSlug,
+			animateView: this.animate,
+			animationDelay: "2.5s",
+			clockAnimationDelay: "2500",
 			missionMarkdown: "",
 		};
 	},
-  created() {
-    this.disableAnimate();
-  },
+	created() {
+		this.setAnimate();
+		this.setClockAnimateDelay();
+	},
 	computed: {},
-  beforeUpdate() {
-      // initial set
-      this.selectMission(this.missionSlug);
-  },
+	beforeUpdate() {
+		// initial set
+		this.selectMission(this.missionSlug);
+	},
 	mounted() {
-    // need to set on re-mount
-    if (this.missions.length > 0) {
-      this.selectMission(this.missions[0].slug);
-    }
-  },
+		// need to set on re-mount
+		if (this.missions.length > 0) {
+			this.selectMission(this.missions[0].slug);
+		}
+	},
 	methods: {
 		selectMission(slug) {
-      this.missionSlug = slug;
-      var m = this.missions.find((x) => x.slug === this.missionSlug);
-      this.missionMarkdown = m.content;
-    },
-    disableAnimate() {
-      let statusAnimated = window.sessionStorage.getItem('statusAnimated');
-      if (statusAnimated) {
-        this.animate = false;
-      }
-      if (statusAnimated === null) {
-        window.sessionStorage.setItem('statusAnimated', true);
-      }
-    },
-  },
+			this.missionSlug = slug;
+			var m = this.missions.find(x => x.slug === this.missionSlug);
+			this.missionMarkdown = m.content;
+		},
+		setAnimate() {
+			if (this.animate) {
+				this.animateView = true;
+			}
+			let statusAnimated = window.sessionStorage.getItem("statusAnimated");
+			if (statusAnimated) {
+				this.animationDelay = "0s";
+			}
+			if (statusAnimated === null) {
+				window.sessionStorage.setItem("statusAnimated", true);
+			}
+		},
+		setClockAnimateDelay() {
+			let delayToFloat = parseFloat(this.animationDelay.replace("s", ""));
+			let finalClockDelay = delayToFloat * 600 + 600;
+			this.clockAnimationDelay = finalClockDelay.toString();
+		},
+	},
 };
 </script>

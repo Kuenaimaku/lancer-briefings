@@ -1,0 +1,9 @@
+{
+	"compilerOptions": {
+		"allowJs": true,
+		"isolatedModules": false,
+		"skipLibCheck": true,
+    "jsx":"preserve",
+	},
+	"exclude": ["node_modules", "dist", "bin", "samples"]
+}

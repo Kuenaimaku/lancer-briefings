@@ -1,0 +1,30 @@
+{
+	"initialSlug": "001",
+	"planetPath": "/planet.webm",
+	"animate": true,
+	"header": {
+		"planet": "Hercynia",
+		"year": "5014u",
+		"system": "Ardennes-3",
+		"gate": "Atlas-Quanokrim",
+		"ring": "Atlas-Line",
+		"headerTitle": "Mirrorsmoke",
+		"headerSubtitle": "Mercenary Company",
+		"subheaderTitle": "Crisis Response",
+		"subheaderSubtitle": "Delta-Echo-Echo-Zulu"
+	},
+	"pilotSpecialInfo": {
+		"ANUBIS": {
+			"age": "30u",
+			"pob": ""
+		},
+		"APOLLO": {
+			"age": "32u",
+			"pob": "Evergreen"
+		},
+		"RAI-DEN": {
+			"age": "48u",
+			"pob": "Gaia"
+		}
+	}
+}

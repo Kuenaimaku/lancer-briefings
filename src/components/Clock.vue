@@ -60,12 +60,22 @@ export default defineComponent({
 	name: "Clock",
 	components: { DoughnutChart },
 	props: {
-		clock: Object,
-    initialAnimate: Boolean,
+		clock: {
+			type: Object,
+			required: true,
+		},
+		animate: {
+			type: Boolean,
+			required: true,
+		},
+		animationDelay: {
+			type: String,
+			required: false,
+		},
 	},
 	setup(props) {
-		const dataArray = [];
-		const colorArray = [];
+		const dataArray: number[] = [];
+		const colorArray: string[] = [];
 		for (let index = 0; index < props.clock.max; index++) {
 			dataArray.push(1);
 
@@ -76,12 +86,12 @@ export default defineComponent({
 			}
 		}
 		const data = ref(dataArray);
-    const animation = !props.initialAnimate ? null : { delay: 3000 }
+		const animation = !props.animate ? null : { delay: parseInt(props.animationDelay) };
 		const options = ref({
 			responsive: true,
 			cutout: "35%",
 			devicePixelRatio: 2,
-      animation
+			animation,
 		});
 
 		const testData = computed(() => ({

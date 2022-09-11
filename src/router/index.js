@@ -1,4 +1,4 @@
-import { createWebHistory, createRouter } from "vue-router";
+import { createMemoryHistory, createWebHistory, createRouter } from "vue-router";
 
 import Status from "@/views/StatusView.vue";
 import Pilots from "@/views/PilotsView.vue";
@@ -6,9 +6,9 @@ import Events from "@/views/EventsView.vue";
 
 const DEFAULT_TITLE = "MSMC |";
 const routes = [
-  {
+	{
 		path: "/",
-		redirect: "/status"
+		redirect: "/status",
 	},
 	{
 		path: "/status",
@@ -34,7 +34,7 @@ const routes = [
 ];
 
 const router = createRouter({
-	history: createWebHistory(),
+	history: import.meta.env.SSR ? createMemoryHistory() : createWebHistory(),
 	routes,
 	scrollBehavior(to, from, savedPosition) {
 		if (to.hash) {

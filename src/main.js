@@ -8,9 +8,9 @@ import "@mdi/font/css/materialdesignicons.css";
 
 import "@/assets/styles/_reset.css";
 import "@/assets/styles/_base.css";
-import '@/assets/styles/_animations.css'
+import "@/assets/styles/_animations.css";
 
-import Router from "./router";
+import router from "./router";
 import VueWriter from "vue-writer";
 
-createApp(App).use(Router).use(Oruga).use(VueWriter).mount("#app");
+createApp(App).use(router).use(Oruga).use(VueWriter).mount("#app");
