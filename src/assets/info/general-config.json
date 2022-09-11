@@ -14,10 +14,6 @@
 		"subheaderSubtitle": "Delta-Echo-Echo-Zulu"
 	},
 	"pilotSpecialInfo": {
-		"ANUBIS": {
-			"age": "30u",
-			"pob": ""
-		},
 		"APOLLO": {
 			"age": "32u",
 			"pob": "Evergreen"
