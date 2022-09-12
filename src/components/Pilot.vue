@@ -23,7 +23,7 @@
 				</div>
 			</div>
 			<div class="pilot-code">
-				<VueWriter :array="pilotCode" :typeSpeed="25" :eraseSpeed="0" :delay="10000" />
+				<VueWriter :array="pilotCode" :typeSpeed="25" :eraseSpeed="0" :start="900" :delay="5000" />
 			</div>
 		</div>
 		<div class="gear-column" v-if="!this.pilotInfo.bondId" @click="pilotModal">
@@ -152,6 +152,7 @@ import nrfawData from "lancer-nrfaw-data";
 import longrimData from "lancer-longrim-data";
 
 import PilotModal from "@/components/modals/PilotModal.vue";
+import MechModal from "@/components/modals/MechModal.vue";
 
 import ProgressBar from "@/components/ProgressBar.vue";
 import Burden from "@/components/Burden.vue";
@@ -287,6 +288,21 @@ export default {
 				width: 1920,
 			});
 		},
+    mechModal() {
+      this.$oruga.modal.open({
+				component: MechModal,
+				custom: true,
+				trapFocus: true,
+				props: {
+          animate: this.animate,
+					mech: this.activeMech,
+          systemsData: [...lancerData.systems, ...ktbData.systems, ...nrfawData.systems, ...longrimData.systems],
+          weaponsData: [...lancerData.weapons, ...ktbData.weapons, ...nrfawData.weapons, ...longrimData.weapons],
+        },
+				class: "custom-modal",
+				width: 1920,
+			});
+    }
 	},
 };
 </script>
