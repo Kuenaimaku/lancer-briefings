@@ -2,6 +2,8 @@
 	"initialSlug": "001",
 	"planetPath": "/planet.webm",
 	"animate": true,
+  "defaultTitle": "MSMC |",
+  "icon": "/faction-logos/msmc.svg",
 	"header": {
 		"planet": "Hercynia",
 		"year": "5014u",

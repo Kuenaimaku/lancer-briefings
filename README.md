@@ -66,6 +66,8 @@ This folder holds all of the local image, audio and video assets.
 - `general-config.json` - Edit this to change which mission loads initially, set the pilot information, and other ease-of-use options that have been introduced to modify how the site works. Below are the values you might have to change.
   - `initialSlug` - Controls what mission file is selected on startup. This MUST match the slug of a markdown file within the `/public/missions/` directory.
   - `planetPath` - The path (relative to the root directory of this repository) to the .webm or .gif file to use for the planet video element.
+  - `defaultTitle` - Sets the prefix for the title of each page (the text that shows up in your browser tab).
+  - `icon` - The path (relative to the root directory of this repository) to the image that should be used for the favicon. This will be displayed in the browser tab for this website.
   - `header` - Reads from the `header` JSON object to determine what text to place on each element of the `Header.vue` Component.
   - `pilotSpecialInfo` - Currently only used for getting the `age` and place of birth (`pob`) for each pilot, based on their uppercased callsign.
 - `/missions` - This is where the summaries of missions are held. The filename MUST match the `slug` property within the App's data.

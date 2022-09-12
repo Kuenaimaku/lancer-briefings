@@ -66,6 +66,7 @@ export default {
 		};
 	},
 	created() {
+    this.setTitleFavicon(Config.defaultTitle + " MISSION BRIEFING", Config.icon);
 		this.importMissions(import.meta.glob("@/assets/missions/*.md", { as: "raw" }));
 		this.importEvents(import.meta.glob("@/assets/events/*.md", { as: "raw" }));
 		this.importClocks(import.meta.glob("@/assets/clocks/*.json"));
@@ -76,6 +77,14 @@ export default {
 		this.$router.push("/status");
 	},
 	methods: {
+    setTitleFavicon(title, favicon) {
+      document.title = title;
+      let headEl = document.querySelector('head');
+      let faviconEl = document.createElement('link');
+      faviconEl.setAttribute('rel','shortcut icon');
+      faviconEl.setAttribute('href',favicon);
+      headEl.appendChild(faviconEl);
+    },
 		async importMissions(files) {
 			let filePromises = Object.keys(files).map(path => files[path]());
 			let fileContents = await Promise.all(filePromises);
