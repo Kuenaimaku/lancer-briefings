@@ -1,7 +1,7 @@
 <template>
 	<div class="pilot-wrapper">
 		<div class="pilot-column" @click="pilotModal">
-			<img :src="this.pilotInfo.cloud_portrait" class="portrait" />
+			<img :src="pilotInfo.cloud_portrait" class="portrait" />
 			<div class="pilot-info">
 				<div class="callsign">
 					<h1>Callsign</h1>
@@ -11,22 +11,22 @@
 					<h1>Name or Legal Alias</h1>
 					<h2>{{ pilotInfo.name }}</h2>
 				</div>
-				<div class="age-pob" v-if="this.pilotInfo.age || this.pilotInfo.pob">
-          <div class="pob" v-if="this.pilotInfo.pob.length > 0">
+				<div v-if="pilotInfo.age || pilotInfo.pob" class="age-pob">
+          <div v-if="pilotInfo.pob.length > 0" class="pob">
 						<h1>Place of Birth</h1>
 						<h2>{{ pilot.pob }}</h2>
 					</div>
-					<div class="age" v-if="this.pilotInfo.age.length > 0">
+					<div v-if="pilotInfo.age.length > 0" class="age">
 						<h1>Subjective Age</h1>
 						<h2>{{ pilot.age }}</h2>
 					</div>
 				</div>
 			</div>
 			<div class="pilot-code">
-				<VueWriter :array="pilotCode" :typeSpeed="25" :eraseSpeed="0" :start="900" :delay="5000" />
+				<VueWriter :array="pilotCode" :type-speed="25" :erase-speed="0" :start="900" :delay="5000" />
 			</div>
 		</div>
-		<div class="gear-column" v-if="!this.pilotInfo.bondId" @click="pilotModal">
+		<div v-if="!pilotInfo.bondId" class="gear-column" @click="pilotModal">
 			<div class="gear-row">
         <div class="armor">
           <h1>Pilot Armor</h1>
@@ -58,7 +58,7 @@
         </div>
 			</div>
 		</div>
-		<div class="bonds-column" v-if="this.pilotInfo.bondId" @click="pilotModal">
+		<div v-if="pilotInfo.bondId" class="bonds-column" @click="pilotModal">
 			<div class="bonds">
 				<div class="bond">
 					<h1>Bond</h1>
@@ -67,26 +67,26 @@
 				<div class="experience">
 					<h1>Experience</h1>
 					<ProgressBar
-            :value="this.pilotInfo.xp"
+            :value="pilotInfo.xp"
             :max="8"
             color="rgba(125, 187, 187, 1)" />
 				</div>
 				<div class="stress">
 					<h1>Stress</h1>
 					<ProgressBar
-            :value="this.pilotInfo.stress"
+            :value="pilotInfo.stress"
             :max="8" color="#F00" />
 				</div>
 			</div>
-			<div class="burdens" v-if="this.pilotInfo.burdens.length > 0">
+			<div v-if="pilotInfo.burdens.length > 0" class="burdens">
 				<Burden
-					v-for="item in this.pilotInfo.burdens"
+					v-for="item in pilotInfo.burdens"
 					:key="item.id"
 					:burden="item"
 					:animate="animate"
 				/>
       </div>
-      <div class="gear-column" v-else @click="pilotModal">
+      <div v-else class="gear-column" @click="pilotModal">
         <div class="gear-row">
           <div class="armor">
             <h1>Pilot Armor</h1>
@@ -139,7 +139,7 @@
 					{{ activeMech.mechtype }}
 				</div>
 			</div>
-			<img :src="this.pilot.mechs[0].cloud_portrait" class="portrait" />
+			<img :src="pilot.mechs[0].cloud_portrait" class="portrait" />
 		</div>
 	</div>
 </template>

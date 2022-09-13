@@ -1,6 +1,6 @@
 <template>
 	<div class="page-wrapper">
-		<Header :planetPath="planetPath" :class="{ animate: animate }" :header="this.header" />
+		<Header :planet-path="planetPath" :class="{ animate: animate }" :header="header" />
 		<Sidebar :animate="animate" :class="{ animate: animate }" />
 	</div>
 	<div id="router-view-container">

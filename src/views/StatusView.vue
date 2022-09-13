@@ -1,42 +1,45 @@
 <template>
 	<div
-		:class="{ animate: animateView }"
-		:style="{ 'animation-delay': animationDelay }"
-		class="content-container"
-		id="statusView"
-	>
-		<section class="section-container" id="missions" :style="{ 'animation-delay': animationDelay }">
+	  id="statusView"
+	  :class="{ animate: animateView }"
+	  :style="{ 'animation-delay': animationDelay }"
+	  class="content-container">
+		<section id="missions" class="section-container" :style="{ 'animation-delay': animationDelay }">
 			<div class="section-header clipped-medium-backward">
 				<img src="/icons/campaign.svg" />
 				<h1>Mission Log</h1>
 			</div>
 			<div class="section-content-container">
 				<h3>Current Assignment</h3>
-				<Markdown :source="missionMarkdown" class="markdown" />
+				<Markdown
+				  :source="missionMarkdown"
+				  class="markdown" />
 				<h3>Mission List</h3>
 				<div class="mission-list-container">
 					<Mission
-						v-for="item in this.missions"
-						:key="item.slug"
-						:mission="item"
-						:selected="this.missionSlug"
-						@click="selectMission(item.slug)"
-					/>
+					  v-for="item in missions"
+					  :key="item.slug"
+					  :mission="item"
+					  :selected="missionSlug"
+					  @click="selectMission(item.slug)" />
 				</div>
 			</div>
 		</section>
-		<section class="section-container" id="events" :style="{ 'animation-delay': animationDelay }">
+		<section id="events" class="section-container" :style="{ 'animation-delay': animationDelay }">
 			<div class="section-header clipped-medium-backward">
 				<img src="/icons/events.svg" />
 				<h1>Events Log</h1>
 			</div>
 			<div class="section-content-container">
 				<div class="events-list-container">
-					<Event v-for="item in $props.events" :key="item.title" :event="item" />
+					<Event
+					  v-for="item in $props.events"
+					  :key="item.title"
+					  :event="item" />
 				</div>
 			</div>
 		</section>
-		<section class="section-container" id="reserves" :style="{ 'animation-delay': animationDelay }">
+		<section id="reserves" class="section-container" :style="{ 'animation-delay': animationDelay }">
 			<div class="section-header clipped-medium-backward">
 				<img src="/icons/squad.svg" />
 				<h1>Reserves</h1>
@@ -44,15 +47,14 @@
 			<div class="section-content-container">
 				<div class="reserves-list-container">
 					<Reserve
-						v-for="item in this.reserves"
-						:key="item.name"
-						:reserve="item"
-						:pilots="pilots"
-					/>
+					  v-for="item in reserves"
+					  :key="item.name"
+					  :reserve="item"
+					  :pilots="pilots" />
 				</div>
 			</div>
 		</section>
-		<section class="section-container" id="clocks" :style="{ 'animation-delay': animationDelay }">
+		<section id="clocks" class="section-container" :style="{ 'animation-delay': animationDelay }">
 			<div class="section-header clipped-medium-backward">
 				<img src="/icons/protocol.svg" />
 				<h1>Progress Clocks</h1>
@@ -60,12 +62,11 @@
 			<div class="section-content-container">
 				<div class="clocks-list-container">
 					<Clock
-						v-for="item in this.clocks"
-						:key="item.name"
-						:clock="item"
-						:animate="animate"
-						:animationDelay="clockAnimationDelay"
-					/>
+					  v-for="item in clocks"
+					  :key="item.name"
+					  :clock="item"
+					  :animate="animate"
+					  :animation-delay="clockAnimationDelay" />
 				</div>
 			</div>
 		</section>
@@ -126,11 +127,11 @@ export default {
 			missionMarkdown: "",
 		};
 	},
+	computed: {},
 	created() {
 		this.setAnimate();
 		this.setClockAnimateDelay();
 	},
-	computed: {},
 	beforeUpdate() {
 		// initial set
 		this.selectMission(this.missionSlug);

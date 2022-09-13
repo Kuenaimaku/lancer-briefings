@@ -20,7 +20,7 @@
 			<div class="rhombus-back">&nbsp;</div>
 		</div>
 		<div class="pilot">
-			<img :src="this.pilot.cloud_portrait" class="portrait" />
+			<img :src="pilot.cloud_portrait" class="portrait" />
 		</div>
 	</div>
 </template>
@@ -29,20 +29,20 @@
 import Markdown from "vue3-markdown-it";
 
 export default {
-	inheritAttrs: false,
 	components: {
 		Markdown,
 	},
-	data() {
-		return {
-			markdownHtml: true,
-		};
-	},
+	inheritAttrs: false,
 	props: {
 		pilot: {
 			type: Object,
 			required: true,
 		},
+	},
+	data() {
+		return {
+			markdownHtml: true,
+		};
 	},
 	computed: {},
 	methods: {},

@@ -7,7 +7,7 @@
 		<div class="description">
 			{{ reserve.description }}
 		</div>
-		<div class="pilot" v-if="this.reserve.callsign">
+		<div v-if="reserve.callsign" class="pilot">
 			<img :src="ownerImage" class="portrait" />
 			<div class="name">
 				<h1>Reserve Owner</h1>

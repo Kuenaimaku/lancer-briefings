@@ -2,14 +2,13 @@
 	<div class="sidebar-page">
 		<section class="sidebar-layout">
 			<o-sidebar
-				id="sidebar"
-				position="static"
-				:animate="animate"
-				:mobile="mobile"
-				:expand-on-hover="expandOnHover"
-				:reduce="reduce"
-				open
-			>
+			  id="sidebar"
+			  position="static"
+			  :animate="animate"
+			  :mobile="mobile"
+			  :expand-on-hover="expandOnHover"
+			  :reduce="reduce"
+			  open>
 				<router-link class="clipped-bottom-right" to="/status">
 					<img src="/icons/orbital.svg" />
 					<span>Status</span>

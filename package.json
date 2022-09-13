@@ -12,7 +12,6 @@
 		"@oruga-ui/oruga-next": "^0.5.5",
 		"chart.js": "^3.9.1",
 		"external-svg-loader": "^1.6.1",
-		"gsap": "^3.11.0",
 		"lancer-data": "^3.0.46",
 		"lancer-ktb-data": "^1.1.0",
 		"lancer-longrim-data": "^1.0.11",

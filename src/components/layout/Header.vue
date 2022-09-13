@@ -2,12 +2,8 @@
 	<header>
 		<div class="title clipped-x-large-forward">
 			<img class="logo" src="/faction-logos/msmc.svg" />
-      <!-- <div class="logos">
-          <div class="logo logoPrimary" />
-          <div class="logo logoSecondary" />
-      </div> -->
 			<div class="title-container">
-				<div class="title-row" id="title-first-line">
+				<div id="title-first-line" class="title-row">
 					<span id="title-header">{{ header.headerTitle }}</span>
 					<span id="title-subheader">{{ header.headerSubtitle }}</span>
 				</div>
@@ -23,7 +19,7 @@
 				<source :src="`${planetPath}`" type="video/webm" />
 			</video>
 			<div class="location-info">
-				<div class="location-row" id="planet-year">
+				<div id="planet-year" class="location-row">
 					<div id="year">
 						<h4>Year</h4>
 						<span class="subtitle">{{ header.year }}</span>
@@ -33,7 +29,7 @@
 						<span class="subtitle">{{ header.planet }}</span>
 					</div>
 				</div>
-				<div class="location-row" id="system-gate-ring">
+				<div id="system-gate-ring" class="location-row">
 					<div id="ring">
 						<h4>Ring</h4>
 						<span class="subtitle">{{ header.ring }}</span>
@@ -65,10 +61,10 @@ export default {
 			required: true,
 		},
 	},
-	created() {},
 	data() {
 		return {};
 	},
+	created() {},
 	mounted() {},
 };
 </script>
