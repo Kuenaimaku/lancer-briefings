@@ -30,6 +30,9 @@ export default defineConfig({
     cssCodeSplit: true,
     reportCompressedSize: true,
   },
+  json: {
+    namedExports: true,
+  },
   css: {
     devSourcemap: true,
   },

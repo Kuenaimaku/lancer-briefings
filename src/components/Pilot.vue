@@ -119,7 +119,7 @@
 			</div>
     </div>
 		</div>
-		<div class="mech-column" @click="mechModal">
+		<div class="mech-column">
 			<div class="mech-info">
 				<div class="name">
 					<h1>Active Mech</h1>
@@ -152,7 +152,6 @@ import nrfawData from "lancer-nrfaw-data";
 import longrimData from "lancer-longrim-data";
 
 import PilotModal from "@/components/modals/PilotModal.vue";
-import MechModal from "@/components/modals/MechModal.vue";
 
 import ProgressBar from "@/components/ProgressBar.vue";
 import Burden from "@/components/Burden.vue";
@@ -288,21 +287,6 @@ export default {
 				width: 1920,
 			});
 		},
-    mechModal() {
-      this.$oruga.modal.open({
-				component: MechModal,
-				custom: true,
-				trapFocus: true,
-				props: {
-          animate: this.animate,
-					mech: this.activeMech,
-          systemsData: [...lancerData.systems, ...ktbData.systems, ...nrfawData.systems, ...longrimData.systems],
-          weaponsData: [...lancerData.weapons, ...ktbData.weapons, ...nrfawData.weapons, ...longrimData.weapons],
-        },
-				class: "custom-modal",
-				width: 1920,
-			});
-    }
 	},
 };
 </script>

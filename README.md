@@ -15,7 +15,7 @@ Go over mission briefings within the LANCER Universe in style by showing your pl
 
 - Node (v14+)
 - Light Text Editor (VSCode Recommended)
-- Recoommended VSCode extensions:
+- Recommended VSCode extensions:
   - Color Info
   - Color Vision
   - IntelliCode
@@ -34,13 +34,14 @@ Go over mission briefings within the LANCER Universe in style by showing your pl
 
 `npm run dev` - Serve the webapp with hot reloads (for development work)
 `npm run build` - Build for production
-`npm run serve` - Locally preview production build
+`npm run serve OR npm run preview` - Locally preview production build
+`npm run format` - Format all code files using `prettier` based on rules set in `.prettierrc.json` (for development work)
 
 ## Customization
 
 Customization is handled in a couple of places.
 
-### Main.scss
+### _base.css
 
 This file holds a majority of the colors, fonts, and sizes of the webapp. Play around with the values in the marked customization section.
 
@@ -61,9 +62,7 @@ This folder holds all of the local image, audio and video assets.
 - `startup.ogg` - This is the sound that plays on page load.
 
 ### /assets folder
-
-
-- `general-config.json` - Edit this to change which mission loads initially, set the pilot information, and other ease-of-use options that have been introduced to modify how the site works. Below are the values you might have to change.
+- `/info/general-config.json` - Edit this to change which mission loads initially, set the pilot information, and other ease-of-use options that have been introduced to modify how the site works. Below are the values you might have to change.
   - `initialSlug` - Controls what mission file is selected on startup. This MUST match the slug of a markdown file within the `/public/missions/` directory.
   - `planetPath` - The path (relative to the root directory of this repository) to the .webm or .gif file to use for the planet video element.
   - `defaultTitle` - Sets the prefix for the title of each page (the text that shows up in your browser tab).
@@ -79,18 +78,18 @@ This folder holds all of the local image, audio and video assets.
 
 This file contains the basic structure of the entire application - and houses the data for all the various places. Find the `created()` method within App.vue, here you will find the directories that are used for importing the general configuration information and all of the data for each page. Below is a general description of each object and relevant sub-objects.
 
-- `missions`
-  - slug:
-- `missions.slug` - Controls what markdown file is selected when this mission is selected. This MUST match a markdown file within the `/public/missions/` directory.
-- `missions.name` - Controls what name the mission has in the mission list.
-- `missions.status` - controls what badge the mission has. Acceptable values are `start`, `partial-success`, `success`, and `failure`.
-- `pilots` - An array of json objects representing Lancer Pilots. Export your Pilot(s) from Comp/Con and put their .json files in the `assets/pilots` directory.
-- `pilots.callsign` - Controls what appears in the callsign section of the pilot roster. MUST match pilot portraits and biography markdown files within the `/public/pilots/` directory.
-- `pilots.alias` - Controls what appears in the Name or Legal Alias section of the pilot roster.
-- `pilots.code` - Controls what appears underneath the Name or Legal Alias section of the pilot roster.
-- `pilots.corpro` - Controls what appears first in the mech's header section.
-- `pilots.frame` - Controls what appears second in the mech's header section.
-- `pilots.mech` - Controls what appears under the mech's header section. MUST match mech images within the `/public/mechs/` directory.
+- `missions` - An array of `.md` files representing missions. Where the first 3 lines map to the `slug` `name` and `status`, respectively, followed by the `content` in the rest of the file.
+  - `slug` - Controls what markdown file is selected when this mission is selected. This MUST match a markdown file within the `/assets/missions/` directory.
+  - `name` - Controls what name the mission has in the mission list.
+  - `status` - Controls what badge the mission has. Acceptable values are `start`, `partial-success`, `success`, and `failure`.
+  - `content` - The actual content that gets displayed for the mission when selected.
+- `pilots` - An array of json objects representing Lancer Pilots. Export your Pilot(s) from Comp/Con and put their .json files in the `/assets/pilots` directory.
+  - `callsign` - Controls what appears in the callsign section of the pilot roster. MUST match pilot portraits and biography markdown files within the `/assets/pilots/` directory.
+  - `alias` - Controls what appears in the Name or Legal Alias section of the pilot roster.
+  - `code` - Controls what appears underneath the Name or Legal Alias section of the pilot roster.
+  - `corpro` - Controls what appears first in the mech's header section.
+  - `frame` - Controls what appears second in the mech's header section.
+  - `mech` - Controls what appears under the mech's header section. MUST match mech images within the `/public/mechs/` directory.
 
 ## Hosting Recommendations
 

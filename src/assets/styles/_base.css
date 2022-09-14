@@ -4,17 +4,21 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inconsolata&display=swap");
 
+/*-------------------------------------*/
+/*--       Theme Customization       --*/
+/*-------------------------------------*/
 :root {
+  /* Primary Colors */
 	--primary-color: #7dbbbb;
 	--secondary-color: #161c1dcc;
 	--highlight-hover: rgba(255, 255, 255, 0.3);
 	--highlight-active: rgba(255, 255, 255, 0.1);
-
+  /* Primary Text */
 	--text-headers: rgba(0, 0, 0, 1);
 	--text-location: rgba(255, 255, 255, 0.87);
-
+  /* Location Information */
 	--location-separator: rgba(255, 255, 255, 0.24);
-
+  /* Mission Pane */
 	--text-mission-title: rgba(255, 255, 255, 0.67);
 	--text-mission-status: rgba(255, 255, 255, 0.87);
 	--mission-start: rgba(109, 109, 109, 1);
@@ -23,16 +27,14 @@
 	--mission-failure: rgba(176, 45, 45, 1);
   --primary-logo:#0C3C40;
   --secondary-logo: #146464;
-
+  /* Pilot Roster Text */
 	--text-pilot-header: rgba(255, 255, 255, 0.67);
 	--text-pilot-value: rgba(255, 255, 255, 0.87);
 	--text-pilot-code: rgba(255, 255, 255, 0.47);
-
+  /* Markdown (Current Assignment, Events Log, Pilot Biography) */
 	--text-markdown-p: rgba(255, 255, 255, 0.87);
 	--text-markdown-h1: rgba(255, 255, 255, 0.67);
 	--text-markdown-h2: rgba(255, 255, 255, 0.87);
-
-	background-color: var(--secondary-color);
 }
 
 header {

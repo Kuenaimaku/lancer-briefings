@@ -14,3 +14,4 @@ import router from "./router";
 import VueWriter from "vue-writer";
 
 createApp(App).use(router).use(Oruga).use(VueWriter).mount("#app");
+// TODO: Introduce eslint with vue3 + typescript support
