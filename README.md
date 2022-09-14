@@ -32,10 +32,10 @@ Go over mission briefings within the LANCER Universe in style by showing your pl
 
 ## Build Scripts
 
-`npm run dev` - Serve the webapp with hot reloads (for development work)
-`npm run build` - Build for production
-`npm run serve OR npm run preview` - Locally preview production build
-`npm run format` - Format all code files using `prettier` based on rules set in `.prettierrc.json` (for development work)
+`npm run dev` - Serve the webapp with hot reloads (for development work)  
+`npm run build` - Build for production  
+`npm run serve OR npm run preview` - Locally preview production build  
+`npm run format` - Format all code files using `prettier` based on rules set in `.prettierrc.json` (for development work)  
 
 ## Customization
 
