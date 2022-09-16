@@ -283,12 +283,7 @@
 			"rank": 1
 		}
 	],
-	"mechSkills": [
-		0,
-		2,
-		0,
-		0
-	],
+	"mechSkills": [0, 2, 0, 0],
 	"counter_data": [],
 	"custom_counters": [],
 	"core_bonuses": [],
@@ -303,10 +298,7 @@
 	"bondPowers": [],
 	"powerSelections": 0,
 	"maxStress": 8,
-	"bondAnswers": [
-		"",
-		""
-	],
+	"bondAnswers": ["", ""],
 	"majorIdeal": "",
 	"minorIdeal": "",
 	"clocks": [],
@@ -375,13 +367,8 @@
 				"customDamageType": null
 			}
 		],
-		"extendedWeapons": [
-			null
-		],
-		"extendedGear": [
-			null,
-			null
-		]
+		"extendedWeapons": [null],
+		"extendedGear": [null, null]
 	},
 	"brews": []
 }

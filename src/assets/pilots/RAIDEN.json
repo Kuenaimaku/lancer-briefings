@@ -124,9 +124,7 @@
 								}
 							],
 							"extra": [],
-							"bonus_effects": [
-								"cb_overpower_caliber"
-							]
+							"bonus_effects": ["cb_overpower_caliber"]
 						},
 						{
 							"mount_type": "Heavy",
@@ -319,9 +317,7 @@
 		"Frames": [],
 		"MechWeapons": [],
 		"WeaponMods": [],
-		"MechSystems": [
-			"ms_external_batteries"
-		],
+		"MechSystems": ["ms_external_batteries"],
 		"SystemMods": []
 	},
 	"combat_history": {
@@ -400,17 +396,10 @@
 			"rank": 2
 		}
 	],
-	"mechSkills": [
-		2,
-		1,
-		0,
-		2
-	],
+	"mechSkills": [2, 1, 0, 2],
 	"counter_data": [],
 	"custom_counters": [],
-	"core_bonuses": [
-		"cb_overpower_caliber"
-	],
+	"core_bonuses": ["cb_overpower_caliber"],
 	"licenses": [
 		{
 			"id": "mf_deaths_head",
@@ -665,13 +654,8 @@
 				"customDamageType": null
 			}
 		],
-		"extendedWeapons": [
-			null
-		],
-		"extendedGear": [
-			null,
-			null
-		]
+		"extendedWeapons": [null],
+		"extendedGear": [null, null]
 	},
 	"brews": []
 }
