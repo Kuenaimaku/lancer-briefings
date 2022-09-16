@@ -404,6 +404,12 @@ section .section-header h1 {
 	-webkit-clip-path: polygon(0 0, 400px 0, 452px 100%, 0% 100%);
 	margin-right: 1em;
 }
+.clipped-medium-backward-mech {
+	width: 452px;
+	clip-path: polygon(0 0, 400px 0, 452px 100%, 0% 100%);
+	-webkit-clip-path: polygon(0 0, 400px 0, 452px 100%, 0% 100%);
+	margin-right: 1em;
+}
 .clipped-medium-backward-bio {
 	width: 552px;
 	clip-path: polygon(0 0, 500px 0, 552px 100%, 0% 100%);
@@ -873,7 +879,18 @@ section .section-header h1 {
 .pilot-modal.portrait .pilot-header-container {
 	display: flex;
 }
-.pilot-modal.portrait div .section-header {
+.pilot-modal.portrait .rhombus-back {
+	left: -25px;
+}
+
+.mech-modal {
+	position: relative;
+}
+
+.mech-modal .mech-header-container {
+	display: flex;
+}
+.mech-modal div .section-header {
 	background-color: var(--primary-color);
 	border-color: var(--primary-color);
 	height: 52px;
@@ -882,7 +899,16 @@ section .section-header h1 {
 	padding-left: 16px;
 	margin-top: -38px !important;
 }
-.pilot-modal.portrait .rhombus-back {
+.mech-modal div .section-header h1 {
+	font-size: 26px;
+	margin: 0%;
+	align-self: center;
+	font-family: "Big Shoulders Display", cursive;
+	font-weight: 800;
+	text-transform: uppercase;
+	letter-spacing: 0.1em;
+}
+.mech-modal .rhombus-back {
 	transform: skew(0.785398rad) !important;
 	background-color: var(--primary-color);
 	border-color: var(--primary-color);
@@ -890,9 +916,54 @@ section .section-header h1 {
 	height: 52px;
 	display: inline-block;
 	position: relative;
-	left: -25px;
+	left: -10px;
 	top: -38px;
 }
+.mech-modal div.mech {
+	background-color: var(--secondary-color);
+	border: 1px solid var(--primary-color);
+	margin-top: -38px;
+	width: 888px;
+	height: 662px;
+}
+.mech-modal div.mech div.markdown {
+	height: 662px;
+}
+.mech-modal.portrait .mech {
+	width: 600px;
+}
+.mech-modal.portrait img.portrait {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: top;
+	overflow: hidden;
+}
+.mech-modal.portrait .mech-header-container {
+	display: flex;
+}
+.mech-modal.portrait .rhombus-back {
+	left: -25px;
+}
+.mech h1 {
+	font-size: 12px;
+	font-weight: 400;
+	font-family: "Roboto", sans-serif;
+	line-height: 1.5em;
+	letter-spacing: 3px;
+	text-transform: uppercase;
+	color: var(--text-pilot-header);
+}
+.mech h2 {
+	font-size: 18px;
+	font-weight: 700;
+	font-family: "Titillium Web", sans-serif;
+	line-height: 1.5em;
+	letter-spacing: 0.5px;
+	text-transform: uppercase;
+	color: var(--text-pilot-value);
+}
+
 
 /* for Pilot view typing animation */
 .is-typed span.cursor {
