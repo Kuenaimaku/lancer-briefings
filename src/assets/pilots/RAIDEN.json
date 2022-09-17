@@ -43,7 +43,7 @@
 			"reactor_destroyed": false,
 			"core_active": false,
 			"cc_ver": "ERR",
-			"portrait": "",
+			"portrait": "/mechs/Type - Worst Beat.webp",
 			"cloud_portrait": "",
 			"loadouts": [
 				{
@@ -589,7 +589,7 @@
 	],
 	"group": "",
 	"sort_index": -1,
-	"portrait": "",
+	"portrait": "/pilots/Raiden.webp",
 	"cloud_portrait": "https://i.imgur.com/C7hgEeY.png",
 	"loadout": {
 		"id": "78e98f17-8922-4b91-be2a-c720298c04fa",

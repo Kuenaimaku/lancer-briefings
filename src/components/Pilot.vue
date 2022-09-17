@@ -1,7 +1,7 @@
 <template>
 	<div class="pilot-wrapper">
 		<div class="pilot-column" @click="pilotModal">
-			<img :src="pilotInfo.cloud_portrait" class="portrait" />
+			<img :src="pilotInfo.cloud_portrait" @error="setAltImage" :backup="pilotInfo.portrait" class="portrait" />
 			<div class="pilot-info">
 				<div class="callsign">
 					<h1>Callsign</h1>
@@ -139,7 +139,7 @@
 					{{ activeMech.mechtype }}
 				</div>
 			</div>
-			<img :src="pilot.mechs[0].cloud_portrait" class="portrait" />
+			<img :src="pilot.mechs[0].cloud_portrait" @error="setAltImage" :backup="pilot.mechs[0].portrait" class="portrait" />
 		</div>
 	</div>
 </template>
@@ -287,6 +287,13 @@ export default {
 				width: 1920,
 			});
 		},
+		setAltImage(event) {
+			let newImg = event.target.attributes.backup.nodeValue;
+			if(event.target.src === newImg) {
+				return;
+			}
+			event.target.src = newImg;
+		}
 	},
 };
 </script>

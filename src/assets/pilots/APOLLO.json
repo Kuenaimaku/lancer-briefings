@@ -43,7 +43,7 @@
 			"reactor_destroyed": false,
 			"core_active": false,
 			"cc_ver": "ERR",
-			"portrait": "pre_sniper_pixel.png",
+			"portrait": "/mechs/Mayfly.webp",
 			"cloud_portrait": "",
 			"loadouts": [
 				{
@@ -302,7 +302,7 @@
 	"majorIdeal": "",
 	"minorIdeal": "",
 	"clocks": [],
-	"portrait": "wampire_9.png",
+	"portrait": "/pilots/Jinzo.webp",
 	"cloud_portrait": null,
 	"loadout": {
 		"id": "e766180d-74d9-42ec-a07e-5e92704e16bb",
