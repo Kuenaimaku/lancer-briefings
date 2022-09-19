@@ -188,6 +188,7 @@ export default {
   },
   data() {
     return {
+      knownGear: [...lancerData.pilot_gear, ...nrfawData.pilot_gear],
       activeMech: {},
       bond: {},
     }
@@ -224,41 +225,20 @@ export default {
 			];
 		},
     pilotInfo() {
-      const pilotInfo = this.pilot
-      const knownGear = [...lancerData.pilot_gear, ...nrfawData.pilot_gear]
+      const info = this.pilot
 
-      function resolveGear(type, item, idx, arr) {
-        if (item && Object.prototype.hasOwnProperty.call(item, 'flavorName') && typeof item.flavorName !== 'undefined' && !(item.flavorName.length > 0)) {
-          item.flavorName = knownGear.find((obj) => { return item.id === obj.id }).name
-        }
-        else {
-          const missingPilotArmorID = 'missing_pilotarmor'
-          const missingPilotWeaponID = 'missing_pilotweapon'
-          const missingPilotGearID = 'missing_pilotgear'
-
-          item = knownGear.find((obj) => {
-            return (
-              (type === 'armor' && missingPilotArmorID === obj.id)
-            || (type === 'weapon' && missingPilotWeaponID === obj.id)
-            || (type === 'gear' && missingPilotGearID === obj.id)
-            )
-          })
-          item.flavorName = item.name
-          arr[idx] = item
-        }
+      var resolveGear = (type, item, idx, arr) => {
+        item = item || {id: "", flavorName: ""};
+        const gear = this.knownGear.find((obj) => { return item.id === obj.id }) || null;
+        item.flavorName = gear?.name || "ERR: DATA NOT FOUND";
+        arr[idx] = item;
       }
 
-      pilotInfo.loadout.armor.forEach((item, index, array) => {
-        resolveGear('armor', item, index, array)
-      })
-      pilotInfo.loadout.weapons.forEach((item, index, array) => {
-        resolveGear('weapon', item, index, array)
-      })
-      pilotInfo.loadout.gear.forEach((item, index, array) => {
-        resolveGear('gear', item, index, array)
-      })
+      info.loadout.armor.forEach((item, index, array) => resolveGear('armor', item, index, array));
+      info.loadout.weapons.forEach((item, index, array) => resolveGear('weapon', item, index, array));
+      info.loadout.gear.forEach((item, index, array) =>resolveGear('gear', item, index, array));
 
-      return pilotInfo
+      return info;
     },
   },
   mounted() {
