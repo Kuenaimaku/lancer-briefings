@@ -217,7 +217,7 @@ export default {
       })
       identName += identFirstName;
 			return [
-				`Union Administrative RM-4 Pilot Identification Protocol (IDENT) Record ${identName}:${this.pilot.id} // ${this.pilot.background} // LOADOUT ${this.pilot.loadout.id} - MECH ${this.pilot.mechs[0].id} // HARDPOINTS ${this.pilot.mechs[0].loadouts[0].id}`,
+				`Union Administrative RM-4 Pilot Identification Protocol (IDENT) Record ${identName}: ${this.pilot.id} // ${this.pilot.background} // LOADOUT ${this.pilot.loadout.id} - MECH ${this.pilot.mechs[0].id} // HARDPOINTS ${this.pilot.mechs[0].loadouts[0].id}`,
 			];
 		},
     pilotInfo() {

@@ -650,7 +650,6 @@ section .section-header h1 {
 	flex-direction: row;
 	height: 31%;
 	border-bottom: 1px solid var(--primary-color);
-	z-index: 1;
 	cursor: pointer;
 }
 
@@ -660,7 +659,8 @@ section .section-header h1 {
 .pilot-wrapper .mech-column {
 	display: flex;
 	flex-direction: row;
-	margin-left: 1em;
+	margin: 0em 1em 0em 1em;
+  column-gap: 0.5em;
 }
 
 .pilot-wrapper .pilot-column {
@@ -706,7 +706,6 @@ section .section-header h1 {
 	font-size: 11px;
 	color: var(--text-pilot-code);
 	width: 20em;
-  /* width: 65$; */
 }
 
 .pilot-wrapper .gear-column,
@@ -737,25 +736,19 @@ section .section-header h1 {
 }
 
 .pilot-wrapper .bonds-column .bonds {
-	/* width: 50%; */
 	display: flex;
 	flex-direction: column;
 	row-gap: 0.5em;
-  column-gap: 0.5em;
   max-width: 15em;
 	flex-grow: 2;
-	/* padding: 0em 1em; */
 }
 
 .pilot-wrapper .bonds-column .burdens {
-	/* width: 50%; */
 	display: flex;
 	flex-direction: column;
 	row-gap: 0.5em;
-  column-gap: 0.5em;
   max-width: 15em;
   flex-grow: 1;
-	/* padding: 0em 1em; */
 }
 
 .pilot-wrapper .bonds-column {
@@ -804,7 +797,6 @@ section .section-header h1 {
 .pilot-wrapper .gear-column .gear-row {
 	display: flex;
 	flex-direction: row;
-	column-gap: 1em;
 }
 
 .gear-row .gear,
