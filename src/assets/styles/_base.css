@@ -35,6 +35,39 @@
 	--text-markdown-p: rgba(255, 255, 255, 0.87);
 	--text-markdown-h1: rgba(255, 255, 255, 0.67);
 	--text-markdown-h2: rgba(255, 255, 255, 0.87);
+
+  /* For Firefox */
+  scrollbar-color: var(--primary-color) transparent !important;
+  scrollbar-width: thin;
+}
+
+html {
+  overflow: overlay;
+}
+
+/* Scroll bar stylings */
+::-webkit-scrollbar {
+  overflow: overlay;
+	width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar:hover {
+  background-color: var(--highlight-color);
+  scrollbar-color: var(--highlight-color) transparent !important;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+	background-color: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+	background-color: var(--primary-color);
+	scrollbar-color: var(--primary-color);
+	border-radius: 6px;
+	border: 0px transparent;
 }
 
 header {
@@ -316,7 +349,6 @@ section.section-container#events-logs .rhombus-back {
 
 .event-list-container {
 	height: 666px;
-	overflow-y: overlay;
 }
 
 section.section-container#pilots {
@@ -334,7 +366,6 @@ section.section-container#pilots .rhombus-back {
 
 .pilot-list-container {
 	height: 666px;
-	overflow-y: overlay;
 }
 
 section .section-header {
@@ -368,7 +399,12 @@ section .section-header h1 {
 	border: 1px solid var(--primary-color);
 	margin-top: -1px;
 	z-index: 0;
-	overflow-y: hidden;
+	overflow: auto;
+  /* Firefox only */
+  scrollbar-width: thin;
+}
+.section-content-container *:last-child{
+	border-bottom: none;
 }
 .section-content-container h3 {
 	color: var(--primary-color);
@@ -386,7 +422,7 @@ section .section-header h1 {
 
 .mission-list-container {
 	height: 180px;
-	overflow-y: overlay;
+	overflow: auto;
 }
 .clipped-medium-backward {
 	clip-path: polygon(0 0, calc(100% - 52px) 0, 100% 100%, 0% 100%);
@@ -432,6 +468,7 @@ section .section-header h1 {
 	font-weight: 400;
 	display: flex;
 	align-items: center;
+  justify-content: center;
 	border-radius: 3px;
 }
 .mission .name {
@@ -504,7 +541,6 @@ section .section-header h1 {
 .events-list-container {
 	display: flex;
 	flex-direction: column;
-	overflow-y: overlay;
 	height: 665px;
 }
 
@@ -558,7 +594,6 @@ section .section-header h1 {
 .reserves-list-container {
 	display: flex;
 	flex-direction: column;
-	overflow-y: scroll;
 	height: 665px;
 }
 
@@ -609,9 +644,10 @@ section .section-header h1 {
 }
 
 .pilot-wrapper {
+  align-items: center;
+  padding: 1em 0em 1em 0em;
 	display: flex;
 	flex-direction: row;
-	margin: 1.5em 0em 0em 0em;
 	height: 31%;
 	border-bottom: 1px solid var(--primary-color);
 	z-index: 1;
@@ -624,17 +660,11 @@ section .section-header h1 {
 .pilot-wrapper .mech-column {
 	display: flex;
 	flex-direction: row;
-	margin: 0.5em 1em 0em 1em;
-	border-right: 1px solid var(--secondary-color);
+	margin-left: 1em;
 }
 
 .pilot-wrapper .pilot-column {
 	column-gap: 1em;
-	width: 35%;
-}
-
-.pilot-wrapper .pilot-column .pilot-info {
-	margin: 0em;
 }
 
 .pilot-wrapper .pilot-column .age-pob {
@@ -675,7 +705,8 @@ section .section-header h1 {
 	line-height: 1.25em;
 	font-size: 11px;
 	color: var(--text-pilot-code);
-	width: 30%;
+	width: 20em;
+  /* width: 65$; */
 }
 
 .pilot-wrapper .gear-column,
@@ -705,12 +736,25 @@ section .section-header h1 {
 	border-bottom-right-radius: 11px;
 }
 
-.pilot-wrapper .bonds-column .bonds,
-.pilot-wrapper .bonds-column .burdens {
-	width: 50%;
+.pilot-wrapper .bonds-column .bonds {
+	/* width: 50%; */
 	display: flex;
 	flex-direction: column;
 	row-gap: 0.5em;
+  column-gap: 0.5em;
+  max-width: 15em;
+	flex-grow: 2;
+	/* padding: 0em 1em; */
+}
+
+.pilot-wrapper .bonds-column .burdens {
+	/* width: 50%; */
+	display: flex;
+	flex-direction: column;
+	row-gap: 0.5em;
+  column-gap: 0.5em;
+  max-width: 15em;
+  flex-grow: 1;
 	/* padding: 0em 1em; */
 }
 
@@ -771,8 +815,7 @@ section .section-header h1 {
 
 .pilot-wrapper .mech-column {
 	border-right: 0px solid transparent;
-	column-gap: 1em;
-	width: 500px;
+	column-gap: 2em;
 }
 
 .pilot-wrapper .mech-column .mech-info {
@@ -802,13 +845,9 @@ section .section-header h1 {
 	color: var(--text-pilot-value);
 }
 
-.pilot-wrapper .mech-column img.portrait {
-	margin-left: auto;
-}
-
-/* #main-tab .pilot:last-child {
+.pilot-wrapper:last-child {
 	border-bottom: none;
-} */
+}
 
 .o-modal > div:nth-child(2) {
 	display: flex;
@@ -868,7 +907,7 @@ section .section-header h1 {
 	height: 100%;
 	object-fit: cover;
 	object-position: top;
-	overflow: hidden;
+	overflow: clip;
 }
 .pilot-modal.portrait .pilot-header-container {
 	display: flex;
@@ -949,21 +988,6 @@ section .section-header h1 {
 	height: 600px;
 	width: 888px;
 	margin-left: -18px;
-}
-
-.event-modal ::-webkit-scrollbar {
-	width: 12px;
-}
-
-.event-modal {
-	scrollbar-width: thin;
-}
-
-.event-modal ::-webkit-scrollbar-thumb {
-	background-color: var(--primary-color);
-	border-radius: 6px;
-	border: 4px solid var(--secondary-color);
-	background-clip: content-box;
 }
 
 .o-modal__overlay {
@@ -1061,7 +1085,6 @@ section .section-header h1 {
 .clocks-list-container {
 	display: flex;
 	flex-direction: column;
-	overflow-y: overlay;
 	height: 665px;
 }
 
@@ -1146,21 +1169,6 @@ section .section-header h1 {
 	width: calc(100% / 3 * 2);
 }
 
-#app ::-webkit-scrollbar {
-	width: 12px;
-}
-
-#app {
-	scrollbar-width: thin;
-}
-
-#app ::-webkit-scrollbar-thumb {
-	background-color: var(--primary-color);
-	border-radius: 6px;
-	border: 4px solid var(--secondary-color);
-	background-clip: content-box;
-}
-
 div.markdown {
 	padding-left: 1em;
 	padding-right: 1em;
@@ -1171,7 +1179,9 @@ div.markdown {
 	color: var(--text-markdown-p);
 	border-bottom: 1px solid var(--primary-color);
 	height: 350px;
-	overflow-y: auto;
+	overflow: auto;
+  /* For Firefox */
+  scrollbar-width: thin;
 }
 
 div.markdown p {

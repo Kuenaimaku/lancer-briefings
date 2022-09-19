@@ -11,12 +11,18 @@
 					<h1>Name or Legal Alias</h1>
 					<h2>{{ pilotInfo.name }}</h2>
 				</div>
-				<div v-if="pilotInfo.age || pilotInfo.pob" class="age-pob">
-          <div v-if="pilotInfo.pob.length > 0" class="pob">
+				<div
+				  v-if="pilotInfo.age || pilotInfo.pob"
+				  class="age-pob">
+          <div
+            v-if="pilotInfo.pob.length > 0"
+            class="pob">
 						<h1>Place of Birth</h1>
 						<h2>{{ pilot.pob }}</h2>
 					</div>
-					<div v-if="pilotInfo.age.length > 0" class="age">
+					<div
+					  v-if="pilotInfo.age.length > 0"
+					  class="age">
 						<h1>Subjective Age</h1>
 						<h2>{{ pilot.age }}</h2>
 					</div>
@@ -26,7 +32,10 @@
 				<VueWriter :array="pilotCode" :type-speed="25" :erase-speed="0" :start="900" :delay="5000" />
 			</div>
 		</div>
-		<div v-if="!pilotInfo.bondId" class="gear-column" @click="pilotModal">
+		<div
+		  v-if="!pilotInfo.bondId"
+		  class="gear-column"
+		  @click="pilotModal">
 			<div class="gear-row">
         <div class="armor">
           <h1>Pilot Armor</h1>
@@ -58,7 +67,10 @@
         </div>
 			</div>
 		</div>
-		<div v-if="pilotInfo.bondId" class="bonds-column" @click="pilotModal">
+		<div
+		  v-if="pilotInfo.bondId"
+		  class="bonds-column"
+		  @click="pilotModal">
 			<div class="bonds">
 				<div class="bond">
 					<h1>Bond</h1>
@@ -78,7 +90,9 @@
             :max="8" color="#F00" />
 				</div>
 			</div>
-			<div v-if="pilotInfo.burdens.length > 0" class="burdens">
+			<div
+			  v-if="pilotInfo.burdens.length > 0"
+			  class="burdens">
 				<Burden
 					v-for="item in pilotInfo.burdens"
 					:key="item.id"
@@ -86,7 +100,10 @@
 					:animate="animate"
 				/>
       </div>
-      <div v-else class="gear-column" @click="pilotModal">
+      <div
+        v-else
+        class="gear-column"
+        @click="pilotModal">
         <div class="gear-row">
           <div class="armor">
             <h1>Pilot Armor</h1>
