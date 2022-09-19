@@ -403,6 +403,9 @@ section .section-header h1 {
   /* Firefox only */
   scrollbar-width: thin;
 }
+.section-content-container *:last-child{
+	border-bottom: none;
+}
 .section-content-container h3 {
 	color: var(--primary-color);
 	font-size: 18px;
@@ -842,9 +845,9 @@ section .section-header h1 {
 	color: var(--text-pilot-value);
 }
 
-/* #main-tab .pilot:last-child {
+.pilot-wrapper:last-child {
 	border-bottom: none;
-} */
+}
 
 .o-modal > div:nth-child(2) {
 	display: flex;
@@ -1165,22 +1168,6 @@ section .section-header h1 {
 .story .clock-summary {
 	width: calc(100% / 3 * 2);
 }
-
-/* #app ::-webkit-scrollbar {
-	width: 12px;
-}
-
-#app {
-	scrollbar-width: thin;
-  -webkit-scrollbar: thin;
-}
-
-#app ::-webkit-scrollbar-thumb {
-	background-color: var(--primary-color);
-	border-radius: 6px;
-	border: 4px solid var(--secondary-color);
-	background-clip: content-box;
-} */
 
 div.markdown {
 	padding-left: 1em;
