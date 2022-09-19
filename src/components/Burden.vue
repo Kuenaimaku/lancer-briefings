@@ -58,7 +58,7 @@ export default defineComponent({
 			}
 		}
 		const data = ref(dataArray);
-		const animation = !props.animate ? null : { delay: 5000 };
+		const animation = !props.animate ? null : { delay: 1500 };
 		const options = ref({
 			responsive: true,
 			cutout: "35%",
