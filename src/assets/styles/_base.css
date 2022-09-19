@@ -673,7 +673,7 @@ section .section-header h1 {
 	column-gap: 1em;
 }
 
-.pilot-wrapper .pilot-column .age-pob {
+.pilot-wrapper .pilot-column .pilot-info {
 	display: flex;
 	flex-direction: column;
 }
@@ -917,7 +917,11 @@ section .section-header h1 {
 .mech-modal {
 	position: relative;
 }
-
+.mech-modal .clipped-medium-backward-bio {
+	width: 582px;
+	clip-path: polygon(0 0, 530px 0, 582px 100%, 0% 100%);
+	-webkit-clip-path: polygon(0 0, 530px 0, 582px 100%, 0% 100%);
+}
 .mech-modal .mech-header-container {
 	display: flex;
 }
@@ -949,6 +953,9 @@ section .section-header h1 {
 	position: relative;
 	left: -10px;
 	top: -38px;
+}
+.mech-modal div.mech-gear {
+  border-bottom: 1px solid var(--primary-color);
 }
 .mech-modal div.mech {
 	background-color: var(--secondary-color);
@@ -994,8 +1001,27 @@ section .section-header h1 {
 	text-transform: uppercase;
 	color: var(--text-pilot-value);
 }
-
-
+.mech-modal .mech-column {
+	display: flex;
+	flex-direction: row;
+}
+.mech-column .gear-row {
+  display: flex;
+	flex-direction: column;
+  row-gap: 0.5em;
+  column-gap: 2em;
+  padding: 1em 0em 1em 1em;
+  flex-grow: 1;
+	/* width: 50%; */
+}
+.mech-column .gear-row.mech-system {
+  flex-direction: row;
+  flex-grow: 0.8;
+  padding: 0em 1em 1em 1em;
+}
+.mech-column div.no-systems {
+  padding: 1em 1em 1em 1em;
+}
 /* for Pilot view typing animation */
 .is-typed span.cursor {
 	display: inline-block;

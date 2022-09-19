@@ -5,46 +5,45 @@
         <img src="/icons/npc.svg">
         <h1>{{ mech.name }} [{{ mech.frame_name }}]</h1>
       </div>
-      <div class="rhombus-back">
-&nbsp;
-      </div>
+      <div class="rhombus-back"></div>
     </div>
     <div class="mech">
-      <div class="mech-modal-column">
-        <div class="gear-row">
-          <div
-            v-for="mainMount in mainMounts"
-            class="weapon"
-          >
-            <h1>Main Mount</h1>
-            <h2>{{ mainMount.flavorName }}</h2>
+      <div class="mech-gear">
+        <div class="mech-column">
+          <div v-if="mainMounts.length > 0" class="gear-row mech-mount">
+            <div v-for="mainMount in mainMounts" class="main-mount">
+              <h1>Main Mount</h1>
+              <h2>{{ mainMount.flavorName }}</h2>
+            </div>
           </div>
-          <div
-            v-for="flexMount in flexMounts"
-            class="mech-flex"
-          >
-            <h1>Flex Mount</h1>
-            <h2>{{ flexMount.flavorName }}</h2>
+          <div v-if="flexMounts.length > 0" class="gear-row mech-mount">
+            <div v-for="flexMount in flexMounts" class="flex-mount">
+              <h1>Flex Mount</h1>
+              <h2>{{ flexMount.flavorName }}</h2>
+            </div>
           </div>
-        </div>
-        <div class="gear-row">
-          <div
-            v-for="heavyMount in heavyMounts"
-            class="mech-heavy"
-          >
-            <h1>Heavy Mount</h1>
-            <h2>{{ heavyMount.flavorName }}</h2>
+          <div v-if="heavyMounts.length > 0" class="gear-row mech-mount">
+            <div v-for="heavyMount in heavyMounts" class="heavy-mount">
+              <h1>Heavy Mount</h1>
+              <h2>{{ heavyMount.flavorName }}</h2>
+            </div>
           </div>
         </div>
-        <div class="gear-row">
-          <div
-            v-for="system in mechSystems"
-            class="mech-systems"
-          >
-            <h1>System</h1>
-            <h2>{{ system.flavorName }}</h2>
+        <div class="mech-column">
+          <div v-if="mechSystems.length > 0" class="gear-row mech-system">
+            <div v-for="system in mechSystems" class="system">
+              <h1>System</h1>
+              <h2>{{ system.flavorName }}</h2>
+            </div>
+          </div>
+          <div v-else class="no-systems">
+            <h1>SYSTEMS</h1>
+            <h2>ERR: NO SYSTEMS FOUND</h2>
           </div>
         </div>
+      </div>
+      <div class="mech-notes">
+        <Markdown :source="mech.notes" class="markdown" :html="markdownHtml" />
       </div>
     </div>
   </div>
@@ -55,7 +54,7 @@
         <h1>Mech Artwork</h1>
       </div>
       <div class="rhombus-back">
-&nbsp;
+        &nbsp;
       </div>
     </div>
     <div class="mech">
@@ -65,11 +64,12 @@
 </template>
 
 <script>
-// import Markdown from "vue3-markdown-it";
+import Markdown from "vue3-markdown-it";
 
 export default {
-  components: {},
-  inheritAttrs: false,
+  components: {
+    Markdown,
+  }, inheritAttrs: false,
   props: {
     animate: {
       type: Boolean,
@@ -90,7 +90,7 @@ export default {
   },
   data() {
     return {
-      // markdownHtml: true,
+      markdownHtml: true,
       activeLoadout: {},
       mainMounts: [],
       flexMounts: [],
@@ -104,7 +104,7 @@ export default {
     if (this.mech) {
       this.getActiveLoadout();
     }
-    if (this.weaponsData && typeof this.weaponsData !== 'undefined'){
+    if (this.weaponsData && typeof this.weaponsData !== 'undefined') {
       this.getMechMounts();
     }
     if (this.systemsData)
@@ -116,32 +116,32 @@ export default {
       this.activeLoadout = this.mech.loadouts[activeLoadoutIdx]
     },
     getMechMounts() {
-      const {weaponsData, mainMounts, flexMounts, heavyMounts} = this;
       var resolveMountSlots = (type, item, idx, arr) => {
-        if (item && Object.prototype.hasOwnProperty.call(item, 'flavorName') && typeof item.flavorName !== 'undefined' && !(item.flavorName.length > 0))
-          item.flavorName = weaponsData.find((obj) => { return item.id === obj.id }).name
+        item = item || {id: "", flavorName: ""}
+        const mountObj = this.weaponsData.find((obj) => { return item.id === obj.id }) || null
+        item.flavorName = mountObj?.name || "ERR: DATA NOT FOUND";
 
         switch (type) {
           case 'Main':
-            this.mainMounts = [...this.mainMounts, item]
-            break
+            this.mainMounts = [...this.mainMounts, item];
+            break;
           case 'Flex':
-            this.flexMounts = [...this.flexMounts, item]
-            break
+            this.flexMounts = [...this.flexMounts, item];
+            break;
           // case "Auxiliary":
-          //   this.auxiliaryMounts = [...this.auxiliaryMounts, item];
+          //   this.mainMounts = [...this.mainMounts, item];
           //   break;
           case 'Heavy':
-            this.heavyMounts = [...this.heavyMounts, item]
-            break
+            this.heavyMounts = [...this.heavyMounts, item];
+            break;
           default:
-            break
+            this.mainMounts = [...this.mainMounts, item];
+            break;
         }
       }
       this.activeLoadout.mounts.forEach((mount) => {
         const mountSlots = mount.slots
         const mountSlotsIsArray = Array.isArray(mountSlots) && mountSlots.length > 0
-        console.log(mountSlotsIsArray)
         if (mountSlotsIsArray) {
           mountSlots.forEach((slot, index, array) => resolveMountSlots(mount.mount_type, slot.weapon, index, array));
         }
@@ -151,29 +151,17 @@ export default {
         if (mountExtrasIsArray) {
           mountExtras.forEach((extra, index, array) => resolveMountSlots(mount.mount_type, extra.weapon, index, array));
         }
-
-        const missingWeaponID = 'missing_mechweapon'
-        const missingWeaponArr = [this.weaponsData.find((obj) => { return missingWeaponID === obj.id })]
-        if (!mountSlotsIsArray && !mountExtrasIsArray)
-          resolveMountSlots(mount.mount_type, missingWeaponArr[0], 0, missingWeaponArr).bind(this)
       })
     },
     getMechSystems() {
       var resolveMechSystems = (item, idx, arr) => {
-        if (item && Object.prototype.hasOwnProperty.call(item, 'flavorName') && typeof item.flavorName !== 'undefined' && !(item.flavorName.length > 0)) {
-          item.flavorName = this.systemsData.find((obj) => { return item.id === obj.id }).name
-        }
-        // else {
-        //   const missingSystemID = 'missing_mechsystem'
-        //   item.flavorName = this.systemsData.find((obj) => { return missingSystemID === obj.id }).name
-        //   arr[idx] = item
-        // }
+        item = item || {id: "", flavorName: ""}
+        const mountObj = this.systemsData.find((obj) => { return item.id === obj.id }) || null
+        item.flavorName = mountObj?.name || "ERR: DATA NOT FOUND";
+
         this.mechSystems = [...this.mechSystems, item]
       }
-      console.log(this.activeLoadout.systems[0])
       this.activeLoadout.systems.forEach(resolveMechSystems);
-      console.log(this.mechSystems)
-
     },
   },
 }
