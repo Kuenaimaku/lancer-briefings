@@ -656,7 +656,7 @@ section .section-header h1 {
 	flex-direction: row;
 	height: 31%;
 	border-bottom: 1px solid var(--primary-color);
-	cursor: pointer;
+	/* cursor: pointer; */
 }
 
 .pilot-wrapper .pilot-column,
@@ -671,6 +671,11 @@ section .section-header h1 {
 
 .pilot-wrapper .pilot-column {
 	column-gap: 1em;
+  cursor: pointer;
+}
+.pilot-wrapper .pilot-column:hover {
+	background-color: var(--highlight-hover) !important;
+	padding-top: 1em;
 }
 
 .pilot-wrapper .pilot-column .pilot-info {
@@ -814,6 +819,11 @@ section .section-header h1 {
 .pilot-wrapper .mech-column {
 	border-right: 0px solid transparent;
 	column-gap: 2em;
+  flex-grow: 0.3;
+}
+.pilot-wrapper .mech-column:hover {
+  background-color: var(--highlight-hover) !important;
+	padding-top: 1em;
 }
 
 .pilot-wrapper .mech-column .mech-info {
