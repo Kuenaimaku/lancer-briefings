@@ -440,6 +440,12 @@ section .section-header h1 {
 	-webkit-clip-path: polygon(0 0, 400px 0, 452px 100%, 0% 100%);
 	margin-right: 1em;
 }
+.clipped-medium-backward-mech {
+	width: 452px;
+	clip-path: polygon(0 0, 400px 0, 452px 100%, 0% 100%);
+	-webkit-clip-path: polygon(0 0, 400px 0, 452px 100%, 0% 100%);
+	margin-right: 1em;
+}
 .clipped-medium-backward-bio {
 	width: 552px;
 	clip-path: polygon(0 0, 500px 0, 552px 100%, 0% 100%);
@@ -650,7 +656,7 @@ section .section-header h1 {
 	flex-direction: row;
 	height: 31%;
 	border-bottom: 1px solid var(--primary-color);
-	cursor: pointer;
+	/* cursor: pointer; */
 }
 
 .pilot-wrapper .pilot-column,
@@ -665,9 +671,14 @@ section .section-header h1 {
 
 .pilot-wrapper .pilot-column {
 	column-gap: 1em;
+  cursor: pointer;
+}
+.pilot-wrapper .pilot-column:hover {
+	background-color: var(--highlight-hover) !important;
+	padding-top: 1em;
 }
 
-.pilot-wrapper .pilot-column .age-pob {
+.pilot-wrapper .pilot-column .pilot-info {
 	display: flex;
 	flex-direction: column;
 }
@@ -808,6 +819,12 @@ section .section-header h1 {
 .pilot-wrapper .mech-column {
 	border-right: 0px solid transparent;
 	column-gap: 2em;
+  flex-grow: 0.3;
+  cursor: pointer;
+}
+.pilot-wrapper .mech-column:hover {
+  background-color: var(--highlight-hover) !important;
+	padding-top: 1em;
 }
 
 .pilot-wrapper .mech-column .mech-info {
@@ -904,7 +921,22 @@ section .section-header h1 {
 .pilot-modal.portrait .pilot-header-container {
 	display: flex;
 }
-.pilot-modal.portrait div .section-header {
+.pilot-modal.portrait .rhombus-back {
+	left: -25px;
+}
+
+.mech-modal {
+	position: relative;
+}
+.mech-modal .clipped-medium-backward-bio {
+	width: 582px;
+	clip-path: polygon(0 0, 530px 0, 582px 100%, 0% 100%);
+	-webkit-clip-path: polygon(0 0, 530px 0, 582px 100%, 0% 100%);
+}
+.mech-modal .mech-header-container {
+	display: flex;
+}
+.mech-modal div .section-header {
 	background-color: var(--primary-color);
 	border-color: var(--primary-color);
 	height: 52px;
@@ -913,7 +945,16 @@ section .section-header h1 {
 	padding-left: 16px;
 	margin-top: -38px !important;
 }
-.pilot-modal.portrait .rhombus-back {
+.mech-modal div .section-header h1 {
+	font-size: 26px;
+	margin: 0%;
+	align-self: center;
+	font-family: "Big Shoulders Display", cursive;
+	font-weight: 800;
+	text-transform: uppercase;
+	letter-spacing: 0.1em;
+}
+.mech-modal .rhombus-back {
 	transform: skew(0.785398rad) !important;
 	background-color: var(--primary-color);
 	border-color: var(--primary-color);
@@ -921,10 +962,77 @@ section .section-header h1 {
 	height: 52px;
 	display: inline-block;
 	position: relative;
-	left: -25px;
+	left: -10px;
 	top: -38px;
 }
-
+.mech-modal div.mech-gear {
+  border-bottom: 1px solid var(--primary-color);
+}
+.mech-modal div.mech {
+	background-color: var(--secondary-color);
+	border: 1px solid var(--primary-color);
+	margin-top: -38px;
+	width: 888px;
+	height: 662px;
+}
+.mech-modal div.mech div.markdown {
+	height: 662px;
+}
+.mech-modal.portrait .mech {
+	width: 600px;
+}
+.mech-modal.portrait img.portrait {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: top;
+	overflow: hidden;
+}
+.mech-modal.portrait .mech-header-container {
+	display: flex;
+}
+.mech-modal.portrait .rhombus-back {
+	left: -25px;
+}
+.mech h1 {
+	font-size: 12px;
+	font-weight: 400;
+	font-family: "Roboto", sans-serif;
+	line-height: 1.5em;
+	letter-spacing: 3px;
+	text-transform: uppercase;
+	color: var(--text-pilot-header);
+}
+.mech h2 {
+	font-size: 18px;
+	font-weight: 700;
+	font-family: "Titillium Web", sans-serif;
+	line-height: 1.5em;
+	letter-spacing: 0.5px;
+	text-transform: uppercase;
+	color: var(--text-pilot-value);
+}
+.mech-modal .mech-column {
+	display: flex;
+	flex-direction: row;
+}
+.mech-column .gear-row {
+  display: flex;
+	flex-direction: column;
+  row-gap: 0.5em;
+  column-gap: 2em;
+  padding: 1em 0em 1em 1em;
+  flex-grow: 1;
+	/* width: 50%; */
+}
+.mech-column .gear-row.mech-system {
+  flex-direction: row;
+  flex-grow: 0.8;
+  padding: 0em 1em 1em 1em;
+}
+.mech-column div.no-systems {
+  padding: 1em 1em 1em 1em;
+}
 /* for Pilot view typing animation */
 .is-typed span.cursor {
 	display: inline-block;
