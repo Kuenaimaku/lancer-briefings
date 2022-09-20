@@ -820,6 +820,7 @@ section .section-header h1 {
 	border-right: 0px solid transparent;
 	column-gap: 2em;
   flex-grow: 0.3;
+  cursor: pointer;
 }
 .pilot-wrapper .mech-column:hover {
   background-color: var(--highlight-hover) !important;
