@@ -11,7 +11,6 @@ import "@/assets/styles/_base.css";
 import "@/assets/styles/_animations.css";
 
 import router from "./router";
-import VueWriter from "vue-writer";
 
-createApp(App).use(router).use(Oruga).use(VueWriter).mount("#app");
+createApp(App).use(router).use(Oruga).mount("#app");
 // TODO: Introduce eslint with vue3 + typescript support
