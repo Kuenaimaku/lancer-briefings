@@ -1,0 +1,661 @@
+{
+  "id": "f0bb9f53-9606-4966-9538-75816f94d7f5",
+  "level": 3,
+  "callsign": "Rai-Den",
+  "name": "Galatea Sers",
+  "player_name": "Me smile",
+  "status": "Active",
+  "dead": false,
+  "text_appearance": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis eleifend quam adipiscing vitae proin sagittis. Suscipit adipiscing bibendum est ultricies integer quis auctor elit sed. Augue lacus viverra vitae congue eu consequat ac. Rhoncus est pellentesque elit ullamcorper dignissim cras. Tristique senectus et netus et malesuada. Sit amet consectetur adipiscing elit ut aliquam purus. Aliquet bibendum enim facilisis gravida neque convallis. Sodales neque sodales ut etiam sit amet nisl. Mi ipsum faucibus vitae aliquet nec ullamcorper sit amet risus. Sem et tortor consequat id porta nibh. Mattis rhoncus urna neque viverra justo nec ultrices. Urna duis convallis convallis tellus id interdum velit laoreet id. Nisi est sit amet facilisis magna etiam tempor orci. Et malesuada fames ac turpis egestas maecenas. Eu consequat ac felis donec et. Aliquam sem fringilla ut morbi tincidunt augue interdum velit euismod. Consectetur purus ut faucibus pulvinar elementum integer enim neque volutpat. Urna nunc id cursus metus aliquam eleifend mi.</p><p>Viverra vitae congue eu consequat ac felis donec et. Netus et malesuada fames ac turpis egestas sed. Commodo sed egestas egestas fringilla phasellus faucibus scelerisque. Purus ut faucibus pulvinar elementum integer enim neque. Metus vulputate eu scelerisque felis imperdiet proin fermentum. Ornare aenean euismod elementum nisi. Parturient montes nascetur ridiculus mus mauris vitae ultricies leo. Urna condimentum mattis pellentesque id nibh. Aenean et tortor at risus viverra adipiscing at. Nibh tortor id aliquet lectus proin nibh nisl condimentum. Posuere lorem ipsum dolor sit amet consectetur adipiscing elit. Volutpat lacus laoreet non curabitur gravida arcu ac. Dictum sit amet justo donec enim diam vulputate ut pharetra. Odio euismod lacinia at quis risus sed vulputate odio. Massa tincidunt nunc pulvinar sapien. Est ante in nibh mauris. Elit ut aliquam purus sit amet luctus. Tempus iaculis urna id volutpat.</p><p>Duis convallis convallis tellus id interdum velit laoreet. Mi quis hendrerit dolor magna eget est lorem ipsum. Mauris in aliquam sem fringilla ut morbi tincidunt augue interdum. Condimentum mattis pellentesque id nibh tortor id aliquet lectus proin. Sit amet nisl suscipit adipiscing bibendum est ultricies integer. Sed blandit libero volutpat sed cras. Pellentesque nec nam aliquam sem et tortor consequat id porta. Nulla aliquet enim tortor at auctor urna nunc id. Mattis pellentesque id nibh tortor id aliquet lectus proin. Ultrices neque ornare aenean euismod elementum nisi quis eleifend. Sem nulla pharetra diam sit amet nisl.</p>",
+  "notes": "Test",
+  "history": "<p>this is some regular text</p><blockquote><p>Here is a block quote</p></blockquote><p><u>Underline</u> <s>Strikethrough</s> <em>Italics</em> <strong>Bold</strong></p><ul><li><p>Unordered List 1</p></li><li><p>2</p></li><li><p>3</p></li></ul><ol><li><p>Ordered List 1</p></li><li><p>2</p></li><li><p>3</p></li></ol><h1>Header 1</h1><h2>Header 2</h2><h3>Header 3</h3><p><code>This is some code</code></p><hr>",
+  "quirks": [],
+  "current_hp": 8,
+  "background": "MERCENARY",
+  "resistances": [],
+  "mechs": [
+    {
+      "id": "f2cc7a38-2cc9-4821-973c-38a2684a6354",
+      "name": "Snow Upon the Desert",
+      "notes": "",
+      "gm_note": "",
+      "frame": "mf_deaths_head",
+      "active": false,
+      "current_structure": 4,
+      "current_move": 5,
+      "boost": 0,
+      "current_hp": 14,
+      "overshield": 0,
+      "current_stress": 4,
+      "current_heat": 0,
+      "current_repairs": 3,
+      "current_overcharge": 0,
+      "current_core_energy": 1,
+      "statuses": [],
+      "conditions": [],
+      "resistances": [],
+      "reactions": [],
+      "burn": 0,
+      "destroyed": false,
+      "defeat": "",
+      "activations": 1,
+      "meltdown_imminent": false,
+      "reactor_destroyed": false,
+      "core_active": false,
+      "cc_ver": "ERR",
+      "portrait": "",
+      "cloud_portrait": "",
+      "loadouts": [
+        {
+          "id": "6f2f491d-d929-4f28-a798-16c0a3a708b6",
+          "name": "Primary",
+          "systems": [
+            {
+              "id": "ms_kinetic_compensator",
+              "uses": 0,
+              "destroyed": false,
+              "cascading": false
+            },
+            {
+              "id": "ms_comp_con_class_assistant_unit",
+              "uses": 0,
+              "destroyed": false,
+              "cascading": false
+            },
+            {
+              "id": "ms_pattern_a_smoke_charges",
+              "uses": 3,
+              "destroyed": false,
+              "cascading": false
+            },
+            {
+              "id": "ms_eva_module",
+              "uses": 0,
+              "destroyed": false,
+              "cascading": false
+            },
+            {
+              "id": "ms_manipulators",
+              "uses": 0,
+              "destroyed": false,
+              "cascading": false
+            }
+          ],
+          "integratedSystems": [
+            {
+              "id": "ms_walking_armory_2",
+              "uses": 6,
+              "destroyed": false,
+              "cascading": false
+            }
+          ],
+          "mounts": [
+            {
+              "mount_type": "Main/Aux",
+              "lock": false,
+              "slots": [
+                {
+                  "size": "Main",
+                  "weapon": {
+                    "id": "mw_vulture_dmr",
+                    "destroyed": false,
+                    "cascading": false,
+                    "loaded": true,
+                    "mod": null,
+                    "customDamageType": null,
+                    "maxUseOverride": 0,
+                    "uses": 0,
+                    "selectedProfile": 0
+                  }
+                },
+                {
+                  "size": "Auxiliary",
+                  "weapon": {
+                    "id": "mw_pistol",
+                    "destroyed": false,
+                    "cascading": false,
+                    "loaded": true,
+                    "mod": null,
+                    "customDamageType": null,
+                    "maxUseOverride": 0,
+                    "uses": 0,
+                    "selectedProfile": 0
+                  }
+                }
+              ],
+              "extra": [],
+              "bonus_effects": ["cb_overpower_caliber"]
+            },
+            {
+              "mount_type": "Heavy",
+              "lock": false,
+              "slots": [
+                {
+                  "size": "Heavy",
+                  "weapon": {
+                    "id": "mw_railgun",
+                    "destroyed": false,
+                    "cascading": false,
+                    "loaded": true,
+                    "mod": null,
+                    "customDamageType": null,
+                    "maxUseOverride": 0,
+                    "uses": 0,
+                    "selectedProfile": 0
+                  }
+                }
+              ],
+              "extra": [],
+              "bonus_effects": []
+            }
+          ],
+          "integratedMounts": [],
+          "improved_armament": {
+            "mount_type": "Flex",
+            "lock": false,
+            "slots": [
+              {
+                "size": "Flex",
+                "weapon": null
+              }
+            ],
+            "extra": [
+              {
+                "size": "Auxiliary",
+                "weapon": null
+              }
+            ],
+            "bonus_effects": []
+          },
+          "integratedWeapon": {
+            "mount_type": "Aux",
+            "lock": false,
+            "slots": [
+              {
+                "size": "Auxiliary",
+                "weapon": null
+              }
+            ],
+            "extra": [],
+            "bonus_effects": []
+          }
+        }
+      ],
+      "active_loadout_index": 0
+    },
+    {
+      "id": "0961c377-4eb1-4a1b-8ab9-cff065929309",
+      "name": "Terms and Conditions",
+      "notes": "",
+      "gm_note": "",
+      "frame": "mf_standard_pattern_i_everest",
+      "active": false,
+      "current_structure": 4,
+      "current_move": 4,
+      "boost": 0,
+      "current_hp": 16,
+      "overshield": 0,
+      "current_stress": 4,
+      "current_heat": 0,
+      "current_repairs": 6,
+      "current_overcharge": 0,
+      "current_core_energy": 1,
+      "statuses": [],
+      "conditions": [],
+      "resistances": [],
+      "reactions": [],
+      "burn": 0,
+      "destroyed": false,
+      "defeat": "",
+      "activations": 1,
+      "meltdown_imminent": false,
+      "reactor_destroyed": false,
+      "core_active": false,
+      "cc_ver": "ERR",
+      "lastModified": "Fri Apr 22 2022 22:58:55 GMT-0500 (Central Daylight Time)",
+      "isDeleted": false,
+      "expireTime": "",
+      "deleteTime": "",
+      "portrait": "",
+      "cloud_portrait": "",
+      "loadouts": [
+        {
+          "id": "be879a05-7a7a-43fe-816d-f4ee674cf3e8",
+          "name": "Primary",
+          "systems": [],
+          "integratedSystems": [
+            {
+              "id": "ms_walking_armory_2",
+              "uses": 6,
+              "destroyed": false,
+              "cascading": false,
+              "flavorName": "Ammo Case II",
+              "flavorDescription": "Gained from the <i>Walking Armory: Rank II</i> pilot talent."
+            }
+          ],
+          "mounts": [
+            {
+              "mount_type": "Main",
+              "lock": false,
+              "slots": [
+                {
+                  "size": "Main",
+                  "weapon": null
+                }
+              ],
+              "extra": [],
+              "bonus_effects": []
+            },
+            {
+              "mount_type": "Flex",
+              "lock": false,
+              "slots": [
+                {
+                  "size": "Flex",
+                  "weapon": null
+                }
+              ],
+              "extra": [
+                {
+                  "size": "Auxiliary",
+                  "weapon": null
+                }
+              ],
+              "bonus_effects": []
+            },
+            {
+              "mount_type": "Heavy",
+              "lock": false,
+              "slots": [
+                {
+                  "size": "Heavy",
+                  "weapon": null
+                }
+              ],
+              "extra": [],
+              "bonus_effects": []
+            }
+          ],
+          "integratedMounts": [],
+          "improved_armament": {
+            "mount_type": "Flex",
+            "lock": false,
+            "slots": [
+              {
+                "size": "Flex",
+                "weapon": null
+              }
+            ],
+            "extra": [
+              {
+                "size": "Auxiliary",
+                "weapon": null
+              }
+            ],
+            "bonus_effects": []
+          },
+          "integratedWeapon": {
+            "mount_type": "Aux",
+            "lock": false,
+            "slots": [
+              {
+                "size": "Auxiliary",
+                "weapon": null
+              }
+            ],
+            "extra": [],
+            "bonus_effects": []
+          }
+        }
+      ],
+      "active_loadout_index": 0
+    }
+  ],
+  "cc_ver": "",
+  "special_equipment": {
+    "PilotGear": [],
+    "Frames": [],
+    "MechWeapons": [],
+    "WeaponMods": [],
+    "MechSystems": ["ms_external_batteries"],
+    "SystemMods": []
+  },
+  "combat_history": {
+    "moves": 0,
+    "kills": 0,
+    "damage": 0,
+    "hp_damage": 0,
+    "structure_damage": 0,
+    "overshield": 0,
+    "heat_damage": 0,
+    "reactor_damage": 0,
+    "overcharge_uses": 0,
+    "core_uses": 0
+  },
+  "state": {
+    "active_mech_id": "f2cc7a38-2cc9-4821-973c-38a2684a6354",
+    "remote_mech_id": "",
+    "stage": "Narrative",
+    "turn": 1,
+    "actions": 2,
+    "braced": false,
+    "overcharged": false,
+    "prepare": false,
+    "bracedCooldown": false,
+    "redundant": false,
+    "stats": {
+      "moves": 0,
+      "kills": 0,
+      "damage": 0,
+      "hp_damage": 0,
+      "structure_damage": 0,
+      "overshield": 0,
+      "heat_damage": 0,
+      "reactor_damage": 0,
+      "overcharge_uses": 0,
+      "core_uses": 0
+    },
+    "deployed": []
+  },
+  "lastModified": "Fri Apr 22 2022 23:02:39 GMT-0500 (Central Daylight Time)",
+  "lastUpdate_cloud": "Fri Apr 22 2022 23:02:39 GMT-0500 (Central Daylight Time)",
+  "lastSync": "Fri Apr 22 2022 23:02:39 GMT-0500 (Central Daylight Time)",
+  "skills": [
+    {
+      "id": "sk_act_unseen_or_unheard",
+      "rank": 2
+    },
+    {
+      "id": "sk_get_somewhere_quickly",
+      "rank": 1
+    },
+    {
+      "id": "sk_spot",
+      "rank": 1
+    },
+    {
+      "id": "sk_stay_cool",
+      "rank": 2
+    },
+    {
+      "id": "sk_take_someone_out",
+      "rank": 1
+    }
+  ],
+  "talents": [
+    {
+      "id": "t_crack_shot",
+      "rank": 2
+    },
+    {
+      "id": "t_heavy_gunner",
+      "rank": 2
+    },
+    {
+      "id": "t_walking_armory",
+      "rank": 2
+    }
+  ],
+  "mechSkills": [2, 1, 0, 2],
+  "counter_data": [],
+  "custom_counters": [],
+  "core_bonuses": ["cb_overpower_caliber"],
+  "licenses": [
+    {
+      "id": "mf_deaths_head",
+      "rank": 3
+    }
+  ],
+  "reserves": [
+    {
+      "id": "reserve_safe_harbor",
+      "type": "Resource",
+      "name": "Safe Harbor",
+      "label": "Location",
+      "description": "Guaranteed safety for meeting, planning, or recuperating.",
+      "resource_name": "Location",
+      "resource_note": "Notes",
+      "resource_cost": "Cost",
+      "used": false,
+      "bonuses": [],
+      "actions": [],
+      "synergies": [],
+      "deployables": [],
+      "counters": [],
+      "integrated": [],
+      "special_equipment": []
+    },
+    {
+      "id": "reserve_corebonus",
+      "type": "Bonus",
+      "name": "Extra CORE Bonus",
+      "label": "Bonus",
+      "description": "Add an additional CORE Bonus.",
+      "resource_name": "Bonus",
+      "resource_note": "Notes",
+      "resource_cost": "Costs",
+      "used": false,
+      "bonuses": [
+        {
+          "id": "cb_point",
+          "val": 1,
+          "damage_types": [],
+          "range_types": [],
+          "weapon_types": [],
+          "weapon_sizes": []
+        }
+      ],
+      "actions": [],
+      "synergies": [],
+      "deployables": [],
+      "counters": [],
+      "integrated": [],
+      "special_equipment": []
+    },
+    {
+      "id": "reserve_mechskill",
+      "type": "Bonus",
+      "name": "Mech Skill Point",
+      "label": "Bonus",
+      "description": "Add a Mech Skill Point to add to your Pilot's HULL, AGILITY, SYSTEMS, or ENGINEERING rating.",
+      "resource_name": "Bonus",
+      "resource_note": "Notes",
+      "resource_cost": "Costs",
+      "used": false,
+      "bonuses": [
+        {
+          "id": "mech_skill_point",
+          "val": 1,
+          "damage_types": [],
+          "range_types": [],
+          "weapon_types": [],
+          "weapon_sizes": []
+        }
+      ],
+      "actions": [],
+      "synergies": [],
+      "deployables": [],
+      "counters": [],
+      "integrated": [],
+      "special_equipment": []
+    },
+    {
+      "id": "reserve_scouting",
+      "type": "Tactical",
+      "name": "Scouting",
+      "label": "Location",
+      "description": "Detailed information on the kinds of mechs and threats you will face on the mission, such as number, type, and statistics.",
+      "resource_name": "Location",
+      "resource_note": "Notes",
+      "resource_cost": "Cost",
+      "used": false,
+      "bonuses": [],
+      "actions": [],
+      "synergies": [],
+      "deployables": [],
+      "counters": [],
+      "integrated": [],
+      "special_equipment": []
+    },
+    {
+      "id": "reserve_rented_gear",
+      "type": "Mech",
+      "name": "Rented gear",
+      "label": "Gear",
+      "description": "Temporary access to a new weapon or piece of mech gear.",
+      "resource_name": "",
+      "resource_note": "Test",
+      "resource_cost": "Test",
+      "used": false,
+      "bonuses": [],
+      "actions": [],
+      "synergies": [],
+      "deployables": [],
+      "counters": [],
+      "integrated": [],
+      "special_equipment": []
+    },
+    {
+      "id": "reserve_project",
+      "type": "Project",
+      "name": "Exploring the Ancient  (In Progress)",
+      "label": "Project",
+      "description": "",
+      "resource_name": "Exploring the Ancient",
+      "resource_note": "Details",
+      "resource_cost": "Requires: Specialized tools, A good workspace, Specific knowledge or techniques, Quality materials",
+      "used": false,
+      "bonuses": [],
+      "actions": [],
+      "synergies": [],
+      "deployables": [],
+      "counters": [],
+      "integrated": [],
+      "special_equipment": []
+    }
+  ],
+  "orgs": [
+    {
+      "name": "THE ARMADA",
+      "purpose": "Military",
+      "description": "purpose",
+      "efficiency": 2,
+      "influence": 4,
+      "actions": ""
+    }
+  ],
+  "bondId": "ktb-bond-harlequin",
+  "xp": 2,
+  "stress": 4,
+  "isBroken": false,
+  "burdens": [
+    {
+      "id": "7a2a38a6-d2a7-428d-82d7-13806b254b5f",
+      "title": "The PTSD",
+      "description": "Explosions scare me",
+      "resolution": "explode others",
+      "segments": 8,
+      "progress": 3
+    }
+  ],
+  "bondPowers": [
+    {
+      "name": "Fast Friends",
+      "description": "When someone can hear and understand you, you can make them friendly to you for a minute. They’ll let you into areas, vouch for you, do small favors for you, and so on. Social rolls against them gain +1 ACCURACY and increased effect. After a minute, they realize they were manipulated and it won’t work on them again in the same session. This power only works on one person at a time."
+    },
+    {
+      "name": "Mercurial",
+      "frequency": "1/session",
+      "description": "If nobody else is looking, you can completely change your physical appearance, looking and sounding like an entirely new person (height, weight, build, hair/ clothes, and gender). Whether this physically changes you or is an illusory effect created by visual trickery is up to you. If you’re trying to impersonate someone else, your disguise holds up perfectly unless someone knows that person intimately, and even then you get +1 ACCURACY on all skill checks to keep the disguise up. You’re stuck in this form until you next eat or drink."
+    }
+  ],
+  "powerSelections": 2,
+  "maxStress": 8,
+  "bondAnswers": [
+    "A deal you once made in a dream.",
+    "Your can swap your clothing’s coloration, material, fit, cut, and type completely when you enter any scene."
+  ],
+  "majorIdeal": "I expressed my heritage, background, or beliefs through my actions.",
+  "minorIdeal": "I struggled against or humiliated the powerful.",
+  "clocks": [
+    {
+      "id": "0c58d359-2f79-42eb-a5d0-57dbf485e788",
+      "title": "Digging up the Past",
+      "description": "RAI-DEN is attempting to find information about the history of this planet.",
+      "resolution": "",
+      "segments": 6,
+      "progress": 2
+    }
+  ],
+  "group": "",
+  "sort_index": -1,
+  "portrait": "",
+  "cloud_portrait": "https://i.imgur.com/C7hgEeY.png",
+  "loadout": {
+    "id": "78e98f17-8922-4b91-be2a-c720298c04fa",
+    "name": "Primary",
+    "armor": [
+      {
+        "id": "pg_mobility_hardsuit",
+        "destroyed": false,
+        "uses": 0,
+        "cascading": false,
+        "flavorName": "MOBILITY HARDSUIT",
+        "flavorDescription": "These hardsuits have integrated flight systems, allowing pilots to fly when they move or Boost. Flying pilots must end their turn on the ground (or another surface) or begin falling.",
+        "customDamageType": null
+      }
+    ],
+    "weapons": [
+      {
+        "id": "pg_heavy_signature",
+        "destroyed": false,
+        "uses": 0,
+        "cascading": false,
+        "flavorName": "HEAVY SIGNATURE",
+        "flavorDescription": "Heavy signature weapons are missile tubes, heavy lasers, light machine gun, or exotic rifles.",
+        "customDamageType": null
+      },
+      {
+        "id": "pg_light_signature",
+        "destroyed": false,
+        "uses": 0,
+        "cascading": false,
+        "flavorName": "LIGHT SIGNATURE",
+        "flavorDescription": "Light signature weapons might be oversized revolvers, braces of pistols, and submachine guns.",
+        "customDamageType": null
+      }
+    ],
+    "gear": [
+      {
+        "id": "pg_infoskin",
+        "destroyed": false,
+        "uses": 0,
+        "cascading": false,
+        "flavorName": "INFOSKIN",
+        "flavorDescription": "A reactive, synthetic polymer with advanced qualities, infoskin bonds quickly to real skin and hair. Once applied, it responds to electronic signals delivered by linked software, rapidly changing its color and texture – even contorting and distorting its form – allowing wearers to make minor changes to their appearance. With infoskin, it’s a simple matter to alter facial features, hair color, or makeup patterns.",
+        "customDamageType": null
+      },
+      {
+        "id": "pg_omnihook",
+        "destroyed": false,
+        "uses": 0,
+        "cascading": false,
+        "flavorName": "OMNIHOOK",
+        "flavorDescription": "A portable – if bulky – omninet terminal that allows for communication, data transfer, and limited hot-spotting. Omnihooks are extremely valuable, although most mech squads have at least one. Tuning an omnihook requires a high level of skill, so they are usually mounted or carried by designated operators.",
+        "customDamageType": null
+      },
+      {
+        "id": "pg_smart_scope",
+        "destroyed": false,
+        "uses": 0,
+        "cascading": false,
+        "flavorName": "SMART SCOPE",
+        "flavorDescription": "A powerful electronic scope that provides high-resolution magnification up to two miles, and automatically adjusts its reticle for wind, gravity, and pressure. Smart scopes can project their field of vision and all data to the HUD of any networked user. They can also pair with other thermal, optical, or simulated-vision devices to further enhance targeting.",
+        "customDamageType": null
+      }
+    ],
+    "extendedWeapons": [null],
+    "extendedGear": [null, null]
+  },
+  "brews": []
+}

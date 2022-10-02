@@ -1,0 +1,28 @@
+{
+  "initialSlug": "001",
+  "planetPath": "/planet.webm",
+  "animate": true,
+  "defaultTitle": "MSMC |",
+  "icon": "/faction-logos/msmc.svg",
+  "header": {
+    "planet": "Hercynia",
+    "year": "5014u",
+    "system": "Ardennes-3",
+    "gate": "Atlas-Quanokrim",
+    "ring": "Atlas-Line",
+    "headerTitle": "Mirrorsmoke",
+    "headerSubtitle": "Mercenary Company",
+    "subheaderTitle": "Crisis Response",
+    "subheaderSubtitle": "Delta-Echo-Echo-Zulu"
+  },
+  "pilotSpecialInfo": {
+    "APOLLO": {
+      "age": "32u",
+      "pob": "Evergreen"
+    },
+    "RAI-DEN": {
+      "age": "48u",
+      "pob": "Gaia"
+    }
+  }
+}

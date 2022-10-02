@@ -1,40 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<link rel="icon" href="" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta property="og:type" content="website" />
+	</head>
 
-<head>
-  <meta charset="UTF-8" />
-  <link rel="icon" href="/icons/company-icon.svg">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://lancer.kuenaimaku.com/">
-  <meta property="og:title" content="MSMC Mission Briefing">
-  <meta property="og:description" content="MIRRORSMOKE MERCENARY COMPANY | MISSION BRIEFING">
-  <meta property="og:image" content="/icons/company-icon.svg">
-  <title>MSMC | MISSION BRIEFING</title>
-</head>
-
-<body style="margin:0px;">
-  <div id="app"></div>
-  <script type="module" src="/src/main.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/vanta@0.5.21/dist/vanta.waves.min.js"></script>
-  <script>
-    VANTA.WAVES({
-      el: "body",
-      mouseControls: true,
-      touchControls: true,
-      gyroControls: false,
-      minHeight: 200.00,
-      minWidth: 200.00,
-      scale: 1.00,
-      scaleMobile: 1.00,
-      color: 0x182325,
-      shininess: 10.00,
-      waveHeight: 40.00,
-      waveSpeed: 0.10,
-      zoom: 0.65
-    })
-  </script>
-</body>
-
+	<body style="margin: 0px">
+		<div id="app"></div>
+		<script type="module" src="/src/main.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+		<script type="module" src="/src/assets/scripts/vanta.globe.min.js"></script>
+		<script type="module">
+			VANTA.GLOBE({
+				el: "body",
+				mouseControls: false,
+				touchControls: false,
+				gyroControls: false,
+				minHeight: 200.0,
+				minWidth: 200.0,
+				scale: 1.0,
+				scaleMobile: 1.0,
+				color: 0x694f5d,
+				color2: 0x68a691,
+				backgroundColor: 0x0c090d,
+				size: 2.0,
+				sphereRotation: -0.002,
+				meshRotation: 0.004,
+			});
+		</script>
+	</body>
 </html>

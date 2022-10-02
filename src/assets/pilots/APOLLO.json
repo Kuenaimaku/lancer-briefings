@@ -1,0 +1,374 @@
+{
+  "id": "2fd399f0-de79-4efe-af9b-c70814495435",
+  "level": 0,
+  "callsign": "Apollo",
+  "name": "Lev Deshaies",
+  "player_name": "",
+  "status": "Active",
+  "dead": false,
+  "text_appearance": "<p>asdf</p>",
+  "notes": "",
+  "history": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis eleifend quam adipiscing vitae proin sagittis. Suscipit adipiscing bibendum est ultricies integer quis auctor elit sed. Augue lacus viverra vitae congue eu consequat ac. Rhoncus est pellentesque elit ullamcorper dignissim cras. Tristique senectus et netus et malesuada. Sit amet consectetur adipiscing elit ut aliquam purus. Aliquet bibendum enim facilisis gravida neque convallis. Sodales neque sodales ut etiam sit amet nisl. Mi ipsum faucibus vitae aliquet nec ullamcorper sit amet risus. Sem et tortor consequat id porta nibh. Mattis rhoncus urna neque viverra justo nec ultrices. Urna duis convallis convallis tellus id interdum velit laoreet id. Nisi est sit amet facilisis magna etiam tempor orci. Et malesuada fames ac turpis egestas maecenas. Eu consequat ac felis donec et. Aliquam sem fringilla ut morbi tincidunt augue interdum velit euismod. Consectetur purus ut faucibus pulvinar elementum integer enim neque volutpat. Urna nunc id cursus metus aliquam eleifend mi.</p><p>Viverra vitae congue eu consequat ac felis donec et. Netus et malesuada fames ac turpis egestas sed. Commodo sed egestas egestas fringilla phasellus faucibus scelerisque. Purus ut faucibus pulvinar elementum integer enim neque. Metus vulputate eu scelerisque felis imperdiet proin fermentum. Ornare aenean euismod elementum nisi. Parturient montes nascetur ridiculus mus mauris vitae ultricies leo. Urna condimentum mattis pellentesque id nibh. Aenean et tortor at risus viverra adipiscing at. Nibh tortor id aliquet lectus proin nibh nisl condimentum. Posuere lorem ipsum dolor sit amet consectetur adipiscing elit. Volutpat lacus laoreet non curabitur gravida arcu ac. Dictum sit amet justo donec enim diam vulputate ut pharetra. Odio euismod lacinia at quis risus sed vulputate odio. Massa tincidunt nunc pulvinar sapien. Est ante in nibh mauris. Elit ut aliquam purus sit amet luctus. Tempus iaculis urna id volutpat.</p><p>Duis convallis convallis tellus id interdum velit laoreet. Mi quis hendrerit dolor magna eget est lorem ipsum. Mauris in aliquam sem fringilla ut morbi tincidunt augue interdum. Condimentum mattis pellentesque id nibh tortor id aliquet lectus proin. Sit amet nisl suscipit adipiscing bibendum est ultricies integer. Sed blandit libero volutpat sed cras. Pellentesque nec nam aliquam sem et tortor consequat id porta. Nulla aliquet enim tortor at auctor urna nunc id. Mattis pellentesque id nibh tortor id aliquet lectus proin. Ultrices neque ornare aenean euismod elementum nisi quis eleifend. Sem nulla pharetra diam sit amet nisl.</p>",
+  "quirks": [],
+  "current_hp": 6,
+  "background": "NOBLE",
+  "resistances": [],
+  "mechs": [
+    {
+      "id": "270f036e-ef86-44d2-9642-30ad752ff277",
+      "name": "A Dangersome Inheritance",
+      "notes": "",
+      "gm_note": "",
+      "frame": "mf_standard_pattern_i_everest",
+      "active": false,
+      "current_structure": 4,
+      "current_move": 4,
+      "boost": 0,
+      "current_hp": 10,
+      "overshield": 0,
+      "current_stress": 4,
+      "current_heat": 0,
+      "current_repairs": 5,
+      "current_overcharge": 0,
+      "current_core_energy": 1,
+      "statuses": [],
+      "conditions": [],
+      "resistances": [],
+      "reactions": [],
+      "burn": 0,
+      "destroyed": false,
+      "defeat": "",
+      "activations": 1,
+      "meltdown_imminent": false,
+      "reactor_destroyed": false,
+      "core_active": false,
+      "cc_ver": "ERR",
+      "portrait": "pre_sniper_pixel.png",
+      "cloud_portrait": "",
+      "loadouts": [
+        {
+          "id": "dcd5d821-5ca3-4117-b3d0-4b77a7e6be1d",
+          "name": "Primary",
+          "systems": [
+            {
+              "id": "ms_rapid_burst_jump_jet_system",
+              "uses": 0,
+              "destroyed": false,
+              "cascading": false,
+              "flavorName": "RAPID BURST JUMP JET SYSTEM",
+              "flavorDescription": ""
+            },
+            {
+              "id": "ms_pattern_a_jericho_deployable_cover",
+              "uses": 0,
+              "destroyed": false,
+              "cascading": false,
+              "flavorName": "PATTERN-A JERICHO DEPLOYABLE COVER",
+              "flavorDescription": ""
+            },
+            {
+              "id": "ms_pattern_a_smoke_charges",
+              "uses": 3,
+              "destroyed": false,
+              "cascading": false,
+              "flavorName": "PATTERN-A SMOKE CHARGES",
+              "flavorDescription": ""
+            }
+          ],
+          "integratedSystems": [],
+          "mounts": [
+            {
+              "mount_type": "Main",
+              "lock": false,
+              "slots": [
+                {
+                  "size": "Main",
+                  "weapon": {
+                    "id": "mw_thermal_rifle",
+                    "destroyed": false,
+                    "cascading": false,
+                    "loaded": true,
+                    "mod": null,
+                    "flavorName": "THERMAL RIFLE",
+                    "flavorDescription": "Much like GMS mechs, GMS weapons are reliable galactic standards, made using interchangeable parts and built to withstand almost any conditions. There are three lines currently in production.<br>The Type-II (T-2) line displays GMS’s proprietary “charged” melee weapons and energy weapons.",
+                    "customDamageType": null,
+                    "maxUseOverride": 0,
+                    "uses": 0,
+                    "selectedProfile": 0
+                  }
+                }
+              ],
+              "extra": [],
+              "bonus_effects": []
+            },
+            {
+              "mount_type": "Flex",
+              "lock": false,
+              "slots": [
+                {
+                  "size": "Flex",
+                  "weapon": {
+                    "id": "mw_segment_knife",
+                    "destroyed": false,
+                    "cascading": false,
+                    "loaded": true,
+                    "mod": null,
+                    "flavorName": "SEGMENT KNIFE",
+                    "flavorDescription": "Much like GMS mechs, GMS weapons are reliable galactic standards, made using interchangeable parts and built to withstand almost any conditions. There are three lines currently in production.<br>The Type-III (T-3) line is made up of heavy weapons, ordnance, and other exotic, specialized, or massive weapons. A broad classification, the T-3 range includes conventional-kinetic anti-materiel rifles, super-rapid cycling pulse rifles, missile racks, cannons, and drone nexuses – “hive”style launchers that serve as miniature factory, hangar, and deployment systems for portable drones. The classification also includes the fearsome “segment knife”, a system that uses flash-printing to produce disposable edged weapons in a vicinity around the user.",
+                    "customDamageType": null,
+                    "maxUseOverride": 0,
+                    "uses": 0,
+                    "selectedProfile": 0
+                  }
+                }
+              ],
+              "extra": [
+                {
+                  "size": "Auxiliary",
+                  "weapon": {
+                    "id": "mw_segment_knife",
+                    "destroyed": false,
+                    "cascading": false,
+                    "loaded": true,
+                    "mod": null,
+                    "flavorName": "SEGMENT KNIFE",
+                    "flavorDescription": "Much like GMS mechs, GMS weapons are reliable galactic standards, made using interchangeable parts and built to withstand almost any conditions. There are three lines currently in production.<br>The Type-III (T-3) line is made up of heavy weapons, ordnance, and other exotic, specialized, or massive weapons. A broad classification, the T-3 range includes conventional-kinetic anti-materiel rifles, super-rapid cycling pulse rifles, missile racks, cannons, and drone nexuses – “hive”style launchers that serve as miniature factory, hangar, and deployment systems for portable drones. The classification also includes the fearsome “segment knife”, a system that uses flash-printing to produce disposable edged weapons in a vicinity around the user.",
+                    "customDamageType": null,
+                    "maxUseOverride": 0,
+                    "uses": 0,
+                    "selectedProfile": 0
+                  }
+                }
+              ],
+              "bonus_effects": []
+            },
+            {
+              "mount_type": "Heavy",
+              "lock": false,
+              "slots": [
+                {
+                  "size": "Heavy",
+                  "weapon": {
+                    "id": "mw_anti_materiel_rifle",
+                    "destroyed": false,
+                    "cascading": false,
+                    "loaded": true,
+                    "mod": null,
+                    "flavorName": "ANTI-MATERIEL RIFLE",
+                    "flavorDescription": "Much like GMS mechs, GMS weapons are reliable galactic standards, made using interchangeable parts and built to withstand almost any conditions. There are three lines currently in production.<br>The Type-III (T-3) line is made up of heavy weapons, ordnance, and other exotic, specialized, or massive weapons. A broad classification, the T-3 range includes conventional-kinetic anti-materiel rifles, super-rapid cycling pulse rifles, missile racks, cannons, and drone nexuses – “hive” style launchers that serve as miniature factory, hangar, and deployment systems for portable drones. The classification also includes the fearsome “segment knife”, a system that uses flash-printing to produce disposable edged weapons in a vicinity around the user.",
+                    "customDamageType": null,
+                    "maxUseOverride": 0,
+                    "uses": 0,
+                    "selectedProfile": 0
+                  }
+                }
+              ],
+              "extra": [],
+              "bonus_effects": []
+            }
+          ],
+          "integratedMounts": [],
+          "improved_armament": {
+            "mount_type": "Flex",
+            "lock": false,
+            "slots": [
+              {
+                "size": "Flex",
+                "weapon": null
+              }
+            ],
+            "extra": [
+              {
+                "size": "Auxiliary",
+                "weapon": null
+              }
+            ],
+            "bonus_effects": []
+          },
+          "integratedWeapon": {
+            "mount_type": "Aux",
+            "lock": false,
+            "slots": [
+              {
+                "size": "Auxiliary",
+                "weapon": null
+              }
+            ],
+            "extra": [],
+            "bonus_effects": []
+          }
+        }
+      ],
+      "active_loadout_index": 0
+    }
+  ],
+  "special_equipment": {
+    "PilotArmor": [],
+    "PilotWeapons": [],
+    "PilotGear": [],
+    "Frames": [],
+    "MechWeapons": [],
+    "WeaponMods": [],
+    "MechSystems": [],
+    "SystemMods": []
+  },
+  "combat_history": {
+    "moves": 0,
+    "kills": 0,
+    "damage": 0,
+    "hp_damage": 0,
+    "structure_damage": 0,
+    "overshield": 0,
+    "heat_damage": 0,
+    "reactor_damage": 0,
+    "overcharge_uses": 0,
+    "core_uses": 0
+  },
+  "state": {
+    "active_mech_id": "270f036e-ef86-44d2-9642-30ad752ff277",
+    "remote_mech_id": "",
+    "stage": "Narrative",
+    "turn": 1,
+    "actions": 2,
+    "braced": false,
+    "overcharged": false,
+    "prepare": false,
+    "bracedCooldown": false,
+    "redundant": false,
+    "stats": {
+      "moves": 0,
+      "kills": 0,
+      "damage": 0,
+      "hp_damage": 0,
+      "structure_damage": 0,
+      "overshield": 0,
+      "heat_damage": 0,
+      "reactor_damage": 0,
+      "overcharge_uses": 0,
+      "core_uses": 0
+    },
+    "deployed": []
+  },
+  "lastUpdate_cloud": "Tue Apr 19 2022 17:19:51 GMT-0500 (Central Daylight Time)",
+  "lastSync": "Tue Apr 19 2022 17:19:51 GMT-0500 (Central Daylight Time)",
+  "skills": [
+    {
+      "id": "sk_act_unseen_or_unheard",
+      "rank": 1
+    },
+    {
+      "id": "sk_investigate",
+      "rank": 1
+    },
+    {
+      "id": "sk_spot",
+      "rank": 1
+    },
+    {
+      "id": "sk_take_someone_out",
+      "rank": 1
+    }
+  ],
+  "talents": [
+    {
+      "id": "t_skirmisher",
+      "rank": 1
+    },
+    {
+      "id": "t_crack_shot",
+      "rank": 1
+    },
+    {
+      "id": "t_infiltrator",
+      "rank": 1
+    }
+  ],
+  "mechSkills": [0, 2, 0, 0],
+  "counter_data": [],
+  "custom_counters": [],
+  "core_bonuses": [],
+  "licenses": [],
+  "reserves": [],
+  "orgs": [],
+  "bondId": "",
+  "xp": 0,
+  "stress": 0,
+  "isBroken": false,
+  "burdens": [],
+  "bondPowers": [],
+  "powerSelections": 0,
+  "maxStress": 8,
+  "bondAnswers": ["", ""],
+  "majorIdeal": "",
+  "minorIdeal": "",
+  "clocks": [],
+  "portrait": "wampire_9.png",
+  "cloud_portrait": null,
+  "loadout": {
+    "id": "e766180d-74d9-42ec-a07e-5e92704e16bb",
+    "name": "Primary",
+    "armor": [
+      {
+        "id": "pg_mobility_hardsuit",
+        "destroyed": false,
+        "uses": 0,
+        "cascading": false,
+        "flavorName": "MOBILITY HARDSUIT",
+        "flavorDescription": "These hardsuits have integrated flight systems, allowing pilots to fly when they move or Boost. Flying pilots must end their turn on the ground (or another surface) or begin falling.",
+        "customDamageType": null
+      }
+    ],
+    "weapons": [
+      {
+        "id": "pg_heavy_signature",
+        "destroyed": false,
+        "uses": 0,
+        "cascading": false,
+        "flavorName": "HEAVY SIGNATURE",
+        "flavorDescription": "Heavy signature weapons are missile tubes, heavy lasers, light machine gun, or exotic rifles.",
+        "customDamageType": null
+      },
+      {
+        "id": "pg_light_a_c",
+        "destroyed": false,
+        "uses": 0,
+        "cascading": false,
+        "flavorName": "LIGHT A/C",
+        "flavorDescription": "Light A/C weapons might be knives, bayonets, punching daggers, and short swords.",
+        "customDamageType": null
+      }
+    ],
+    "gear": [
+      {
+        "id": "pg_camo_cloth",
+        "destroyed": false,
+        "uses": 0,
+        "cascading": false,
+        "flavorName": "CAMO CLOTH",
+        "flavorDescription": "A square of reactive material that slowly shifts to reflect the surrounding environment, enough to cover a human comfortably. The transition takes about 10 seconds and makes anything hidden underneath very difficult to spot.",
+        "customDamageType": null
+      },
+      {
+        "id": "pg_wilderness_survival_kit",
+        "destroyed": false,
+        "uses": 0,
+        "cascading": false,
+        "flavorName": "WILDERNESS SURVIVAL KIT",
+        "flavorDescription": "This kit contains many essentials for surviving in hostile environments: a rebreather, water filters, hardsuit patches, backup thermals, a bivouac kit, and so on.",
+        "customDamageType": null
+      },
+      {
+        "id": "pg_stims",
+        "destroyed": false,
+        "uses": 3,
+        "cascading": false,
+        "flavorName": "STIMS",
+        "flavorDescription": "These chemical stimulants are sometimes administered automatically by injectors built into a pilot’s suit, or even implanted within their body. Uncontrolled use can be addictive and dangerous to health in the long-term and is a problem for some pilots.<br>Expend a charge for one of the following effects:<ul><li><b>Kick:</b> Keeps a pilot awake and alert for up to 30 hours.</li><li><b>Freeze:</b> Keeps a pilot calm and emotionally stable; deadens fear and other strong reactions.</li><li><b>Juice:</b> Heighten senses and alertness, reduce fatigue, and shorten reaction times. Juice occasionally provokes rage in some users.</li></ul>",
+        "customDamageType": null
+      }
+    ],
+    "extendedWeapons": [null],
+    "extendedGear": [null, null]
+  },
+  "brews": []
+}
