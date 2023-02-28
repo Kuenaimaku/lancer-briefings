@@ -101,28 +101,28 @@ export default {
       ],
       "pilots": [
         {
-          "callsign": "Jinzo",
-          "alias": "Shayan Arsenal",
-          "code": "462370be-bd0f-41c2-b667-cc75f3a59a96///NDL-C-DEEP-STATION//377308ad-ba23-410b-ae37-68a1fb5f8db4",
+          "callsign": "Blaze",
+          "alias": "Elijah Taw",
+          "code": "Taw.Elijah:62420f55-4640-4fd0-acc4-0de5bc039e4d//NDL-C-SORROW-SKY",
           "corpro": "GMS",
           "frame": "Everest",
-          "mech": "Type - Worst Beat"
+          "mech": "Demolition Derby"
         },
         {
-          "callsign": "Kal",
-          "alias": "Vier Flau",
-          "code": "7cd700cc-c990-48ed-892f-e5468de724c4///NDL-C-DEEP-STATION//a98c3e28-ad4a-4f89-bcd9-501464e960da",
+          "callsign": "Bulwark",
+          "alias": "Roland Ironguts",
+          "code": "Ironguts.Roland:b5e39aa0-0e40-4b7c-8b35-1049a2aa6207//NDL-C-BETA-HIDE",
           "corpro": "GMS",
-          "frame": "Everest",
-          "mech": "Necrophile"
+          "frame": "Sagarmatha",
+          "mech": "Iron Pan"
         },
         {
-          "callsign": "Starboard",
-          "alias": "Maria",
-          "code": "4be26ce9-923b-4069-b6c9-76437d4be455///NDL-C-DEEP-STATION//056940c6-8d55-4190-8e85-57caa043cb1a",
+          "callsign": "Stinger",
+          "alias": "Victor Steele",
+          "code": "Steele.Victor:f80dee99-30af-4a3f-a65f-9590577f5847//NDL-C-DEEP-TEMPLE",
           "corpro": "GMS",
           "frame": "Everest",
-          "mech": "Scarlet Judicator"
+          "mech": "One Shot"
         },
       ],
       "header": {
