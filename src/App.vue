@@ -98,11 +98,6 @@ export default {
           "name": "Vigilant Gaze",
           "status": "start"
         },
-      ],
-      "mission_slug": "001",
-      "current_md": "",
-      "events": "",
-      "missions": [
         {
           "slug": "001",
           "name": "Bug-Hunt",
