@@ -128,7 +128,7 @@ export default {
         },
         {
           "callsign": "Rabbit",
-          "alias": "Case Young",
+          "alias": "Chase Young",
           "code": "Young.Chase:8b55ba62-473f-4e7a-9dae-2010ac9bb2bb//NDL-C-FIRST-CRYPT",
           "corpro": "HORUS",
           "frame": "Goblin",

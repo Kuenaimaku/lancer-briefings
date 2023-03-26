@@ -1,4 +1,4 @@
 ## DOSSIER NOT FOUND
-You were a medical specialist in your old life. How did you wind up piloting a mech? What was your specialty? Did you work in research, care, or trauma? Did you love the life and take your duty seriously, or did you see yourself as an organic mechanic? 
+You were closely involved in the study, creation, or maintenance of a prime non-human person. Nonhuman persons, or NHPs, are complex artificial intelligences. As a prime NHP, the one you were associated with` was even more complex than most. 
 
-You might have worked in a colony or on a core world, in private practice, for a corporation, or on a noble family’s payroll: Did you operate a small frontier practice, or work in a blink station urgent care center, or in a massive hospital campus? Were you a whitecoat or an EMT? Is there a memory that haunts you, or one that gives you comfort?
+Did you interact with that entity like a scientist or engineer, or more like a priest or shaman? Do you have a personal connection to them, after all this time? How do clones of that NHP perceive you? And now that you’re a pilot, how do you feel about nonhuman intelligence?
