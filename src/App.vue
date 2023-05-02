@@ -89,14 +89,24 @@ export default {
 
   data() {
     return {
-      "mission_slug": "003",
+      "mission_slug": "005",
       "current_md": "",
       "events": "",
       "missions": [
         {
+          "slug": "005",
+          "name": "Split-Knuckle Haymaker",
+          "status": "start"
+        },
+        {
+          "slug": "004a",
+          "name": "Last Castle",
+          "status": "success"
+        },
+        {
           "slug": "003",
           "name": "Floodgate",
-          "status": "start"
+          "status": "success"
         },
         {
           "slug": "002",
