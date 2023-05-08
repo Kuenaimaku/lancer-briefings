@@ -2,4 +2,6 @@
 
 ## Trivia
 
-* Is not a nerd like the rest of y'all
+* Scientist
+* Looking for lost artifacts
+* Trying to bring something back

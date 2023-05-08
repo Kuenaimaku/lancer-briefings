@@ -2,4 +2,6 @@ A righteous man in sinful times a symbol of defiance against a system rotting fr
 
 ## Trivia
 
-* Is not a nerd like the rest of y'all
+* Drug Addict
+* Career Criminal
+* Losing his sense of self

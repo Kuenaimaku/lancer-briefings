@@ -2,4 +2,6 @@ Veteran of civil guerilla war, saw some shit and is scarred from it and now is a
 
 ## Trivia
 
-* Is not a nerd like the rest of y'all
+* Drunk
+* Drank more
+* Passed out

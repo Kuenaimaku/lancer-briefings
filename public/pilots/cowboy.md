@@ -2,4 +2,5 @@ Andy Altman comes from a long line of nobles, on a far off planet covered in red
 
 ## Trivia
 
-* Is not a nerd like the rest of y'all
+* Bounty Hunter
+* "Self Made" Man

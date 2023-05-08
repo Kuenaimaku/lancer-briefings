@@ -2,4 +2,6 @@
 
 ## Trivia
 
-* Is not a nerd like the rest of y'all
+* Chronic Flirt
+* Head of JMR field agents
+* Cool Turtleneck 

@@ -1,4 +1,6 @@
 
 ## Trivia
 
-* Is not a nerd like the rest of y'all
+* Promising Mechanic
+* War Veteran
+* Caught in the wrong crowd
