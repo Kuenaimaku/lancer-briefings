@@ -93,19 +93,14 @@ export default {
       "current_md": "",
       "events": "",
       "missions": [
-        {
-          "slug": "001",
-          "name": "The Long Night",
-          "status": "success"
+      {
+          "slug": "006",
+          "name": "Sic Semper",
+          "status": "start"
         },
         {
-          "slug": "002",
-          "name": "Steelworks",
-          "status": "success"
-        },
-        {
-          "slug": "003",
-          "name": "Pulling Threads",
+          "slug": "005",
+          "name": "Grassroots",
           "status": "success"
         },
         {
@@ -114,14 +109,19 @@ export default {
           "status": "partial-success"
         },
         {
-          "slug": "005",
-          "name": "Grassroots",
+          "slug": "003",
+          "name": "Pulling Threads",
           "status": "success"
         },
         {
-          "slug": "006",
-          "name": "Sic Semper",
-          "status": "start"
+          "slug": "002",
+          "name": "Steelworks",
+          "status": "success"
+        },
+        {
+          "slug": "001",
+          "name": "The Long Night",
+          "status": "success"
         },
       ],
       "pilots": [
@@ -191,7 +191,7 @@ export default {
         "headerTitle": "JMR Agency",
         "headerSubtitle": "Intelligence Services",
         "subheaderTitle": "Intelligence",
-        "subheaderSubtitle": "Sierra-Mike-Oscar-Kilo-Echo",
+        "subheaderSubtitle": "Security",
       },
       "options":{
         "eventsMarkdownPerMission": true
