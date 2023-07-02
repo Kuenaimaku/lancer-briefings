@@ -129,6 +129,7 @@ header {
     font-weight: 800;
     text-transform: uppercase;
     letter-spacing: 0.15em;
+    color: white;
   }
 
   #title-subheader {
@@ -140,6 +141,7 @@ header {
     text-transform: uppercase;
     letter-spacing: 0.12em;
     padding-left: 0.32em;
+    color: white;
   }
 
   #subtitle-header {
@@ -164,7 +166,7 @@ header {
 }
 
 .logo {
-  width: 50px;
+  width: 80px;
   height: 80px;
   margin-left: 15px;
 }
@@ -307,6 +309,7 @@ section .section-header {
   display: inline-flex;
   gap: 15px;
   padding-left: 16px;
+  color: #F4F4F4;
 
   img {
     width: 36px;
