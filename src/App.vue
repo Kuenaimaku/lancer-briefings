@@ -114,7 +114,7 @@ export default {
           "code": "7cd700cc-c990-48ed-892f-e5468de724c4///Ushoryagrad//a98c3e28-ad4a-4f89-bcd9-501464e960da",
           "corpro": "GMS",
           "frame": "Sagarmatha",
-          "mech": ""
+          "mech": "RBMK"
         },
         {
           "callsign": "NOITA",
@@ -122,7 +122,7 @@ export default {
           "code": "98ca9616-044e-4f87-b89b-aae4eb3387ec///NDL-C-DEEP-STATION//6f572259-6946-41bf-931a-e0543709e892",
           "corpro": "GMS",
           "frame": "Everest",
-          "mech": "MAYFLY"
+          "mech": "MAAHINEN"
         },
         {
           "callsign": "BEARHOG",
@@ -130,7 +130,7 @@ export default {
           "code": "d1fdf62e-d81e-4e10-97c8-df3bc4860117///Toor//5a4254aa-9fa2-42ca-a077-8f5bfd1e1ad3",
           "corpro": "GMS",
           "frame": "Everest",
-          "mech": "GREEN FJORD"
+          "mech": "GREEN_FJORD"
         },
       ],
       "header": {
