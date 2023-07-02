@@ -110,7 +110,7 @@ export default {
         },
         {
           "callsign": "STRELOK",
-          "alias": "Andreus Daniilovich Trechtchiov",
+          "alias": "Andreus Trechtchiov",
           "code": "7cd700cc-c990-48ed-892f-e5468de724c4///Ushoryagrad//a98c3e28-ad4a-4f89-bcd9-501464e960da",
           "corpro": "GMS",
           "frame": "Sagarmatha",
@@ -119,7 +119,7 @@ export default {
         {
           "callsign": "NOITA",
           "alias": "Niklas Gornastajevskiy",
-          "code": "98ca9616-044e-4f87-b89b-aae4eb3387ec///NDL-C-DEEP-STATION//6f572259-6946-41bf-931a-e0543709e892",
+          "code": "98ca9616-044e-4f87-b89b-aae4eb3387ec///Hycean/6f572259-6946-41bf-931a-e0543709e892",
           "corpro": "GMS",
           "frame": "Everest",
           "mech": "MAAHINEN"
@@ -139,9 +139,9 @@ export default {
         "system": "Ardennes-3",
         "gate": "Atlas-Quanokrim",
         "ring": "Atlas-Line",
-        "headerTitle": "Mirrorsmoke",
-        "headerSubtitle": "Mercenary Company",
-        "subheaderTitle": "Crisis Response",
+        "headerTitle": "Union Navy",
+        "headerSubtitle": "Auxiliaries",
+        "subheaderTitle": "First Respose Team",
         "subheaderSubtitle": "Delta-Echo-Echo-Zulu",
       },
       "options":{
