@@ -101,20 +101,12 @@ export default {
       ],
       "pilots": [
         {
-          "callsign": "VALKYRIE",
-          "alias": "Kyrie Moulinos",
-          "code": "462370be-bd0f-41c2-b667-cc75f3a59a96///Valhalla-II//377308ad-ba23-410b-ae37-68a1fb5f8db4",
+          "callsign": "BEARHOG",
+          "alias": 'Jeremiah Beck',
+          "code": "d1fdf62e-d81e-4e10-97c8-df3bc4860117///Toor//5a4254aa-9fa2-42ca-a077-8f5bfd1e1ad3",
           "corpro": "GMS",
-          "frame": "Sagarmatha",
-          "mech": "EINHERJAR"
-        },
-        {
-          "callsign": "STRELOK",
-          "alias": "Andreus Trechtchiov",
-          "code": "7cd700cc-c990-48ed-892f-e5468de724c4///Ushoryagrad//a98c3e28-ad4a-4f89-bcd9-501464e960da",
-          "corpro": "GMS",
-          "frame": "Sagarmatha",
-          "mech": "RBMK"
+          "frame": "Everest",
+          "mech": "GREEN_FJORD"
         },
         {
           "callsign": "NOITA",
@@ -125,12 +117,20 @@ export default {
           "mech": "MAAHINEN"
         },
         {
-          "callsign": "BEARHOG",
-          "alias": 'Jeremiah Beck',
-          "code": "d1fdf62e-d81e-4e10-97c8-df3bc4860117///Toor//5a4254aa-9fa2-42ca-a077-8f5bfd1e1ad3",
+          "callsign": "STRELOK",
+          "alias": "Andreus Trechtchiov",
+          "code": "7cd700cc-c990-48ed-892f-e5468de724c4///Ushoryagrad//a98c3e28-ad4a-4f89-bcd9-501464e960da",
           "corpro": "GMS",
-          "frame": "Everest",
-          "mech": "GREEN_FJORD"
+          "frame": "Sagarmatha",
+          "mech": "RBMK"
+        },
+        {
+          "callsign": "VALKYRIE",
+          "alias": "Kyrie Moulinos",
+          "code": "462370be-bd0f-41c2-b667-cc75f3a59a96///Valhalla-II//377308ad-ba23-410b-ae37-68a1fb5f8db4",
+          "corpro": "GMS",
+          "frame": "Sagarmatha",
+          "mech": "EINHERJAR"
         },
       ],
       "header": {
