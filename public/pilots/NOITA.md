@@ -4,3 +4,4 @@ Mas-E V is large for a rocky planet located near a galactic intersection and is 
 
 ## Data
 * Rehydration Drink: Coffee
+* Does not like 'Walnuts'

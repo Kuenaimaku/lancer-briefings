@@ -4,3 +4,6 @@ A still-unidentified force brought total ruin to Midgarde when Ky was little mor
 
 ## Data
 * Rehydration Drink: Exotic Tea
+
+## Quotes
+"I want my mech to be covered in children"
