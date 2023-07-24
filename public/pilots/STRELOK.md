@@ -4,3 +4,6 @@ Before he was a pilot, Andreus worked as a planning officer with the forestry co
 
 ## Data
 * Rehydration Drink: Aspirin
+
+## Quotes
+"I don't want them to be snotty with their little jam fingers"
