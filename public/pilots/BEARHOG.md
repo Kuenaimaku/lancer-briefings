@@ -12,3 +12,4 @@ Jeremiah would likely not recognise Toor and its star-system if he returned to i
 
 ## Data
 * Rehydration Drink: Hot apple juice
+* Is allergic to 'Walnuts'
