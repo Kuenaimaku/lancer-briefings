@@ -5,3 +5,6 @@ Mas-E V is large for a rocky planet located near a galactic intersection and is 
 ## Data
 * Rehydration Drink: Coffee
 * Does not like 'Walnuts'
+
+## Quotes
+"Im not much of a talker but im bilingual, I speak bullets and manna"
