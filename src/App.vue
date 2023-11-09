@@ -96,7 +96,7 @@ export default {
         {
           "slug": "001",
           "name": "It's not the fall that kills you",
-          "status": "finished"
+          "status": "success"
         },        
         {
           "slug": "002",
@@ -139,7 +139,7 @@ export default {
         "ring": "Atlas-Line",
         "headerTitle": "Union Navy",
         "headerSubtitle": "Rio Grande",
-        "subheaderTitle": "Squadron",
+        "subheaderTitle": "Squadron ",
         "subheaderSubtitle": "004th Squad - Delta",
       },
       "options":{
