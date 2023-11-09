@@ -89,15 +89,21 @@ export default {
 
   data() {
     return {
-      "mission_slug": "001",
+      "mission_slug": "002",
       "current_md": "",
       "events": "",
       "missions": [
         {
           "slug": "001",
-          "name": "Bug-Hunt",
+          "name": "It's not the fall that kills you",
+          "status": "finished"
+        },        
+        {
+          "slug": "002",
+          "name": "Look both ways",
           "status": "start"
         },
+        
       ],
       "pilots": [
         {
@@ -126,15 +132,15 @@ export default {
         },
       ],
       "header": {
-        "planet": "Hercynia",
-        "year": "5014u",
-        "system": "Ardennes-3",
+        "planet": "Nov Elysia",
+        "year": "5016",
+        "system": "Cressidium",
         "gate": "Atlas-Quanokrim",
         "ring": "Atlas-Line",
-        "headerTitle": "Mirrorsmoke",
-        "headerSubtitle": "Mercenary Company",
-        "subheaderTitle": "Crisis Response",
-        "subheaderSubtitle": "Delta-Echo-Echo-Zulu",
+        "headerTitle": "Union Navy",
+        "headerSubtitle": "Rio Grande",
+        "subheaderTitle": "Squadron",
+        "subheaderSubtitle": "004th Squad - Delta",
       },
       "options":{
         "eventsMarkdownPerMission": true
