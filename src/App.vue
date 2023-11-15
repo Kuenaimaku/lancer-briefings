@@ -96,25 +96,17 @@ export default {
         {
           "slug": "001",
           "name": "Bug-Hunt",
-          "status": "start"
+          "status": "partial-success"
         },
       ],
       "pilots": [
         {
           "callsign": "Head Start",
-          "alias": "Shayan Arsenal",
-          "code": "462370be-bd0f-41c2-b667-cc75f3a59a96///NDL-C-DEEP-STATION//377308ad-ba23-410b-ae37-68a1fb5f8db4",
+          "alias": "Johannes Bhraqma",
+          "code": "cb8646a9-982c-4921-afbd-a97b4dcc9824//NDL-C-THIRD-AXE",
           "corpro": "GMS",
-          "frame": "Everest",
-          "mech": "Type - Worst Beat"
-        },
-        {
-          "callsign": "Jinzo",
-          "alias": "Shayan Arsenal",
-          "code": "462370be-bd0f-41c2-b667-cc75f3a59a96///NDL-C-DEEP-STATION//377308ad-ba23-410b-ae37-68a1fb5f8db4",
-          "corpro": "GMS",
-          "frame": "Everest",
-          "mech": "Type - Worst Beat"
+          "frame": "Sagarmatha",
+          "mech": "The Podium "
         },
 
       ],
@@ -124,10 +116,10 @@ export default {
         "system": "Ardennes-3",
         "gate": "Atlas-Quanokrim",
         "ring": "Atlas-Line",
-        "headerTitle": "Mirrorsmoke",
-        "headerSubtitle": "Mercenary Company",
+        "headerTitle": "From Parched Skies",
+        "headerSubtitle": "",
         "subheaderTitle": "Crisis Response",
-        "subheaderSubtitle": "Delta-Echo-Echo-Zulu",
+        "subheaderSubtitle": "Whiskey-Tango-Foxtrot",
       },
       "options":{
         "eventsMarkdownPerMission": true
