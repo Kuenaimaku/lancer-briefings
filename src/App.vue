@@ -111,7 +111,7 @@ export default {
 
       ],
       "header": {
-        "planet": "Hercynia",
+        "planet": "Petrovsky's World",
         "year": "5014u",
         "system": "Ardennes-3",
         "gate": "Atlas-Quanokrim",
