@@ -119,7 +119,7 @@ export default {
       ],
       "header": {
         "planet": "Petrovsky's World",
-        "year": "1951",
+        "year": "5016U",
         "system": "Ardennes-3",
         "gate": "ANNAMITE-Maracan",
         "ring": "ANNAMITE-Line",
