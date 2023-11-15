@@ -94,6 +94,11 @@ export default {
       "events": "",
       "missions": [
         {
+          "slug": "lancer mission",
+          "name": "Big Butthole Test",
+          "status": "failure"
+        },
+        {
           "slug": "001",
           "name": "Bug-Hunt",
           "status": "partial-success"
@@ -111,8 +116,8 @@ export default {
 
       ],
       "header": {
-        "planet": "Hercynia",
-        "year": "5014u",
+        "planet": "Petrovsky's World",
+        "year": "1951",
         "system": "Ardennes-3",
         "gate": "Atlas-Quanokrim",
         "ring": "Atlas-Line",
