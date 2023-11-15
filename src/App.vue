@@ -1,4 +1,5 @@
 <template>
+  <v-scale-screen width="1920" height="1080">
   <Header :header="this.header" />
   <div class="content-container">
     <section class="section-container" id="missions" style="width:435px; height:714px;">
@@ -69,6 +70,7 @@
     <source src="/startup.ogg" type="audio/ogg" />
   </audio>
   <Footer/>
+</v-scale-screen>
 </template>
 
 <script>
@@ -185,8 +187,30 @@ export default {
 
 <style lang="scss">
 #app {
-  width: 1902px;
-  height: 910px;
-  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+  overflow: auto; // Changed to auto to allow scrolling when content overflows
 }
+
+.content-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap; // This allows items to wrap onto multiple lines
+  justify-content: center;
+  align-items: flex-start; // Aligns items to the start of the flex container
+  padding: 10px;
+}
+
+.section-container {
+  flex: 1;
+  margin: 10px;
+  box-sizing: border-box; // Includes padding and border in the element's total width and height
+  min-width: 300px; // Minimum width before wrapping happens
+
+  // You can still keep the media queries if you want specific styles at certain breakpoints
+}
+
+// Continue with other responsive design adjustments as necessary
 </style>
+
+
