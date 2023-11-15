@@ -106,7 +106,7 @@ export default {
           "code": "cb8646a9-982c-4921-afbd-a97b4dcc9824//NDL-C-THIRD-AXE",
           "corpro": "GMS",
           "frame": "Sagarmatha",
-          "mech": "The Podium "
+          "mech": "The Podium"
         },
 
       ],
