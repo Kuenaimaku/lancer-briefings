@@ -33,6 +33,7 @@ export default {
 			if (this.mission.status === "start") return "Current\nBriefing"
 			if (this.mission.status === "partial-success") return "Partial\nSuccess"
 			if (this.mission.status === "success") return "Mission\nSuccess"
+			if (this.mission.status === "in-progress") return "Mission In\nProgress"
 			if (this.mission.status === "failure") return "Mission\nFailure"
 		},
 		isActive() {

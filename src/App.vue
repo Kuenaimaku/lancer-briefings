@@ -96,7 +96,7 @@ export default {
         {
           "slug": "lancer mission",
           "name": "Big Butthole Test",
-          "status": "failure"
+          "status": "in-progress"
         },
         {
           "slug": "001",
