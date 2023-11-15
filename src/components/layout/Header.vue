@@ -1,5 +1,4 @@
 <template>
-  	<v-scale-screen width="1920" height="1080">
   <header class="clipped-x-large-forward">
     <div class="title clipped-x-large-forward">
       <img class="logo" src="/icons/ipsn-company-icon.svg" />
@@ -45,7 +44,6 @@
       </div>
     </div>
   </header>
-</v-scale-screen>
 </template>
 
 <script>
@@ -63,30 +61,5 @@ export default {
 }
 </script>
 
-<style lang="scss">
-#app {
-  width: 100vw;
-  height: 100vh;
-  overflow: auto; // Changed to auto to allow scrolling when content overflows
-}
-
-.content-container {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap; // This allows items to wrap onto multiple lines
-  justify-content: center;
-  align-items: flex-start; // Aligns items to the start of the flex container
-  padding: 10px;
-}
-
-.section-container {
-  flex: 1;
-  margin: 10px;
-  box-sizing: border-box; // Includes padding and border in the element's total width and height
-  min-width: 300px; // Minimum width before wrapping happens
-
-  // You can still keep the media queries if you want specific styles at certain breakpoints
-}
-
-// Continue with other responsive design adjustments as necessary
+<style lang="scss" scoped>
 </style>
