@@ -126,7 +126,7 @@ export default {
         "headerTitle": "From Parched Skies",
         "headerSubtitle": "",
         "subheaderTitle": "Trunk Security",
-        "subheaderSubtitle": "Whiskey-Tango-Foxtrot",
+        "subheaderSubtitle": "Anti-Piracy Response Unit",
       },
       "options":{
         "eventsMarkdownPerMission": true
