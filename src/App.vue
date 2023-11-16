@@ -120,7 +120,7 @@ export default {
       "header": {
         "planet": "Petrovsky's World",
         "year": "5016U",
-        "system": "Ardennes-3",
+        "system": "U-ANN-1",
         "gate": "ANNAMITE-Maracan",
         "ring": "ANNAMITE-Line",
         "headerTitle": "From Parched Skies",
