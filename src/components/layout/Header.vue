@@ -1,7 +1,7 @@
 <template>
   <header class="clipped-x-large-forward">
     <div class="title clipped-x-large-forward">
-      <img class="logo" src="/icons/company-icon.svg" />
+      <img class="logo" src="/icons/ipsn-company-icon.svg" />
       <div class="title-container">
         <div class="title-row" id="title-first-line">
           <span id="title-header">{{ header.headerTitle }}</span>
@@ -15,7 +15,7 @@
     </div>
     <div class="rhombus">&nbsp;</div>
     <video autoplay muted loop width="90px" height="90px">
-      <source src="/planet.webm" type="video/webm" />
+      <source src="/Dagmars_Test_3.webm" type="video/webm" />
     </video>
     <div class="location-info">
       <div class="location-row" id="planet-year">

@@ -5,10 +5,10 @@
 /*-------------------------------------*/
 
 //Primary Colors
-$primary: rgba(125, 187, 187, 1);
+$primary: rgb(245, 241, 242);
 $secondary: rgba(23, 29, 30, 0.8);
-$highlight-hover: rgba(255, 255, 255, 0.3);
-$highlight-active: rgba(255, 255, 255, 0.1);
+$highlight-hover: rgba(255, 255, 255, 0.445);
+$highlight-active: rgba(255, 255, 255, 0.253);
 
 //Primary Text
 $text-headers: rgba(0, 0, 0, 1);
@@ -24,6 +24,7 @@ $mission-start: rgba(109, 109, 109, 1);
 $mission-partial: rgba(88, 34, 102, 1);
 $mission-success: rgba(34, 102, 98, 1);
 $mission-failure: rgba(176, 45, 45, 1);
+$mission-in-progress: rgb(138, 125, 8);
 
 //Pilot Roster Text
 $text-pilot-header: rgba(255, 255, 255, 0.67);
@@ -462,6 +463,10 @@ section .section-header {
 
   .partial-success {
     background-color: $mission-partial;
+  }
+
+  .in-progress {
+    background-color: $mission-in-progress;
   }
 
   .success {
