@@ -96,11 +96,6 @@ export default {
       "events": "",
       "missions": [
         {
-          "slug": "lancer mission",
-          "name": "Big Butthole Test",
-          "status": "in-progress"
-        },
-        {
           "slug": "001",
           "name": "Bug-Hunt",
           "status": "partial-success"
