@@ -1,6 +1,6 @@
-# Babbies First Mission File
-## Stardate uhhhhhh
-Comrade Patrick learn ways of Mark, and how he get down.
+# Engagement with Previous Forces
+## Capital of Petrovsky's World Identified to be under Attack
+Team must defend the holdouts of the planet below and to liase with locals.
 
-## Stardate 20 mins past previous...
+## Another Damn Header
 Comrade Blake fix event file.
