@@ -116,7 +116,7 @@ export default {
         "planet": "Petrovsky's World",
         "year": "5016U",
         "system": "U-ANN-1",
-        "gate": "ANNAMITE-Sop Sang",
+        "gate": "ANNAMITE-Phu Luong",
         "ring": "ANNAMITE-Line",
         "headerTitle": "From Parched Skies",
         "headerSubtitle": "",
