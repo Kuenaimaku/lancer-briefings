@@ -97,7 +97,7 @@ export default {
       "missions": [
         {
           "slug": "001",
-          "name": "Bug-Hunt",
+          "name": "Boarding Action",
           "status": "partial-success"
         },
       ],
