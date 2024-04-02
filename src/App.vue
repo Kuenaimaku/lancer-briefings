@@ -89,56 +89,69 @@ export default {
 
   data() {
     return {
-      "mission_slug": "001",
+      "mission_slug": "002",
       "current_md": "",
       "events": "",
       "missions": [
         {
           "slug": "001",
           "name": "Bug-Hunt",
+          "status": "success"
+        },
+        {
+          "slug": "002",
+          "name": "Vigilant Gaze",
           "status": "start"
         },
       ],
       "pilots": [
         {
-          "callsign": "Jinzo",
-          "alias": "Shayan Arsenal",
-          "code": "462370be-bd0f-41c2-b667-cc75f3a59a96///NDL-C-DEEP-STATION//377308ad-ba23-410b-ae37-68a1fb5f8db4",
+          "callsign": "Fairy",
+          "alias": "[REDACTED]",
+          "code": "627db090-4cd5-4787-98d4-301a7a2470ba//NDL-C-COLD-DECEMBER//627db090-4cd5-4787-98d4-301a7a2470ba",
           "corpro": "GMS",
           "frame": "Everest",
-          "mech": "Type - Worst Beat"
+          "mech": "Zephyr"
         },
         {
-          "callsign": "Kal",
-          "alias": "Vier Flau",
-          "code": "7cd700cc-c990-48ed-892f-e5468de724c4///NDL-C-DEEP-STATION//a98c3e28-ad4a-4f89-bcd9-501464e960da",
-          "corpro": "GMS",
-          "frame": "Everest",
-          "mech": "Necrophile"
+          "callsign": "Captain",
+          "alias": "Unknown",
+          "code": "UNKNOWN",
+          "corpro": "Unknown",
+          "frame": "Unknown",
+          "mech": "Unknown"
         },
         {
-          "callsign": "Starboard",
-          "alias": "Maria",
-          "code": "4be26ce9-923b-4069-b6c9-76437d4be455///NDL-C-DEEP-STATION//056940c6-8d55-4190-8e85-57caa043cb1a",
+          "callsign": "Ruiner",
+          "alias": "Aster Elliot Rhea",
+          "code": "cff6e4be-1636-4788-b52d-9a85b5baa8b4//NDL-C-BRASS-SKULL//cff6e4be-1636-4788-b52d-9a85b5baa8b4",
           "corpro": "GMS",
           "frame": "Everest",
-          "mech": "Scarlet Judicator"
+          "mech": "Mannequin Idol"
         },
         {
-          "callsign": "Badlands",
-          "alias": "Marlene Gatsby",
-          "code": "98ca9616-044e-4f87-b89b-aae4eb3387ec///NDL-C-DEEP-STATION//6f572259-6946-41bf-931a-e0543709e892",
+          "callsign": "Z3RO",
+          "alias": "Ryōsuke Abane",
+          "code": "f37a441a-7df3-43c1-963d-f197b4705da5//NDL-C-BLUE-WILD//f37a441a-7df3-43c1-963d-f197b4705da5",
           "corpro": "GMS",
           "frame": "Everest",
-          "mech": "Mayfly"
+          "mech": "Proxy"
         },
         {
-          "callsign": "Compadre",
-          "alias": 'Clint "CC" Cruz',
-          "code": "d1fdf62e-d81e-4e10-97c8-df3bc4860117///NDL-C-DEEP-STATION//5a4254aa-9fa2-42ca-a077-8f5bfd1e1ad3",
+          "callsign": "Quasar",
+          "alias": "Alex",
+          "code": "13e56571-d57f-496e-bba8-a937403f11b2//NDL-C-SINGULARITY-OCTOBER//13e56571-d57f-496e-bba8-a937403f11b2",
           "corpro": "GMS",
           "frame": "Everest",
-          "mech": "Rio Bravo"
+          "mech": "Neverest"
+        },
+        {
+          "callsign": "NotAnAI",
+          "alias": "Unknown",
+          "code": "Unknown",
+          "corpro": "Unknown",
+          "frame": "Unknown",
+          "mech": "Unknown"
         },
       ],
       "header": {
@@ -150,7 +163,7 @@ export default {
         "headerTitle": "Mirrorsmoke",
         "headerSubtitle": "Mercenary Company",
         "subheaderTitle": "Crisis Response",
-        "subheaderSubtitle": "Delta-Echo-Echo-Zulu",
+        "subheaderSubtitle": "Echo-Yankee-Zulu",
       },
       "options":{
         "eventsMarkdownPerMission": true
