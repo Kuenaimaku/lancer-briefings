@@ -124,7 +124,7 @@ export default {
         {
           "callsign": "Ruiner",
           "alias": "Aster Elliot Rhea",
-          "code": "cff6e4be-1636-4788-b52d-9a85b5baa8b4//NDL-C-BRASS-SKULL//cff6e4be-1636-4788-b52d-9a85b5baa8b4",
+          "code": "cff6e4be-1636-4788-b52d-9a85b5baa8b4//NDL-C-EARNEST-CASCADE//cff6e4be-1636-4788-b52d-9a85b5baa8b4",
           "corpro": "GMS",
           "frame": "Everest",
           "mech": "Mannequin Idol"
