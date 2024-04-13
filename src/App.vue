@@ -98,7 +98,7 @@ export default {
         {
           "slug": "001",
           "name": "Boarding Action",
-          "status": "partial-success"
+          "status": "start"
         },
       ],
       "pilots": [
