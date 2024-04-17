@@ -98,33 +98,28 @@ export default {
           "name": "Bug-Hunt",
           "status": "start"
         },
-        {
-          "slug": "002",
-          "name": "Vigilant Gaze",
-          "status": "start"
-        },
       ],
       "pilots": [
         {
-          "callsign": "Fairy",
+          "callsign": "FAIRY",
           "alias": "[REDACTED]",
-          "code": "627db090-4cd5-4787-98d4-301a7a2470ba//NDL-C-COLD-DECEMBER//627db090-4cd5-4787-98d4-301a7a2470ba",
+          "code": "627db090-4cd5-4787-98d4-301a7a2470ba//NDL-C-ETA-MARCH",
           "corpro": "GMS",
           "frame": "Everest",
           "mech": "Zephyr"
         },
         {
-          "callsign": "Captain",
-          "alias": "Unknown",
-          "code": "UNKNOWN",
-          "corpro": "Unknown",
-          "frame": "Unknown",
-          "mech": "Unknown"
+          "callsign": "CAPTAIN",
+          "alias": "T'Chaka",
+          "code": "4a55b894-3eb1-42ec-bebf-670c24af2f7d//NDL-C-GOLD-CASCADE",
+          "corpro": "GMS",
+          "frame": "Sagarmatha",
+          "mech": "Metroplex"
         },
         {
-          "callsign": "Ruiner",
+          "callsign": "RUINER",
           "alias": "Aster Elliot Rhea",
-          "code": "cff6e4be-1636-4788-b52d-9a85b5baa8b4//NDL-C-EARNEST-CASCADE//cff6e4be-1636-4788-b52d-9a85b5baa8b4",
+          "code": "cff6e4be-1636-4788-b52d-9a85b5baa8b4//NDL-C-DEEP-NOVEMBER",
           "corpro": "GMS",
           "frame": "Everest",
           "mech": "Mannequin Idol"
@@ -132,26 +127,18 @@ export default {
         {
           "callsign": "Z3RO",
           "alias": "Ryōsuke Abane",
-          "code": "f37a441a-7df3-43c1-963d-f197b4705da5//NDL-C-BLUE-WILD//f37a441a-7df3-43c1-963d-f197b4705da5",
+          "code": "f37a441a-7df3-43c1-963d-f197b4705da5//NDL-C-DARK-CRYSTAL",
           "corpro": "GMS",
           "frame": "Everest",
           "mech": "Proxy"
         },
         {
-          "callsign": "Quasar",
+          "callsign": "QUASAR",
           "alias": "Alex",
-          "code": "13e56571-d57f-496e-bba8-a937403f11b2//NDL-C-SINGULARITY-OCTOBER//13e56571-d57f-496e-bba8-a937403f11b2",
+          "code": "13e56571-d57f-496e-bba8-a937403f11b2//NDL-C-SINGULARITY-OCTOBER",
           "corpro": "GMS",
           "frame": "Everest",
           "mech": "Neverest"
-        },
-        {
-          "callsign": "NotAnAI",
-          "alias": "Unknown",
-          "code": "Unknown",
-          "corpro": "Unknown",
-          "frame": "Unknown",
-          "mech": "Unknown"
         },
       ],
       "header": {
