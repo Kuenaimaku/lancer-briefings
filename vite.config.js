@@ -8,7 +8,7 @@ export default defineConfig({
   base: "./",
   resolve: {
     alias: {
-      '@': path.resolve("_https://lancerbriefingsa11eycat.netlify.app", './src'),
+      '@': path.resolve(__https://lancerbriefingsa11eycat.netlify.app, './src'),
     },
   }
 })
