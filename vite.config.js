@@ -8,7 +8,7 @@ export default defineConfig({
   base: "./",
   resolve: {
     alias: {
-      '@': path.resolve( 001.md, './src'),
+      '@': path.resolve( "ntl init", './src'),
     },
   }
 })
