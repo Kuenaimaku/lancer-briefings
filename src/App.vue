@@ -89,71 +89,60 @@ export default {
 
   data() {
     return {
-      "mission_slug": "002",
+      "mission_slug": "001",
       "current_md": "",
       "events": "",
       "missions": [
         {
           "slug": "001",
-          "name": "a bridge too far",
-          "status": "success"
+          "name": "It's not the fall that kills you",
+          "status": "start"
         },
          {
           "slug": "002",
-          "name": "Get Collard",
+          "name": "???",
+          "status": "start"
+        },
+        {
+          "slug": "003",
+          "name": "???",
           "status": "start"
         },
       ],
       "pilots": [
         {
-          "callsign": "Outrigger",
-          "alias": "Pappy Bong",
+          "callsign": "Condor",
+          "alias": "Mito Swavely VII",
           "code": "3d6ca0e0-e73d-4f0c-b161-09a28535bf3b//274e70ac-e5c2-4756-a7b4-6b76b7415b57",
-          "corpro": "GMS",
-          "frame": "Everest",
-          "mech": "Augenblick"
+          "corpro": "SSC",
+          "frame": "Metalmark",
+          "mech": "Craven"
         },
         {
-          "callsign": "Mouse",
-          "alias": "Gerry Thomas",
+          "callsign": "Kelpie",
+          "alias": "Izaskun Hommel III",
           "code": "3d6ca0e0-e73d-4f0c-b161-09a28535bf3b//7c169109-15ea-4d65-8165-23a9994ff6ae",
-          "corpro": "GMS",
-          "frame": "Everest",
-          "mech": "Pea Shooter"
+          "corpro": "SSC",
+          "frame": "Duskwing",
+          "mech": "Hey Shadow"
         },
         {
-          "callsign": "Mako",
-          "alias": "Raniero Kun",
-          "code": "3D6CA0E0-E73D-4F0C-B161-09A28535BF3B//5861FD53-F2CC-4C6A-BA98-6036EEE5DA25",
-          "corpro": "GMS",
-          "frame": "Everest",
-          "mech": "Judgemental Connotation"
-        },
-        {
-          "callsign": "Badgers",
-          "alias": "Deke Rogers",
+          "callsign": "Echo",
+          "alias": "Servat Radsky",
           "code": "3d6ca0e0-e73d-4f0c-b161-09a28535bf3b//adadc250-dd0d-4fd3-b340-da828f044bb8",
-          "corpro": "GMS",
-          "frame": "Ode to Truth",
-          "mech": "Mayfly"
-        },
-        {
-          "callsign": "Tweek",
-          "alias": 'Clint "CC" Cruz',
-          "code": "3d6ca0e0-e73d-4f0c-b161-09a28535bf3b//e43ead24-bb2b-4f61-9b32-4c895a15127e",
-          "corpro": "GMS",
-          "frame": "Everest",
-          "mech": "Monkey Wrench"
+          "corpro": "IPS-N",
+          "frame": "Caliban",
+          "mech": "Wolf"
         },
       ],
       "header": {
-        "planet": "Lambda 02",
+        "planet": "Cressidum",
         "year": "5014u",
         "system": "Aeon-3",
-        "gate": "Aeon-Quanokrim",
-        "ring": "Aon-Line",
-        "headerTitle": "Fallen Star",
-        "headerSubtitle": "Lancer Company",
+        "gate": "Rainer",
+        "ring": "Cascade-Line",
+        "headerTitle": "Operation Choas Rain",
+        "headerSubtitle": "Union",
         "subheaderTitle": "Assault Response",
         "subheaderSubtitle": "Capture-extraction",
       },
