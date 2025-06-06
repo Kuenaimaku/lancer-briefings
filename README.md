@@ -2,7 +2,7 @@
 
 # Lancer Briefings
 
-**[Live Demo](https://ars-morendi.kuenaimaku.com/)**
+**[Live Demo](https://lancer.kuenaimaku.com/)**
 
 Go over mission briefings within the LANCER Universe in style by showing your players a fully animated mission briefing screen, with a Mirrorsmoke Mercenary Company theme.
 
