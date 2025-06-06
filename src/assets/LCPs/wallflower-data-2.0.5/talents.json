@@ -1,0 +1,39 @@
+[
+  {
+    "id": "t_empath",
+    "name": "Empath",
+    "terse": "Gain abilities that grant your allies guaranteed dice results",
+    "description": "<p><i>Your time on Hercynia has always been marked by a kind of … searching. A connection to the planet, to something alive there. You can perceive it best at night, when it’s quiet: your name, or a whisper that speaks something deeper and more true, spoken in the voice of another. You don’t feel any fear when you hear it. You feel complete. It takes some time down the well, but one morning you awake resolute.</p><p>Time to find the distant speaker.</i></p><p>Whether your character was born offworld and came to Hercynia knowing nothing of the Egregorians, Witness, or any of the planet’s history, or you were born in Evergreen or one of the cities of the HUC, your character can be an empath. An empath is someone who can not only register when Witness is being shared, but begin to understand it and, with some training, even add their own subjectivity to it.</p><p>Mere exposure to Hercynia is enough for a character to become an empath. Nobody is “born” an empath – it is a learned process, not an inherited one. Although, like all skills, some people find it easier than others, anyone can potentially learn to understand Witness. Normally, human empaths bond with Egregorians – there are many examples of such in the United Cities. Rarely, empaths can form bonds with other humans – a process that is as rare and wondrous to Egregorians as it is to the humans undergoing it, and one that also suggests that a human extension of Witness may latent and possible with exploration.</p>",
+    "ranks": [
+      {
+        "name": "Sympathetic Precognition",
+        "description": "Your ability to sense the subjectivities of others grants you an uncanny ability to predict your ally’s actions, guiding them with your influence.",
+        "actions": [
+          {
+            "name": "Sympathetic Precognition",
+            "activation": "Reaction",
+            "frequency": "1/scene",
+            "trigger": "An allied character in line of sight makes a skill check, attack, or save.",
+            "detail": "That character may choose not to roll, instead treating their check, attack, or save as if they had rolled a 10 on the d20."
+          }
+        ]
+      },
+      {
+        "name": "Bend to Will",
+        "description": "1/scene when an allied character in line of sight makes a structure or overheating check, they can roll twice and choose either result."
+      },
+      {
+        "name": "Shared Subjectivity",
+        "description": "1/scene as a quick action, you may tap deep reserves of willpower to grant extraordinary awareness to an allied character in line of sight. Your mech immediately becomes STUNNED until the start of your next turn and your perception almost completely merges with that of the other character. Until the end of their next turn, any time that character makes an attack, check, or saving throw, they can choose to roll as normal or instead treat that attack, check, or save as if they had rolled a 10 on the d20. They must decide before rolling.",
+        "actions": [
+          {
+            "name": "Shared Subjectivity",
+            "activation": "Quick",
+            "frequency": "1/scene",
+            "detail": "Your mech immediately becomes STUNNED until the start of your next turn and your perception almost completely merges with that of the other character. Until the end of their next turn, any time that character makes an attack, check, or saving throw, they can choose to roll as normal or instead treat that attack, check, or save as if they had rolled a 10 on the d20. They must decide before rolling."
+          }
+        ]
+      }
+    ]
+  }
+]

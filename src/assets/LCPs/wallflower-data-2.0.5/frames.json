@@ -1,0 +1,437 @@
+[
+  {
+    "id": "mf_kidd",
+    "source": "IPS-N",
+    "name": "Kidd",
+    "mechtype": [
+      "Support"
+    ],
+    "y_pos": 25,
+    "license_level": 2,
+    "description": "<p>A sidegraded cousin of IPS-N&rsquo;s Lancaster support frame, the Kidd was produced under a joint development contract by IPS-N&rsquo;s Titan&ndash;Enceladus Field Project and Northstar Branch Robotics. The original pattern for the frame was bought off a mining commune that had rigged their support drones in a slapdash but ingenious neural mesh that both hardened them against tech intrusion and increased their operational efficiency many times over. Urban legend was that the original builder of the rig had used his drone team to bury caches of black-market Volador tech in several wandering asteroids, and out of extreme paranoia made his systems almost impossible to crack. To this day Northstar Branch Robotics tries valiantly to squash down persistent rumors that clues to the location of the caches are hidden in the Kidd&rsquo;s code base.</p> <p>Designed to provide an aggressive, all-theater support solution to rugged field teams in hostile environments, the Kidd mounts a trio of powerful systems to ensure a broad operational envelope. The Jolly Roger semiautonomous personal orbital platform, bundled with every genuine-license Kidd platform establishes theater control in any open or near-surface environment. A squadron of bundled subalterns (along with an onboard maintenance suite) guarantees friendly support in any environment and provides a broad suite of tactical possibility. Finally, Titan&ndash;Enceladus&rsquo;s SMOKESTACK heat sink pylon represents the cutting edge of IPS-N&rsquo;s thermodynamic axiomatics, allowing users to offset surplus heat via the creation of a pinhole-window into an omega state of absolute zero.</p> <p>The Kidd is a popular chassis in Evergreen where it is employed as a subaltern command platform for civilian and engineering purposes. Its familiar bulk can also regularly be seen accompanying traders on their way to do business with the Gray Towns.</p>",
+    "mounts": [
+      "Main"
+    ],
+    "stats": {
+      "size": 1,
+      "stress": 4,
+      "structure": 4,
+      "armor": 2,
+      "hp": 6,
+      "evasion": 6,
+      "edef": 12,
+      "heatcap": 4,
+      "repcap": 5,
+      "sensor_range": 8,
+      "tech_attack": 1,
+      "save": 11,
+      "speed": 6,
+      "sp": 10
+    },
+    "traits": [
+      {
+        "name": "Rapid Deployment",
+        "description": "On its first turn in any combat scene, the Kidd can deploy or activate any one system with the drone or deployable tag as a free action.",
+        "synergies": [
+          {
+            "locations": [
+              "deployable",
+              "drone"
+            ],
+            "detail": "On its first turn in any combat, the Kidd can deploy or activate any one system with the DRONE or DEPLOYABLE tag as a free action."
+          }
+        ]
+      },
+      {
+        "name": "Reroute Power",
+        "description": "As a quick action 1/round, the Kidd can destroy one of its DEPLOYABLES or DRONES that was not deployed or created in the same round to either grant 1d6+1 OVERSHIELD to an allied character or deal 1d6+1 AP Energy Damage to a hostile character. The target, allied or hostile, must be adjacent to whatever is destroyed. Systems without LIMITED that are destroyed this way must be repaired before they can be used again.",
+        "actions": [
+          {
+            "name": "Reroute Power",
+            "activation": "Quick",
+            "frequency": "1/round",
+            "detail": "Destroy one of your deployables or drones to either grant 1d6+1 OVERSHIELD to an allied character or deal 1d6+1 AP Energy Damage to a hostile character. The target, allied or hostile, must be adjacent to whatever is destroyed. Systems without LIMITED that are destroyed this way must be repaired before they can be used again."
+          }
+        ]
+      },
+      {
+        "name": "Recycle",
+        "description": "At the end of any scene in which the Kidd used REROUTE POWER, it restores 1 charge to a LIMITED system of its choice with the DRONE or DEPLOYABLE tag.",
+        "synergies": [
+          {
+            "locations": [
+              "deployable",
+              "drone"
+            ],
+            "detail": "At the end of any scene in which the Kidd used REROUTE POWER, it restores 1 charge to a LIMITED system of its choice with the DRONE or DEPLOYABLE tag."
+          }
+        ]
+      }
+    ],
+    "core_system": {
+      "name": "The Jolly Roger",
+      "description": "",
+      "active_name": "Skull and Bones",
+      "active_effect": "For the rest of the scene, Plunder and Swindle become Blast 2 and Shiver Timbers affects all characters in a Line 10 path.",
+      "activation": "Protocol",
+      "use": "Encounter",
+      "passive_name": "Jolly Roger",
+      "passive_effect": "<p>At the start of every combat scene, your Kidd automatically connects to its paired Jolly Roger orbital satellite weapon. The efficacy of the Jolly Roger depends on maintaining a high level of calibration with the Kidd, which is tracked with a JOLLY ROGER DIE - 1d6, starting at 1.</p> <p>The die ticks up by 1 whenever you:</p> <ul> <li>deploy a DRONE or DEPLOYABLE</li> <li>take a tech action that targets at least one allied character.</li> </ul> <p>Each option can only increase the value of the of the JOLLY ROGER DIE once per round independently; however, the die also ticks up by 1 any time a hostile character takes a tech action against an allied character within your SENSORS, with no limit.</p> <p>1/round, you can activate the Jolly Roger as a quick action, resetting the JOLLY ROGER DIE to 1. Choose one of the following effects, based on the value of the die:</p> <p><b class='accent--text'>3+</b> <b>Plunder</b>: SCAN every hostile character in a Blast 1 area and give them LOCK ON.</p> <p><b class='accent--text'>5+</b> <b>Swindle</b>: Every hostile character in a Blast 1 area must succeed on a SYSTEMS save or become IMPAIRED, JAMMED, and SLOWED until the end of their next turn.</p> <p><b class='accent--text'>6</b> <b>Shiver Timbers</b>: Fire a beam weapon, punching a narrow hole through walls and obstructions. One hostile character must succeed on an AGILITY save or take 3d6 AP Energy Damage. On a success, they take half damage</p> <p>You do not require line of sight for any of these effects, they have the effective range of the battlefield, and they easily penetrate objects and terrain, although more potent barriers (e.g., energy shields that prevent effects from crossing them due to line of sight) block them normally</p>",
+      "passive_actions": [
+        {
+          "name": "Plunder 3+",
+          "activation": "Quick",
+          "detail": "SCAN every hostile character in a Blast 1 area and give them LOCK ON.",
+          "frequency": "1/round"
+        },
+        {
+          "name": "Swindle 5+",
+          "activation": "Quick",
+          "detail": "Every hostile character in a Blast 1 area must succeed on a SYSTEMS save or become IMPAIRED, JAMMED, and SLOWED until the end of their next turn.",
+          "frequency": "1/round"
+        },
+        {
+          "name": "Shiver Timbers 6",
+          "activation": "Quick",
+          "detail": "Fire a beam weapon, punching a narrow hole through walls and obstructions. One hostile character must succeed on an AGILITY save or take 3d6 AP Energy Damage. On a success, they take half damage.",
+          "frequency": "1/round"
+        }
+      ],
+      "counters": [
+        {
+          "id": "ctr_jolly_roger",
+          "name": "Jolly Roger",
+          "default_value": 1,
+          "min": 1,
+          "max": 6
+        }
+      ]
+    },
+    "data_type": "frame",
+    "image_url": "https://compcon-image-assets.s3.amazonaws.com/frames/mf_kidd.png",
+    "license_id": "mf_kidd"
+  },
+  {
+    "id": "mf_sagarmatha",
+    "variant": "Everest",
+    "source": "GMS",
+    "name": "Sagarmatha",
+    "mechtype": [
+      "Defender"
+    ],
+    "y_pos": 25,
+    "license_level": 0,
+    "description": "<p>The SAGARMATHA is a SIZE 2 legacy GMS chassis that all characters have access to from LL0 onwards. This variant FRAME is not mutually exclusive with the EVEREST.</p><p>The Sagarmatha is of an older pattern than the Everest, sturdier and bulkier by necessity more than design. It is seen as somewhat antiquated through the lens of modern manufacturing standards. Nevertheless, it enjoys some use in border colonies, in the Baronies, and with the Albatross.</p>",
+    "mounts": [
+      "Main",
+      "Flex",
+      "Heavy"
+    ],
+    "stats": {
+      "size": 2,
+      "stress": 4,
+      "structure": 4,
+      "armor": 1,
+      "hp": 8,
+      "evasion": 8,
+      "edef": 8,
+      "heatcap": 6,
+      "repcap": 4,
+      "sensor_range": 10,
+      "tech_attack": 0,
+      "save": 10,
+      "speed": 4,
+      "sp": 6
+    },
+    "traits": [
+      {
+        "name": "Guardian",
+        "description": "Adjacent allied characters can use the Sagarmatha as hard cover."
+      },
+      {
+        "name": "Heroism",
+        "description": "1/scene the Sagarmatha can brace without sacrificing any actions or movement on its following turn.",
+        "synergies": [
+          {
+            "locations": [
+              "active_effects"
+            ],
+            "detail": "1/scene the Sagarmatha can brace without sacrificing any actions or movement on its following turn."
+          }
+        ]
+      },
+      {
+        "name": "Replaceable Parts",
+        "description": "While resting, the Sagarmatha can be repaired at a rate of 1 repair per structure damage instead of 2.",
+        "bonuses": [
+          {
+            "id": "cheap_struct",
+            "val": 1
+          }
+        ],
+        "synergies": [
+          {
+            "locations": [
+              "rest"
+            ],
+            "detail": "The Sagarmatha can be repaired at a rate of 1 Repair per 1 structure damage."
+          }
+        ]
+      }
+    ],
+    "core_system": {
+      "name": "Rallying Cry",
+      "description": "",
+      "active_name": "Raise the Banner",
+      "active_effect": "You raise a rallying banner. All allied characters in line of sight of your mech when you do this gain RESISTANCE to all damage and heat and gain +1 Accuracy on all checks and saves. These effects last until the end of your next turn.",
+      "activation": "Quick",
+      "use": "Next Turn"
+    },
+    "data_type": "frame",
+    "image_url": "https://compcon-image-assets.s3.amazonaws.com/frames/nodata.png",
+    "license_id": "mf_standard_pattern_i_everest"
+  },
+  {
+    "id": "mf_tokugawa_alt_enkidu",
+    "variant": "Tokugawa",
+    "source": "HA",
+    "name": "Enkidu",
+    "mechtype": [
+      "Striker",
+      "Defender"
+    ],
+    "y_pos": 25,
+    "license_level": 2,
+    "description": "<p>The ENKIDU can be taken at rank II of the TOKUGAWA license instead of the base FRAME, or retrofitted during Act 1 of the No Room for a Wallflower Campaign.</p><p>This experimental frame was secretly designed as a TBK chassis for lateaction combat in the Hercynian Crisis. Deployed in limited numbers against the remaining Egregorian hives in the brutal last stages of the war, the Enkidu&rsquo;s neurological interfacing was dangerous: raw and unshielded. The power and aggression flowing through the subroutines that govern the mech bled into its pilot&rsquo;s subjectivity, making them lose themselves in a storm of violence, constantly pushing themselves to greater and greater acts of destruction. This effect was incredibly hard for pilots to handle &ndash; the fallout rate from the program was extremely high, and the survivors required extensive conditioning, implants, and a cocktail of neurological suppressants to continue.</p> <p>The true aim of the Enkidu program was not to fight Egregorians, which were in the final stages of practical extinction, but to use the battlefield as a testing ground for the eventual deployment of the chassis against ThirdComm revolutionaries and dissidents. Though the codebase for the Enkidu was eventually discontinued and molded into what is now the Tokugawa, the difficulties with the initial project prevented it from getting off the ground before the revolution took hold. The remaining prototypes were buried along with the rest of Hercynia&rsquo;s history.</p>",
+    "mounts": [
+      "Flex",
+      "Flex"
+    ],
+    "stats": {
+      "size": 2,
+      "stress": 4,
+      "structure": 4,
+      "armor": 1,
+      "hp": 10,
+      "evasion": 8,
+      "edef": 8,
+      "heatcap": 8,
+      "repcap": 5,
+      "sensor_range": 5,
+      "tech_attack": -2,
+      "save": 10,
+      "speed": 3,
+      "sp": 5
+    },
+    "traits": [
+      {
+        "name": "Primal Fury",
+        "description": "<p>When the Enkidu ends its turn in the DANGER ZONE, it rears up, extends its PLASMA TALONS (see below), and enters a state of primal fury with the following effects:</p> <ul> <li>On hit, characters struck by the Enkidu&rsquo;s PLASMA TALONS immediately become IMMOBILIZED until the end of their next turn.</li> <li>As a special reaction, the Enkidu must use its PLASMA TALONS to attack any character (hostile or allied) that enters, exits or moves more than 1 space within its THREAT. This special reaction can be used once a turn, any number of times a round, and doesn’t count against the maximum number of reactions a turn, so the Enkidu can take other reactions normally.</li> </ul> <p>This state ends at the start of the Enkidu&rsquo;s turn, or if the Enkidu exits the DANGER ZONE.</p>",
+        "synergies": [
+          {
+            "locations": [
+              "heat"
+            ],
+            "detail": "When the Enkidu ends its turn in the Danger Zone, it enters the Primal Fury state."
+          }
+        ]
+      },
+      {
+        "name": "All Fours",
+        "description": "While it’s in the DANGER ZONE, the Enkidu can’t make ranged or tech attacks but has 6 base SPEED.",
+        "synergies": [
+          {
+            "locations": [
+              "heat"
+            ],
+            "detail": "While it’s in the DANGER ZONE, the Enkidu can’t make ranged or tech attacks but has 6 base SPEED."
+          }
+        ]
+      },
+      {
+        "name": "Brute Strength",
+        "description": "The Enkidu gets +1 accuracy on hull checks and saves.",
+        "synergies": [
+          {
+            "locations": [
+              "hull"
+            ],
+            "detail": "The Enkidu gets +1 accuracy on hull checks and saves."
+          }
+        ]
+      },
+      {
+        "name": "Bloodsense",
+        "description": "The Enkidu always knows if characters are at or under half of their maximum HP, but not the exact number."
+      }
+    ],
+    "core_system": {
+      "name": "Limit Restriction Zero",
+      "description": "<p>“I argue that it is Man who is shapeless; far from immutable, he is given form by the environment around him. In civilization, man is as divine as old God, who judges and creates; he is clothed in finery, and enjoys literature, art, company, and purpose. When left alone in the savage wilderness of nature, Man comports himself accordingly.”</p><p>— Harrison II, “Mandate, Vol II: On Nature, On Savagery, On Reason”</p>",
+      "active_name": "Crush Limiter",
+      "active_effect": "For the rest of the scene, the Enkidu gains the Bifurcate action, which can only be used in the DANGER ZONE",
+      "activation": "Protocol",
+      "use": "Encounter",
+      "active_actions": [
+        {
+          "name": "Bifurcate",
+          "activation": "Full",
+          "detail": "<p>The Enkidu engages its monstrous strength, targets an adjacent character (allied or hostile) and attempts to tear them in half with its talons. If the target has 7 HP or less, only 1 STRUCTURE remaining, and doesn&rsquo;t have IMMUNITY to damage, they are immediately destroyed, the action cost of this ability is refunded, and the Enkidu can BOOST as a free action. If this action fails to destroy the target, the target instead takes 1 Kinetic Damage.</p> <p>At the end of the scene, the CP cost of BIFURCATE is refunded if the Enkidu did not use it to destroy any characters.</p>"
+        }
+      ],
+      "integrated": [
+        "mw_tokugawa_alt_enkidu_integrated"
+      ]
+    },
+    "data_type": "frame",
+    "aptitude": {},
+    "image_url": "https://compcon-image-assets.s3.amazonaws.com/frames/alt_tokugawa.png",
+    "license_id": "mf_tokugawa"
+  },
+  {
+    "id": "mf_genghis_alt_worldkiller_genghis_mk_i",
+    "variant": "Genghis",
+    "source": "HA",
+    "name": "“Worldkiller” Genghis Mk I",
+    "mechtype": [
+      "Striker",
+      "Defender"
+    ],
+    "y_pos": 25,
+    "license_level": 2,
+    "description": "<p>This variant can be taken at rank II of the GENGHIS license instead of the base FRAME. It can also be dug up and repaired as part of No Room For A Wallflower.</p><p>Though the Genghis Mk I is classified as a Harrison Armory FRAME for gameplay purposes, the original Genghis models were based on upscaled SecComm power armor and are technically GMS frames. Today, they are only compatible with the HA Genghis license due to a last-ditch tech partition by SecComm partisans in the latter stages of the revolution.</p><p>These old-pattern Genghis mechs are buried all over Hercynia in various states of disrepair. They are a grim reminder of the carnage that once took place here. Unlike the Mk II, with its sleeker, slimmer frame, the Mk I is much more brutal in its simplicity – mass produced, a crude weapon.</p>",
+    "mounts": [
+      "Main",
+      "Main",
+      "Heavy"
+    ],
+    "stats": {
+      "size": 2,
+      "stress": 4,
+      "structure": 4,
+      "armor": 3,
+      "hp": 6,
+      "evasion": 6,
+      "edef": 8,
+      "heatcap": 8,
+      "repcap": 4,
+      "sensor_range": 5,
+      "tech_attack": -2,
+      "save": 10,
+      "speed": 3,
+      "sp": 5
+    },
+    "traits": [
+      {
+        "name": "Insulated",
+        "description": "The Genghis has immunity to Burn."
+      },
+      {
+        "name": "TBK Munitions",
+        "description": "The Genghis’s attacks ignore resistance to Burn and Heat."
+      },
+      {
+        "name": "Weak Computer",
+        "description": "The Genghis receives +1 Difficulty on all SYSTEM saves and checks.",
+        "synergies": [
+          {
+            "locations": [
+              "systems"
+            ],
+            "detail": "The Genghis receives +1 Difficulty on all SYSTEM saves and checks."
+          }
+        ]
+      }
+    ],
+    "core_system": {
+      "name": "Juggernaut Reactor",
+      "description": "Inside his great suit the fireman smiles. He is a salamander upon the world, belching flame, cleaning away history, and leaving a new land for the living.",
+      "passive_name": "Furiosa",
+      "passive_effect": "While in the DANGER ZONE, you are surrounded by shimmering heat that interferes with targeting. You gain soft cover. Additionally, other than you, characters within Burst 1 can’t take reactions.",
+      "passive_synergies": [
+        {
+          "locations": [
+            "heat"
+          ],
+          "detail": "While in the DANGER ZONE, you are surrounded by shimmering heat that interferes with targeting. You gain soft cover. Additionally, other than you, characters within Burst 1 can’t take reactions."
+        }
+      ],
+      "active_name": "A Pleasure to Burn",
+      "active_effect": "<p>For the rest of the scene, the Genghis is wreathed in coruscating heat. Your FURIOSA aura grows to Burst 2, and your mech ignores all difficult terrain, simply melting through it.</p> <p>If you overheat during this time, your mech releases a blast of heat that melts the ground beneath it. Characters other than you within the affected area of FURIOSA take 1d6 AP Energy damage and must succeed on a HULL save or become IMMOBILIZED until the end of their next turn. The area then becomes difficult terrain for the rest of the scene.</p>",
+      "activation": "Protocol",
+      "use": "Encounter"
+    },
+    "data_type": "frame",
+    "aptitude": {},
+    "image_url": "https://compcon-image-assets.s3.amazonaws.com/frames/alt_genghis.png",
+    "license_id": "mf_genghis"
+  },
+  {
+    "id": "mf_swallowtail_alt_swallowtail_ranger_variant",
+    "variant": "Swallowtail",
+    "source": "SSC",
+    "name": "Swallowtail (Ranger Variant)",
+    "mechtype": [
+      "Support"
+    ],
+    "y_pos": 25,
+    "license_level": 2,
+    "description": "<p>This variant can be taken at rank II of the SWALLOWTAIL license instead of the base FRAME, or gained as EXOTIC GEAR by aiding Dthall Ordo during the campaign.</p><p>This Swallowtail variant is common among HUC ranger forces. It was adopted and reverse-engineered from the material remains of early, abandoned SSC survey expeditions. With no ability to print-replicate the mech, the rangers painstakingly manufactured and assembled each unit to high specifications. Unlike the sleek luxury of other SSC frames, this Swallowtail is a rugged affair. Each one has a suite of marks left by its previous owners – livery, battle paint, custom gear, camouflage, and weathering. They have been repaired and maintained for two generations and each one is precious to the United Cities.</p>",
+    "mounts": [
+      "Flex",
+      "Main"
+    ],
+    "stats": {
+      "size": 1,
+      "stress": 4,
+      "structure": 4,
+      "armor": 0,
+      "hp": 6,
+      "evasion": 10,
+      "edef": 8,
+      "heatcap": 4,
+      "repcap": 5,
+      "sensor_range": 20,
+      "tech_attack": 1,
+      "save": 10,
+      "speed": 6,
+      "sp": 6
+    },
+    "traits": [
+      {
+        "name": "Scout Battlefield",
+        "description": "<p>Before the first round of any combat and before any deployment takes place, place up to two of the following in free spaces anywhere on the battlefield:</p> <ul> <li>A 2 x 2 zone that does not impede movement and grants soft cover to characters at least partly within it.</li> <li>A 2 x 2 zone that is difficult terrain.</li> <li>A SIZE 1 piece of hard cover.</li> </ul> <p>They can&rsquo;t be placed within 4 spaces of each other. The same option can be chosen more than once. These objects and zones represent naturally occurring terrain on the battlefield, and you can work with the GM to decide what they are.</p>"
+      },
+      {
+        "name": "Invigorating Scanners",
+        "description": "1/round when the Swallowtail inflicts Lock On, an allied character in its sensor range and line of sight can move up to its speed as a reaction.",
+        "synergies": [
+          {
+            "locations": [
+              "lock_on"
+            ],
+            "detail": "1/round when the Swallowtail inflicts Lock On, an allied character in its sensor range and line of sight can move up to its speed as a reaction."
+          }
+        ]
+      },
+      {
+        "name": "Weathering",
+        "description": "The Swallowtail ignores difficult terrain."
+      }
+    ],
+    "core_system": {
+      "name": "Gaia Inheritance",
+      "description": "Outnumbered, outgunned, and lacking the ability to mass-produce mechs, the rangers have had to rely on the legacy of Hercynia itself to protect them. Each of their Swallowtails is an ingenious, fast-moving suite of meshed software and gear, uniquely tweaked by generations of hardened warriors – imperfect in a way that would make any SSC smith shiver. Each wears its own unique name, has its own unique ballad, and is recorded in the osteomemetics of its home city.",
+      "passive_name": "Grounded",
+      "passive_effect": "When you end your turn in a zone that grants soft cover, you become INVISIBLE until you leave that cover, take damage, attack, force a save, or take any other hostile action that affects another character.",
+      "active_name": "Guerrilla Warfare",
+      "active_effect": "<p>You create three Burst 1 patches of smoke in spaces within line of sight and Range 5. These patches grant soft cover to characters at least partly within them. They last for the rest of the scene.</p> <p>Additionally, for the rest of the scene, allied characters within SENSORS gain the benefits of GROUNDED.</p>",
+      "activation": "Protocol",
+      "use": "Encounter"
+    },
+    "data_type": "frame",
+    "aptitude": {},
+    "image_url": "https://compcon-image-assets.s3.amazonaws.com/frames/alt_ranger.png",
+    "license_id": "mf_swallowtail"
+  }
+]

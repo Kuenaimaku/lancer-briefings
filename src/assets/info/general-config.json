@@ -1,0 +1,19 @@
+{
+  "initialSlug": "001",
+  "planetPath": "/planet.webm",
+  "animate": true,
+  "defaultTitle": "MSMC |",
+  "icon": "/faction-logos/msmc.svg",
+  "header": {
+    "planet": "Heiligtum-6 'Deep Blue'",
+    "year": "5017u",
+    "system": "Heiligtum",
+    "gate": "Rào Cỏ",
+    "ring": "Annamite",
+    "headerTitle": "Mirrorsmoke",
+    "headerSubtitle": "Mercenary Company",
+    "subheaderTitle": "Contract Work",
+    "subheaderSubtitle": "Sierra-Whiskey-Alpha-Golf"
+  },
+  "pilotSpecialInfo": {}
+}

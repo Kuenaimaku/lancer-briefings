@@ -1,0 +1,223 @@
+[
+  {
+    "id": "ms_exo_anti_armor_signature_weapon",
+    "name": "Anti-Armor Signature Weapon",
+    "type": "Weapon",
+    "effect": "If a pilot takes an Anti-Armor Signature Weapon on a mission, they can’t take any other pilot weapons.",
+    "tags": [
+      {
+        "id": "tg_ap"
+      },
+      {
+        "id": "tg_limited",
+        "val": 2
+      },
+      {
+        "id": "tg_loading"
+      },
+      {
+        "id": "tg_ordnance"
+      },
+      {
+        "id": "tg_reliable",
+        "val": 2
+      },
+      {
+        "id": "tg_exotic"
+      },
+      {
+        "id": "tg_pilot_weapon"
+      }
+    ],
+    "range": [
+      {
+        "type": "Range",
+        "val": 15
+      }
+    ],
+    "damage": [
+      {
+        "type": "Variable",
+        "val": 5
+      }
+    ]
+  },
+  {
+    "id": "ms_exo_bahadurs_reserve",
+    "name": "Bahadur's Reserve",
+    "type": "Gear",
+    "effect": "Expend a charge for the following effect:<ul><li><b>Molotov Cocktail</b> (Grenade, Range 5, Blast 1): Affected characters must pass an Agility save or take 2 Burn.</li></ul>",
+    "description": "A remarkably potent spirit distilled by Mir Bahadur, this moonshine is served to discerning customers and traded for favors within Evergreen's informal barter networks. It goes down surprisingly smooth with notes of vanilla and spices and is responsible for a truly impressive number of hangovers and bad decisions. While piloting under the influence is highly inadvisable, a bottle of good alcohol can be a boon to morale as well as a valuable trade commodity. Bahadur’s homebrew can even serve as a disinfectant or crude (if effective) anesthetic, and it is high enough proof to run a biofuel generator or even be repurposed into a makeshift incendiary device in a pinch.",
+    "actions": [
+      {
+        "name": "Molotov Cocktail",
+        "activation": "Quick",
+        "range": [
+          {
+            "type": "Range",
+            "val": 5
+          },
+          {
+            "type": "Blast",
+            "val": 1
+          }
+        ],
+        "damage": [
+          {
+            "type": "Burn",
+            "val": 2
+          }
+        ],
+        "detail": "Throw a molotov within Range 5. Affected characters within a Blast 1 must pass an Agility save or take 2 Burn.",
+        "pilot": true
+      }
+    ],
+    "tags": [
+      {
+        "id": "tg_limited",
+        "val": 1
+      },
+      {
+        "id": "tg_exotic"
+      },
+      {
+        "id": "tg_gear"
+      }
+    ]
+  },
+  {
+    "id": "ms_exo_hercynian_rations",
+    "name": "Hercynian Rations",
+    "type": "Gear",
+    "description": "HUC rations rely heavily on fish, either smoked or tinned in spiced oil; dried mushrooms which can be reconstituted with water; sealed packs of flatbread or crackers; pickled macroalgae; dried fruits; rice; oats; and tea and freeze-dried coffee. In some ways, these rations are familiar to anyone who's ever subsisted on military fare. In others, they're a reminder of just how far from home you are.",
+    "tags": [
+      {
+        "id": "tg_exotic"
+      },
+      {
+        "id": "tg_gear"
+      }
+    ]
+  },
+  {
+    "id": "ms_exo_locus",
+    "name": "Locus",
+    "type": "Gear",
+    "description": "<p>For those humans attempting to cultivate an affinity for Witness, the learning process can be frustrating at times. Over the centuries, a variety of tools and techniques have been developed to assist with this. One of these techniques involves the consumption of a native species of psychedelic fungus, either dried or brewed as tea. This substance, commonly called locus, induces feelings of opennness, euphoria, enhanced empathy, and altered sensory perceptions including mild hallucinations and synaesthesia. Locus is not habit-forming nor does it have any harmful long-term effects, though some users experience headaches and fatigue after use. That said, overdosing can lead to bouts of “empathic overload”, dissociation, and more severe hallucinatory episodes.</p><p>In humans, ingestion of locus induces a state of enhanced affinity for Witness, though it does not necessarily grant a deeper understanding of its use. The effects last from three to six hours depending on the strength of the dose, the user’s metabolism, and other factors. Locus also has a variety of other therapeutic uses.</p>",
+    "tags": [
+      {
+        "id": "tg_exotic"
+      },
+      {
+        "id": "tg_gear"
+      }
+    ]
+  },
+  {
+    "id": "ms_exo_light_carapace_armor",
+    "name": "Light Carapace Hardsuit",
+    "type": "Armor",
+    "effect": "The multiple ablative layers of treated chitin make carapace hardsuits especially effective at dispersing the effects of energy weapons, and as a result all such armor has Resistance to energy damage.",
+    "description": "<p>While Hercynian society is far from primitive, the HUC lacks the advanced industrial manufacturing base required to easily fabricate the large quantities of composite materials needed for modern armor. As a result, the personal combat armor worn by rangers and other combatants is typically made from interlocking and overlapping layers of molted Egregorian carapace, donated by willing volunteers. Distinctly insectile in appearance, treatment allows the carapace to be molded into a variety of shapes and styles suitable for numerous occupational specialties ranging from long-range reconnaissance to heavy assault. While many examples of carapace armor are unpowered, ranger pilots and special forces units use carapace hardsuits created by marrying the plates to various strength-amplification exoskeletons and fitting them with upgraded power sources, interface systems, and environmental seals.</p><p>Acquiring a carapace hardsuit isn't a simple matter. Such suits don’t tend to be available for sale in currency or barter, instead being either handed down from pilot to pilot or custom-made according to a number of formal traditions. These traditions include seeking permission from a willing Egregorian donor to use their carapace and the personal participation of the wearer in the crafting, a process that can take weeks depending on the complexity of the suit. Should a PC manage to obtain one of these hardsuits, you may represent it with the following stats.</p>",
+    "tags": [
+      {
+        "id": "tg_personal_armor"
+      }
+    ],
+    "bonuses": [
+      {
+        "id": "pilot_hp",
+        "val": 2
+      },
+      {
+        "id": "pilot_evasion",
+        "val": 10,
+        "replace": true
+      },
+      {
+        "id": "pilot_edef",
+        "val": 10,
+        "replace": true
+      },
+      {
+        "id": "pilot_speed",
+        "val": 4,
+        "replace": true
+      }
+    ]
+  },
+  {
+    "id": "ms_exo_assault_carapace_armor",
+    "name": "Assault Carapace Hardsuit",
+    "type": "Armor",
+    "effect": "The multiple ablative layers of treated chitin make carapace hardsuits especially effective at dispersing the effects of energy weapons, and as a result all such armor has Resistance to energy damage.",
+    "description": "<p>While Hercynian society is far from primitive, the HUC lacks the advanced industrial manufacturing base required to easily fabricate the large quantities of composite materials needed for modern armor. As a result, the personal combat armor worn by rangers and other combatants is typically made from interlocking and overlapping layers of molted Egregorian carapace, donated by willing volunteers. Distinctly insectile in appearance, treatment allows the carapace to be molded into a variety of shapes and styles suitable for numerous occupational specialties ranging from long-range reconnaissance to heavy assault. While many examples of carapace armor are unpowered, ranger pilots and special forces units use carapace hardsuits created by marrying the plates to various strength-amplification exoskeletons and fitting them with upgraded power sources, interface systems, and environmental seals.</p><p>Acquiring a carapace hardsuit isn't a simple matter. Such suits don’t tend to be available for sale in currency or barter, instead being either handed down from pilot to pilot or custom-made according to a number of formal traditions. These traditions include seeking permission from a willing Egregorian donor to use their carapace and the personal participation of the wearer in the crafting, a process that can take weeks depending on the complexity of the suit. Should a PC manage to obtain one of these hardsuits, you may represent it with the following stats.</p>",
+    "tags": [
+      {
+        "id": "tg_personal_armor"
+      }
+    ],
+    "bonuses": [
+      {
+        "id": "pilot_hp",
+        "val": 2
+      },
+      {
+        "id": "pilot_armor",
+        "val": 1
+      },
+      {
+        "id": "pilot_evasion",
+        "val": 8,
+        "replace": true
+      },
+      {
+        "id": "pilot_edef",
+        "val": 8,
+        "replace": true
+      },
+      {
+        "id": "pilot_speed",
+        "val": 4,
+        "replace": true
+      }
+    ]
+  },
+  {
+    "id": "ms_exo_heavy_carapace_armor",
+    "name": "Heavy Carapace Hardsuit",
+    "type": "Armor",
+    "effect": "The multiple ablative layers of treated chitin make carapace hardsuits especially effective at dispersing the effects of energy weapons, and as a result all such armor has Resistance to energy damage.",
+    "description": "<p>While Hercynian society is far from primitive, the HUC lacks the advanced industrial manufacturing base required to easily fabricate the large quantities of composite materials needed for modern armor. As a result, the personal combat armor worn by rangers and other combatants is typically made from interlocking and overlapping layers of molted Egregorian carapace, donated by willing volunteers. Distinctly insectile in appearance, treatment allows the carapace to be molded into a variety of shapes and styles suitable for numerous occupational specialties ranging from long-range reconnaissance to heavy assault. While many examples of carapace armor are unpowered, ranger pilots and special forces units use carapace hardsuits created by marrying the plates to various strength-amplification exoskeletons and fitting them with upgraded power sources, interface systems, and environmental seals.</p><p>Acquiring a carapace hardsuit isn't a simple matter. Such suits don’t tend to be available for sale in currency or barter, instead being either handed down from pilot to pilot or custom-made according to a number of formal traditions. These traditions include seeking permission from a willing Egregorian donor to use their carapace and the personal participation of the wearer in the crafting, a process that can take weeks depending on the complexity of the suit. Should a PC manage to obtain one of these hardsuits, you may represent it with the following stats.</p>",
+    "tags": [
+      {
+        "id": "tg_personal_armor"
+      }
+    ],
+    "bonuses": [
+      {
+        "id": "pilot_hp",
+        "val": 2
+      },
+      {
+        "id": "pilot_armor",
+        "val": 2
+      },
+      {
+        "id": "pilot_evasion",
+        "val": 6,
+        "replace": true
+      },
+      {
+        "id": "pilot_edef",
+        "val": 6,
+        "replace": true
+      },
+      {
+        "id": "pilot_speed",
+        "val": 3,
+        "replace": true
+      }
+    ]
+  }
+]

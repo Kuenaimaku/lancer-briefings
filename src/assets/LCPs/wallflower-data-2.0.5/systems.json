@@ -1,0 +1,363 @@
+[
+  {
+    "id": "ms_pebcac",
+    "name": "PEBCAC",
+    "type": "Tech",
+    "sp": 2,
+    "tags": [
+      {
+        "id": "tg_unique"
+      }
+    ],
+    "source": "IPS-N",
+    "license": "Kidd",
+    "license_level": 1,
+    "actions": [
+      {
+        "activation": "Quick Tech",
+        "detail": "<p>: An allied mech character within line of sight and SENSORS quickly flash reboots at the system level. This ends all effects caused by tech actions, stops NHP cascades, and gives the target Immunity to all tech actions – hostile and allied – other than this one until the end of their next turn. This cannot be used on Jammed characters.</p> <p>Additionally, roll 1d6 to determine a side effect from the table below. These effects take place immediately and don&rsquo;t count as an action or reaction. Any movement they cause is involuntary.</p> <ol> <li>Your target becomes JAMMED until the end of their next turn.</li> <li>Your target moves up to its SPEED in a direction of the GM&rsquo;s choice.</li> <li>Your target immediately moves up to 3 spaces toward the nearest character (allied or hostile) and performs an IMPROVISED ATTACK against them. If no characters are in range, it only moves.</li> <li>Your target falls PRONE and takes 2 Kinetic Damage.</li> <li>Your target vents 1d6 Heat and deals the amount cooled as energy damage to all adjacent characters.</li> <li>Your target immediately takes the STABILIZE action and can choose what to do.</li> </ol>"
+      }
+    ],
+    "description": "When the problem exists between chair and chassis, aggressive solutions are needed. This rather quick solution is an old system-level reboot program that is often used by asteroid miners dealing with aging hardware.",
+    "data_type": "system",
+    "aptitude": {},
+    "license_id": "mf_kidd"
+  },
+  {
+    "id": "ms_omnibus_plate",
+    "name": "Omnibus Plate",
+    "type": "Deployable",
+    "sp": 1,
+    "tags": [
+      {
+        "id": "tg_limited",
+        "val": 2
+      },
+      {
+        "id": "tg_unique"
+      }
+    ],
+    "source": "IPS-N",
+    "license": "Kidd",
+    "license_level": 2,
+    "effect": "Expend a charge to deploy an omnibus plate to a space within Range 5.",
+    "deployables": [
+      {
+        "name": "Omnibus Plate",
+        "type": "Deployable",
+        "activation": "Quick",
+        "instances": 1,
+        "size": 1,
+        "hp": 10,
+        "evasion": 5,
+        "detail": "The plate cannot be moved, is flat, and does not block movement. It is large enough to hold a single SIZE 1 or smaller DRONE or DEPLOYABLE at a time. DRONES and DEPLOYABLES placed on the plate gain RESISTANCE to all damage and gain +1 to the size of any BURST or BLAST effects they generate. Additionally, any of their effects that require adjacency can now be activated from within Range 2."
+      }
+    ],
+    "description": "Northstar Branch Robotics returned to their roots with the Omnibus Plate, creating a simple, deployable catalytic for frontline nexus users. Designed with adaptation in mind, Omnibus Plates can attach securely to any drone or deployable system, increasing that system’s efficacy in all aspects of employ.",
+    "data_type": "system",
+    "aptitude": {},
+    "license_id": "mf_kidd"
+  },
+  {
+    "id": "ms_field_approved_brass_ignorant_modifications",
+    "name": "Field-Approved, Brass Ignorant Modifications",
+    "type": "Tech",
+    "sp": 2,
+    "tags": [
+      {
+        "id": "tg_unique"
+      }
+    ],
+    "source": "IPS-N",
+    "license": "Kidd",
+    "license_level": 2,
+    "actions": [
+      {
+        "activation": "Quick Tech",
+        "detail": "<p>Choose an allied mech character within line of sight and SENSORS. You power up their weapons. When they make a ranged or melee attack roll:</p> <ul> <li>the attack&rsquo;s damage cannot be reduced in any way</li> <li>the kick from firing the weapon knocks them back 1 space in any direction after the attack</li> <li><strong>On Hit:</strong> their target must succeed on a HULL save or be knocked PRONE.</li> </ul> <p>This effect ends when your target successfully hits with a ranged or melee attack roll or at the end of the scene.</p>"
+      }
+    ],
+    "description": "As implied by the name, FABI modifications are ad hoc battlefield modifications that, while technically falling well outside the approved envelope of functionality and safety, are nonetheless popular among veteran pilots. FABI mods tend to be temporary in nature: removal of joule governors with quick-patched code, fieldcooked “hot” kinetic rounds, and so on.",
+    "data_type": "system",
+    "aptitude": {},
+    "license_id": "mf_kidd"
+  },
+  {
+    "id": "ms_forge_2_subaltern_squad",
+    "name": "FORGE-2 Subaltern Squad",
+    "type": "Deployable",
+    "sp": 4,
+    "tags": [
+      {
+        "id": "tg_limited",
+        "val": 6
+      },
+      {
+        "id": "tg_unique"
+      }
+    ],
+    "source": "IPS-N",
+    "license": "Kidd",
+    "license_level": 3,
+    "effect": "<p>1/round, expend a charge to deploy a team of FORGE-2 subalterns to start work on one of the following projects in a free space within line of sight and Range 5.</p> <p>The project is an immovable object that is finished at the start of your next turn, gaining +10 HP (maximum and current). It is canceled if it&rsquo;s destroyed.</p> <p>The subalterns aren&rsquo;t treated as separate entities and can&rsquo;t be targeted. They return to you if the project is destroyed, canceled, or finished, no matter where you are.</p> <p>If you OVERCHARGE to use this system again, it may ignore the 1/round limit, but the second project must be placed adjacent to the first.</p>",
+    "deployables": [
+      {
+        "type": "Project",
+        "name": "Emplacement",
+        "activation": "Quick",
+        "instances": 1,
+        "cost": 1,
+        "size": 1,
+        "hp": 5,
+        "detail": "When finished, this elevated emplacement is SIZE 1 and 3 spaces high. The top third is a is a shielded platform that can fit characters up to a combined SIZE 1 (the rest is solid metal or plastic). Firing slits allow line of sight both into and out of the emplacement but give characters within hard cover from all directions. Characters can enter or exit the emplacement from any adjacent space as a quick action. Upon entering, they move into the shielded platform. Characters and DEPLOYABLES can stand on the flat roof of the structure, but don’t gain cover."
+      },
+      {
+        "type": "Project",
+        "name": "Snare Foam",
+        "activation": "Quick",
+        "instances": 1,
+        "cost": 1,
+        "size": 1,
+        "hp": 5,
+        "detail": "When finished, this project continually sprays foam around it, creating a Burst 2 area of difficult terrain. Destroying it removes the effect."
+      },
+      {
+        "type": "Project",
+        "name": "Damping Station",
+        "activation": "Quick",
+        "instances": 1,
+        "cost": 1,
+        "size": 1,
+        "hp": 5,
+        "detail": "When finished, this repair station generates a Burst 1 field within which allied characters gain IMMUNITY to burn and clear any burn currently affecting them."
+      },
+      {
+        "type": "Project",
+        "name": "Armor Pack",
+        "activation": "Quick",
+        "instances": 1,
+        "cost": 1,
+        "size": 1,
+        "hp": 5,
+        "detail": "When finished, this pack latches onto the next allied character that moves adjacent to it and fuses onto them. The project is destroyed, but they gain +1 ARMOR for the rest of the scene. This could temporarily put them over the armor maximum."
+      }
+    ],
+    "description": "The FORGE line of subalterns represents IPS-N’s premier range of frontline autonomous robotic humanoids. Produced by its robotics division, Northstar Branch Robotics, FORGE-2 subalterns are IPS-N’s newest combat engineering models, built to user scale and function.",
+    "data_type": "system",
+    "aptitude": {},
+    "license_id": "mf_kidd"
+  },
+  {
+    "id": "ms_smokestack_heatsink",
+    "name": "SMOKESTACK Heat Sink",
+    "type": "Deployable",
+    "sp": 3,
+    "tags": [
+      {
+        "id": "tg_limited",
+        "val": 2
+      },
+      {
+        "id": "tg_unique"
+      }
+    ],
+    "source": "IPS-N",
+    "license": "Kidd",
+    "license_level": 3,
+    "deployables": [
+      {
+        "name": "SMOKESTACK Heat Sink",
+        "type": "Pylon",
+        "activation": "Quick",
+        "instances": 1,
+        "size": 0.5,
+        "hp": 5,
+        "evasion": 10,
+        "edef": 10,
+        "heat": 6,
+        "detail": "Expend a charge to deploy a pylon that absorbs heat in a Burst 2 area around itself. It absorbs any heat dealt to characters at least partially within the affected area from any source (before reductions, including RESISTANCE). Once the pylon has absorbed 6 Heat, it explodes. Characters within the affected area must succeed on an AGILITY save or take 1d6+3 AP Energy Damage. On a success, they take half damage. Objects and DEPLOYABLES are hit automatically. Any excess heat absorbed by the pylon as part of the same action or effect that caused it to explode disperses with no effect."
+      }
+    ],
+    "description": "The IPS-N Kidd’s SMOKESTACK Heat Sink represents the latest in IPS-N’s heat dispersion systems for chassis and other CORE-powered vehicles and vessels. Utilizing proprietary axiomatics, the SMOKESTACK system establishes (via deployable pylon) a localized, minor, and stable pinhole into an omega state, allowing users to – for a certain value of thermodynamic exchange – cool excess heat debt by depositing it into that same state. Once the SMOKESTACK reaches capacity – a hard-coded feature – it detonates, making the system just as effective a weapon as it is a heat sink.",
+    "data_type": "system",
+    "aptitude": {},
+    "license_id": "mf_kidd"
+  },
+  {
+    "id": "ms_exo_snapdragon_launcher",
+    "name": "Snapdragon Anti-Chassis Guided Missile Launcher",
+    "type": "System",
+    "sp": 1,
+    "tags": [
+      {
+        "id": "tg_exotic"
+      },
+      {
+        "id": "tg_unique"
+      },
+      {
+        "id": "tg_quick_action"
+      }
+    ],
+    "source": "EXOTIC",
+    "effect": "<p>1/mission, the \"Snapdragon\" anti-chassis guided missile launcher can be used to make a ranged attack with the following profile:</p><p>Heavy Launcher, Reliable 4, Seeking <br> Range 15, 2d6 + 2 Explosive Damage</p>",
+    "description": "<ol> <li>Check all safety locks.</li> <li>Extend launch tube. Missile door should open automatically (if door fails to open, launcher will not fire).</li> <li>Activate rangefinder, acquire target. Wait for positive tone and visual confirmation that target has been acquired (TGT OK).</li> <li>Check backblast area. Minimum safe distance 100 meters. WARNING: backblast poses serious injury risk to unprotected personnel.</li> <li>Fire.</li> </ol>",
+    "data_type": "system",
+    "aptitude": {},
+    "license_id": ""
+  },
+  {
+    "id": "ms_exo_cynosure",
+    "name": "Cynosure",
+    "type": "Tech",
+    "sp": 2,
+    "tags": [
+      {
+        "id": "tg_unique"
+      },
+      {
+        "id": "tg_exotic"
+      }
+    ],
+    "source": "EXOTIC",
+    "actions": [
+      {
+        "name": "Celestial Ordering",
+        "activation": "Quick Tech",
+        "detail": "Every character on the battlefield involuntarily moves 1 space in a direction of your choice, ignoring engagement and without provoking reactions. They must all move in the same direction."
+      },
+      {
+        "name": "Unblinking Pursuit",
+        "activation": "Quick Tech",
+        "detail": "A hostile character within line of sight and SENSORS must succeed on a SYSTEMS save or be mesmerized. Choose another visible character. Any voluntary movement the mesmerized character makes must be toward the chosen character by the most direct route possible. This effect ends when the mesmerized character starts or ends their turn adjacent to any other character, otherwise it lasts until the end of combat."
+      }
+    ],
+    "description": "This program talks, quietly, of revenge, of the ordering of things, of a march of blades lifted high against the sun.",
+    "license_id": ""
+  },
+  {
+    "id": "ms_exo_opportunity",
+    "name": "Opportunity",
+    "type": "AI",
+    "sp": 2,
+    "tags": [
+      {
+        "id": "tg_ai"
+      },
+      {
+        "id": "tg_unique"
+      },
+      {
+        "id": "tg_exotic"
+      }
+    ],
+    "source": "EXOTIC",
+    "actions": [
+      {
+        "name": "Knock",
+        "activation": "Quick Tech",
+        "detail": "<p>Opportunity lends their extraordinary processing power and their precise (if exacting) aid, optimizing an ally&rsquo;s systems to a more &ldquo;organized&rdquo; state.</p> <p>Choose an allied mech character within line of sight and SENSORS to benefit from Opportunity&rsquo;s optimization. They gain immunity to heat from other characters, +1 Accuracy on all SYSTEMS checks and saves, and attackers gain +1 Difficulty on tech attacks against them.</p> <p>This effect ends immediately when you take this action again, or when the affected character &ldquo;makes a mess of things&rdquo; by taking an attack roll, forcing a save, or taking any other action that would affect a hostile character.</p>"
+      }
+    ],
+    "description": "",
+    "license_id": ""
+  },
+  {
+    "id": "ms_exo_markeys_fusebox",
+    "name": "Markey’s Fusebox",
+    "type": "Deployable",
+    "sp": 2,
+    "tags": [
+      {
+        "id": "tg_limited",
+        "val": 2
+      },
+      {
+        "id": "tg_unique"
+      },
+      {
+        "id": "tg_exotic"
+      }
+    ],
+    "source": "EXOTIC",
+    "deployables": [
+      {
+        "name": "Markey’s Fusebox",
+        "type": "Mine",
+        "activation": "Quick",
+        "size": 0.5,
+        "hp": 10,
+        "edef": 5,
+        "evasion": 5,
+        "heatcap": 10,
+        "range": [
+          {
+            "type": "Burst",
+            "val": 3
+          }
+        ],
+        "detail": "Expend a charge to set an explosive charge in a free adjacent space. It arms at the end of the round; once armed, it explodes if it takes any damage or heat. Characters within Burst 3 must succeed on an AGILITY save or take 2d6 Explosive damage and be pushed out of the affected area, or as far as possible. On a success, they are still pushed but take half damage."
+      }
+    ],
+    "description": "",
+    "license_id": ""
+  },
+  {
+    "id": "ms_exo_carapace_cladding",
+    "name": "Carapace Cladding",
+    "type": "System",
+    "sp": 1,
+    "tags": [
+      {
+        "id": "tg_limited",
+        "val": 2
+      },
+      {
+        "id": "tg_unique"
+      },
+      {
+        "id": "tg_exotic"
+      }
+    ],
+    "actions": [
+      {
+        "activation": "Quick",
+        "detail": "Immediately clear all Burn from your mech."
+      }
+    ],
+    "source": "EXOTIC",
+    "effect": "Expend a charge to immediately clear all Burn from your mech. Additionally, whenever you BRACE you may also expend a charge to reduce all Burn dealt by the attack to 0.",
+    "description": "While sufficient for personal armor, Egregorian chitin on its own is not robust enough to withstand attacks from heavier weapons, nor can it easily be gathered in sufficient quantities to fully outfit a chassis. Regardless, many rangers still utilize carapace-based secondary defensive enhancements anchored over critical systems as an additional layer of ablative protection, most notably against incendiary or caustic/corrosive munitions that might otherwise resist conventional suppression.",
+    "license_id": ""
+  },
+  {
+    "id": "ms_exo_fragment_beggar_one",
+    "name": "Fragment of Beggar One",
+    "type": "Tech",
+    "sp": 2,
+    "tags": [
+      {
+        "id": "tg_unique"
+      },
+      {
+        "id": "tg_exotic"
+      }
+    ],
+    "source": "EXOTIC",
+    "effect": "<p>1/scene, you may take one of the following Full Tech actions:</p>",
+    "actions": [
+      {
+        "name": "Whisper of Cascade",
+        "activation": "Full Tech",
+        "detail": "Choose a hostile character within SENSORS. They must either immediately attack a different character or object of your choice within their RANGE and line of sight with a single weapon as a reaction, or become JAMMED until the end of their next turn."
+      },
+      {
+        "name": "A Razor Called Qualia",
+        "activation": "Full Tech",
+        "detail": "<p>Choose a hostile character within SENSORS. Until the end of their next turn:</p> <ul> <li>They must use their standard move to move toward you by the most direct route possible</li> <li>As long as you are within the RANGE and line of sight of their attacks, they consider you the only valid target for attacks.</li> </ul>."
+      }
+    ],
+    "description": "This artifact, recovered following the termination of Beggar One (provisionally designated /obj/00001), displays a number of unusual properties. Though tangible and presumed to be chemically stable, its monocrystalline composition does not correspond to any known element and emits a steady, measurable level of gamma radiation through an unknown process. Deep magnetic resonance scans indicate the presence of significant quantities of compressed data stored within the object, though it shows no signs of self-directed intelligence at any quantifiable level. Its exact purpose, if it has one, has yet to be determined.",
+    "license_id": ""
+  }
+]

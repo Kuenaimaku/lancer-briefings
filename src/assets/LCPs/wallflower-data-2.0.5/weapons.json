@@ -1,0 +1,195 @@
+[
+  {
+    "id": "mw_blackspot_targeting_laser",
+    "name": "Blackspot Targeting Laser",
+    "mount": "Main",
+    "type": "Rifle",
+    "sp": 1,
+    "damage": [
+      {
+        "type": "Energy",
+        "val": "1d3+1"
+      }
+    ],
+    "range": [
+      {
+        "type": "Range",
+        "val": 15
+      }
+    ],
+    "tags": [
+      {
+        "id": "tg_unique"
+      }
+    ],
+    "source": "IPS-N",
+    "license": "Kidd",
+    "license_level": 1,
+    "on_hit": "DRONE, SEEKING, and NEXUS weapons and systems gain +1 Accuracy to attack the target until the end of their next turn.",
+    "on_crit": "The target also receives Lock On.",
+    "description": "“Who tipped me the black spot the day we landed and began this dance?” – Treasure Island (1883)",
+    "data_type": "weapon",
+    "license_id": "mf_kidd"
+  },
+  {
+    "id": "mw_tokugawa_alt_enkidu_integrated",
+    "name": "Plasma Talons",
+    "mount": "Auxiliary",
+    "type": "Melee",
+    "range": [
+      {
+        "type": "Threat",
+        "val": 3
+      }
+    ],
+    "damage": [
+      {
+        "type": "Energy",
+        "val": "1d3+2"
+      }
+    ],
+    "effect": "",
+    "description": "These molten talons are long, whiplike plasma lashes that the Enkidu can extend or retract. They can only be used in the DANGER ZONE.",
+    "tags": [
+      {
+        "id": "tg_ap"
+      },
+      {
+        "id": "tg_danger_zone"
+      },
+      {
+        "id": "tg_reliable",
+        "val": 2
+      }
+    ],
+    "license_id": ""
+  },
+  {
+    "id": "mw_exo_plasma_maul",
+    "name": "Plasma Maul",
+    "mount": "Heavy",
+    "source": "EXOTIC",
+    "type": "Melee",
+    "range": [
+      {
+        "type": "Threat",
+        "val": 1
+      }
+    ],
+    "damage": [
+      {
+        "type": "Energy",
+        "val": "3d6"
+      }
+    ],
+    "effect": "This weapon does not need to be reloaded on a miss.",
+    "description": "Popular among colonial militias, the plasma maul is a heavy but simple device. High-density magnetic plasma capacitors have a wide range of applications, from power storage through to construction and defense. In the case of the plasma maul, they are mounted in rows along a reinforced haft and set to discharge on contact, making this a devastating closequarters weapon limited only by its need to recharge between strikes. Early models featured ejectable capacitor banks, but contemporary versions are designed to draw power directly from a chassis’ reactor.",
+    "tags": [
+      {
+        "id": "tg_loading"
+      },
+      {
+        "id": "tg_overkill"
+      },
+      {
+        "id": "tg_exotic"
+      }
+    ],
+    "license_id": ""
+  },
+  {
+    "id": "mw_exo_sting_heavy_anti_armor_rifle",
+    "name": "“Sting” Heavy Anti-Armor Rifle",
+    "mount": "Superheavy",
+    "source": "EXOTIC",
+    "type": "Rifle",
+    "range": [
+      {
+        "type": "Range",
+        "val": 20
+      }
+    ],
+    "damage": [
+      {
+        "type": "Kinetic",
+        "val": "4d6"
+      }
+    ],
+    "on_attack": "If you consume LOCK ON, your attack ignores cover.",
+    "on_hit": "Create a Line 5 path from (but not including) your target, continuing in the same direction as the attack. Characters in this path take 5 Kinetic Damage.",
+    "description": "An obsolete chassis-grade anti-materiel/ anti-armor rifle dating back to the Hercynian Crisis, this particular design has not been in distribution for hundreds of years but finds continued use among contemporary Hercynian forces. Bulkier and more cumbersome than the current GMS T-3 anti-materiel rifle, this particular model lacks many of the refinements incorporated into later models and is meant to be employed with a dedicated spotter to provide targeting data. All the same, its heavy, highvelocity rounds remain extremely effective at defeating both armor and static defenses at extreme range.",
+    "tags": [
+      {
+        "id": "tg_loading"
+      },
+      {
+        "id": "tg_ordnance"
+      },
+      {
+        "id": "tg_reliable",
+        "val": 5
+      },
+      {
+        "id": "tg_exotic"
+      }
+    ],
+    "license_id": ""
+  },
+  {
+    "id": "mw_exo_steelpunch_heavy_needlebeam",
+    "name": "“Steelpunch” Heavy Needlebeam",
+    "source": "EXOTIC",
+    "mount": "Heavy",
+    "type": "Rifle",
+    "range": [
+      {
+        "type": "Range",
+        "val": 15
+      }
+    ],
+    "damage": [
+      {
+        "type": "Energy",
+        "val": "4"
+      }
+    ],
+    "effect": "This weapon deals +1d6 bonus damage against targets with at least 1 Armor.",
+    "description": "The “steelpunch”, as it’s affectionately known, is a twin-beam directed-energy weapon developed by HUC engineers for use against the heavily reinforced hulls of remnant chassis and other hardened targets. The earliest models were derived from Second Committee–era mineral surveying lasers. An initial beam flash-vaporizes the target’s outer layer and the plasma bloom is instantly analyzed for material density and structural composition, following which the needlebeam fires a focused, highintensity pulsed beam tuned to defeat heavy armor. Performance against softer targets is significantly reduced, however, as excessive material ablation disrupts the secondary beam before an optimal effect can be achieved.",
+    "tags": [
+      {
+        "id": "tg_ap"
+      },
+      {
+        "id": "tg_exotic"
+      }
+    ],
+    "license_id": ""
+  },
+  {
+    "id": "mw_exo_brood_siblings_molt",
+    "name": "Brood-Sibling’s Molt",
+    "source": "EXOTIC",
+    "mount": "Main",
+    "type": "Melee",
+    "range": [
+      {
+        "type": "Threat",
+        "val": 1
+      }
+    ],
+    "damage": [
+      {
+        "type": "Kinetic",
+        "val": "1d6+1"
+      }
+    ],
+    "effect": "1/round, this weapon deals +1d6 bonus damage to characters that are SHREDDED or STUNNED.",
+    "description": "Goodbye, old [friend/love]",
+    "tags": [
+      {
+        "id": "tg_exotic"
+      }
+    ],
+    "license_id": ""
+  }
+]
