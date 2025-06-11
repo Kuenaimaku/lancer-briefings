@@ -7,6 +7,40 @@
 	}
 }
 
+@keyframes slideInFromLeftFade {
+	0% {
+		transform: translateX(-100%);
+		opacity: 0;
+	}
+	50% {
+		opacity: 0.2;
+	}
+	75% {
+		opacity: 0.5;
+	}
+	100% {
+		transform: translateX(0);
+		opacity: 1;
+	}
+}
+
+@keyframes slideInFromTopFade {
+	0% {
+		transform: translateY(-100%);
+		opacity: 0;
+	}
+	50% {
+		opacity: 0.2;
+	}
+	75% {
+		opacity: 0.5;
+	}
+	100% {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+
 @keyframes slideInDown {
 	0% {
 		transform: translateY(-1000%);
@@ -93,11 +127,15 @@
 
 /* HEADER + SIDEBAR */
 header[class*="animate"] {
+	position:relative;
+	z-index:100;
 	animation: slideInFromLeft 0.3s ease-out;
 }
 
 .sidebar-page[class*="animate"] #sidebar {
 	display: flex;
+	position:relative;
+	z-index:100;
 	background-color: var(--primary-color);
 	animation: slideInDownSidebar 0.3s ease-out 1.2s;
 	animation-fill-mode: both;
@@ -134,32 +172,14 @@ header[class*="animate"] div.location-info {
 
 /* VIEWS CONTENT */
 
-/* all section-containers on main /status view */
-[class*="animate"] section.section-container {
-	/* the animation-delay for the StatusView section-containers is dynamically set in StatusView.vue */
-	animation: flickerIn 0.5s ease;
-	/* make sure the containers dont appear until the animation starts */
+.content-container[class*="animate"]#status,
+.section-content-container[class*="animate"]#pilots,
+section.section-container[class*="animate"]#events,
+section.section-container[class*="animate"]#events-logs {
+	position:relative;
+	z-index:0;
+	animation: slideInFromTopFade 0.5s ease-in-out;
 	animation-fill-mode: both;
-}
-
-/* section-containers on /pilots and /events views */
-section.section-container[class*="animate"]#events-logs,
-section.section-container[class*="animate"]#pilots, {
-	animation: flickerIn 0.8s ease;
-	animation-fill-mode: both;
-}
-
-div.markdown {
-	transition: height 0.5s ease-in-out;
-}
-
-.mission {
-	transition: background-color 0.2s ease-in-out, padding-left 0.2s ease-in-out;
-}
-
-.pilot-wrapper:active .middle,
-.pilot-wrapper.active .middle {
-	transition: 0.5s ease;
 }
 
 /* END VIEWS CONTENT */

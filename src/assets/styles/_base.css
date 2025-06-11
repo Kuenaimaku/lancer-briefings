@@ -390,10 +390,6 @@ section.section-container#pilots .rhombus-back {
 	left: -2em;
 }
 
-.pilot-list-container {
-	height:661px;
-}
-
 section .section-header {
 	background-color: var(--primary-color);
 	border-color: var(--primary-color);
@@ -724,9 +720,6 @@ section .section-header h1 {
 	padding: 0.25em;
 }
 
-.pilot-wrapper .pilot-column:hover {
-	background-color: var(--highlight-hover) !important;
-}
 
 .pilot-wrapper .pilot-column .pilot-info {
 	display: flex;
@@ -875,11 +868,6 @@ section .section-header h1 {
 	padding: 0.25em;
 }
 
-.pilot-wrapper .mech-column:hover {
-	background-color: var(--highlight-hover) !important;
-
-}
-
 .pilot-wrapper .mech-column .mech-info {
 	display: flex;
 	flex-direction: column;
@@ -916,15 +904,15 @@ section .section-header h1 {
 	gap: 5em;
 }
 
-.pilot-modal {
+.grid-item {
 	position: relative;
 }
 
-.pilot-modal .pilot-header-container {
+.grid-item .pilot-header-container {
 	display: flex;
 }
 
-.pilot-modal div .section-header {
+.grid-item div .section-header {
 	background-color: var(--primary-color);
 	border-color: var(--primary-color);
 	height: 52px;
@@ -934,7 +922,7 @@ section .section-header h1 {
 	margin-top: -38px !important;
 }
 
-.pilot-modal div .section-header h1 {
+.grid-item div .section-header h1 {
 	font-size: 26px;
 	margin: 0%;
 	align-self: center;
@@ -944,7 +932,7 @@ section .section-header h1 {
 	letter-spacing: 0.1em;
 }
 
-.pilot-modal .rhombus-back {
+.grid-item .rhombus-back {
 	transform: skew(0.785398rad) !important;
 	background-color: var(--primary-color);
 	border-color: var(--primary-color);
@@ -956,7 +944,7 @@ section .section-header h1 {
 	top: -38px;
 }
 
-.pilot-modal div.pilot {
+.grid-item div.pilot {
 	background-color: var(--secondary-color);
 	border: 1px solid var(--primary-color);
 	margin-top: -38px;
@@ -964,15 +952,15 @@ section .section-header h1 {
 	height: 662px;
 }
 
-.pilot-modal div.pilot div.markdown {
+.grid-item div.pilot div.markdown {
 	height: 662px;
 }
 
-.pilot-modal.portrait .pilot {
+.grid-item.portrait .pilot {
 	width: 600px;
 }
 
-.pilot-modal.portrait img.portrait {
+.grid-item.portrait img.portrait {
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
@@ -980,13 +968,77 @@ section .section-header h1 {
 	overflow: clip;
 }
 
-.pilot-modal.portrait .pilot-header-container {
+.grid-item.portrait .pilot-header-container {
 	display: flex;
 }
 
+.grid-item.portrait .rhombus-back {
+	left: -25px;
+}
+
+.pilot-modal {
+	position: relative;
+}
+
+.pilot-modal .pilot-header-container {
+	display: flex;
+}
+.pilot-modal div .section-header {
+	background-color: var(--primary-color);
+	border-color: var(--primary-color);
+	height: 52px;
+	display: inline-flex;
+	gap: 15px;
+	padding-left: 16px;
+	margin-top: -38px !important;
+}
+.pilot-modal div .section-header h1 {
+	font-size: 26px;
+	margin: 0%;
+	align-self: center;
+	font-family: "Big Shoulders Display", cursive;
+	font-weight: 800;
+	text-transform: uppercase;
+	letter-spacing: 0.1em;
+}
+.pilot-modal .rhombus-back {
+	transform: skew(0.785398rad) !important;
+	background-color: var(--primary-color);
+	border-color: var(--primary-color);
+	width: 40px;
+	height: 52px;
+	display: inline-block;
+	position: relative;
+	left: -10px;
+	top: -38px;
+}
+.pilot-modal div.pilot {
+	background-color: var(--secondary-color);
+	border: 1px solid var(--primary-color);
+	margin-top: -38px;
+	width: 888px;
+	height: 662px;
+}
+.pilot-modal div.pilot div.markdown {
+	height: 662px;
+}
+.pilot-modal.portrait .pilot {
+	width: 600px;
+}
+.pilot-modal.portrait img.portrait {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: top;
+	overflow: clip;
+}
+.pilot-modal.portrait .pilot-header-container {
+	display: flex;
+}
 .pilot-modal.portrait .rhombus-back {
 	left: -25px;
 }
+
 
 .mech-modal {
 	position: relative;
@@ -1498,11 +1550,6 @@ div.markdown ol li {
 	text-transform: uppercase;
 }
 
-.pilot-identity {
-	width: 1050px;
-	height: 600px;
-}
-
 .pilot-identity .header {
 	background: var(--primary-color);
 	color: var(--text-headers);
@@ -1611,13 +1658,35 @@ div.markdown ol li {
 	display:flex;
 	flex-direction: row;
 	padding-top: 0.5em;
+	width:100%;
+	justify-content: center;
 }
 
-.pilot-identity .biometrics {
+.biometrics, .mech-record {
+	cursor: pointer;
+}
+
+.biometrics, .mech-record {
+	transition: 0.2s ease-in-out;
+}
+
+.biometrics:hover, .mech-record:hover {
+	background-color: var(--highlight-hover) !important;
+	transition: 0.2s ease-in-out;
+}
+
+.pilot-identity .biometrics, .pilot-identity .mech-record {
 	align-self: flex-end;
+	width: 100%;
 }
 
 .pilot-identity .overline{
 	font-size: 11px;
 	text-transform: uppercase;
+}
+
+.pilot-identity .row--dense {
+	padding: 5px;
+	line-height:11px;
+	text-align: justify;
 }

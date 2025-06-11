@@ -1,5 +1,5 @@
 <template>
-	<div id="statusView" :class="{ animate: animateView }" :style="{ 'animation-delay': animationDelay }"
+	<div id="status" :class="{ animate: animateView }" :style="{ 'animation-delay': animationDelay }"
 		class="content-container">
 		<section id="missions" class="section-container" :style="{ 'animation-delay': animationDelay }">
 			<div class="section-header clipped-medium-backward">

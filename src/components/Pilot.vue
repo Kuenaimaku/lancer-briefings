@@ -1,143 +1,136 @@
 <template>
-	<div class="pilot-wrapper">
-    <div class="pilot-column" @click="pilotModal">
-      <img :src="pilotPortrait" class="portrait" />
-      <div class="pilot-info">
-        <div class="callsign">
-          <h1>Callsign</h1>
-          <h2>{{ pilotInfo.callsign }}</h2>
-        </div>
-        <div class="name">
-          <h1>Name or Legal Alias</h1>
-          <h2>{{ pilotInfo.name }}</h2>
-        </div>
+  <div class="grid-item pilot-identity" style="color:white!important">
+    <div class="header">
+      <div class="col grow-max">
+        <div class="heading h1">{{ pilot.callsign }}</div>
+        <div class="heading h2">({{ pilot.name }}) </div>
       </div>
-      <div class="pilot-code">
-        <Typer :values="pilotCode" />
-      </div>
+      <div class="col"><img src="/faction-logos/msmc.svg"></div>
     </div>
-    <div
-      v-if="!pilotInfo.bondId"
-      class="gear-column">
-      <div class="gear-row">
-        <div class="armor">
-          <h1>Pilot Armor</h1>
-          <h2>{{ pilotInfo.loadout.armor[0].flavorName }}</h2>
+    <div class="body">
+      <div class="add-padding"> Union Administrative RM-4 Pilot Identification Protocol (IDENT) Record
+        {{ pilot.id }} </div>
+      <div class="flex-container-rows">
+        <div class="row add-padding">
+          {{ reverse(this.pilot.name) }}:{{ pilot.id }}//NDL-C-BLIND-REACH
         </div>
-        <div class="gear">
-          <h1>Pilot Gear</h1>
-          <h2>{{ pilotInfo.loadout.gear[0].flavorName }}</h2>
-        </div>
-      </div>
-      <div class="gear-row">
-        <div class="weapon">
-          <h1>Pilot Weapon</h1>
-          <h2>{{ pilotInfo.loadout.weapons[0].flavorName }}</h2>
-        </div>
-        <div class="gear">
-          <h1>Pilot Gear</h1>
-          <h2>{{ pilotInfo.loadout.gear[1].flavorName }}</h2>
-        </div>
-      </div>
-      <div class="gear-row">
-        <div class="weapon">
-          <h1>Pilot Weapon</h1>
-          <h2>{{ pilotInfo.loadout.weapons[1].flavorName }}</h2>
-        </div>
-        <div class="gear">
-          <h1>Pilot Gear</h1>
-          <h2>{{ pilotInfo.loadout.gear[2].flavorName }}</h2>
-        </div>
-      </div>
-    </div>
-    <div
-      v-if="pilotInfo.bondId"
-      class="bonds-column">
-      <div class="bonds">
-        <div class="bond">
-          <h1>Bond</h1>
-          <h2>{{ bond.name }}</h2>
-        </div>
-        <div class="experience">
-          <h1>Experience</h1>
-          <ProgressBar
-            :value="pilotInfo.xp"
-            :max="8"
-            color="rgba(125, 187, 187, 1)"
-          />
-        </div>
-        <div class="stress">
-          <h1>Stress</h1>
-          <ProgressBar
-            :value="pilotInfo.stress"
-            :max="8" color="#F00" />
-        </div>
-      </div>
-      <div
-        v-if="pilotInfo.burdens.length > 0"
-        class="burdens">
-        <Burden
-          v-for="item in pilotInfo.burdens"
-          :key="item.id"
-          :burden="item"
-          :animate="animate"/>
-    </div>
-    <div
-      v-else
-      class="gear-column">
-      <div class="gear-row">
-        <div class="armor">
-          <h1>Pilot Armor</h1>
-          <h2>{{ pilotInfo.loadout.armor[0].flavorName }}</h2>
-        </div>
-        <div class="gear">
-          <h1>Pilot Gear</h1>
-          <h2>{{ pilotInfo.loadout.gear[0].flavorName }}</h2>
-        </div>
-      </div>
-      <div class="gear-row">
-        <div class="weapon">
-          <h1>Pilot Weapon</h1>
-          <h2>{{ pilotInfo.loadout.weapons[0].flavorName }}</h2>
-        </div>
-        <div class="gear">
-          <h1>Pilot Gear</h1>
-          <h2>{{ pilotInfo.loadout.gear[1].flavorName }}</h2>
-        </div>
-      </div>
-      <div class="gear-row">
-        <div class="weapon">
-          <h1>Pilot Weapon</h1>
-          <h2>{{ pilotInfo.loadout.weapons[1].flavorName }}</h2>
-        </div>
-        <div class="gear">
-          <h1>Pilot Gear</h1>
-          <h2>{{ pilotInfo.loadout.gear[2].flavorName }}</h2>
-        </div>
-      </div>
-    </div>
-    </div>
-    <div class="mech-column" @click="mechModal">
-      <div class="mech-info">
-        <div class="name">
-          <h1>Active Mech</h1>
-          <h2>{{ activeMech.name }}</h2>
-        </div>
-        <div class="manufacturer">
-          <svg :data-src="`${mechManufacturerIcon}#Content`" style="width:48px; height:48px; fill:var(--primary-color)"></svg>
-          <div class="manufacturer-info">
-            <h1>{{ activeMech.manufacturer }}</h1>
-            <h2>{{ activeMech.frame_name }}</h2>
+        <div class="row flex-container-cols add-padding">
+          <div class="col grow-max flex-container-rows" style="padding-top:5px">
+            <div class="row flex-container-cols">
+              <div class="col col-primary"><span class="flavor-text"> Callsign: <b class="accent--text">{{
+                capitalize(pilot.callsign) }}</b><br> Name (or legal alias): <b class="accent--text">{{ pilot.name
+                    }}</b><br> Background: <b class="accent--text"> {{ pilot.background }} </b></span></div>
+              <div class="col">CALLSIGN AVAILABLE <br> IDENTITY
+                VERIFIED <br> PH/HR DATA REGISTERED</div>
+            </div>
+            <div style="padding-top:5px"> FRAME CONFIGURATION OPTIONS <span class="subtle--text">("H.A.S.E"
+                OMNINET VAULT REMIT)</span></div>
+            <div class="row" style="padding-top:5px"><span style="font-size: 22px; line-height: 15px;"> [
+                HULL: <span class="stat-text accent--text" style="font-size: 24px;"> {{ pilot.mechSkills[0] }} </span>
+                AGI: <span class="stat-text accent--text" style="font-size: 24px;"> {{ pilot.mechSkills[1] }} </span>
+                SYS: <span class="stat-text accent--text" style="font-size: 24px;"> {{ pilot.mechSkills[2] }} </span>
+                ENG: <span class="stat-text accent--text" style="font-size: 24px;"> {{ pilot.mechSkills[3] }} </span> ]
+              </span></div>
+            <div class="row flex-container-cols">
+              <div class="col col-share">
+                <span>PILOT SKILL TRIGGER AUDIT</span>
+                <br>
+                <div class="chip-container" v-for="skill in pilot.skills" :key="skill.id">
+                  <span class="chip"><i aria-hidden="true" class="notranslate cci cci-skill"></i>{{ getSkill(skill)
+                  }}</span>
+                </div>
+              </div>
+              <div class="col col-share">
+                <span>PILOT TALENT AUDIT</span>
+                <br>
+                <div class="chip-container" v-for="talent in pilot.talents" :key="talent.id">
+                  <span class="chip"><i aria-hidden="true" class="notranslate cci cci-talent"></i>{{
+                    getTalent(talent.id, talent.rank) }}</span>
+                </div>
+              </div>
+            </div>
+            <div v-if="pilot.level > 0" class="row flex-container-cols">
+              <div class="col" style="padding-top:5px">
+                <span>PROCUREMENT LICENSE AUDIT: LEVEL {{ pilot.level }}</span>
+                <br>
+                <div class="chip-container" v-for="license in pilot.licenses" :key="license.id">
+                  <span class="chip"><i aria-hidden="true" class="notranslate cci cci-license"></i>{{
+                    getLicense(license.id, license.rank) }}</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="pilot-image-container">
+              <div class="pilot-image-border">
+                <img :src="pilotPortrait" class="portrait" />
+              </div>
+            </div>
           </div>
         </div>
-        <div class="role">
-          {{ activeMech.mechtype }}
+      </div>
+      <div class="flex-container-cols modal-buttons">
+        <div class="row biometrics-container">
+          <div class="biometrics flex-container-cols" @click="pilotModal">
+            <div>
+              <i aria-hidden="true" class="v-icon notranslate mdi mdi-fingerprint theme--dark grey--text text--darken-2"
+                style="font-size: 36px; margin-top:36px;"></i>
+            </div>
+            <div style="width:100%">
+              BIOMETRIC RECORD VALID [[{{ randomNumber(14, 22) }}PB]]<br />
+              OHM C//{{ timeStamp(pilot.lastModified) }}
+            </div>
+          </div>
+        </div>
+        <div class="row biometrics-container">
+          <div class="mech-record flex-container-cols" @click="mechModal">
+            <div style="width:100%">
+              MECHANICAL BLUEPRINT VALID [[{{ randomNumber(14, 22) }}TB]] <br />
+              {{ activeMech.manufacturer.toUpperCase() }}-{{ activeMech.frame_name.toUpperCase() }} :: "{{ activeMech.name.toUpperCase() }}"
+            </div>
+            <div>
+              <i aria-hidden="true"
+                class="v-icon notranslate cci cci-reserve-mech theme--dark grey--text text--darken-2 larger"
+                style="font-size: 42px; margin-top:1em;"></i>
+            </div>
+          </div>
         </div>
       </div>
-      <img :src="mechPortrait" class="portrait">
+      <hr role="separator" aria-orientation="horizontal" class="ma-2 v-divider theme--dark">
+      <div class="row row--dense"><span class="overline" style="line-height: 13px !important; opacity: 0.4;">
+          Improper use of this IDENT record and/or its constituent data by the record holder or any other
+          persons is punishable under the DoJ/HR A-645-c. This record is the property of the Union
+          Administrative Office and the information herein must be transmitted on request under
+          NDL-C-DISCORDANT-BREATH encryption protocols. This RM-4 record must be updated every five (5)
+          Cradle
+          Standard Years of objective time to retain GMS licensing rights. Far-field operatives that
+          anticipate deployments lasting longer than five Cradle Standard Years that have not been issued
+          a
+          man-portable Omninet Hook should apply for the RM-11-B IDENT Supplemental (b) Extension. Contact
+          your local Union Adminstrative Officer for any other matters regarding this
+          record.  V-CDL//M-265-114-831 (A) </span></div>
     </div>
   </div>
 </template>
+
+<style scoped>
+.larger::before {
+  margin-top: 9px;
+}
+
+.mdi::before {
+  margin-top: 9px;
+}
+
+.mech-record {
+  margin-left: auto;
+  text-align: right;
+}
+
+.modal-buttons {
+  margin-top: 5px;
+}
+</style>
 
 <script>
 import 'external-svg-loader'
@@ -245,7 +238,7 @@ export default {
       return info;
     },
   },
-  mounted() {
+  created() {
     this.getActiveMech();
     this.getBond();
   },
@@ -280,6 +273,74 @@ export default {
       this.activeMech.frame_name = frame.name
       this.activeMech.manufacturer = frame.source
       this.activeMech.mechtype = frame.mechtype.join(' // ')
+    },
+    getHistory() {
+      if (this.pilot.history === "") {
+        return `<p> <h2> [ERR: REDACTED] </h2> </p>`
+      }
+
+      let response = "<p>"
+
+      if (this.pilot.text_appearance !== "") {
+        response += `<h2>APPEARANCE</h2> ${this.pilot.text_appearance} </hr>`;
+      }
+
+      if (this.pilot.history !== "") {
+        response += `<h2>HISTORY</h2> ${this.pilot.history} </hr>`;
+      }
+
+      response += "</p>"
+
+      return response;
+    },
+    getSkill(skill) {
+      let sk = this.skills.find((x) => x.id == skill.id);
+      return sk.name + " +" + (skill.rank * 2)
+    },
+    getTalent(id, value) {
+      let talent = this.talents.find((x) => x.id == id);
+      let response = talent.name + " "
+
+      for (let i = 0; i < value; i++) {
+        response += "I"
+      }
+      return response;
+    },
+    getLicense(id, value) {
+      let frame = this.frames.find((x) => x.id == id);
+      let response = frame.source + " " + frame.name + " "
+
+      for (let i = 0; i < value; i++) {
+        response += "I"
+      }
+      return response;
+    },
+    capitalize(str) {
+      return str.split(' ').map(word => word[0].toUpperCase() + word.slice(1)).join(' ');
+    },
+    reverse(str) {
+      const words = str.split(' ')
+      const reversed = words.reverse()
+      const reversedResult = words.join('.')
+      return reversedResult
+    },
+    randomNumber(max, min) {
+      const rand = Math.random() * (max - min) + min
+      const power = Math.pow(10, 2)
+      return Math.floor(rand * power) / power
+    },
+    timeStamp(str) {
+      let date = new Date(str);
+      let y = date.getFullYear();
+      let m = date.getMonth();
+      let d = date.getDate();
+      let h = date.getHours();
+      let mi = date.getMinutes();
+      let s = date.getSeconds();
+      let ms = date.getMilliseconds();
+      let tz = date.getTimezoneOffset();
+      y += 2990;
+      return new Date(y, m, d, h, mi, s, ms).toISOString();
     },
     pilotModal() {
       this.$oruga.modal.open({
